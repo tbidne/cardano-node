@@ -1152,6 +1152,12 @@
     "link": "cardano-cli/Cardano-CLI-Shelley-Run-Query.html#v:runQueryCmd"
   },
   {
+    "display_html": "<a href=\"#v:percentage\">percentage</a> &#8759; RelativeTime &#8594; RelativeTime &#8594; RelativeTime &#8594; <a href=\"file:///opt/ghc/8.10.4/share/doc/ghc-8.10.4/html/libraries/text-1.2.4.1/Data-Text.html#t:Text\" title=\"Data.Text\">Text</a>",
+    "name": "percentage",
+    "module": "Cardano.CLI.Shelley.Run.Query",
+    "link": "cardano-cli/Cardano-CLI-Shelley-Run-Query.html#v:percentage"
+  },
+  {
     "display_html": "<span class=\"keyword\">newtype</span> <a href=\"#t:ByronQueryError\">ByronQueryError</a> = <a href=\"#v:ByronQueryEnvVarSocketErr\">ByronQueryEnvVarSocketErr</a> <a href=\"Cardano-CLI-Environment.html#t:EnvSocketError\" title=\"Cardano.CLI.Environment\">EnvSocketError</a>",
     "name": "ByronQueryError ByronQueryEnvVarSocketErr",
     "module": "Cardano.CLI.Byron.Query",
