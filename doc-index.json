@@ -300,7 +300,7 @@
     "link": "cardano-api/Cardano-Api-Eras.html#t:ShelleyBasedEra"
   },
   {
-    "display_html": "<span class=\"keyword\">class</span> (<a href=\"Cardano-Api-Eras.html#t:IsCardanoEra\" title=\"Cardano.Api.Eras\">IsCardanoEra</a> era, Crypto (<a href=\"Cardano-Api-Eras.html#t:ShelleyLedgerEra\" title=\"Cardano.Api.Eras\">ShelleyLedgerEra</a> era) ~ StandardCrypto) &#8658; <a href=\"#t:IsShelleyBasedEra\">IsShelleyBasedEra</a> era <span class=\"keyword\">where</span><ul class=\"subs\"><li><a href=\"#v:shelleyBasedEra\">shelleyBasedEra</a> &#8759; <a href=\"Cardano-Api-Eras.html#t:ShelleyBasedEra\" title=\"Cardano.Api.Eras\">ShelleyBasedEra</a> era</li></ul>",
+    "display_html": "<span class=\"keyword\">class</span> <a href=\"Cardano-Api-Eras.html#t:IsCardanoEra\" title=\"Cardano.Api.Eras\">IsCardanoEra</a> era &#8658; <a href=\"#t:IsShelleyBasedEra\">IsShelleyBasedEra</a> era <span class=\"keyword\">where</span><ul class=\"subs\"><li><a href=\"#v:shelleyBasedEra\">shelleyBasedEra</a> &#8759; <a href=\"Cardano-Api-Eras.html#t:ShelleyBasedEra\" title=\"Cardano.Api.Eras\">ShelleyBasedEra</a> era</li></ul>",
     "name": "IsShelleyBasedEra shelleyBasedEra",
     "module": "Cardano.Api.Eras",
     "link": "cardano-api/Cardano-Api-Eras.html#t:IsShelleyBasedEra"
@@ -2868,7 +2868,7 @@
     "link": "cardano-api/Cardano-Api-TxBody.html#t:AsType"
   },
   {
-    "display_html": "<span class=\"keyword\">data</span> <a href=\"#t:Tx\">Tx</a> era <span class=\"keyword\">where</span><ul class=\"subs\"><li><a href=\"#v:ByronTx\">ByronTx</a> &#8759; ATxAux <a href=\"file:///opt/ghc/8.10.4/share/doc/ghc-8.10.4/html/libraries/bytestring-0.10.12.0/Data-ByteString.html#t:ByteString\" title=\"Data.ByteString\">ByteString</a> &#8594; <a href=\"Cardano-Api-Tx.html#t:Tx\" title=\"Cardano.Api.Tx\">Tx</a> <a href=\"Cardano-Api-Eras.html#t:ByronEra\" title=\"Cardano.Api.Eras\">ByronEra</a></li><li><a href=\"#v:ShelleyTx\">ShelleyTx</a> &#8759; <a href=\"Cardano-Api-Eras.html#t:ShelleyBasedEra\" title=\"Cardano.Api.Eras\">ShelleyBasedEra</a> era &#8594; Tx (<a href=\"Cardano-Api-Eras.html#t:ShelleyLedgerEra\" title=\"Cardano.Api.Eras\">ShelleyLedgerEra</a> era) &#8594; <a href=\"Cardano-Api-Tx.html#t:Tx\" title=\"Cardano.Api.Tx\">Tx</a> era</li><li><span class=\"keyword\">pattern</span> <a href=\"#v:Tx\">Tx</a> &#8759; Era era &#8658; <a href=\"Cardano-Api-TxBody.html#t:TxBody\" title=\"Cardano.Api.TxBody\">TxBody</a> era &#8594; [<a href=\"Cardano-Api-Tx.html#t:KeyWitness\" title=\"Cardano.Api.Tx\">KeyWitness</a> era] &#8594; <a href=\"Cardano-Api-Tx.html#t:Tx\" title=\"Cardano.Api.Tx\">Tx</a> era</li></ul>",
+    "display_html": "<span class=\"keyword\">data</span> <a href=\"#t:Tx\">Tx</a> era <span class=\"keyword\">where</span><ul class=\"subs\"><li><a href=\"#v:ByronTx\">ByronTx</a> &#8759; ATxAux <a href=\"file:///opt/ghc/8.10.4/share/doc/ghc-8.10.4/html/libraries/bytestring-0.10.12.0/Data-ByteString.html#t:ByteString\" title=\"Data.ByteString\">ByteString</a> &#8594; <a href=\"Cardano-Api-Tx.html#t:Tx\" title=\"Cardano.Api.Tx\">Tx</a> <a href=\"Cardano-Api-Eras.html#t:ByronEra\" title=\"Cardano.Api.Eras\">ByronEra</a></li><li><a href=\"#v:ShelleyTx\">ShelleyTx</a> &#8759; <a href=\"Cardano-Api-Eras.html#t:ShelleyBasedEra\" title=\"Cardano.Api.Eras\">ShelleyBasedEra</a> era &#8594; Tx (<a href=\"Cardano-Api-Eras.html#t:ShelleyLedgerEra\" title=\"Cardano.Api.Eras\">ShelleyLedgerEra</a> era) &#8594; <a href=\"Cardano-Api-Tx.html#t:Tx\" title=\"Cardano.Api.Tx\">Tx</a> era</li><li><span class=\"keyword\">pattern</span> <a href=\"#v:Tx\">Tx</a> &#8759; <a href=\"Cardano-Api-TxBody.html#t:TxBody\" title=\"Cardano.Api.TxBody\">TxBody</a> era &#8594; [<a href=\"Cardano-Api-Tx.html#t:KeyWitness\" title=\"Cardano.Api.Tx\">KeyWitness</a> era] &#8594; <a href=\"Cardano-Api-Tx.html#t:Tx\" title=\"Cardano.Api.Tx\">Tx</a> era</li></ul>",
     "name": "Tx Tx ByronTx ShelleyTx",
     "module": "Cardano.Api.Tx",
     "link": "cardano-api/Cardano-Api-Tx.html#t:Tx"
@@ -3642,7 +3642,7 @@
     "link": "cardano-api/Cardano-Api.html#t:ShelleyBasedEra"
   },
   {
-    "display_html": "<span class=\"keyword\">class</span> (<a href=\"Cardano-Api.html#t:IsCardanoEra\" title=\"Cardano.Api\">IsCardanoEra</a> era, Crypto (<a href=\"Cardano-Api-Eras.html#t:ShelleyLedgerEra\" title=\"Cardano.Api.Eras\">ShelleyLedgerEra</a> era) ~ StandardCrypto) &#8658; <a href=\"#t:IsShelleyBasedEra\">IsShelleyBasedEra</a> era <span class=\"keyword\">where</span><ul class=\"subs\"><li><a href=\"#v:shelleyBasedEra\">shelleyBasedEra</a> &#8759; <a href=\"Cardano-Api.html#t:ShelleyBasedEra\" title=\"Cardano.Api\">ShelleyBasedEra</a> era</li></ul>",
+    "display_html": "<span class=\"keyword\">class</span> <a href=\"Cardano-Api.html#t:IsCardanoEra\" title=\"Cardano.Api\">IsCardanoEra</a> era &#8658; <a href=\"#t:IsShelleyBasedEra\">IsShelleyBasedEra</a> era <span class=\"keyword\">where</span><ul class=\"subs\"><li><a href=\"#v:shelleyBasedEra\">shelleyBasedEra</a> &#8759; <a href=\"Cardano-Api.html#t:ShelleyBasedEra\" title=\"Cardano.Api\">ShelleyBasedEra</a> era</li></ul>",
     "name": "IsShelleyBasedEra shelleyBasedEra",
     "module": "Cardano.Api",
     "link": "cardano-api/Cardano-Api.html#t:IsShelleyBasedEra"
@@ -4500,7 +4500,7 @@
     "link": "cardano-api/Cardano-Api.html#t:TxBodyErrorAutoBalance"
   },
   {
-    "display_html": "<span class=\"keyword\">data</span> <a href=\"#t:Tx\">Tx</a> era <span class=\"keyword\">where</span><ul class=\"subs\"><li><span class=\"keyword\">pattern</span> <a href=\"#v:Tx\">Tx</a> &#8759; Era era &#8658; <a href=\"Cardano-Api.html#t:TxBody\" title=\"Cardano.Api\">TxBody</a> era &#8594; [<a href=\"Cardano-Api.html#t:KeyWitness\" title=\"Cardano.Api\">KeyWitness</a> era] &#8594; <a href=\"Cardano-Api.html#t:Tx\" title=\"Cardano.Api\">Tx</a> era</li></ul>",
+    "display_html": "<span class=\"keyword\">data</span> <a href=\"#t:Tx\">Tx</a> era <span class=\"keyword\">where</span><ul class=\"subs\"><li><span class=\"keyword\">pattern</span> <a href=\"#v:Tx\">Tx</a> &#8759; <a href=\"Cardano-Api.html#t:TxBody\" title=\"Cardano.Api\">TxBody</a> era &#8594; [<a href=\"Cardano-Api.html#t:KeyWitness\" title=\"Cardano.Api\">KeyWitness</a> era] &#8594; <a href=\"Cardano-Api.html#t:Tx\" title=\"Cardano.Api\">Tx</a> era</li></ul>",
     "name": "Tx Tx",
     "module": "Cardano.Api",
     "link": "cardano-api/Cardano-Api.html#t:Tx"
