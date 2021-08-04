@@ -282,6 +282,12 @@
     "link": "cardano-cli/Cardano-CLI-Mary-ValueParser.html#v:parseValue"
   },
   {
+    "display_html": "<a href=\"#v:customRenderHelp\">customRenderHelp</a> &#8759; <a href=\"file:///opt/ghc/8.10.4/share/doc/ghc-8.10.4/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:Int\" title=\"Distribution.Compat.Prelude.Internal\">Int</a> &#8594; ParserHelp &#8594; <a href=\"file:///opt/ghc/8.10.4/share/doc/ghc-8.10.4/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:String\" title=\"Distribution.Compat.Prelude.Internal\">String</a>",
+    "name": "customRenderHelp",
+    "module": "Cardano.CLI.Render",
+    "link": "cardano-cli/Cardano-CLI-Render.html#v:customRenderHelp"
+  },
+  {
     "display_html": "<span class=\"keyword\">data</span> <a href=\"#t:QueryTipOutput\">QueryTipOutput</a> localState = <a href=\"#v:QueryTipOutput\">QueryTipOutput</a> {<ul class=\"subs\"><li><a href=\"#v:chainTip\">chainTip</a> &#8759; <a href=\"file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.4/cardano-api-1.28.0/noopt/doc/html/cardano-api/Cardano-Api-Block.html#t:ChainTip\" title=\"Cardano.Api.Block\">ChainTip</a></li><li><a href=\"#v:mLocalState\">mLocalState</a> &#8759; <a href=\"file:///opt/ghc/8.10.4/share/doc/ghc-8.10.4/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:Maybe\" title=\"Distribution.Compat.Prelude.Internal\">Maybe</a> localState</li></ul>}",
     "name": "QueryTipOutput QueryTipOutput $sel:chainTip:QueryTipOutput $sel:mLocalState:QueryTipOutput",
     "module": "Cardano.CLI.Shelley.Output",
@@ -1602,8 +1608,8 @@
     "link": "cardano-cli/Paths_cardano_cli.html#v:getSysconfDir"
   },
   {
-    "display_html": "<span class=\"keyword\">data</span> <a href=\"#t:ClientCommand\">ClientCommand</a><ul class=\"subs\"><li>= <a href=\"#v:ByronCommand\">ByronCommand</a> <a href=\"Cardano-CLI-Byron-Commands.html#t:ByronCommand\" title=\"Cardano.CLI.Byron.Commands\">ByronCommand</a></li><li>| <a href=\"#v:ShelleyCommand\">ShelleyCommand</a> <a href=\"Cardano-CLI-Shelley-Commands.html#t:ShelleyCommand\" title=\"Cardano.CLI.Shelley.Commands\">ShelleyCommand</a></li><li>| <a href=\"#v:DeprecatedShelleySubcommand\">DeprecatedShelleySubcommand</a> <a href=\"Cardano-CLI-Shelley-Commands.html#t:ShelleyCommand\" title=\"Cardano.CLI.Shelley.Commands\">ShelleyCommand</a></li><li>| <a href=\"#v:DisplayVersion\">DisplayVersion</a></li></ul>",
-    "name": "ClientCommand ByronCommand ShelleyCommand DeprecatedShelleySubcommand DisplayVersion",
+    "display_html": "<span class=\"keyword\">data</span> <a href=\"#t:ClientCommand\">ClientCommand</a><ul class=\"subs\"><li>= <a href=\"#v:ByronCommand\">ByronCommand</a> <a href=\"Cardano-CLI-Byron-Commands.html#t:ByronCommand\" title=\"Cardano.CLI.Byron.Commands\">ByronCommand</a></li><li>| <a href=\"#v:ShelleyCommand\">ShelleyCommand</a> <a href=\"Cardano-CLI-Shelley-Commands.html#t:ShelleyCommand\" title=\"Cardano.CLI.Shelley.Commands\">ShelleyCommand</a></li><li>| <a href=\"#v:DeprecatedShelleySubcommand\">DeprecatedShelleySubcommand</a> <a href=\"Cardano-CLI-Shelley-Commands.html#t:ShelleyCommand\" title=\"Cardano.CLI.Shelley.Commands\">ShelleyCommand</a></li><li>| &#8704; a. <a href=\"#v:Help\">Help</a> ParserPrefs (ParserInfo a)</li><li>| <a href=\"#v:DisplayVersion\">DisplayVersion</a></li></ul>",
+    "name": "ClientCommand ByronCommand ShelleyCommand DeprecatedShelleySubcommand Help DisplayVersion",
     "module": "Cardano.CLI.Run",
     "link": "cardano-cli/Cardano-CLI-Run.html#t:ClientCommand"
   },
