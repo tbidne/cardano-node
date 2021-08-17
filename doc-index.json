@@ -1615,7 +1615,7 @@
   },
   {
     "display_html": "<span class=\"keyword\">data</span> <a href=\"#t:ClientCommand\">ClientCommand</a><ul class=\"subs\"><li>= <a href=\"#v:ByronCommand\">ByronCommand</a> <a href=\"Cardano-CLI-Byron-Commands.html#t:ByronCommand\" title=\"Cardano.CLI.Byron.Commands\">ByronCommand</a></li><li>| <a href=\"#v:ShelleyCommand\">ShelleyCommand</a> <a href=\"Cardano-CLI-Shelley-Commands.html#t:ShelleyCommand\" title=\"Cardano.CLI.Shelley.Commands\">ShelleyCommand</a></li><li>| <a href=\"#v:DeprecatedShelleySubcommand\">DeprecatedShelleySubcommand</a> <a href=\"Cardano-CLI-Shelley-Commands.html#t:ShelleyCommand\" title=\"Cardano.CLI.Shelley.Commands\">ShelleyCommand</a></li><li>| &#8704; a. <a href=\"#v:Help\">Help</a> ParserPrefs (ParserInfo a)</li><li>| <a href=\"#v:DisplayVersion\">DisplayVersion</a></li></ul>",
-    "name": "ClientCommand ByronCommand ShelleyCommand DeprecatedShelleySubcommand Help DisplayVersion",
+    "name": "ClientCommand ByronCommand ShelleyCommand Help DeprecatedShelleySubcommand DisplayVersion",
     "module": "Cardano.CLI.Run",
     "link": "cardano-cli/Cardano-CLI-Run.html#t:ClientCommand"
   },
