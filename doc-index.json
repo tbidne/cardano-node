@@ -1974,6 +1974,12 @@
     "link": "lib/Cardano-Api-Address.html#t:AsType"
   },
   {
+    "display_html": "<a href=\"#v:isKeyAddress\">isKeyAddress</a> &#8759; <a href=\"Cardano-Api-Address.html#t:AddressInEra\" title=\"Cardano.Api.Address\">AddressInEra</a> era &#8594; <a href=\"file:///opt/ghc/8.10.4/share/doc/ghc-8.10.4/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:Bool\" title=\"Distribution.Compat.Prelude.Internal\">Bool</a>",
+    "name": "isKeyAddress",
+    "module": "Cardano.Api.Address",
+    "link": "lib/Cardano-Api-Address.html#v:isKeyAddress"
+  },
+  {
     "display_html": "<span class=\"keyword\">newtype</span> <a href=\"#t:Lovelace\">Lovelace</a> = <a href=\"#v:Lovelace\">Lovelace</a> <a href=\"file:///opt/ghc/8.10.4/share/doc/ghc-8.10.4/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:Integer\" title=\"Distribution.Compat.Prelude.Internal\">Integer</a>",
     "name": "Lovelace Lovelace",
     "module": "Cardano.Api.Value",
@@ -4030,6 +4036,12 @@
     "name": "AddressInEra AddressInEra",
     "module": "Cardano.Api",
     "link": "lib/Cardano-Api.html#t:AddressInEra"
+  },
+  {
+    "display_html": "<a href=\"#v:isKeyAddress\">isKeyAddress</a> &#8759; <a href=\"Cardano-Api.html#t:AddressInEra\" title=\"Cardano.Api\">AddressInEra</a> era &#8594; <a href=\"file:///opt/ghc/8.10.4/share/doc/ghc-8.10.4/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:Bool\" title=\"Distribution.Compat.Prelude.Internal\">Bool</a>",
+    "name": "isKeyAddress",
+    "module": "Cardano.Api",
+    "link": "lib/Cardano-Api.html#v:isKeyAddress"
   },
   {
     "display_html": "<span class=\"keyword\">data</span> <a href=\"#t:AddressTypeInEra\">AddressTypeInEra</a> addrtype era <span class=\"keyword\">where</span><ul class=\"subs\"><li><a href=\"#v:ByronAddressInAnyEra\">ByronAddressInAnyEra</a> &#8759; <a href=\"Cardano-Api.html#t:AddressTypeInEra\" title=\"Cardano.Api\">AddressTypeInEra</a> <a href=\"Cardano-Api.html#t:ByronAddr\" title=\"Cardano.Api\">ByronAddr</a> era</li><li><a href=\"#v:ShelleyAddressInEra\">ShelleyAddressInEra</a> &#8759; <a href=\"Cardano-Api.html#t:ShelleyBasedEra\" title=\"Cardano.Api\">ShelleyBasedEra</a> era &#8594; <a href=\"Cardano-Api.html#t:AddressTypeInEra\" title=\"Cardano.Api\">AddressTypeInEra</a> <a href=\"Cardano-Api.html#t:ShelleyAddr\" title=\"Cardano.Api\">ShelleyAddr</a> era</li></ul>",
