@@ -5994,6 +5994,18 @@
     "link": "lib/Cardano-Api.html#t:NetworkMagic"
   },
   {
+    "display_html": "<a href=\"#v:toLedgerPParams\">toLedgerPParams</a> &#8759; <a href=\"Cardano-Api.html#t:ShelleyBasedEra\" title=\"Cardano.Api\">ShelleyBasedEra</a> era &#8594; <a href=\"Cardano-Api-ProtocolParameters.html#t:ProtocolParameters\" title=\"Cardano.Api.ProtocolParameters\">ProtocolParameters</a> &#8594; PParams (<a href=\"Cardano-Api-Eras.html#t:ShelleyLedgerEra\" title=\"Cardano.Api.Eras\">ShelleyLedgerEra</a> era)",
+    "name": "toLedgerPParams",
+    "module": "Cardano.Api",
+    "link": "lib/Cardano-Api.html#v:toLedgerPParams"
+  },
+  {
+    "display_html": "<a href=\"#v:fromLedgerPParams\">fromLedgerPParams</a> &#8759; <a href=\"Cardano-Api.html#t:ShelleyBasedEra\" title=\"Cardano.Api\">ShelleyBasedEra</a> era &#8594; PParams (<a href=\"Cardano-Api-Eras.html#t:ShelleyLedgerEra\" title=\"Cardano.Api.Eras\">ShelleyLedgerEra</a> era) &#8594; <a href=\"Cardano-Api-ProtocolParameters.html#t:ProtocolParameters\" title=\"Cardano.Api.ProtocolParameters\">ProtocolParameters</a>",
+    "name": "fromLedgerPParams",
+    "module": "Cardano.Api",
+    "link": "lib/Cardano-Api.html#v:fromLedgerPParams"
+  },
+  {
     "display_html": "<a href=\"#v:toNetworkMagic\">toNetworkMagic</a> &#8759; <a href=\"Cardano-Api.html#t:NetworkId\" title=\"Cardano.Api\">NetworkId</a> &#8594; <a href=\"Cardano-Api.html#t:NetworkMagic\" title=\"Cardano.Api\">NetworkMagic</a>",
     "name": "toNetworkMagic",
     "module": "Cardano.Api",
