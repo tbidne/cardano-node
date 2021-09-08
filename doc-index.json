@@ -3534,96 +3534,6 @@
     "link": "lib/Cardano-Api-IPC.html#t:NodeToClientVersion"
   },
   {
-    "display_html": "<span class=\"keyword\">data</span> <a href=\"#t:Env\">Env</a> = <a href=\"#v:Env\">Env</a> {<ul class=\"subs\"><li><a href=\"#v:envLedgerConfig\">envLedgerConfig</a> &#8759; HardForkLedgerConfig (CardanoEras StandardCrypto)</li><li><a href=\"#v:envProtocolConfig\">envProtocolConfig</a> &#8759; ConsensusConfig (HardForkProtocol (CardanoEras StandardCrypto))</li></ul>}",
-    "name": "Env Env envLedgerConfig envProtocolConfig",
-    "module": "Cardano.Api.LedgerState",
-    "link": "lib/Cardano-Api-LedgerState.html#t:Env"
-  },
-  {
-    "display_html": "<a href=\"#v:envSecurityParam\">envSecurityParam</a> &#8759; <a href=\"Cardano-Api-LedgerState.html#t:Env\" title=\"Cardano.Api.LedgerState\">Env</a> &#8594; <a href=\"file:///opt/ghc/8.10.4/share/doc/ghc-8.10.4/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:Word64\" title=\"Distribution.Compat.Prelude.Internal\">Word64</a>",
-    "name": "envSecurityParam",
-    "module": "Cardano.Api.LedgerState",
-    "link": "lib/Cardano-Api-LedgerState.html#v:envSecurityParam"
-  },
-  {
-    "display_html": "<span class=\"keyword\">newtype</span> <a href=\"#t:LedgerState\">LedgerState</a> <span class=\"keyword\">where</span><ul class=\"subs\"><li><a href=\"#v:LedgerState\">LedgerState</a> { <ul class=\"subs\"><li><a href=\"#v:clsState\">clsState</a> &#8759; <a href=\"Cardano-Api-Query.html#t:LedgerState\" title=\"Cardano.Api.Query\">LedgerState</a> (HardForkBlock (CardanoEras StandardCrypto))</li></ul> }</li><li><span class=\"keyword\">pattern</span> <a href=\"#v:LedgerStateByron\">LedgerStateByron</a> &#8759; <a href=\"Cardano-Api-Query.html#t:LedgerState\" title=\"Cardano.Api.Query\">LedgerState</a> ByronBlock &#8594; <a href=\"Cardano-Api-LedgerState.html#t:LedgerState\" title=\"Cardano.Api.LedgerState\">LedgerState</a></li><li><span class=\"keyword\">pattern</span> <a href=\"#v:LedgerStateShelley\">LedgerStateShelley</a> &#8759; <a href=\"Cardano-Api-Query.html#t:LedgerState\" title=\"Cardano.Api.Query\">LedgerState</a> (ShelleyBlock (ShelleyEra StandardCrypto)) &#8594; <a href=\"Cardano-Api-LedgerState.html#t:LedgerState\" title=\"Cardano.Api.LedgerState\">LedgerState</a></li><li><span class=\"keyword\">pattern</span> <a href=\"#v:LedgerStateAllegra\">LedgerStateAllegra</a> &#8759; <a href=\"Cardano-Api-Query.html#t:LedgerState\" title=\"Cardano.Api.Query\">LedgerState</a> (ShelleyBlock (AllegraEra StandardCrypto)) &#8594; <a href=\"Cardano-Api-LedgerState.html#t:LedgerState\" title=\"Cardano.Api.LedgerState\">LedgerState</a></li><li><span class=\"keyword\">pattern</span> <a href=\"#v:LedgerStateMary\">LedgerStateMary</a> &#8759; <a href=\"Cardano-Api-Query.html#t:LedgerState\" title=\"Cardano.Api.Query\">LedgerState</a> (ShelleyBlock (MaryEra StandardCrypto)) &#8594; <a href=\"Cardano-Api-LedgerState.html#t:LedgerState\" title=\"Cardano.Api.LedgerState\">LedgerState</a></li></ul>",
-    "name": "LedgerState LedgerStateByron LedgerStateShelley LedgerStateAllegra LedgerStateMary LedgerState clsState",
-    "module": "Cardano.Api.LedgerState",
-    "link": "lib/Cardano-Api-LedgerState.html#t:LedgerState"
-  },
-  {
-    "display_html": "<a href=\"#v:initialLedgerState\">initialLedgerState</a> &#8759; <a href=\"file:///opt/ghc/8.10.4/share/doc/ghc-8.10.4/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:FilePath\" title=\"Distribution.Compat.Prelude.Internal\">FilePath</a> &#8594; <a href=\"file:///opt/ghc/8.10.4/share/doc/ghc-8.10.4/html/libraries/mtl-2.2.2/Control-Monad-Except.html#t:ExceptT\" title=\"Control.Monad.Except\">ExceptT</a> <a href=\"Cardano-Api-LedgerState.html#t:InitialLedgerStateError\" title=\"Cardano.Api.LedgerState\">InitialLedgerStateError</a> <a href=\"file:///opt/ghc/8.10.4/share/doc/ghc-8.10.4/html/libraries/base-4.14.1.0/System-IO.html#t:IO\" title=\"System.IO\">IO</a> (<a href=\"Cardano-Api-LedgerState.html#t:Env\" title=\"Cardano.Api.LedgerState\">Env</a>, <a href=\"Cardano-Api-LedgerState.html#t:LedgerState\" title=\"Cardano.Api.LedgerState\">LedgerState</a>)",
-    "name": "initialLedgerState",
-    "module": "Cardano.Api.LedgerState",
-    "link": "lib/Cardano-Api-LedgerState.html#v:initialLedgerState"
-  },
-  {
-    "display_html": "<a href=\"#v:applyBlock\">applyBlock</a> &#8759; <a href=\"Cardano-Api-LedgerState.html#t:Env\" title=\"Cardano.Api.LedgerState\">Env</a> &#8594; <a href=\"Cardano-Api-LedgerState.html#t:LedgerState\" title=\"Cardano.Api.LedgerState\">LedgerState</a> &#8594; <a href=\"Cardano-Api-LedgerState.html#t:ValidationMode\" title=\"Cardano.Api.LedgerState\">ValidationMode</a> &#8594; <a href=\"Cardano-Api-Block.html#t:Block\" title=\"Cardano.Api.Block\">Block</a> era &#8594; <a href=\"file:///opt/ghc/8.10.4/share/doc/ghc-8.10.4/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:Either\" title=\"Distribution.Compat.Prelude.Internal\">Either</a> <a href=\"file:///opt/ghc/8.10.4/share/doc/ghc-8.10.4/html/libraries/text-1.2.4.1/Data-Text.html#t:Text\" title=\"Data.Text\">Text</a> <a href=\"Cardano-Api-LedgerState.html#t:LedgerState\" title=\"Cardano.Api.LedgerState\">LedgerState</a>",
-    "name": "applyBlock",
-    "module": "Cardano.Api.LedgerState",
-    "link": "lib/Cardano-Api-LedgerState.html#v:applyBlock"
-  },
-  {
-    "display_html": "<span class=\"keyword\">data</span> <a href=\"#t:ValidationMode\">ValidationMode</a><ul class=\"subs\"><li>= <a href=\"#v:FullValidation\">FullValidation</a></li><li>| <a href=\"#v:QuickValidation\">QuickValidation</a></li></ul>",
-    "name": "ValidationMode FullValidation QuickValidation",
-    "module": "Cardano.Api.LedgerState",
-    "link": "lib/Cardano-Api-LedgerState.html#t:ValidationMode"
-  },
-  {
-    "display_html": "<a href=\"#v:foldBlocks\">foldBlocks</a> &#8759; &#8704; a. <a href=\"file:///opt/ghc/8.10.4/share/doc/ghc-8.10.4/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:FilePath\" title=\"Distribution.Compat.Prelude.Internal\">FilePath</a> &#8594; <a href=\"Cardano-Api-Modes.html#t:ConsensusModeParams\" title=\"Cardano.Api.Modes\">ConsensusModeParams</a> <a href=\"Cardano-Api-Modes.html#t:CardanoMode\" title=\"Cardano.Api.Modes\">CardanoMode</a> &#8594; <a href=\"file:///opt/ghc/8.10.4/share/doc/ghc-8.10.4/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:FilePath\" title=\"Distribution.Compat.Prelude.Internal\">FilePath</a> &#8594; <a href=\"Cardano-Api-LedgerState.html#t:ValidationMode\" title=\"Cardano.Api.LedgerState\">ValidationMode</a> &#8594; a &#8594; (<a href=\"Cardano-Api-LedgerState.html#t:Env\" title=\"Cardano.Api.LedgerState\">Env</a> &#8594; <a href=\"Cardano-Api-LedgerState.html#t:LedgerState\" title=\"Cardano.Api.LedgerState\">LedgerState</a> &#8594; <a href=\"Cardano-Api-Block.html#t:BlockInMode\" title=\"Cardano.Api.Block\">BlockInMode</a> <a href=\"Cardano-Api-Modes.html#t:CardanoMode\" title=\"Cardano.Api.Modes\">CardanoMode</a> &#8594; a &#8594; <a href=\"file:///opt/ghc/8.10.4/share/doc/ghc-8.10.4/html/libraries/base-4.14.1.0/System-IO.html#t:IO\" title=\"System.IO\">IO</a> a) &#8594; <a href=\"file:///opt/ghc/8.10.4/share/doc/ghc-8.10.4/html/libraries/mtl-2.2.2/Control-Monad-Except.html#t:ExceptT\" title=\"Control.Monad.Except\">ExceptT</a> <a href=\"Cardano-Api-LedgerState.html#t:FoldBlocksError\" title=\"Cardano.Api.LedgerState\">FoldBlocksError</a> <a href=\"file:///opt/ghc/8.10.4/share/doc/ghc-8.10.4/html/libraries/base-4.14.1.0/System-IO.html#t:IO\" title=\"System.IO\">IO</a> a",
-    "name": "foldBlocks",
-    "module": "Cardano.Api.LedgerState",
-    "link": "lib/Cardano-Api-LedgerState.html#v:foldBlocks"
-  },
-  {
-    "display_html": "<a href=\"#v:chainSyncClientWithLedgerState\">chainSyncClientWithLedgerState</a> &#8759; &#8704; m a. <a href=\"file:///opt/ghc/8.10.4/share/doc/ghc-8.10.4/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:Monad\" title=\"Distribution.Compat.Prelude.Internal\">Monad</a> m &#8658; <a href=\"Cardano-Api-LedgerState.html#t:Env\" title=\"Cardano.Api.LedgerState\">Env</a> &#8594; <a href=\"Cardano-Api-LedgerState.html#t:LedgerState\" title=\"Cardano.Api.LedgerState\">LedgerState</a> &#8594; <a href=\"Cardano-Api-LedgerState.html#t:ValidationMode\" title=\"Cardano.Api.LedgerState\">ValidationMode</a> &#8594; <a href=\"Cardano-Api-ChainSync-Client.html#t:ChainSyncClient\" title=\"Cardano.Api.ChainSync.Client\">ChainSyncClient</a> (<a href=\"Cardano-Api-Block.html#t:BlockInMode\" title=\"Cardano.Api.Block\">BlockInMode</a> <a href=\"Cardano-Api-Modes.html#t:CardanoMode\" title=\"Cardano.Api.Modes\">CardanoMode</a>, <a href=\"file:///opt/ghc/8.10.4/share/doc/ghc-8.10.4/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:Either\" title=\"Distribution.Compat.Prelude.Internal\">Either</a> <a href=\"file:///opt/ghc/8.10.4/share/doc/ghc-8.10.4/html/libraries/text-1.2.4.1/Data-Text.html#t:Text\" title=\"Data.Text\">Text</a> <a href=\"Cardano-Api-LedgerState.html#t:LedgerState\" title=\"Cardano.Api.LedgerState\">LedgerState</a>) <a href=\"Cardano-Api-Block.html#t:ChainPoint\" title=\"Cardano.Api.Block\">ChainPoint</a> <a href=\"Cardano-Api-Block.html#t:ChainTip\" title=\"Cardano.Api.Block\">ChainTip</a> m a &#8594; <a href=\"Cardano-Api-ChainSync-Client.html#t:ChainSyncClient\" title=\"Cardano.Api.ChainSync.Client\">ChainSyncClient</a> (<a href=\"Cardano-Api-Block.html#t:BlockInMode\" title=\"Cardano.Api.Block\">BlockInMode</a> <a href=\"Cardano-Api-Modes.html#t:CardanoMode\" title=\"Cardano.Api.Modes\">CardanoMode</a>) <a href=\"Cardano-Api-Block.html#t:ChainPoint\" title=\"Cardano.Api.Block\">ChainPoint</a> <a href=\"Cardano-Api-Block.html#t:ChainTip\" title=\"Cardano.Api.Block\">ChainTip</a> m a",
-    "name": "chainSyncClientWithLedgerState",
-    "module": "Cardano.Api.LedgerState",
-    "link": "lib/Cardano-Api-LedgerState.html#v:chainSyncClientWithLedgerState"
-  },
-  {
-    "display_html": "<a href=\"#v:chainSyncClientPipelinedWithLedgerState\">chainSyncClientPipelinedWithLedgerState</a> &#8759; &#8704; m a. <a href=\"file:///opt/ghc/8.10.4/share/doc/ghc-8.10.4/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:Monad\" title=\"Distribution.Compat.Prelude.Internal\">Monad</a> m &#8658; <a href=\"Cardano-Api-LedgerState.html#t:Env\" title=\"Cardano.Api.LedgerState\">Env</a> &#8594; <a href=\"Cardano-Api-LedgerState.html#t:LedgerState\" title=\"Cardano.Api.LedgerState\">LedgerState</a> &#8594; <a href=\"Cardano-Api-LedgerState.html#t:ValidationMode\" title=\"Cardano.Api.LedgerState\">ValidationMode</a> &#8594; <a href=\"Cardano-Api-ChainSync-ClientPipelined.html#t:ChainSyncClientPipelined\" title=\"Cardano.Api.ChainSync.ClientPipelined\">ChainSyncClientPipelined</a> (<a href=\"Cardano-Api-Block.html#t:BlockInMode\" title=\"Cardano.Api.Block\">BlockInMode</a> <a href=\"Cardano-Api-Modes.html#t:CardanoMode\" title=\"Cardano.Api.Modes\">CardanoMode</a>, <a href=\"file:///opt/ghc/8.10.4/share/doc/ghc-8.10.4/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:Either\" title=\"Distribution.Compat.Prelude.Internal\">Either</a> <a href=\"file:///opt/ghc/8.10.4/share/doc/ghc-8.10.4/html/libraries/text-1.2.4.1/Data-Text.html#t:Text\" title=\"Data.Text\">Text</a> <a href=\"Cardano-Api-LedgerState.html#t:LedgerState\" title=\"Cardano.Api.LedgerState\">LedgerState</a>) <a href=\"Cardano-Api-Block.html#t:ChainPoint\" title=\"Cardano.Api.Block\">ChainPoint</a> <a href=\"Cardano-Api-Block.html#t:ChainTip\" title=\"Cardano.Api.Block\">ChainTip</a> m a &#8594; <a href=\"Cardano-Api-ChainSync-ClientPipelined.html#t:ChainSyncClientPipelined\" title=\"Cardano.Api.ChainSync.ClientPipelined\">ChainSyncClientPipelined</a> (<a href=\"Cardano-Api-Block.html#t:BlockInMode\" title=\"Cardano.Api.Block\">BlockInMode</a> <a href=\"Cardano-Api-Modes.html#t:CardanoMode\" title=\"Cardano.Api.Modes\">CardanoMode</a>) <a href=\"Cardano-Api-Block.html#t:ChainPoint\" title=\"Cardano.Api.Block\">ChainPoint</a> <a href=\"Cardano-Api-Block.html#t:ChainTip\" title=\"Cardano.Api.Block\">ChainTip</a> m a",
-    "name": "chainSyncClientPipelinedWithLedgerState",
-    "module": "Cardano.Api.LedgerState",
-    "link": "lib/Cardano-Api-LedgerState.html#v:chainSyncClientPipelinedWithLedgerState"
-  },
-  {
-    "display_html": "<span class=\"keyword\">data</span> <a href=\"#t:FoldBlocksError\">FoldBlocksError</a><ul class=\"subs\"><li>= <a href=\"#v:FoldBlocksInitialLedgerStateError\">FoldBlocksInitialLedgerStateError</a> <a href=\"Cardano-Api-LedgerState.html#t:InitialLedgerStateError\" title=\"Cardano.Api.LedgerState\">InitialLedgerStateError</a></li><li>| <a href=\"#v:FoldBlocksApplyBlockError\">FoldBlocksApplyBlockError</a> <a href=\"file:///opt/ghc/8.10.4/share/doc/ghc-8.10.4/html/libraries/text-1.2.4.1/Data-Text.html#t:Text\" title=\"Data.Text\">Text</a></li></ul>",
-    "name": "FoldBlocksError FoldBlocksInitialLedgerStateError FoldBlocksApplyBlockError",
-    "module": "Cardano.Api.LedgerState",
-    "link": "lib/Cardano-Api-LedgerState.html#t:FoldBlocksError"
-  },
-  {
-    "display_html": "<span class=\"keyword\">data</span> <a href=\"#t:GenesisConfigError\">GenesisConfigError</a><ul class=\"subs\"><li>= <a href=\"#v:NEError\">NEError</a> !<a href=\"file:///opt/ghc/8.10.4/share/doc/ghc-8.10.4/html/libraries/text-1.2.4.1/Data-Text.html#t:Text\" title=\"Data.Text\">Text</a></li><li>| <a href=\"#v:NEByronConfig\">NEByronConfig</a> !<a href=\"file:///opt/ghc/8.10.4/share/doc/ghc-8.10.4/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:FilePath\" title=\"Distribution.Compat.Prelude.Internal\">FilePath</a> !ConfigurationError</li><li>| <a href=\"#v:NEShelleyConfig\">NEShelleyConfig</a> !<a href=\"file:///opt/ghc/8.10.4/share/doc/ghc-8.10.4/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:FilePath\" title=\"Distribution.Compat.Prelude.Internal\">FilePath</a> !<a href=\"file:///opt/ghc/8.10.4/share/doc/ghc-8.10.4/html/libraries/text-1.2.4.1/Data-Text.html#t:Text\" title=\"Data.Text\">Text</a></li><li>| <a href=\"#v:NEAlonzoConfig\">NEAlonzoConfig</a> !<a href=\"file:///opt/ghc/8.10.4/share/doc/ghc-8.10.4/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:FilePath\" title=\"Distribution.Compat.Prelude.Internal\">FilePath</a> !<a href=\"file:///opt/ghc/8.10.4/share/doc/ghc-8.10.4/html/libraries/text-1.2.4.1/Data-Text.html#t:Text\" title=\"Data.Text\">Text</a></li><li>| <a href=\"#v:NECardanoConfig\">NECardanoConfig</a> !<a href=\"file:///opt/ghc/8.10.4/share/doc/ghc-8.10.4/html/libraries/text-1.2.4.1/Data-Text.html#t:Text\" title=\"Data.Text\">Text</a></li></ul>",
-    "name": "GenesisConfigError NECardanoConfig NEError NEByronConfig NEShelleyConfig NEAlonzoConfig",
-    "module": "Cardano.Api.LedgerState",
-    "link": "lib/Cardano-Api-LedgerState.html#t:GenesisConfigError"
-  },
-  {
-    "display_html": "<span class=\"keyword\">data</span> <a href=\"#t:InitialLedgerStateError\">InitialLedgerStateError</a><ul class=\"subs\"><li>= <a href=\"#v:ILSEConfigFile\">ILSEConfigFile</a> <a href=\"file:///opt/ghc/8.10.4/share/doc/ghc-8.10.4/html/libraries/text-1.2.4.1/Data-Text.html#t:Text\" title=\"Data.Text\">Text</a></li><li>| <a href=\"#v:ILSEGenesisFile\">ILSEGenesisFile</a> <a href=\"Cardano-Api-LedgerState.html#t:GenesisConfigError\" title=\"Cardano.Api.LedgerState\">GenesisConfigError</a></li><li>| <a href=\"#v:ILSELedgerConsensusConfig\">ILSELedgerConsensusConfig</a> <a href=\"Cardano-Api-LedgerState.html#t:GenesisConfigError\" title=\"Cardano.Api.LedgerState\">GenesisConfigError</a></li></ul>",
-    "name": "InitialLedgerStateError ILSEConfigFile ILSEGenesisFile ILSELedgerConsensusConfig",
-    "module": "Cardano.Api.LedgerState",
-    "link": "lib/Cardano-Api-LedgerState.html#t:InitialLedgerStateError"
-  },
-  {
-    "display_html": "<a href=\"#v:renderFoldBlocksError\">renderFoldBlocksError</a> &#8759; <a href=\"Cardano-Api-LedgerState.html#t:FoldBlocksError\" title=\"Cardano.Api.LedgerState\">FoldBlocksError</a> &#8594; <a href=\"file:///opt/ghc/8.10.4/share/doc/ghc-8.10.4/html/libraries/text-1.2.4.1/Data-Text.html#t:Text\" title=\"Data.Text\">Text</a>",
-    "name": "renderFoldBlocksError",
-    "module": "Cardano.Api.LedgerState",
-    "link": "lib/Cardano-Api-LedgerState.html#v:renderFoldBlocksError"
-  },
-  {
-    "display_html": "<a href=\"#v:renderGenesisConfigError\">renderGenesisConfigError</a> &#8759; <a href=\"Cardano-Api-LedgerState.html#t:GenesisConfigError\" title=\"Cardano.Api.LedgerState\">GenesisConfigError</a> &#8594; <a href=\"file:///opt/ghc/8.10.4/share/doc/ghc-8.10.4/html/libraries/text-1.2.4.1/Data-Text.html#t:Text\" title=\"Data.Text\">Text</a>",
-    "name": "renderGenesisConfigError",
-    "module": "Cardano.Api.LedgerState",
-    "link": "lib/Cardano-Api-LedgerState.html#v:renderGenesisConfigError"
-  },
-  {
-    "display_html": "<a href=\"#v:renderInitialLedgerStateError\">renderInitialLedgerStateError</a> &#8759; <a href=\"Cardano-Api-LedgerState.html#t:InitialLedgerStateError\" title=\"Cardano.Api.LedgerState\">InitialLedgerStateError</a> &#8594; <a href=\"file:///opt/ghc/8.10.4/share/doc/ghc-8.10.4/html/libraries/text-1.2.4.1/Data-Text.html#t:Text\" title=\"Data.Text\">Text</a>",
-    "name": "renderInitialLedgerStateError",
-    "module": "Cardano.Api.LedgerState",
-    "link": "lib/Cardano-Api-LedgerState.html#v:renderInitialLedgerStateError"
-  },
-  {
     "display_html": "<span class=\"keyword\">data</span> <a href=\"#t:LocalStateQueryExpr\">LocalStateQueryExpr</a> block point query r m a",
     "name": "LocalStateQueryExpr",
     "module": "Cardano.Api.IPC.Monad",
@@ -3688,6 +3598,120 @@
     "name": "AsType AsByronAddr AsShelleyAddr AsByronAddress AsShelleyAddress AsAddress AsAddressAny AsAddressInEra AsStakeAddress AsByronEra AsShelleyEra AsAllegraEra AsMaryEra AsAlonzoEra AsByron AsShelley AsAllegra AsMary AsHash AsVerificationKey AsSigningKey AsTx AsByronTx AsShelleyTx AsKeyWitness AsByronWitness AsShelleyWitness AsTextEnvelope AsTxMetadata AsPaymentKey AsPaymentExtendedKey AsStakeKey AsStakeExtendedKey AsGenesisKey AsGenesisExtendedKey AsGenesisDelegateKey AsGenesisDelegateExtendedKey AsGenesisUTxOKey AsStakePoolKey AsScriptData AsSimpleScriptV1 AsSimpleScriptV2 AsPlutusScriptV1 AsScript AsScriptInAnyLang AsScriptInEra AsScriptHash AsSimpleScript AsPlutusScript AsByronKey AsByronKeyLegacy AsKesKey AsVrfKey AsStakePoolMetadata AsPolicyId AsAssetName AsPraosNonce AsUpdateProposal AsCertificate AsOperationalCertificate AsOperationalCertificateIssueCounter",
     "module": "Cardano.Api.OperationalCertificate",
     "link": "lib/Cardano-Api-OperationalCertificate.html#t:AsType"
+  },
+  {
+    "display_html": "<span class=\"keyword\">data</span> <a href=\"#t:LedgerEvent\">LedgerEvent</a><ul class=\"subs\"><li>= <a href=\"#v:PoolRegistration\">PoolRegistration</a> <a href=\"Cardano-Api-Certificate.html#t:Certificate\" title=\"Cardano.Api.Certificate\">Certificate</a></li><li>| <a href=\"#v:PoolReRegistration\">PoolReRegistration</a> <a href=\"Cardano-Api-Certificate.html#t:Certificate\" title=\"Cardano.Api.Certificate\">Certificate</a></li><li>| <a href=\"#v:RewardsDistribution\">RewardsDistribution</a> <a href=\"Cardano-Api-ProtocolParameters.html#t:EpochNo\" title=\"Cardano.Api.ProtocolParameters\">EpochNo</a> (<a href=\"file:///opt/ghc/8.10.4/share/doc/ghc-8.10.4/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:Map\" title=\"Distribution.Compat.Prelude.Internal\">Map</a> <a href=\"Cardano-Api-Address.html#t:StakeCredential\" title=\"Cardano.Api.Address\">StakeCredential</a> <a href=\"Cardano-Api-Value.html#t:Lovelace\" title=\"Cardano.Api.Value\">Lovelace</a>)</li><li>| <a href=\"#v:MIRDistribution\">MIRDistribution</a> <a href=\"Cardano-Api-LedgerEvent.html#t:MIRDistributionDetails\" title=\"Cardano.Api.LedgerEvent\">MIRDistributionDetails</a></li></ul>",
+    "name": "LedgerEvent PoolRegistration PoolReRegistration RewardsDistribution MIRDistribution",
+    "module": "Cardano.Api.LedgerEvent",
+    "link": "lib/Cardano-Api-LedgerEvent.html#t:LedgerEvent"
+  },
+  {
+    "display_html": "<span class=\"keyword\">data</span> <a href=\"#t:MIRDistributionDetails\">MIRDistributionDetails</a> = <a href=\"#v:MIRDistributionDetails\">MIRDistributionDetails</a> {<ul class=\"subs\"><li><a href=\"#v:reservePayouts\">reservePayouts</a> &#8759; <a href=\"file:///opt/ghc/8.10.4/share/doc/ghc-8.10.4/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:Map\" title=\"Distribution.Compat.Prelude.Internal\">Map</a> <a href=\"Cardano-Api-Address.html#t:StakeCredential\" title=\"Cardano.Api.Address\">StakeCredential</a> <a href=\"Cardano-Api-Value.html#t:Lovelace\" title=\"Cardano.Api.Value\">Lovelace</a></li><li><a href=\"#v:treasuryPayouts\">treasuryPayouts</a> &#8759; <a href=\"file:///opt/ghc/8.10.4/share/doc/ghc-8.10.4/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:Map\" title=\"Distribution.Compat.Prelude.Internal\">Map</a> <a href=\"Cardano-Api-Address.html#t:StakeCredential\" title=\"Cardano.Api.Address\">StakeCredential</a> <a href=\"Cardano-Api-Value.html#t:Lovelace\" title=\"Cardano.Api.Value\">Lovelace</a></li><li><a href=\"#v:reservesToTreasury\">reservesToTreasury</a> &#8759; <a href=\"Cardano-Api-Value.html#t:Lovelace\" title=\"Cardano.Api.Value\">Lovelace</a></li><li><a href=\"#v:treasuryToReserves\">treasuryToReserves</a> &#8759; <a href=\"Cardano-Api-Value.html#t:Lovelace\" title=\"Cardano.Api.Value\">Lovelace</a></li></ul>}",
+    "name": "MIRDistributionDetails MIRDistributionDetails reservePayouts treasuryPayouts reservesToTreasury treasuryToReserves",
+    "module": "Cardano.Api.LedgerEvent",
+    "link": "lib/Cardano-Api-LedgerEvent.html#t:MIRDistributionDetails"
+  },
+  {
+    "display_html": "<a href=\"#v:toLedgerEvent\">toLedgerEvent</a> &#8759; ConvertLedgerEvent blk &#8658; WrapLedgerEvent blk &#8594; <a href=\"file:///opt/ghc/8.10.4/share/doc/ghc-8.10.4/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:Maybe\" title=\"Distribution.Compat.Prelude.Internal\">Maybe</a> <a href=\"Cardano-Api-LedgerEvent.html#t:LedgerEvent\" title=\"Cardano.Api.LedgerEvent\">LedgerEvent</a>",
+    "name": "toLedgerEvent",
+    "module": "Cardano.Api.LedgerEvent",
+    "link": "lib/Cardano-Api-LedgerEvent.html#v:toLedgerEvent"
+  },
+  {
+    "display_html": "<span class=\"keyword\">data</span> <a href=\"#t:Env\">Env</a> = <a href=\"#v:Env\">Env</a> {<ul class=\"subs\"><li><a href=\"#v:envLedgerConfig\">envLedgerConfig</a> &#8759; HardForkLedgerConfig (CardanoEras StandardCrypto)</li><li><a href=\"#v:envProtocolConfig\">envProtocolConfig</a> &#8759; ConsensusConfig (HardForkProtocol (CardanoEras StandardCrypto))</li></ul>}",
+    "name": "Env Env envLedgerConfig envProtocolConfig",
+    "module": "Cardano.Api.LedgerState",
+    "link": "lib/Cardano-Api-LedgerState.html#t:Env"
+  },
+  {
+    "display_html": "<a href=\"#v:envSecurityParam\">envSecurityParam</a> &#8759; <a href=\"Cardano-Api-LedgerState.html#t:Env\" title=\"Cardano.Api.LedgerState\">Env</a> &#8594; <a href=\"file:///opt/ghc/8.10.4/share/doc/ghc-8.10.4/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:Word64\" title=\"Distribution.Compat.Prelude.Internal\">Word64</a>",
+    "name": "envSecurityParam",
+    "module": "Cardano.Api.LedgerState",
+    "link": "lib/Cardano-Api-LedgerState.html#v:envSecurityParam"
+  },
+  {
+    "display_html": "<span class=\"keyword\">newtype</span> <a href=\"#t:LedgerState\">LedgerState</a> <span class=\"keyword\">where</span><ul class=\"subs\"><li><a href=\"#v:LedgerState\">LedgerState</a> { <ul class=\"subs\"><li><a href=\"#v:clsState\">clsState</a> &#8759; <a href=\"Cardano-Api-Query.html#t:LedgerState\" title=\"Cardano.Api.Query\">LedgerState</a> (HardForkBlock (CardanoEras StandardCrypto))</li></ul> }</li><li><span class=\"keyword\">pattern</span> <a href=\"#v:LedgerStateByron\">LedgerStateByron</a> &#8759; <a href=\"Cardano-Api-Query.html#t:LedgerState\" title=\"Cardano.Api.Query\">LedgerState</a> ByronBlock &#8594; <a href=\"Cardano-Api-LedgerState.html#t:LedgerState\" title=\"Cardano.Api.LedgerState\">LedgerState</a></li><li><span class=\"keyword\">pattern</span> <a href=\"#v:LedgerStateShelley\">LedgerStateShelley</a> &#8759; <a href=\"Cardano-Api-Query.html#t:LedgerState\" title=\"Cardano.Api.Query\">LedgerState</a> (ShelleyBlock (ShelleyEra StandardCrypto)) &#8594; <a href=\"Cardano-Api-LedgerState.html#t:LedgerState\" title=\"Cardano.Api.LedgerState\">LedgerState</a></li><li><span class=\"keyword\">pattern</span> <a href=\"#v:LedgerStateAllegra\">LedgerStateAllegra</a> &#8759; <a href=\"Cardano-Api-Query.html#t:LedgerState\" title=\"Cardano.Api.Query\">LedgerState</a> (ShelleyBlock (AllegraEra StandardCrypto)) &#8594; <a href=\"Cardano-Api-LedgerState.html#t:LedgerState\" title=\"Cardano.Api.LedgerState\">LedgerState</a></li><li><span class=\"keyword\">pattern</span> <a href=\"#v:LedgerStateMary\">LedgerStateMary</a> &#8759; <a href=\"Cardano-Api-Query.html#t:LedgerState\" title=\"Cardano.Api.Query\">LedgerState</a> (ShelleyBlock (MaryEra StandardCrypto)) &#8594; <a href=\"Cardano-Api-LedgerState.html#t:LedgerState\" title=\"Cardano.Api.LedgerState\">LedgerState</a></li></ul>",
+    "name": "LedgerState LedgerStateByron LedgerStateShelley LedgerStateAllegra LedgerStateMary LedgerState clsState",
+    "module": "Cardano.Api.LedgerState",
+    "link": "lib/Cardano-Api-LedgerState.html#t:LedgerState"
+  },
+  {
+    "display_html": "<a href=\"#v:initialLedgerState\">initialLedgerState</a> &#8759; <a href=\"file:///opt/ghc/8.10.4/share/doc/ghc-8.10.4/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:FilePath\" title=\"Distribution.Compat.Prelude.Internal\">FilePath</a> &#8594; <a href=\"file:///opt/ghc/8.10.4/share/doc/ghc-8.10.4/html/libraries/mtl-2.2.2/Control-Monad-Except.html#t:ExceptT\" title=\"Control.Monad.Except\">ExceptT</a> <a href=\"Cardano-Api-LedgerState.html#t:InitialLedgerStateError\" title=\"Cardano.Api.LedgerState\">InitialLedgerStateError</a> <a href=\"file:///opt/ghc/8.10.4/share/doc/ghc-8.10.4/html/libraries/base-4.14.1.0/System-IO.html#t:IO\" title=\"System.IO\">IO</a> (<a href=\"Cardano-Api-LedgerState.html#t:Env\" title=\"Cardano.Api.LedgerState\">Env</a>, <a href=\"Cardano-Api-LedgerState.html#t:LedgerState\" title=\"Cardano.Api.LedgerState\">LedgerState</a>)",
+    "name": "initialLedgerState",
+    "module": "Cardano.Api.LedgerState",
+    "link": "lib/Cardano-Api-LedgerState.html#v:initialLedgerState"
+  },
+  {
+    "display_html": "<a href=\"#v:applyBlock\">applyBlock</a> &#8759; <a href=\"Cardano-Api-LedgerState.html#t:Env\" title=\"Cardano.Api.LedgerState\">Env</a> &#8594; <a href=\"Cardano-Api-LedgerState.html#t:LedgerState\" title=\"Cardano.Api.LedgerState\">LedgerState</a> &#8594; <a href=\"Cardano-Api-LedgerState.html#t:ValidationMode\" title=\"Cardano.Api.LedgerState\">ValidationMode</a> &#8594; <a href=\"Cardano-Api-Block.html#t:Block\" title=\"Cardano.Api.Block\">Block</a> era &#8594; <a href=\"file:///opt/ghc/8.10.4/share/doc/ghc-8.10.4/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:Either\" title=\"Distribution.Compat.Prelude.Internal\">Either</a> <a href=\"file:///opt/ghc/8.10.4/share/doc/ghc-8.10.4/html/libraries/text-1.2.4.1/Data-Text.html#t:Text\" title=\"Data.Text\">Text</a> <a href=\"Cardano-Api-LedgerState.html#t:LedgerState\" title=\"Cardano.Api.LedgerState\">LedgerState</a>",
+    "name": "applyBlock",
+    "module": "Cardano.Api.LedgerState",
+    "link": "lib/Cardano-Api-LedgerState.html#v:applyBlock"
+  },
+  {
+    "display_html": "<span class=\"keyword\">data</span> <a href=\"#t:ValidationMode\">ValidationMode</a><ul class=\"subs\"><li>= <a href=\"#v:FullValidation\">FullValidation</a></li><li>| <a href=\"#v:QuickValidation\">QuickValidation</a></li></ul>",
+    "name": "ValidationMode FullValidation QuickValidation",
+    "module": "Cardano.Api.LedgerState",
+    "link": "lib/Cardano-Api-LedgerState.html#t:ValidationMode"
+  },
+  {
+    "display_html": "<a href=\"#v:applyBlockWithEvents\">applyBlockWithEvents</a> &#8759; <a href=\"Cardano-Api-LedgerState.html#t:Env\" title=\"Cardano.Api.LedgerState\">Env</a> &#8594; <a href=\"Cardano-Api-LedgerState.html#t:LedgerState\" title=\"Cardano.Api.LedgerState\">LedgerState</a> &#8594; <a href=\"file:///opt/ghc/8.10.4/share/doc/ghc-8.10.4/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:Bool\" title=\"Distribution.Compat.Prelude.Internal\">Bool</a> &#8594; HardForkBlock (CardanoEras StandardCrypto) &#8594; <a href=\"file:///opt/ghc/8.10.4/share/doc/ghc-8.10.4/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:Either\" title=\"Distribution.Compat.Prelude.Internal\">Either</a> <a href=\"file:///opt/ghc/8.10.4/share/doc/ghc-8.10.4/html/libraries/text-1.2.4.1/Data-Text.html#t:Text\" title=\"Data.Text\">Text</a> LedgerStateEvents",
+    "name": "applyBlockWithEvents",
+    "module": "Cardano.Api.LedgerState",
+    "link": "lib/Cardano-Api-LedgerState.html#v:applyBlockWithEvents"
+  },
+  {
+    "display_html": "<a href=\"#v:foldBlocks\">foldBlocks</a> &#8759; &#8704; a. <a href=\"file:///opt/ghc/8.10.4/share/doc/ghc-8.10.4/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:FilePath\" title=\"Distribution.Compat.Prelude.Internal\">FilePath</a> &#8594; <a href=\"Cardano-Api-Modes.html#t:ConsensusModeParams\" title=\"Cardano.Api.Modes\">ConsensusModeParams</a> <a href=\"Cardano-Api-Modes.html#t:CardanoMode\" title=\"Cardano.Api.Modes\">CardanoMode</a> &#8594; <a href=\"file:///opt/ghc/8.10.4/share/doc/ghc-8.10.4/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:FilePath\" title=\"Distribution.Compat.Prelude.Internal\">FilePath</a> &#8594; <a href=\"Cardano-Api-LedgerState.html#t:ValidationMode\" title=\"Cardano.Api.LedgerState\">ValidationMode</a> &#8594; a &#8594; (<a href=\"Cardano-Api-LedgerState.html#t:Env\" title=\"Cardano.Api.LedgerState\">Env</a> &#8594; <a href=\"Cardano-Api-LedgerState.html#t:LedgerState\" title=\"Cardano.Api.LedgerState\">LedgerState</a> &#8594; <a href=\"Cardano-Api-Block.html#t:BlockInMode\" title=\"Cardano.Api.Block\">BlockInMode</a> <a href=\"Cardano-Api-Modes.html#t:CardanoMode\" title=\"Cardano.Api.Modes\">CardanoMode</a> &#8594; a &#8594; <a href=\"file:///opt/ghc/8.10.4/share/doc/ghc-8.10.4/html/libraries/base-4.14.1.0/System-IO.html#t:IO\" title=\"System.IO\">IO</a> a) &#8594; <a href=\"file:///opt/ghc/8.10.4/share/doc/ghc-8.10.4/html/libraries/mtl-2.2.2/Control-Monad-Except.html#t:ExceptT\" title=\"Control.Monad.Except\">ExceptT</a> <a href=\"Cardano-Api-LedgerState.html#t:FoldBlocksError\" title=\"Cardano.Api.LedgerState\">FoldBlocksError</a> <a href=\"file:///opt/ghc/8.10.4/share/doc/ghc-8.10.4/html/libraries/base-4.14.1.0/System-IO.html#t:IO\" title=\"System.IO\">IO</a> a",
+    "name": "foldBlocks",
+    "module": "Cardano.Api.LedgerState",
+    "link": "lib/Cardano-Api-LedgerState.html#v:foldBlocks"
+  },
+  {
+    "display_html": "<a href=\"#v:chainSyncClientWithLedgerState\">chainSyncClientWithLedgerState</a> &#8759; &#8704; m a. <a href=\"file:///opt/ghc/8.10.4/share/doc/ghc-8.10.4/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:Monad\" title=\"Distribution.Compat.Prelude.Internal\">Monad</a> m &#8658; <a href=\"Cardano-Api-LedgerState.html#t:Env\" title=\"Cardano.Api.LedgerState\">Env</a> &#8594; <a href=\"Cardano-Api-LedgerState.html#t:LedgerState\" title=\"Cardano.Api.LedgerState\">LedgerState</a> &#8594; <a href=\"Cardano-Api-LedgerState.html#t:ValidationMode\" title=\"Cardano.Api.LedgerState\">ValidationMode</a> &#8594; <a href=\"Cardano-Api-ChainSync-Client.html#t:ChainSyncClient\" title=\"Cardano.Api.ChainSync.Client\">ChainSyncClient</a> (<a href=\"Cardano-Api-Block.html#t:BlockInMode\" title=\"Cardano.Api.Block\">BlockInMode</a> <a href=\"Cardano-Api-Modes.html#t:CardanoMode\" title=\"Cardano.Api.Modes\">CardanoMode</a>, <a href=\"file:///opt/ghc/8.10.4/share/doc/ghc-8.10.4/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:Either\" title=\"Distribution.Compat.Prelude.Internal\">Either</a> <a href=\"file:///opt/ghc/8.10.4/share/doc/ghc-8.10.4/html/libraries/text-1.2.4.1/Data-Text.html#t:Text\" title=\"Data.Text\">Text</a> <a href=\"Cardano-Api-LedgerState.html#t:LedgerState\" title=\"Cardano.Api.LedgerState\">LedgerState</a>) <a href=\"Cardano-Api-Block.html#t:ChainPoint\" title=\"Cardano.Api.Block\">ChainPoint</a> <a href=\"Cardano-Api-Block.html#t:ChainTip\" title=\"Cardano.Api.Block\">ChainTip</a> m a &#8594; <a href=\"Cardano-Api-ChainSync-Client.html#t:ChainSyncClient\" title=\"Cardano.Api.ChainSync.Client\">ChainSyncClient</a> (<a href=\"Cardano-Api-Block.html#t:BlockInMode\" title=\"Cardano.Api.Block\">BlockInMode</a> <a href=\"Cardano-Api-Modes.html#t:CardanoMode\" title=\"Cardano.Api.Modes\">CardanoMode</a>) <a href=\"Cardano-Api-Block.html#t:ChainPoint\" title=\"Cardano.Api.Block\">ChainPoint</a> <a href=\"Cardano-Api-Block.html#t:ChainTip\" title=\"Cardano.Api.Block\">ChainTip</a> m a",
+    "name": "chainSyncClientWithLedgerState",
+    "module": "Cardano.Api.LedgerState",
+    "link": "lib/Cardano-Api-LedgerState.html#v:chainSyncClientWithLedgerState"
+  },
+  {
+    "display_html": "<a href=\"#v:chainSyncClientPipelinedWithLedgerState\">chainSyncClientPipelinedWithLedgerState</a> &#8759; &#8704; m a. <a href=\"file:///opt/ghc/8.10.4/share/doc/ghc-8.10.4/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:Monad\" title=\"Distribution.Compat.Prelude.Internal\">Monad</a> m &#8658; <a href=\"Cardano-Api-LedgerState.html#t:Env\" title=\"Cardano.Api.LedgerState\">Env</a> &#8594; <a href=\"Cardano-Api-LedgerState.html#t:LedgerState\" title=\"Cardano.Api.LedgerState\">LedgerState</a> &#8594; <a href=\"Cardano-Api-LedgerState.html#t:ValidationMode\" title=\"Cardano.Api.LedgerState\">ValidationMode</a> &#8594; <a href=\"Cardano-Api-ChainSync-ClientPipelined.html#t:ChainSyncClientPipelined\" title=\"Cardano.Api.ChainSync.ClientPipelined\">ChainSyncClientPipelined</a> (<a href=\"Cardano-Api-Block.html#t:BlockInMode\" title=\"Cardano.Api.Block\">BlockInMode</a> <a href=\"Cardano-Api-Modes.html#t:CardanoMode\" title=\"Cardano.Api.Modes\">CardanoMode</a>, <a href=\"file:///opt/ghc/8.10.4/share/doc/ghc-8.10.4/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:Either\" title=\"Distribution.Compat.Prelude.Internal\">Either</a> <a href=\"file:///opt/ghc/8.10.4/share/doc/ghc-8.10.4/html/libraries/text-1.2.4.1/Data-Text.html#t:Text\" title=\"Data.Text\">Text</a> <a href=\"Cardano-Api-LedgerState.html#t:LedgerState\" title=\"Cardano.Api.LedgerState\">LedgerState</a>) <a href=\"Cardano-Api-Block.html#t:ChainPoint\" title=\"Cardano.Api.Block\">ChainPoint</a> <a href=\"Cardano-Api-Block.html#t:ChainTip\" title=\"Cardano.Api.Block\">ChainTip</a> m a &#8594; <a href=\"Cardano-Api-ChainSync-ClientPipelined.html#t:ChainSyncClientPipelined\" title=\"Cardano.Api.ChainSync.ClientPipelined\">ChainSyncClientPipelined</a> (<a href=\"Cardano-Api-Block.html#t:BlockInMode\" title=\"Cardano.Api.Block\">BlockInMode</a> <a href=\"Cardano-Api-Modes.html#t:CardanoMode\" title=\"Cardano.Api.Modes\">CardanoMode</a>) <a href=\"Cardano-Api-Block.html#t:ChainPoint\" title=\"Cardano.Api.Block\">ChainPoint</a> <a href=\"Cardano-Api-Block.html#t:ChainTip\" title=\"Cardano.Api.Block\">ChainTip</a> m a",
+    "name": "chainSyncClientPipelinedWithLedgerState",
+    "module": "Cardano.Api.LedgerState",
+    "link": "lib/Cardano-Api-LedgerState.html#v:chainSyncClientPipelinedWithLedgerState"
+  },
+  {
+    "display_html": "<span class=\"keyword\">data</span> <a href=\"#t:FoldBlocksError\">FoldBlocksError</a><ul class=\"subs\"><li>= <a href=\"#v:FoldBlocksInitialLedgerStateError\">FoldBlocksInitialLedgerStateError</a> <a href=\"Cardano-Api-LedgerState.html#t:InitialLedgerStateError\" title=\"Cardano.Api.LedgerState\">InitialLedgerStateError</a></li><li>| <a href=\"#v:FoldBlocksApplyBlockError\">FoldBlocksApplyBlockError</a> <a href=\"file:///opt/ghc/8.10.4/share/doc/ghc-8.10.4/html/libraries/text-1.2.4.1/Data-Text.html#t:Text\" title=\"Data.Text\">Text</a></li></ul>",
+    "name": "FoldBlocksError FoldBlocksInitialLedgerStateError FoldBlocksApplyBlockError",
+    "module": "Cardano.Api.LedgerState",
+    "link": "lib/Cardano-Api-LedgerState.html#t:FoldBlocksError"
+  },
+  {
+    "display_html": "<span class=\"keyword\">data</span> <a href=\"#t:GenesisConfigError\">GenesisConfigError</a><ul class=\"subs\"><li>= <a href=\"#v:NEError\">NEError</a> !<a href=\"file:///opt/ghc/8.10.4/share/doc/ghc-8.10.4/html/libraries/text-1.2.4.1/Data-Text.html#t:Text\" title=\"Data.Text\">Text</a></li><li>| <a href=\"#v:NEByronConfig\">NEByronConfig</a> !<a href=\"file:///opt/ghc/8.10.4/share/doc/ghc-8.10.4/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:FilePath\" title=\"Distribution.Compat.Prelude.Internal\">FilePath</a> !ConfigurationError</li><li>| <a href=\"#v:NEShelleyConfig\">NEShelleyConfig</a> !<a href=\"file:///opt/ghc/8.10.4/share/doc/ghc-8.10.4/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:FilePath\" title=\"Distribution.Compat.Prelude.Internal\">FilePath</a> !<a href=\"file:///opt/ghc/8.10.4/share/doc/ghc-8.10.4/html/libraries/text-1.2.4.1/Data-Text.html#t:Text\" title=\"Data.Text\">Text</a></li><li>| <a href=\"#v:NEAlonzoConfig\">NEAlonzoConfig</a> !<a href=\"file:///opt/ghc/8.10.4/share/doc/ghc-8.10.4/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:FilePath\" title=\"Distribution.Compat.Prelude.Internal\">FilePath</a> !<a href=\"file:///opt/ghc/8.10.4/share/doc/ghc-8.10.4/html/libraries/text-1.2.4.1/Data-Text.html#t:Text\" title=\"Data.Text\">Text</a></li><li>| <a href=\"#v:NECardanoConfig\">NECardanoConfig</a> !<a href=\"file:///opt/ghc/8.10.4/share/doc/ghc-8.10.4/html/libraries/text-1.2.4.1/Data-Text.html#t:Text\" title=\"Data.Text\">Text</a></li></ul>",
+    "name": "GenesisConfigError NECardanoConfig NEError NEByronConfig NEShelleyConfig NEAlonzoConfig",
+    "module": "Cardano.Api.LedgerState",
+    "link": "lib/Cardano-Api-LedgerState.html#t:GenesisConfigError"
+  },
+  {
+    "display_html": "<span class=\"keyword\">data</span> <a href=\"#t:InitialLedgerStateError\">InitialLedgerStateError</a><ul class=\"subs\"><li>= <a href=\"#v:ILSEConfigFile\">ILSEConfigFile</a> <a href=\"file:///opt/ghc/8.10.4/share/doc/ghc-8.10.4/html/libraries/text-1.2.4.1/Data-Text.html#t:Text\" title=\"Data.Text\">Text</a></li><li>| <a href=\"#v:ILSEGenesisFile\">ILSEGenesisFile</a> <a href=\"Cardano-Api-LedgerState.html#t:GenesisConfigError\" title=\"Cardano.Api.LedgerState\">GenesisConfigError</a></li><li>| <a href=\"#v:ILSELedgerConsensusConfig\">ILSELedgerConsensusConfig</a> <a href=\"Cardano-Api-LedgerState.html#t:GenesisConfigError\" title=\"Cardano.Api.LedgerState\">GenesisConfigError</a></li></ul>",
+    "name": "InitialLedgerStateError ILSEConfigFile ILSEGenesisFile ILSELedgerConsensusConfig",
+    "module": "Cardano.Api.LedgerState",
+    "link": "lib/Cardano-Api-LedgerState.html#t:InitialLedgerStateError"
+  },
+  {
+    "display_html": "<a href=\"#v:renderFoldBlocksError\">renderFoldBlocksError</a> &#8759; <a href=\"Cardano-Api-LedgerState.html#t:FoldBlocksError\" title=\"Cardano.Api.LedgerState\">FoldBlocksError</a> &#8594; <a href=\"file:///opt/ghc/8.10.4/share/doc/ghc-8.10.4/html/libraries/text-1.2.4.1/Data-Text.html#t:Text\" title=\"Data.Text\">Text</a>",
+    "name": "renderFoldBlocksError",
+    "module": "Cardano.Api.LedgerState",
+    "link": "lib/Cardano-Api-LedgerState.html#v:renderFoldBlocksError"
+  },
+  {
+    "display_html": "<a href=\"#v:renderGenesisConfigError\">renderGenesisConfigError</a> &#8759; <a href=\"Cardano-Api-LedgerState.html#t:GenesisConfigError\" title=\"Cardano.Api.LedgerState\">GenesisConfigError</a> &#8594; <a href=\"file:///opt/ghc/8.10.4/share/doc/ghc-8.10.4/html/libraries/text-1.2.4.1/Data-Text.html#t:Text\" title=\"Data.Text\">Text</a>",
+    "name": "renderGenesisConfigError",
+    "module": "Cardano.Api.LedgerState",
+    "link": "lib/Cardano-Api-LedgerState.html#v:renderGenesisConfigError"
+  },
+  {
+    "display_html": "<a href=\"#v:renderInitialLedgerStateError\">renderInitialLedgerStateError</a> &#8759; <a href=\"Cardano-Api-LedgerState.html#t:InitialLedgerStateError\" title=\"Cardano.Api.LedgerState\">InitialLedgerStateError</a> &#8594; <a href=\"file:///opt/ghc/8.10.4/share/doc/ghc-8.10.4/html/libraries/text-1.2.4.1/Data-Text.html#t:Text\" title=\"Data.Text\">Text</a>",
+    "name": "renderInitialLedgerStateError",
+    "module": "Cardano.Api.LedgerState",
+    "link": "lib/Cardano-Api-LedgerState.html#v:renderInitialLedgerStateError"
   },
   {
     "display_html": "<a href=\"#v:transactionFee\">transactionFee</a> &#8759; &#8704; era. <a href=\"Cardano-Api-Eras.html#t:IsShelleyBasedEra\" title=\"Cardano.Api.Eras\">IsShelleyBasedEra</a> era &#8658; <a href=\"file:///opt/ghc/8.10.4/share/doc/ghc-8.10.4/html/libraries/base-4.14.1.0/GHC-Natural.html#t:Natural\" title=\"GHC.Natural\">Natural</a> &#8594; <a href=\"file:///opt/ghc/8.10.4/share/doc/ghc-8.10.4/html/libraries/base-4.14.1.0/GHC-Natural.html#t:Natural\" title=\"GHC.Natural\">Natural</a> &#8594; <a href=\"Cardano-Api-Tx.html#t:Tx\" title=\"Cardano.Api.Tx\">Tx</a> era &#8594; <a href=\"Cardano-Api-Value.html#t:Lovelace\" title=\"Cardano.Api.Value\">Lovelace</a>",
