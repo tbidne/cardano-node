@@ -24,8 +24,8 @@ PropertyT IO () -&gt; Property
 </span><span class="hs-identifier hs-var">H.property</span></span><span> </span><span class="annot"><span class="annottext">(PropertyT IO () -&gt; Property) -&gt; PropertyT IO () -&gt; Property
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><span class="hs-operator hs-var">$</span></span><span> </span><span class="hs-keyword">do</span><span>
-</span><span id="line-22"></span><span>  </span><span id="local-6989586621679246856"><span class="annot"><span class="annottext">AlonzoGenesis
-</span><a href="#local-6989586621679246856"><span class="hs-identifier hs-var">genesis</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Gen AlonzoGenesis -&gt; PropertyT IO AlonzoGenesis
+</span><span id="line-22"></span><span>  </span><span id="local-6989586621679246866"><span class="annot"><span class="annottext">AlonzoGenesis
+</span><a href="#local-6989586621679246866"><span class="hs-identifier hs-var">genesis</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Gen AlonzoGenesis -&gt; PropertyT IO AlonzoGenesis
 forall (m :: * -&gt; *) a.
 (Monad m, Show a, HasCallStack) =&gt;
 Gen a -&gt; PropertyT m a
@@ -40,7 +40,7 @@ forall (m :: * -&gt; *) (f :: * -&gt; *) b a.
  HasCallStack) =&gt;
 a -&gt; (a -&gt; b) -&gt; (b -&gt; f a) -&gt; m ()
 </span><span class="hs-identifier hs-var">tripping</span></span><span> </span><span class="annot"><span class="annottext">AlonzoGenesis
-</span><a href="#local-6989586621679246856"><span class="hs-identifier hs-var">genesis</span></a></span><span> </span><span class="annot"><span class="annottext">AlonzoGenesis -&gt; ByteString
+</span><a href="#local-6989586621679246866"><span class="hs-identifier hs-var">genesis</span></a></span><span> </span><span class="annot"><span class="annottext">AlonzoGenesis -&gt; ByteString
 forall a. ToJSON a =&gt; a -&gt; ByteString
 </span><span class="hs-identifier hs-var">encode</span></span><span> </span><span class="annot"><span class="annottext">ByteString -&gt; Either String AlonzoGenesis
 forall a. FromJSON a =&gt; ByteString -&gt; Either String a

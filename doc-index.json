@@ -2550,6 +2550,12 @@
     "link": "lib/Cardano-Api-TxBody.html#v:getTxId"
   },
   {
+    "display_html": "<a href=\"#v:getTxIdShelley\">getTxIdShelley</a> &#8759; Crypto (<a href=\"Cardano-Api-Eras.html#t:ShelleyLedgerEra\" title=\"Cardano.Api.Eras\">ShelleyLedgerEra</a> era) ~ StandardCrypto &#8658; UsesTxBody (<a href=\"Cardano-Api-Eras.html#t:ShelleyLedgerEra\" title=\"Cardano.Api.Eras\">ShelleyLedgerEra</a> era) &#8658; <a href=\"Cardano-Api-Eras.html#t:ShelleyBasedEra\" title=\"Cardano.Api.Eras\">ShelleyBasedEra</a> era &#8594; TxBody (<a href=\"Cardano-Api-Eras.html#t:ShelleyLedgerEra\" title=\"Cardano.Api.Eras\">ShelleyLedgerEra</a> era) &#8594; <a href=\"Cardano-Api-TxBody.html#t:TxId\" title=\"Cardano.Api.TxBody\">TxId</a>",
+    "name": "getTxIdShelley",
+    "module": "Cardano.Api.TxBody",
+    "link": "lib/Cardano-Api-TxBody.html#v:getTxIdShelley"
+  },
+  {
     "display_html": "<span class=\"keyword\">data</span> <a href=\"#t:TxIn\">TxIn</a> = <a href=\"#v:TxIn\">TxIn</a> <a href=\"Cardano-Api-TxBody.html#t:TxId\" title=\"Cardano.Api.TxBody\">TxId</a> <a href=\"Cardano-Api-TxBody.html#t:TxIx\" title=\"Cardano.Api.TxBody\">TxIx</a>",
     "name": "TxIn TxIn",
     "module": "Cardano.Api.TxBody",
@@ -2980,6 +2986,12 @@
     "name": "fromByronTxIn",
     "module": "Cardano.Api.TxBody",
     "link": "lib/Cardano-Api-TxBody.html#v:fromByronTxIn"
+  },
+  {
+    "display_html": "<a href=\"#v:fromLedgerTxOuts\">fromLedgerTxOuts</a> &#8759; <a href=\"Cardano-Api-Eras.html#t:ShelleyBasedEra\" title=\"Cardano.Api.Eras\">ShelleyBasedEra</a> era &#8594; TxBody (<a href=\"Cardano-Api-Eras.html#t:ShelleyLedgerEra\" title=\"Cardano.Api.Eras\">ShelleyLedgerEra</a> era) &#8594; [<a href=\"Cardano-Api-TxBody.html#t:TxOut\" title=\"Cardano.Api.TxBody\">TxOut</a> era]",
+    "name": "fromLedgerTxOuts",
+    "module": "Cardano.Api.TxBody",
+    "link": "lib/Cardano-Api-TxBody.html#v:fromLedgerTxOuts"
   },
   {
     "display_html": "<a href=\"#v:renderTxIn\">renderTxIn</a> &#8759; <a href=\"Cardano-Api-TxBody.html#t:TxIn\" title=\"Cardano.Api.TxBody\">TxIn</a> &#8594; <a href=\"file:///opt/ghc/8.10.4/share/doc/ghc-8.10.4/html/libraries/text-1.2.4.1/Data-Text.html#t:Text\" title=\"Data.Text\">Text</a>",
@@ -4746,8 +4758,8 @@
     "link": "lib/Cardano-Api.html#t:ScriptExecutionError"
   },
   {
-    "display_html": "<span class=\"keyword\">data</span> <a href=\"#t:TransactionValidityIntervalError\">TransactionValidityIntervalError</a>",
-    "name": "TransactionValidityIntervalError",
+    "display_html": "<span class=\"keyword\">newtype</span> <a href=\"#t:TransactionValidityIntervalError\">TransactionValidityIntervalError</a> = <a href=\"#v:TransactionValidityIntervalError\">TransactionValidityIntervalError</a> PastHorizonException",
+    "name": "TransactionValidityIntervalError TransactionValidityIntervalError",
     "module": "Cardano.Api",
     "link": "lib/Cardano-Api.html#t:TransactionValidityIntervalError"
   },
@@ -4944,8 +4956,8 @@
     "link": "lib/Cardano-Api.html#t:TxMetadataJsonSchemaError"
   },
   {
-    "display_html": "<span class=\"keyword\">data</span> <a href=\"#t:Certificate\">Certificate</a>",
-    "name": "Certificate",
+    "display_html": "<span class=\"keyword\">data</span> <a href=\"#t:Certificate\">Certificate</a><ul class=\"subs\"><li>= <a href=\"#v:StakeAddressRegistrationCertificate\">StakeAddressRegistrationCertificate</a> <a href=\"Cardano-Api.html#t:StakeCredential\" title=\"Cardano.Api\">StakeCredential</a></li><li>| <a href=\"#v:StakeAddressDeregistrationCertificate\">StakeAddressDeregistrationCertificate</a> <a href=\"Cardano-Api.html#t:StakeCredential\" title=\"Cardano.Api\">StakeCredential</a></li><li>| <a href=\"#v:StakeAddressDelegationCertificate\">StakeAddressDelegationCertificate</a> <a href=\"Cardano-Api.html#t:StakeCredential\" title=\"Cardano.Api\">StakeCredential</a> <a href=\"Cardano-Api-Certificate.html#t:PoolId\" title=\"Cardano.Api.Certificate\">PoolId</a></li><li>| <a href=\"#v:StakePoolRegistrationCertificate\">StakePoolRegistrationCertificate</a> <a href=\"Cardano-Api.html#t:StakePoolParameters\" title=\"Cardano.Api\">StakePoolParameters</a></li><li>| <a href=\"#v:StakePoolRetirementCertificate\">StakePoolRetirementCertificate</a> <a href=\"Cardano-Api-Certificate.html#t:PoolId\" title=\"Cardano.Api.Certificate\">PoolId</a> <a href=\"Cardano-Api.html#t:EpochNo\" title=\"Cardano.Api\">EpochNo</a></li><li>| <a href=\"#v:GenesisKeyDelegationCertificate\">GenesisKeyDelegationCertificate</a> (<a href=\"Cardano-Api.html#t:Hash\" title=\"Cardano.Api\">Hash</a> <a href=\"Cardano-Api.html#t:GenesisKey\" title=\"Cardano.Api\">GenesisKey</a>) (<a href=\"Cardano-Api.html#t:Hash\" title=\"Cardano.Api\">Hash</a> <a href=\"Cardano-Api.html#t:GenesisDelegateKey\" title=\"Cardano.Api\">GenesisDelegateKey</a>) (<a href=\"Cardano-Api.html#t:Hash\" title=\"Cardano.Api\">Hash</a> <a href=\"Cardano-Api-KeysPraos.html#t:VrfKey\" title=\"Cardano.Api.KeysPraos\">VrfKey</a>)</li><li>| <a href=\"#v:MIRCertificate\">MIRCertificate</a> MIRPot <a href=\"Cardano-Api.html#t:MIRTarget\" title=\"Cardano.Api\">MIRTarget</a></li></ul>",
+    "name": "Certificate StakeAddressRegistrationCertificate StakeAddressDeregistrationCertificate StakeAddressDelegationCertificate StakePoolRegistrationCertificate StakePoolRetirementCertificate GenesisKeyDelegationCertificate MIRCertificate",
     "module": "Cardano.Api",
     "link": "lib/Cardano-Api.html#t:Certificate"
   },
@@ -6072,6 +6084,18 @@
     "link": "lib/Cardano-Api.html#v:toNetworkMagic"
   },
   {
+    "display_html": "<a href=\"#v:fromLedgerTxOuts\">fromLedgerTxOuts</a> &#8759; <a href=\"Cardano-Api.html#t:ShelleyBasedEra\" title=\"Cardano.Api\">ShelleyBasedEra</a> era &#8594; TxBody (<a href=\"Cardano-Api-Eras.html#t:ShelleyLedgerEra\" title=\"Cardano.Api.Eras\">ShelleyLedgerEra</a> era) &#8594; [<a href=\"Cardano-Api.html#t:TxOut\" title=\"Cardano.Api\">TxOut</a> era]",
+    "name": "fromLedgerTxOuts",
+    "module": "Cardano.Api",
+    "link": "lib/Cardano-Api.html#v:fromLedgerTxOuts"
+  },
+  {
+    "display_html": "<a href=\"#v:toLedgerUTxO\">toLedgerUTxO</a> &#8759; <a href=\"Cardano-Api-Eras.html#t:ShelleyLedgerEra\" title=\"Cardano.Api.Eras\">ShelleyLedgerEra</a> era ~ ledgerera &#8658; Crypto ledgerera ~ StandardCrypto &#8658; <a href=\"Cardano-Api.html#t:ShelleyBasedEra\" title=\"Cardano.Api\">ShelleyBasedEra</a> era &#8594; <a href=\"Cardano-Api.html#t:UTxO\" title=\"Cardano.Api\">UTxO</a> era &#8594; UTxO ledgerera",
+    "name": "toLedgerUTxO",
+    "module": "Cardano.Api",
+    "link": "lib/Cardano-Api.html#v:toLedgerUTxO"
+  },
+  {
     "display_html": "<span class=\"keyword\">data</span> <a href=\"#t:SomeNodeClientProtocol\">SomeNodeClientProtocol</a> <span class=\"keyword\">where</span><ul class=\"subs\"><li><a href=\"#v:SomeNodeClientProtocol\">SomeNodeClientProtocol</a> &#8759; (RunNode blk, <a href=\"Cardano-Api-Protocol-Types.html#t:ProtocolClient\" title=\"Cardano.Api.Protocol.Types\">ProtocolClient</a> blk) &#8658; <a href=\"Cardano-Api-Protocol-Types.html#t:ProtocolClientInfoArgs\" title=\"Cardano.Api.Protocol.Types\">ProtocolClientInfoArgs</a> blk &#8594; <a href=\"Cardano-Api.html#t:SomeNodeClientProtocol\" title=\"Cardano.Api\">SomeNodeClientProtocol</a></li></ul>",
     "name": "SomeNodeClientProtocol SomeNodeClientProtocol",
     "module": "Cardano.Api",
@@ -6262,6 +6286,12 @@
     "name": "fromShelleyTxId",
     "module": "Cardano.Api.Shelley",
     "link": "lib/Cardano-Api-Shelley.html#v:fromShelleyTxId"
+  },
+  {
+    "display_html": "<a href=\"#v:getTxIdShelley\">getTxIdShelley</a> &#8759; Crypto (<a href=\"Cardano-Api-Shelley.html#t:ShelleyLedgerEra\" title=\"Cardano.Api.Shelley\">ShelleyLedgerEra</a> era) ~ StandardCrypto &#8658; UsesTxBody (<a href=\"Cardano-Api-Shelley.html#t:ShelleyLedgerEra\" title=\"Cardano.Api.Shelley\">ShelleyLedgerEra</a> era) &#8658; <a href=\"Cardano-Api-Eras.html#t:ShelleyBasedEra\" title=\"Cardano.Api.Eras\">ShelleyBasedEra</a> era &#8594; TxBody (<a href=\"Cardano-Api-Shelley.html#t:ShelleyLedgerEra\" title=\"Cardano.Api.Shelley\">ShelleyLedgerEra</a> era) &#8594; <a href=\"Cardano-Api-Shelley.html#t:TxId\" title=\"Cardano.Api.Shelley\">TxId</a>",
+    "name": "getTxIdShelley",
+    "module": "Cardano.Api.Shelley",
+    "link": "lib/Cardano-Api-Shelley.html#v:getTxIdShelley"
   },
   {
     "display_html": "<span class=\"keyword\">data</span> <a href=\"#t:TxIn\">TxIn</a> = <a href=\"#v:TxIn\">TxIn</a> <a href=\"Cardano-Api-Shelley.html#t:TxId\" title=\"Cardano.Api.Shelley\">TxId</a> <a href=\"Cardano-Api-Shelley.html#t:TxIx\" title=\"Cardano.Api.Shelley\">TxIx</a>",
@@ -7038,6 +7068,12 @@
     "link": "lib_gen/Gen-Cardano-Api-Typed.html#v:genAddressShelley"
   },
   {
+    "display_html": "<a href=\"#v:genCertificate\">genCertificate</a> &#8759; Gen <a href=\"file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.4/cardano-api-1.29.0/noopt/doc/html/cardano-api/Cardano-Api-Certificate.html#t:Certificate\" title=\"Cardano.Api.Certificate\">Certificate</a>",
+    "name": "genCertificate",
+    "module": "Gen.Cardano.Api.Typed",
+    "link": "lib_gen/Gen-Cardano-Api-Typed.html#v:genCertificate"
+  },
+  {
     "display_html": "<a href=\"#v:genMaybePraosNonce\">genMaybePraosNonce</a> &#8759; Gen (<a href=\"file:///opt/ghc/8.10.4/share/doc/ghc-8.10.4/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:Maybe\" title=\"Distribution.Compat.Prelude.Internal\">Maybe</a> <a href=\"file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.4/cardano-api-1.29.0/noopt/doc/html/cardano-api/Cardano-Api-ProtocolParameters.html#t:PraosNonce\" title=\"Cardano.Api.ProtocolParameters\">PraosNonce</a>)",
     "name": "genMaybePraosNonce",
     "module": "Gen.Cardano.Api.Typed",
@@ -7090,6 +7126,12 @@
     "name": "genTxOut",
     "module": "Gen.Cardano.Api.Typed",
     "link": "lib_gen/Gen-Cardano-Api-Typed.html#v:genTxOut"
+  },
+  {
+    "display_html": "<a href=\"#v:genUTxO\">genUTxO</a> &#8759; <a href=\"file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.4/cardano-api-1.29.0/noopt/doc/html/cardano-api/Cardano-Api-Eras.html#t:CardanoEra\" title=\"Cardano.Api.Eras\">CardanoEra</a> era &#8594; Gen (<a href=\"file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.4/cardano-api-1.29.0/noopt/doc/html/cardano-api/Cardano-Api-Query.html#t:UTxO\" title=\"Cardano.Api.Query\">UTxO</a> era)",
+    "name": "genUTxO",
+    "module": "Gen.Cardano.Api.Typed",
+    "link": "lib_gen/Gen-Cardano-Api-Typed.html#v:genUTxO"
   },
   {
     "display_html": "<a href=\"#v:genScript\">genScript</a> &#8759; <a href=\"file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.4/cardano-api-1.29.0/noopt/doc/html/cardano-api/Cardano-Api-Script.html#t:ScriptLanguage\" title=\"Cardano.Api.Script\">ScriptLanguage</a> lang &#8594; Gen (<a href=\"file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.4/cardano-api-1.29.0/noopt/doc/html/cardano-api/Cardano-Api-Script.html#t:Script\" title=\"Cardano.Api.Script\">Script</a> lang)",
@@ -7194,6 +7236,12 @@
     "link": "lib_gen/Gen-Cardano-Api-Typed.html#v:genVerificationKey"
   },
   {
+    "display_html": "<a href=\"#v:genVerificationKeyHash\">genVerificationKeyHash</a> &#8759; <a href=\"file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.4/cardano-api-1.29.0/noopt/doc/html/cardano-api/Cardano-Api-Key.html#t:Key\" title=\"Cardano.Api.Key\">Key</a> keyrole &#8658; <a href=\"file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.4/cardano-api-1.29.0/noopt/doc/html/cardano-api/Cardano-Api-HasTypeProxy.html#t:AsType\" title=\"Cardano.Api.HasTypeProxy\">AsType</a> keyrole &#8594; Gen (<a href=\"file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.4/cardano-api-1.29.0/noopt/doc/html/cardano-api/Cardano-Api-Hash.html#t:Hash\" title=\"Cardano.Api.Hash\">Hash</a> keyrole)",
+    "name": "genVerificationKeyHash",
+    "module": "Gen.Cardano.Api.Typed",
+    "link": "lib_gen/Gen-Cardano-Api-Typed.html#v:genVerificationKeyHash"
+  },
+  {
     "display_html": "<a href=\"#v:genUpdateProposal\">genUpdateProposal</a> &#8759; Gen <a href=\"file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.4/cardano-api-1.29.0/noopt/doc/html/cardano-api/Cardano-Api-ProtocolParameters.html#t:UpdateProposal\" title=\"Cardano.Api.ProtocolParameters\">UpdateProposal</a>",
     "name": "genUpdateProposal",
     "module": "Gen.Cardano.Api.Typed",
@@ -7216,6 +7264,24 @@
     "name": "genTxOutDatumHash",
     "module": "Gen.Cardano.Api.Typed",
     "link": "lib_gen/Gen-Cardano-Api-Typed.html#v:genTxOutDatumHash"
+  },
+  {
+    "display_html": "<a href=\"#v:genTxOutValue\">genTxOutValue</a> &#8759; <a href=\"file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.4/cardano-api-1.29.0/noopt/doc/html/cardano-api/Cardano-Api-Eras.html#t:CardanoEra\" title=\"Cardano.Api.Eras\">CardanoEra</a> era &#8594; Gen (<a href=\"file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.4/cardano-api-1.29.0/noopt/doc/html/cardano-api/Cardano-Api-TxBody.html#t:TxOutValue\" title=\"Cardano.Api.TxBody\">TxOutValue</a> era)",
+    "name": "genTxOutValue",
+    "module": "Gen.Cardano.Api.Typed",
+    "link": "lib_gen/Gen-Cardano-Api-Typed.html#v:genTxOutValue"
+  },
+  {
+    "display_html": "<a href=\"#v:genValueForTxOut\">genValueForTxOut</a> &#8759; Gen <a href=\"file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.4/cardano-api-1.29.0/noopt/doc/html/cardano-api/Cardano-Api-Value.html#t:Value\" title=\"Cardano.Api.Value\">Value</a>",
+    "name": "genValueForTxOut",
+    "module": "Gen.Cardano.Api.Typed",
+    "link": "lib_gen/Gen-Cardano-Api-Typed.html#v:genValueForTxOut"
+  },
+  {
+    "display_html": "<a href=\"#v:genValueForMinting\">genValueForMinting</a> &#8759; Gen <a href=\"file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.4/cardano-api-1.29.0/noopt/doc/html/cardano-api/Cardano-Api-Value.html#t:Value\" title=\"Cardano.Api.Value\">Value</a>",
+    "name": "genValueForMinting",
+    "module": "Gen.Cardano.Api.Typed",
+    "link": "lib_gen/Gen-Cardano-Api-Typed.html#v:genValueForMinting"
   },
   {
     "display_html": "<a href=\"#v:genRational\">genRational</a> &#8759; Gen <a href=\"file:///opt/ghc/8.10.4/share/doc/ghc-8.10.4/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:Rational\" title=\"Distribution.Compat.Prelude.Internal\">Rational</a>",
@@ -7404,8 +7470,8 @@
     "link": "lib/Cardano-CLI-Shelley-Output.html#t:QueryTipOutput"
   },
   {
-    "display_html": "<span class=\"keyword\">data</span> <a href=\"#t:QueryTipLocalState\">QueryTipLocalState</a> = <a href=\"#v:QueryTipLocalState\">QueryTipLocalState</a> {<ul class=\"subs\"><li><a href=\"#v:era\">era</a> &#8759; <a href=\"file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.4/cardano-api-1.29.0/noopt/doc/html/cardano-api/Cardano-Api-Eras.html#t:AnyCardanoEra\" title=\"Cardano.Api.Eras\">AnyCardanoEra</a></li><li><a href=\"#v:eraHistory\">eraHistory</a> &#8759; <a href=\"file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.4/cardano-api-1.29.0/noopt/doc/html/cardano-api/Cardano-Api-Query.html#t:EraHistory\" title=\"Cardano.Api.Query\">EraHistory</a> <a href=\"file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.4/cardano-api-1.29.0/noopt/doc/html/cardano-api/Cardano-Api-Modes.html#t:CardanoMode\" title=\"Cardano.Api.Modes\">CardanoMode</a></li><li><a href=\"#v:mSystemStart\">mSystemStart</a> &#8759; <a href=\"file:///opt/ghc/8.10.4/share/doc/ghc-8.10.4/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:Maybe\" title=\"Distribution.Compat.Prelude.Internal\">Maybe</a> <a href=\"file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.4/cardano-api-1.29.0/noopt/doc/html/cardano-api/Cardano-Api-Query.html#t:SystemStart\" title=\"Cardano.Api.Query\">SystemStart</a></li></ul>}",
-    "name": "QueryTipLocalState QueryTipLocalState $sel:era:QueryTipLocalState $sel:eraHistory:QueryTipLocalState $sel:mSystemStart:QueryTipLocalState",
+    "display_html": "<span class=\"keyword\">data</span> <a href=\"#t:QueryTipLocalState\">QueryTipLocalState</a> = <a href=\"#v:QueryTipLocalState\">QueryTipLocalState</a> {<ul class=\"subs\"><li><a href=\"#v:era\">era</a> &#8759; <a href=\"file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.4/cardano-api-1.29.0/noopt/doc/html/cardano-api/Cardano-Api-Eras.html#t:AnyCardanoEra\" title=\"Cardano.Api.Eras\">AnyCardanoEra</a></li><li><a href=\"#v:eraHistory\">eraHistory</a> &#8759; <a href=\"file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.4/cardano-api-1.29.0/noopt/doc/html/cardano-api/Cardano-Api-Query.html#t:EraHistory\" title=\"Cardano.Api.Query\">EraHistory</a> <a href=\"file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.4/cardano-api-1.29.0/noopt/doc/html/cardano-api/Cardano-Api-Modes.html#t:CardanoMode\" title=\"Cardano.Api.Modes\">CardanoMode</a></li><li><a href=\"#v:mSystemStart\">mSystemStart</a> &#8759; <a href=\"file:///opt/ghc/8.10.4/share/doc/ghc-8.10.4/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:Maybe\" title=\"Distribution.Compat.Prelude.Internal\">Maybe</a> <a href=\"file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.4/cardano-api-1.29.0/noopt/doc/html/cardano-api/Cardano-Api-Query.html#t:SystemStart\" title=\"Cardano.Api.Query\">SystemStart</a></li><li><a href=\"#v:epochInfo\">epochInfo</a> &#8759; EpochInfo (<a href=\"file:///opt/ghc/8.10.4/share/doc/ghc-8.10.4/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:Either\" title=\"Distribution.Compat.Prelude.Internal\">Either</a> <a href=\"file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.4/cardano-api-1.29.0/noopt/doc/html/cardano-api/Cardano-Api-Fees.html#t:TransactionValidityIntervalError\" title=\"Cardano.Api.Fees\">TransactionValidityIntervalError</a>)</li></ul>}",
+    "name": "QueryTipLocalState QueryTipLocalState $sel:era:QueryTipLocalState $sel:epochInfo:QueryTipLocalState $sel:eraHistory:QueryTipLocalState $sel:mSystemStart:QueryTipLocalState",
     "module": "Cardano.CLI.Shelley.Output",
     "link": "lib/Cardano-CLI-Shelley-Output.html#t:QueryTipLocalState"
   },
@@ -8272,6 +8338,12 @@
     "name": "executeQuery",
     "module": "Cardano.CLI.Shelley.Run.Query",
     "link": "lib/Cardano-CLI-Shelley-Run-Query.html#v:executeQuery"
+  },
+  {
+    "display_html": "<a href=\"#v:queryQueryTip\">queryQueryTip</a> &#8759; <a href=\"file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.4/cardano-api-1.29.0/noopt/doc/html/cardano-api/Cardano-Api-IPC.html#t:LocalNodeConnectInfo\" title=\"Cardano.Api.IPC\">LocalNodeConnectInfo</a> <a href=\"file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.4/cardano-api-1.29.0/noopt/doc/html/cardano-api/Cardano-Api-Modes.html#t:CardanoMode\" title=\"Cardano.Api.Modes\">CardanoMode</a> &#8594; <a href=\"file:///opt/ghc/8.10.4/share/doc/ghc-8.10.4/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:Maybe\" title=\"Distribution.Compat.Prelude.Internal\">Maybe</a> <a href=\"file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.4/cardano-api-1.29.0/noopt/doc/html/cardano-api/Cardano-Api-Block.html#t:ChainPoint\" title=\"Cardano.Api.Block\">ChainPoint</a> &#8594; <a href=\"file:///opt/ghc/8.10.4/share/doc/ghc-8.10.4/html/libraries/base-4.14.1.0/System-IO.html#t:IO\" title=\"System.IO\">IO</a> (<a href=\"file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.4/cardano-api-1.29.0/noopt/doc/html/cardano-api/Cardano-Api-Block.html#t:ChainTip\" title=\"Cardano.Api.Block\">ChainTip</a>, <a href=\"file:///opt/ghc/8.10.4/share/doc/ghc-8.10.4/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:Either\" title=\"Distribution.Compat.Prelude.Internal\">Either</a> <a href=\"file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.4/cardano-api-1.29.0/noopt/doc/html/cardano-api/Cardano-Api-IPC.html#t:AcquireFailure\" title=\"Cardano.Api.IPC\">AcquireFailure</a> <a href=\"Cardano-CLI-Shelley-Output.html#t:QueryTipLocalState\" title=\"Cardano.CLI.Shelley.Output\">QueryTipLocalState</a>)",
+    "name": "queryQueryTip",
+    "module": "Cardano.CLI.Shelley.Run.Query",
+    "link": "lib/Cardano-CLI-Shelley-Run-Query.html#v:queryQueryTip"
   },
   {
     "display_html": "<span class=\"keyword\">data</span> <a href=\"#t:ShelleyTxCmdError\">ShelleyTxCmdError</a>",
