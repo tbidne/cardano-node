@@ -1141,7 +1141,7 @@
   },
   {
     "display_html": "<span class=\"keyword\">data family</span> <a href=\"#t:Hash\">Hash</a> keyrole &#8759; <a href=\"file:///home/runner/.ghcup/ghc/8.10.4/share/doc/ghc-8.10.4/html/libraries/base-4.14.1.0/Data-Kind.html#t:Type\" title=\"Data.Kind\">Type</a>",
-    "name": "Hash PaymentKeyHash PaymentExtendedKeyHash StakeKeyHash StakeExtendedKeyHash GenesisKeyHash GenesisExtendedKeyHash GenesisDelegateKeyHash GenesisDelegateExtendedKeyHash GenesisUTxOKeyHash StakePoolKeyHash",
+    "name": "Hash StakePoolKeyHash PaymentKeyHash PaymentExtendedKeyHash StakeKeyHash StakeExtendedKeyHash GenesisKeyHash GenesisExtendedKeyHash GenesisDelegateKeyHash GenesisDelegateExtendedKeyHash GenesisUTxOKeyHash",
     "module": "Cardano.Api.KeysShelley",
     "link": "lib/Cardano-Api-KeysShelley.html#t:Hash"
   },
@@ -1231,7 +1231,7 @@
   },
   {
     "display_html": "<span class=\"keyword\">data family</span> <a href=\"#t:Hash\">Hash</a> keyrole &#8759; <a href=\"file:///home/runner/.ghcup/ghc/8.10.4/share/doc/ghc-8.10.4/html/libraries/base-4.14.1.0/Data-Kind.html#t:Type\" title=\"Data.Kind\">Type</a>",
-    "name": "Hash PaymentKeyHash PaymentExtendedKeyHash StakeKeyHash StakeExtendedKeyHash GenesisKeyHash GenesisExtendedKeyHash GenesisDelegateKeyHash GenesisDelegateExtendedKeyHash GenesisUTxOKeyHash StakePoolKeyHash ScriptDataHash",
+    "name": "Hash StakePoolKeyHash PaymentKeyHash PaymentExtendedKeyHash StakeKeyHash StakeExtendedKeyHash GenesisKeyHash GenesisExtendedKeyHash GenesisDelegateKeyHash GenesisDelegateExtendedKeyHash GenesisUTxOKeyHash ScriptDataHash",
     "module": "Cardano.Api.ScriptData",
     "link": "lib/Cardano-Api-ScriptData.html#t:Hash"
   },
@@ -1591,7 +1591,7 @@
   },
   {
     "display_html": "<span class=\"keyword\">data family</span> <a href=\"#t:Hash\">Hash</a> keyrole &#8759; <a href=\"file:///home/runner/.ghcup/ghc/8.10.4/share/doc/ghc-8.10.4/html/libraries/base-4.14.1.0/Data-Kind.html#t:Type\" title=\"Data.Kind\">Type</a>",
-    "name": "Hash PaymentKeyHash PaymentExtendedKeyHash StakeKeyHash StakeExtendedKeyHash GenesisKeyHash GenesisExtendedKeyHash GenesisDelegateKeyHash GenesisDelegateExtendedKeyHash GenesisUTxOKeyHash StakePoolKeyHash ScriptDataHash",
+    "name": "Hash StakePoolKeyHash PaymentKeyHash PaymentExtendedKeyHash StakeKeyHash StakeExtendedKeyHash GenesisKeyHash GenesisExtendedKeyHash GenesisDelegateKeyHash GenesisDelegateExtendedKeyHash GenesisUTxOKeyHash ScriptDataHash",
     "module": "Cardano.Api.Script",
     "link": "lib/Cardano-Api-Script.html#t:Hash"
   },
@@ -1627,7 +1627,7 @@
   },
   {
     "display_html": "<span class=\"keyword\">data family</span> <a href=\"#t:Hash\">Hash</a> keyrole &#8759; <a href=\"file:///home/runner/.ghcup/ghc/8.10.4/share/doc/ghc-8.10.4/html/libraries/base-4.14.1.0/Data-Kind.html#t:Type\" title=\"Data.Kind\">Type</a>",
-    "name": "Hash PaymentKeyHash PaymentExtendedKeyHash StakeKeyHash StakeExtendedKeyHash GenesisKeyHash GenesisExtendedKeyHash GenesisDelegateKeyHash GenesisDelegateExtendedKeyHash GenesisUTxOKeyHash StakePoolKeyHash ByronKeyHash ByronKeyHashLegacy",
+    "name": "Hash StakePoolKeyHash PaymentKeyHash PaymentExtendedKeyHash StakeKeyHash StakeExtendedKeyHash GenesisKeyHash GenesisExtendedKeyHash GenesisDelegateKeyHash GenesisDelegateExtendedKeyHash GenesisUTxOKeyHash ByronKeyHash ByronKeyHashLegacy",
     "module": "Cardano.Api.KeysByron",
     "link": "lib/Cardano-Api-KeysByron.html#t:Hash"
   },
@@ -1771,7 +1771,7 @@
   },
   {
     "display_html": "<span class=\"keyword\">data family</span> <a href=\"#t:Hash\">Hash</a> keyrole &#8759; <a href=\"file:///home/runner/.ghcup/ghc/8.10.4/share/doc/ghc-8.10.4/html/libraries/base-4.14.1.0/Data-Kind.html#t:Type\" title=\"Data.Kind\">Type</a>",
-    "name": "Hash PaymentKeyHash PaymentExtendedKeyHash StakeKeyHash StakeExtendedKeyHash GenesisKeyHash GenesisExtendedKeyHash GenesisDelegateKeyHash GenesisDelegateExtendedKeyHash GenesisUTxOKeyHash StakePoolKeyHash ScriptDataHash ByronKeyHash ByronKeyHashLegacy KesKeyHash VrfKeyHash StakePoolMetadataHash",
+    "name": "Hash StakePoolKeyHash PaymentKeyHash PaymentExtendedKeyHash StakeKeyHash StakeExtendedKeyHash GenesisKeyHash GenesisExtendedKeyHash GenesisDelegateKeyHash GenesisDelegateExtendedKeyHash GenesisUTxOKeyHash ScriptDataHash ByronKeyHash ByronKeyHashLegacy KesKeyHash VrfKeyHash StakePoolMetadataHash",
     "module": "Cardano.Api.StakePoolMetadata",
     "link": "lib/Cardano-Api-StakePoolMetadata.html#t:Hash"
   },
@@ -3624,8 +3624,8 @@
     "link": "lib/Cardano-Api-OperationalCertificate.html#t:AsType"
   },
   {
-    "display_html": "<span class=\"keyword\">data</span> <a href=\"#t:LedgerEvent\">LedgerEvent</a><ul class=\"subs\"><li>= <a href=\"#v:PoolRegistration\">PoolRegistration</a> <a href=\"Cardano-Api-Certificate.html#t:Certificate\" title=\"Cardano.Api.Certificate\">Certificate</a></li><li>| <a href=\"#v:PoolReRegistration\">PoolReRegistration</a> <a href=\"Cardano-Api-Certificate.html#t:Certificate\" title=\"Cardano.Api.Certificate\">Certificate</a></li><li>| <a href=\"#v:RewardsDistribution\">RewardsDistribution</a> <a href=\"Cardano-Api-ProtocolParameters.html#t:EpochNo\" title=\"Cardano.Api.ProtocolParameters\">EpochNo</a> (<a href=\"file:///home/runner/.ghcup/ghc/8.10.4/share/doc/ghc-8.10.4/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:Map\" title=\"Distribution.Compat.Prelude.Internal\">Map</a> <a href=\"Cardano-Api-Address.html#t:StakeCredential\" title=\"Cardano.Api.Address\">StakeCredential</a> <a href=\"Cardano-Api-Value.html#t:Lovelace\" title=\"Cardano.Api.Value\">Lovelace</a>)</li><li>| <a href=\"#v:MIRDistribution\">MIRDistribution</a> <a href=\"Cardano-Api-LedgerEvent.html#t:MIRDistributionDetails\" title=\"Cardano.Api.LedgerEvent\">MIRDistributionDetails</a></li></ul>",
-    "name": "LedgerEvent PoolRegistration PoolReRegistration RewardsDistribution MIRDistribution",
+    "display_html": "<span class=\"keyword\">data</span> <a href=\"#t:LedgerEvent\">LedgerEvent</a><ul class=\"subs\"><li>= <a href=\"#v:PoolRegistration\">PoolRegistration</a> <a href=\"Cardano-Api-Certificate.html#t:Certificate\" title=\"Cardano.Api.Certificate\">Certificate</a></li><li>| <a href=\"#v:PoolReRegistration\">PoolReRegistration</a> <a href=\"Cardano-Api-Certificate.html#t:Certificate\" title=\"Cardano.Api.Certificate\">Certificate</a></li><li>| <a href=\"#v:RewardsDistribution\">RewardsDistribution</a> <a href=\"Cardano-Api-ProtocolParameters.html#t:EpochNo\" title=\"Cardano.Api.ProtocolParameters\">EpochNo</a> (<a href=\"file:///home/runner/.ghcup/ghc/8.10.4/share/doc/ghc-8.10.4/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:Map\" title=\"Distribution.Compat.Prelude.Internal\">Map</a> <a href=\"Cardano-Api-Address.html#t:StakeCredential\" title=\"Cardano.Api.Address\">StakeCredential</a> <a href=\"Cardano-Api-Value.html#t:Lovelace\" title=\"Cardano.Api.Value\">Lovelace</a>)</li><li>| <a href=\"#v:MIRDistribution\">MIRDistribution</a> <a href=\"Cardano-Api-LedgerEvent.html#t:MIRDistributionDetails\" title=\"Cardano.Api.LedgerEvent\">MIRDistributionDetails</a></li><li>| <a href=\"#v:PoolReap\">PoolReap</a> <a href=\"Cardano-Api-LedgerEvent.html#t:PoolReapDetails\" title=\"Cardano.Api.LedgerEvent\">PoolReapDetails</a></li></ul>",
+    "name": "LedgerEvent PoolReap PoolRegistration PoolReRegistration RewardsDistribution MIRDistribution",
     "module": "Cardano.Api.LedgerEvent",
     "link": "lib/Cardano-Api-LedgerEvent.html#t:LedgerEvent"
   },
@@ -3634,6 +3634,12 @@
     "name": "MIRDistributionDetails MIRDistributionDetails reservePayouts treasuryPayouts reservesToTreasury treasuryToReserves",
     "module": "Cardano.Api.LedgerEvent",
     "link": "lib/Cardano-Api-LedgerEvent.html#t:MIRDistributionDetails"
+  },
+  {
+    "display_html": "<span class=\"keyword\">data</span> <a href=\"#t:PoolReapDetails\">PoolReapDetails</a> = <a href=\"#v:PoolReapDetails\">PoolReapDetails</a> {<ul class=\"subs\"><li><a href=\"#v:refunded\">refunded</a> &#8759; <a href=\"file:///home/runner/.ghcup/ghc/8.10.4/share/doc/ghc-8.10.4/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:Map\" title=\"Distribution.Compat.Prelude.Internal\">Map</a> <a href=\"Cardano-Api-Address.html#t:StakeCredential\" title=\"Cardano.Api.Address\">StakeCredential</a> (<a href=\"file:///home/runner/.ghcup/ghc/8.10.4/share/doc/ghc-8.10.4/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:Map\" title=\"Distribution.Compat.Prelude.Internal\">Map</a> (<a href=\"Cardano-Api-Hash.html#t:Hash\" title=\"Cardano.Api.Hash\">Hash</a> <a href=\"Cardano-Api-KeysShelley.html#t:StakePoolKey\" title=\"Cardano.Api.KeysShelley\">StakePoolKey</a>) <a href=\"Cardano-Api-Value.html#t:Lovelace\" title=\"Cardano.Api.Value\">Lovelace</a>)</li><li><a href=\"#v:unclaimed\">unclaimed</a> &#8759; <a href=\"file:///home/runner/.ghcup/ghc/8.10.4/share/doc/ghc-8.10.4/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:Map\" title=\"Distribution.Compat.Prelude.Internal\">Map</a> <a href=\"Cardano-Api-Address.html#t:StakeCredential\" title=\"Cardano.Api.Address\">StakeCredential</a> (<a href=\"file:///home/runner/.ghcup/ghc/8.10.4/share/doc/ghc-8.10.4/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:Map\" title=\"Distribution.Compat.Prelude.Internal\">Map</a> (<a href=\"Cardano-Api-Hash.html#t:Hash\" title=\"Cardano.Api.Hash\">Hash</a> <a href=\"Cardano-Api-KeysShelley.html#t:StakePoolKey\" title=\"Cardano.Api.KeysShelley\">StakePoolKey</a>) <a href=\"Cardano-Api-Value.html#t:Lovelace\" title=\"Cardano.Api.Value\">Lovelace</a>)</li></ul>}",
+    "name": "PoolReapDetails PoolReapDetails refunded unclaimed",
+    "module": "Cardano.Api.LedgerEvent",
+    "link": "lib/Cardano-Api-LedgerEvent.html#t:PoolReapDetails"
   },
   {
     "display_html": "<a href=\"#v:toLedgerEvent\">toLedgerEvent</a> &#8759; ConvertLedgerEvent blk &#8658; WrapLedgerEvent blk &#8594; <a href=\"file:///home/runner/.ghcup/ghc/8.10.4/share/doc/ghc-8.10.4/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:Maybe\" title=\"Distribution.Compat.Prelude.Internal\">Maybe</a> <a href=\"Cardano-Api-LedgerEvent.html#t:LedgerEvent\" title=\"Cardano.Api.LedgerEvent\">LedgerEvent</a>",
@@ -6175,7 +6181,7 @@
   },
   {
     "display_html": "<span class=\"keyword\">data family</span> <a href=\"#t:Hash\">Hash</a> keyrole &#8759; <a href=\"file:///home/runner/.ghcup/ghc/8.10.4/share/doc/ghc-8.10.4/html/libraries/base-4.14.1.0/Data-Kind.html#t:Type\" title=\"Data.Kind\">Type</a>",
-    "name": "Hash PaymentKeyHash PaymentExtendedKeyHash StakeKeyHash StakeExtendedKeyHash GenesisKeyHash GenesisExtendedKeyHash GenesisDelegateKeyHash GenesisDelegateExtendedKeyHash GenesisUTxOKeyHash StakePoolKeyHash ScriptDataHash ByronKeyHash ByronKeyHashLegacy KesKeyHash VrfKeyHash StakePoolMetadataHash",
+    "name": "Hash StakePoolKeyHash PaymentKeyHash PaymentExtendedKeyHash StakeKeyHash StakeExtendedKeyHash GenesisKeyHash GenesisExtendedKeyHash GenesisDelegateKeyHash GenesisDelegateExtendedKeyHash GenesisUTxOKeyHash ScriptDataHash ByronKeyHash ByronKeyHashLegacy KesKeyHash VrfKeyHash StakePoolMetadataHash",
     "module": "Cardano.Api.Shelley",
     "link": "lib/Cardano-Api-Shelley.html#t:Hash"
   },
@@ -6829,7 +6835,7 @@
   },
   {
     "display_html": "<span class=\"keyword\">data family</span> <a href=\"#t:Hash\">Hash</a> keyrole &#8759; <a href=\"file:///home/runner/.ghcup/ghc/8.10.4/share/doc/ghc-8.10.4/html/libraries/base-4.14.1.0/Data-Kind.html#t:Type\" title=\"Data.Kind\">Type</a>",
-    "name": "Hash PaymentKeyHash PaymentExtendedKeyHash StakeKeyHash StakeExtendedKeyHash GenesisKeyHash GenesisExtendedKeyHash GenesisDelegateKeyHash GenesisDelegateExtendedKeyHash GenesisUTxOKeyHash StakePoolKeyHash ByronKeyHash ByronKeyHashLegacy",
+    "name": "Hash StakePoolKeyHash PaymentKeyHash PaymentExtendedKeyHash StakeKeyHash StakeExtendedKeyHash GenesisKeyHash GenesisExtendedKeyHash GenesisDelegateKeyHash GenesisDelegateExtendedKeyHash GenesisUTxOKeyHash ByronKeyHash ByronKeyHashLegacy",
     "module": "Cardano.Api.Byron",
     "link": "lib/Cardano-Api-Byron.html#t:Hash"
   },
