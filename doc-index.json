@@ -3109,7 +3109,7 @@
   },
   {
     "display_html": "<span class=\"keyword\">data family</span> <a href=\"#t:AsType\">AsType</a> t",
-    "name": "AsType AsTx AsByronTx AsShelleyTx AsKeyWitness AsByronWitness AsShelleyWitness",
+    "name": "AsType AsTx AsByronTx AsShelleyTx AsMaryTx AsAllegraTx AsAlonzoTx AsKeyWitness AsByronWitness AsShelleyWitness",
     "module": "Cardano.Api.Tx",
     "link": "lib/Cardano-Api-Tx.html#t:AsType"
   },
@@ -3619,7 +3619,7 @@
   },
   {
     "display_html": "<span class=\"keyword\">data family</span> <a href=\"#t:AsType\">AsType</a> t",
-    "name": "AsType AsByronAddr AsShelleyAddr AsByronAddress AsShelleyAddress AsAddress AsAddressAny AsAddressInEra AsStakeAddress AsByronEra AsShelleyEra AsAllegraEra AsMaryEra AsAlonzoEra AsByron AsShelley AsAllegra AsMary AsHash AsVerificationKey AsSigningKey AsTx AsByronTx AsShelleyTx AsKeyWitness AsByronWitness AsShelleyWitness AsTextEnvelope AsTxMetadata AsPaymentKey AsPaymentExtendedKey AsStakeKey AsStakeExtendedKey AsGenesisKey AsGenesisExtendedKey AsGenesisDelegateKey AsGenesisDelegateExtendedKey AsGenesisUTxOKey AsStakePoolKey AsScriptData AsSimpleScriptV1 AsSimpleScriptV2 AsPlutusScriptV1 AsScript AsScriptInAnyLang AsScriptInEra AsScriptHash AsSimpleScript AsPlutusScript AsByronKey AsByronKeyLegacy AsKesKey AsVrfKey AsStakePoolMetadata AsPolicyId AsAssetName AsPraosNonce AsUpdateProposal AsCertificate AsOperationalCertificate AsOperationalCertificateIssueCounter",
+    "name": "AsType AsByronAddr AsShelleyAddr AsByronAddress AsShelleyAddress AsAddress AsAddressAny AsAddressInEra AsStakeAddress AsByronEra AsShelleyEra AsAllegraEra AsMaryEra AsAlonzoEra AsByron AsShelley AsAllegra AsMary AsHash AsVerificationKey AsSigningKey AsTx AsByronTx AsShelleyTx AsMaryTx AsAllegraTx AsAlonzoTx AsKeyWitness AsByronWitness AsShelleyWitness AsTextEnvelope AsTxMetadata AsPaymentKey AsPaymentExtendedKey AsStakeKey AsStakeExtendedKey AsGenesisKey AsGenesisExtendedKey AsGenesisDelegateKey AsGenesisDelegateExtendedKey AsGenesisUTxOKey AsStakePoolKey AsScriptData AsSimpleScriptV1 AsSimpleScriptV2 AsPlutusScriptV1 AsScript AsScriptInAnyLang AsScriptInEra AsScriptHash AsSimpleScript AsPlutusScript AsByronKey AsByronKeyLegacy AsKesKey AsVrfKey AsStakePoolMetadata AsPolicyId AsAssetName AsPraosNonce AsUpdateProposal AsCertificate AsOperationalCertificate AsOperationalCertificateIssueCounter",
     "module": "Cardano.Api.OperationalCertificate",
     "link": "lib/Cardano-Api-OperationalCertificate.html#t:AsType"
   },
