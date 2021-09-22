@@ -28,8 +28,8 @@ PropertyT IO () -&gt; Property
 </span><span class="hs-identifier hs-var">H.property</span></span><span> </span><span class="annot"><span class="annottext">(PropertyT IO () -&gt; Property) -&gt; PropertyT IO () -&gt; Property
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../file:///home/runner/.ghcup/ghc/8.10.4/share/doc/ghc-8.10.4/html/libraries/base-4.14.1.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="hs-keyword">do</span><span>
-</span><span id="line-26"></span><span>  </span><span id="local-6989586621679250503"><span class="annot"><span class="annottext">AlonzoGenesis
-</span><a href="#local-6989586621679250503"><span class="hs-identifier hs-var">genesis</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Gen AlonzoGenesis -&gt; PropertyT IO AlonzoGenesis
+</span><span id="line-26"></span><span>  </span><span id="local-6989586621679250469"><span class="annot"><span class="annottext">AlonzoGenesis
+</span><a href="#local-6989586621679250469"><span class="hs-identifier hs-var">genesis</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Gen AlonzoGenesis -&gt; PropertyT IO AlonzoGenesis
 forall (m :: * -&gt; *) a.
 (Monad m, Show a, HasCallStack) =&gt;
 Gen a -&gt; PropertyT m a
@@ -44,7 +44,7 @@ forall (m :: * -&gt; *) (f :: * -&gt; *) b a.
  HasCallStack) =&gt;
 a -&gt; (a -&gt; b) -&gt; (b -&gt; f a) -&gt; m ()
 </span><span class="hs-identifier hs-var">tripping</span></span><span> </span><span class="annot"><span class="annottext">AlonzoGenesis
-</span><a href="#local-6989586621679250503"><span class="hs-identifier hs-var">genesis</span></a></span><span> </span><span class="annot"><span class="annottext">AlonzoGenesis -&gt; ByteString
+</span><a href="#local-6989586621679250469"><span class="hs-identifier hs-var">genesis</span></a></span><span> </span><span class="annot"><span class="annottext">AlonzoGenesis -&gt; ByteString
 forall a. ToJSON a =&gt; a -&gt; ByteString
 </span><span class="hs-identifier hs-var">encode</span></span><span> </span><span class="annot"><span class="annottext">ByteString -&gt; Either String AlonzoGenesis
 forall a. FromJSON a =&gt; ByteString -&gt; Either String a
@@ -69,7 +69,7 @@ forall a b. (a -&gt; Parser b) -&gt; a -&gt; Either String b
 </span><span class="hs-identifier hs-var">parseEither</span></span><span> </span><span class="annot"><span class="annottext">EraInMode ByronEra ByronMode
 -&gt; Parser (EraInMode ByronEra ByronMode)
 forall era mode. EraInMode era mode -&gt; Parser (EraInMode era mode)
-</span><a href="#local-6989586621679250500"><span class="hs-identifier hs-var">rountripEraInModeParser</span></a></span><span> </span><span class="annot"><span class="annottext">EraInMode ByronEra ByronMode
+</span><a href="#local-6989586621679250466"><span class="hs-identifier hs-var">rountripEraInModeParser</span></a></span><span> </span><span class="annot"><span class="annottext">EraInMode ByronEra ByronMode
 </span><a href="../file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.4/cardano-api-1.30.0/noopt/doc/html/cardano-api/src"><span class="hs-identifier hs-var">ByronEraInByronMode</span></a></span><span> </span><span class="annot"><span class="annottext">Either String (EraInMode ByronEra ByronMode)
 -&gt; Either String (EraInMode ByronEra ByronMode) -&gt; Bool
 forall a. Eq a =&gt; a -&gt; a -&gt; Bool
@@ -90,7 +90,7 @@ forall a b. (a -&gt; Parser b) -&gt; a -&gt; Either String b
 </span><span class="hs-identifier hs-var">parseEither</span></span><span> </span><span class="annot"><span class="annottext">EraInMode ShelleyEra ShelleyMode
 -&gt; Parser (EraInMode ShelleyEra ShelleyMode)
 forall era mode. EraInMode era mode -&gt; Parser (EraInMode era mode)
-</span><a href="#local-6989586621679250500"><span class="hs-identifier hs-var">rountripEraInModeParser</span></a></span><span> </span><span class="annot"><span class="annottext">EraInMode ShelleyEra ShelleyMode
+</span><a href="#local-6989586621679250466"><span class="hs-identifier hs-var">rountripEraInModeParser</span></a></span><span> </span><span class="annot"><span class="annottext">EraInMode ShelleyEra ShelleyMode
 </span><a href="../file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.4/cardano-api-1.30.0/noopt/doc/html/cardano-api/src"><span class="hs-identifier hs-var">ShelleyEraInShelleyMode</span></a></span><span> </span><span class="annot"><span class="annottext">Either String (EraInMode ShelleyEra ShelleyMode)
 -&gt; Either String (EraInMode ShelleyEra ShelleyMode) -&gt; Bool
 forall a. Eq a =&gt; a -&gt; a -&gt; Bool
@@ -111,7 +111,7 @@ forall a b. (a -&gt; Parser b) -&gt; a -&gt; Either String b
 </span><span class="hs-identifier hs-var">parseEither</span></span><span> </span><span class="annot"><span class="annottext">EraInMode ByronEra CardanoMode
 -&gt; Parser (EraInMode ByronEra CardanoMode)
 forall era mode. EraInMode era mode -&gt; Parser (EraInMode era mode)
-</span><a href="#local-6989586621679250500"><span class="hs-identifier hs-var">rountripEraInModeParser</span></a></span><span> </span><span class="annot"><span class="annottext">EraInMode ByronEra CardanoMode
+</span><a href="#local-6989586621679250466"><span class="hs-identifier hs-var">rountripEraInModeParser</span></a></span><span> </span><span class="annot"><span class="annottext">EraInMode ByronEra CardanoMode
 </span><a href="../file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.4/cardano-api-1.30.0/noopt/doc/html/cardano-api/src"><span class="hs-identifier hs-var">ByronEraInCardanoMode</span></a></span><span> </span><span class="annot"><span class="annottext">Either String (EraInMode ByronEra CardanoMode)
 -&gt; Either String (EraInMode ByronEra CardanoMode) -&gt; Bool
 forall a. Eq a =&gt; a -&gt; a -&gt; Bool
@@ -132,7 +132,7 @@ forall a b. (a -&gt; Parser b) -&gt; a -&gt; Either String b
 </span><span class="hs-identifier hs-var">parseEither</span></span><span> </span><span class="annot"><span class="annottext">EraInMode ShelleyEra CardanoMode
 -&gt; Parser (EraInMode ShelleyEra CardanoMode)
 forall era mode. EraInMode era mode -&gt; Parser (EraInMode era mode)
-</span><a href="#local-6989586621679250500"><span class="hs-identifier hs-var">rountripEraInModeParser</span></a></span><span> </span><span class="annot"><span class="annottext">EraInMode ShelleyEra CardanoMode
+</span><a href="#local-6989586621679250466"><span class="hs-identifier hs-var">rountripEraInModeParser</span></a></span><span> </span><span class="annot"><span class="annottext">EraInMode ShelleyEra CardanoMode
 </span><a href="../file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.4/cardano-api-1.30.0/noopt/doc/html/cardano-api/src"><span class="hs-identifier hs-var">ShelleyEraInCardanoMode</span></a></span><span> </span><span class="annot"><span class="annottext">Either String (EraInMode ShelleyEra CardanoMode)
 -&gt; Either String (EraInMode ShelleyEra CardanoMode) -&gt; Bool
 forall a. Eq a =&gt; a -&gt; a -&gt; Bool
@@ -153,7 +153,7 @@ forall a b. (a -&gt; Parser b) -&gt; a -&gt; Either String b
 </span><span class="hs-identifier hs-var">parseEither</span></span><span> </span><span class="annot"><span class="annottext">EraInMode AllegraEra CardanoMode
 -&gt; Parser (EraInMode AllegraEra CardanoMode)
 forall era mode. EraInMode era mode -&gt; Parser (EraInMode era mode)
-</span><a href="#local-6989586621679250500"><span class="hs-identifier hs-var">rountripEraInModeParser</span></a></span><span> </span><span class="annot"><span class="annottext">EraInMode AllegraEra CardanoMode
+</span><a href="#local-6989586621679250466"><span class="hs-identifier hs-var">rountripEraInModeParser</span></a></span><span> </span><span class="annot"><span class="annottext">EraInMode AllegraEra CardanoMode
 </span><a href="../file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.4/cardano-api-1.30.0/noopt/doc/html/cardano-api/src"><span class="hs-identifier hs-var">AllegraEraInCardanoMode</span></a></span><span> </span><span class="annot"><span class="annottext">Either String (EraInMode AllegraEra CardanoMode)
 -&gt; Either String (EraInMode AllegraEra CardanoMode) -&gt; Bool
 forall a. Eq a =&gt; a -&gt; a -&gt; Bool
@@ -174,7 +174,7 @@ forall a b. (a -&gt; Parser b) -&gt; a -&gt; Either String b
 </span><span class="hs-identifier hs-var">parseEither</span></span><span> </span><span class="annot"><span class="annottext">EraInMode MaryEra CardanoMode
 -&gt; Parser (EraInMode MaryEra CardanoMode)
 forall era mode. EraInMode era mode -&gt; Parser (EraInMode era mode)
-</span><a href="#local-6989586621679250500"><span class="hs-identifier hs-var">rountripEraInModeParser</span></a></span><span> </span><span class="annot"><span class="annottext">EraInMode MaryEra CardanoMode
+</span><a href="#local-6989586621679250466"><span class="hs-identifier hs-var">rountripEraInModeParser</span></a></span><span> </span><span class="annot"><span class="annottext">EraInMode MaryEra CardanoMode
 </span><a href="../file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.4/cardano-api-1.30.0/noopt/doc/html/cardano-api/src"><span class="hs-identifier hs-var">MaryEraInCardanoMode</span></a></span><span> </span><span class="annot"><span class="annottext">Either String (EraInMode MaryEra CardanoMode)
 -&gt; Either String (EraInMode MaryEra CardanoMode) -&gt; Bool
 forall a. Eq a =&gt; a -&gt; a -&gt; Bool
@@ -195,7 +195,7 @@ forall a b. (a -&gt; Parser b) -&gt; a -&gt; Either String b
 </span><span class="hs-identifier hs-var">parseEither</span></span><span> </span><span class="annot"><span class="annottext">EraInMode AlonzoEra CardanoMode
 -&gt; Parser (EraInMode AlonzoEra CardanoMode)
 forall era mode. EraInMode era mode -&gt; Parser (EraInMode era mode)
-</span><a href="#local-6989586621679250500"><span class="hs-identifier hs-var">rountripEraInModeParser</span></a></span><span> </span><span class="annot"><span class="annottext">EraInMode AlonzoEra CardanoMode
+</span><a href="#local-6989586621679250466"><span class="hs-identifier hs-var">rountripEraInModeParser</span></a></span><span> </span><span class="annot"><span class="annottext">EraInMode AlonzoEra CardanoMode
 </span><a href="../file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.4/cardano-api-1.30.0/noopt/doc/html/cardano-api/src"><span class="hs-identifier hs-var">AlonzoEraInCardanoMode</span></a></span><span> </span><span class="annot"><span class="annottext">Either String (EraInMode AlonzoEra CardanoMode)
 -&gt; Either String (EraInMode AlonzoEra CardanoMode) -&gt; Bool
 forall a. Eq a =&gt; a -&gt; a -&gt; Bool
@@ -209,9 +209,9 @@ forall a b. b -&gt; Either a b
 </span><span id="line-40"></span><span>    </span><span class="hs-comment">-- Defined this way instead of using 'tripping' in order to warn the</span><span>
 </span><span id="line-41"></span><span>    </span><span class="hs-comment">-- developer if there's ever a new constructor in 'EraInMode' and we would</span><span>
 </span><span id="line-42"></span><span>    </span><span class="hs-comment">-- need to add a new 'FromJSON' instance.</span><span>
-</span><span id="line-43"></span><span>    </span><span id="local-6989586621679250535"><span id="local-6989586621679250536"><span class="annot"><a href="#local-6989586621679250500"><span class="hs-identifier hs-type">rountripEraInModeParser</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.4/cardano-api-1.30.0/noopt/doc/html/cardano-api/src"><span class="hs-identifier hs-type">EraInMode</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679250536"><span class="hs-identifier hs-type">era</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679250535"><span class="hs-identifier hs-type">mode</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="hs-identifier hs-type">Parser</span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.4/cardano-api-1.30.0/noopt/doc/html/cardano-api/src"><span class="hs-identifier hs-type">EraInMode</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679250536"><span class="hs-identifier hs-type">era</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679250535"><span class="hs-identifier hs-type">mode</span></a></span><span class="hs-special">)</span></span></span><span>
-</span><span id="line-44"></span><span>    </span><span id="local-6989586621679250500"><span class="annot"><span class="annottext">rountripEraInModeParser :: EraInMode era mode -&gt; Parser (EraInMode era mode)
-</span><a href="#local-6989586621679250500"><span class="hs-identifier hs-var hs-var">rountripEraInModeParser</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-glyph">\</span><span class="hs-glyph">case</span><span>
+</span><span id="line-43"></span><span>    </span><span id="local-6989586621679250501"><span id="local-6989586621679250502"><span class="annot"><a href="#local-6989586621679250466"><span class="hs-identifier hs-type">rountripEraInModeParser</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.4/cardano-api-1.30.0/noopt/doc/html/cardano-api/src"><span class="hs-identifier hs-type">EraInMode</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679250502"><span class="hs-identifier hs-type">era</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679250501"><span class="hs-identifier hs-type">mode</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="hs-identifier hs-type">Parser</span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.4/cardano-api-1.30.0/noopt/doc/html/cardano-api/src"><span class="hs-identifier hs-type">EraInMode</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679250502"><span class="hs-identifier hs-type">era</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679250501"><span class="hs-identifier hs-type">mode</span></a></span><span class="hs-special">)</span></span></span><span>
+</span><span id="line-44"></span><span>    </span><span id="local-6989586621679250466"><span class="annot"><span class="annottext">rountripEraInModeParser :: EraInMode era mode -&gt; Parser (EraInMode era mode)
+</span><a href="#local-6989586621679250466"><span class="hs-identifier hs-var hs-var">rountripEraInModeParser</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-glyph">\</span><span class="hs-glyph">case</span><span>
 </span><span id="line-45"></span><span>      </span><span class="annot"><span class="annottext">EraInMode era mode
 </span><a href="../file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.4/cardano-api-1.30.0/noopt/doc/html/cardano-api/src"><span class="hs-identifier hs-var">ByronEraInByronMode</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">Value -&gt; Parser (EraInMode era mode)
 forall a. FromJSON a =&gt; Value -&gt; Parser a
