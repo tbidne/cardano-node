@@ -3552,8 +3552,8 @@
     "link": "lib/Cardano-Api-IPC.html#v:consensusModeOnly"
   },
   {
-    "display_html": "<span class=\"keyword\">data</span> <a href=\"#t:NodeToClientVersion\">NodeToClientVersion</a><ul class=\"subs\"><li>= <a href=\"#v:NodeToClientV_1\">NodeToClientV_1</a></li><li>| <a href=\"#v:NodeToClientV_2\">NodeToClientV_2</a></li><li>| <a href=\"#v:NodeToClientV_3\">NodeToClientV_3</a></li><li>| <a href=\"#v:NodeToClientV_4\">NodeToClientV_4</a></li><li>| <a href=\"#v:NodeToClientV_5\">NodeToClientV_5</a></li><li>| <a href=\"#v:NodeToClientV_6\">NodeToClientV_6</a></li><li>| <a href=\"#v:NodeToClientV_7\">NodeToClientV_7</a></li><li>| <a href=\"#v:NodeToClientV_8\">NodeToClientV_8</a></li><li>| <a href=\"#v:NodeToClientV_9\">NodeToClientV_9</a></li></ul>",
-    "name": "NodeToClientVersion NodeToClientV_9 NodeToClientV_8 NodeToClientV_7 NodeToClientV_6 NodeToClientV_5 NodeToClientV_4 NodeToClientV_3 NodeToClientV_2 NodeToClientV_1",
+    "display_html": "<span class=\"keyword\">data</span> <a href=\"#t:NodeToClientVersion\">NodeToClientVersion</a><ul class=\"subs\"><li>= <a href=\"#v:NodeToClientV_1\">NodeToClientV_1</a></li><li>| <a href=\"#v:NodeToClientV_2\">NodeToClientV_2</a></li><li>| <a href=\"#v:NodeToClientV_3\">NodeToClientV_3</a></li><li>| <a href=\"#v:NodeToClientV_4\">NodeToClientV_4</a></li><li>| <a href=\"#v:NodeToClientV_5\">NodeToClientV_5</a></li><li>| <a href=\"#v:NodeToClientV_6\">NodeToClientV_6</a></li><li>| <a href=\"#v:NodeToClientV_7\">NodeToClientV_7</a></li><li>| <a href=\"#v:NodeToClientV_8\">NodeToClientV_8</a></li><li>| <a href=\"#v:NodeToClientV_9\">NodeToClientV_9</a></li><li>| <a href=\"#v:NodeToClientV_10\">NodeToClientV_10</a></li></ul>",
+    "name": "NodeToClientVersion NodeToClientV_10 NodeToClientV_9 NodeToClientV_8 NodeToClientV_7 NodeToClientV_6 NodeToClientV_5 NodeToClientV_4 NodeToClientV_3 NodeToClientV_2 NodeToClientV_1",
     "module": "Cardano.Api.IPC",
     "link": "lib/Cardano-Api-IPC.html#t:NodeToClientVersion"
   },
@@ -6126,8 +6126,8 @@
     "link": "lib/Cardano-Api.html#v:slotToEpoch"
   },
   {
-    "display_html": "<span class=\"keyword\">data</span> <a href=\"#t:NodeToClientVersion\">NodeToClientVersion</a><ul class=\"subs\"><li>= <a href=\"#v:NodeToClientV_1\">NodeToClientV_1</a></li><li>| <a href=\"#v:NodeToClientV_2\">NodeToClientV_2</a></li><li>| <a href=\"#v:NodeToClientV_3\">NodeToClientV_3</a></li><li>| <a href=\"#v:NodeToClientV_4\">NodeToClientV_4</a></li><li>| <a href=\"#v:NodeToClientV_5\">NodeToClientV_5</a></li><li>| <a href=\"#v:NodeToClientV_6\">NodeToClientV_6</a></li><li>| <a href=\"#v:NodeToClientV_7\">NodeToClientV_7</a></li><li>| <a href=\"#v:NodeToClientV_8\">NodeToClientV_8</a></li><li>| <a href=\"#v:NodeToClientV_9\">NodeToClientV_9</a></li></ul>",
-    "name": "NodeToClientVersion NodeToClientV_9 NodeToClientV_8 NodeToClientV_7 NodeToClientV_6 NodeToClientV_5 NodeToClientV_4 NodeToClientV_3 NodeToClientV_2 NodeToClientV_1",
+    "display_html": "<span class=\"keyword\">data</span> <a href=\"#t:NodeToClientVersion\">NodeToClientVersion</a><ul class=\"subs\"><li>= <a href=\"#v:NodeToClientV_1\">NodeToClientV_1</a></li><li>| <a href=\"#v:NodeToClientV_2\">NodeToClientV_2</a></li><li>| <a href=\"#v:NodeToClientV_3\">NodeToClientV_3</a></li><li>| <a href=\"#v:NodeToClientV_4\">NodeToClientV_4</a></li><li>| <a href=\"#v:NodeToClientV_5\">NodeToClientV_5</a></li><li>| <a href=\"#v:NodeToClientV_6\">NodeToClientV_6</a></li><li>| <a href=\"#v:NodeToClientV_7\">NodeToClientV_7</a></li><li>| <a href=\"#v:NodeToClientV_8\">NodeToClientV_8</a></li><li>| <a href=\"#v:NodeToClientV_9\">NodeToClientV_9</a></li><li>| <a href=\"#v:NodeToClientV_10\">NodeToClientV_10</a></li></ul>",
+    "name": "NodeToClientVersion NodeToClientV_10 NodeToClientV_9 NodeToClientV_8 NodeToClientV_7 NodeToClientV_6 NodeToClientV_5 NodeToClientV_4 NodeToClientV_3 NodeToClientV_2 NodeToClientV_1",
     "module": "Cardano.Api",
     "link": "lib/Cardano-Api.html#t:NodeToClientVersion"
   },
