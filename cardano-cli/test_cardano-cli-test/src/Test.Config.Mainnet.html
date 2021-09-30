@@ -30,8 +30,8 @@ Integration () -&gt; Property
 </span><span class="hs-identifier hs-var">H.propertyOnce</span></span><span> </span><span class="annot"><span class="annottext">(Integration () -&gt; Property) -&gt; Integration () -&gt; Property
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../file:///home/runner/.ghcup/ghc/8.10.4/share/doc/ghc-8.10.4/html/libraries/base-4.14.1.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="hs-keyword">do</span><span>
-</span><span id="line-28"></span><span>  </span><span id="local-6989586621679221980"><span class="annot"><span class="annottext">String
-</span><a href="#local-6989586621679221980"><span class="hs-identifier hs-var">projectBase</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">String
+</span><span id="line-28"></span><span>  </span><span id="local-6989586621679221983"><span class="annot"><span class="annottext">String
+</span><a href="#local-6989586621679221983"><span class="hs-identifier hs-var">projectBase</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">String
 -&gt; PropertyT (ReaderT IntegrationState (ResourceT IO)) String
 forall (m :: * -&gt; *).
 (MonadTest m, HasCallStack) =&gt;
@@ -61,8 +61,8 @@ forall (m :: * -&gt; *) a b. Monad m =&gt; (a -&gt; m b) -&gt; m a -&gt; m b
 </span><a href="../file:///home/runner/.ghcup/ghc/8.10.4/share/doc/ghc-8.10.4/html/libraries/base-4.14.1.0/src"><span class="hs-operator hs-var">=&lt;&lt;</span></a></span><span> </span><span class="annot"><span class="annottext">PropertyT (ReaderT IntegrationState (ResourceT IO)) String
 forall (m :: * -&gt; *). (MonadTest m, MonadIO m) =&gt; m String
 </span><span class="hs-identifier hs-var">H.getProjectBase</span></span><span>
-</span><span id="line-29"></span><span>  </span><span id="local-6989586621679221973"><span class="annot"><span class="annottext">Either InitialLedgerStateError (Env, LedgerState)
-</span><a href="#local-6989586621679221973"><span class="hs-identifier hs-var">result</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">IO (Either InitialLedgerStateError (Env, LedgerState))
+</span><span id="line-29"></span><span>  </span><span id="local-6989586621679221976"><span class="annot"><span class="annottext">Either InitialLedgerStateError (Env, LedgerState)
+</span><a href="#local-6989586621679221976"><span class="hs-identifier hs-var">result</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">IO (Either InitialLedgerStateError (Env, LedgerState))
 -&gt; PropertyT
      (ReaderT IntegrationState (ResourceT IO))
      (Either InitialLedgerStateError (Env, LedgerState))
@@ -91,18 +91,18 @@ forall a b. (a -&gt; b) -&gt; a -&gt; b
 -&gt; String -&gt; ExceptT InitialLedgerStateError IO (Env, LedgerState)
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../file:///home/runner/.ghcup/ghc/8.10.4/share/doc/ghc-8.10.4/html/libraries/base-4.14.1.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">String
-</span><a href="#local-6989586621679221980"><span class="hs-identifier hs-var">projectBase</span></a></span><span> </span><span class="annot"><span class="annottext">String -&gt; String -&gt; String
+</span><a href="#local-6989586621679221983"><span class="hs-identifier hs-var">projectBase</span></a></span><span> </span><span class="annot"><span class="annottext">String -&gt; String -&gt; String
 </span><a href="../file:///home/runner/.ghcup/ghc/8.10.4/share/doc/ghc-8.10.4/html/libraries/filepath-1.4.2.1/src"><span class="hs-operator hs-var">&lt;/&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">String
 </span><span class="hs-string">&quot;configuration/cardano/mainnet-config.json&quot;</span></span><span>
 </span><span id="line-30"></span><span>  </span><span class="hs-keyword">case</span><span> </span><span class="annot"><span class="annottext">Either InitialLedgerStateError (Env, LedgerState)
-</span><a href="#local-6989586621679221973"><span class="hs-identifier hs-var">result</span></a></span><span> </span><span class="hs-keyword">of</span><span>
+</span><a href="#local-6989586621679221976"><span class="hs-identifier hs-var">result</span></a></span><span> </span><span class="hs-keyword">of</span><span>
 </span><span id="line-31"></span><span>    </span><span class="annot"><a href="../file:///home/runner/.ghcup/ghc/8.10.4/share/doc/ghc-8.10.4/html/libraries/base-4.14.1.0/src"><span class="hs-identifier hs-type">Right</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Env
 </span><span class="hs-identifier">_</span></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">LedgerState
 </span><span class="hs-identifier">_</span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">() -&gt; Integration ()
 forall (m :: * -&gt; *) a. Monad m =&gt; a -&gt; m a
 </span><a href="../file:///home/runner/.ghcup/ghc/8.10.4/share/doc/ghc-8.10.4/html/libraries/base-4.14.1.0/src"><span class="hs-identifier hs-var">return</span></a></span><span> </span><span class="hs-special">(</span><span class="hs-special">)</span><span>
-</span><span id="line-32"></span><span>    </span><span class="annot"><a href="../file:///home/runner/.ghcup/ghc/8.10.4/share/doc/ghc-8.10.4/html/libraries/base-4.14.1.0/src"><span class="hs-identifier hs-type">Left</span></a></span><span> </span><span id="local-6989586621679221971"><span class="annot"><span class="annottext">InitialLedgerStateError
-</span><a href="#local-6989586621679221971"><span class="hs-identifier hs-var">e</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">CallStack -&gt; Maybe Diff -&gt; String -&gt; Integration ()
+</span><span id="line-32"></span><span>    </span><span class="annot"><a href="../file:///home/runner/.ghcup/ghc/8.10.4/share/doc/ghc-8.10.4/html/libraries/base-4.14.1.0/src"><span class="hs-identifier hs-type">Left</span></a></span><span> </span><span id="local-6989586621679221974"><span class="annot"><span class="annottext">InitialLedgerStateError
+</span><a href="#local-6989586621679221974"><span class="hs-identifier hs-var">e</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">CallStack -&gt; Maybe Diff -&gt; String -&gt; Integration ()
 forall (m :: * -&gt; *) a.
 MonadTest m =&gt;
 CallStack -&gt; Maybe Diff -&gt; String -&gt; m a
@@ -113,7 +113,7 @@ forall a. Maybe a
 </span><a href="../file:///home/runner/.ghcup/ghc/8.10.4/share/doc/ghc-8.10.4/html/libraries/base-4.14.1.0/src"><span class="hs-identifier hs-var">Nothing</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Text -&gt; String
 </span><a href="../file:///home/runner/.ghcup/ghc/8.10.4/share/doc/ghc-8.10.4/html/libraries/text-1.2.4.1/src"><span class="hs-identifier hs-var">T.unpack</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">InitialLedgerStateError -&gt; Text
 </span><a href="../file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.4/cardano-api-1.30.0/noopt/doc/html/cardano-api/src"><span class="hs-identifier hs-var">renderInitialLedgerStateError</span></a></span><span> </span><span class="annot"><span class="annottext">InitialLedgerStateError
-</span><a href="#local-6989586621679221971"><span class="hs-identifier hs-var">e</span></a></span><span class="hs-special">)</span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679221974"><span class="hs-identifier hs-var">e</span></a></span><span class="hs-special">)</span><span class="hs-special">)</span><span>
 </span><span id="line-33"></span><span>
 </span><span id="line-34"></span><span class="annot"><a href="Test.Config.Mainnet.html#tests"><span class="hs-identifier hs-type">tests</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../file:///home/runner/.ghcup/ghc/8.10.4/share/doc/ghc-8.10.4/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">IO</span></a></span><span> </span><span class="annot"><a href="../file:///home/runner/.ghcup/ghc/8.10.4/share/doc/ghc-8.10.4/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">Bool</span></a></span><span>
 </span><span id="line-35"></span><span id="tests"><span class="annot"><span class="annottext">tests :: IO Bool
