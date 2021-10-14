@@ -7488,12 +7488,6 @@
     "link": "lib_gen/Gen-Hedgehog-Roundtrip-CBOR.html#v:roundtrip_CBOR"
   },
   {
-    "display_html": "<a href=\"#v:fromGroup\">fromGroup</a> &#8759; Group &#8594; TestTree",
-    "name": "fromGroup",
-    "module": "Gen.Tasty.Hedgehog.Group",
-    "link": "lib_gen/Gen-Tasty-Hedgehog-Group.html#v:fromGroup"
-  },
-  {
     "display_html": "<a href=\"#v:tests\">tests</a> &#8759; TestTree",
     "name": "tests",
     "module": "Test.Cardano.Api.Crypto",
