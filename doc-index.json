@@ -10296,7 +10296,7 @@
     "link": "lib/Cardano-Node-Types.html#v:nodeIPv6ToIPAddress"
   },
   {
-    "display_html": "<a href=\"#v:nodeDnsAddressToDomainAddress\">nodeDnsAddressToDomainAddress</a> &#8759; <a href=\"Cardano-Node-Types.html#t:NodeDnsAddress\" title=\"Cardano.Node.Types\">NodeDnsAddress</a> &#8594; DomainAddress",
+    "display_html": "<a href=\"#v:nodeDnsAddressToDomainAddress\">nodeDnsAddressToDomainAddress</a> &#8759; <a href=\"Cardano-Node-Types.html#t:NodeDnsAddress\" title=\"Cardano.Node.Types\">NodeDnsAddress</a> &#8594; DomainAccessPoint",
     "name": "nodeDnsAddressToDomainAddress",
     "module": "Cardano.Node.Types",
     "link": "lib/Cardano-Node-Types.html#v:nodeDnsAddressToDomainAddress"
