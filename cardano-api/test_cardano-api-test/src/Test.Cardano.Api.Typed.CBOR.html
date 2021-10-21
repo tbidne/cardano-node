@@ -624,21 +624,40 @@ forall lang. PlutusScriptVersion lang -&gt; ScriptLanguage lang
 </span><a href="../file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.4/cardano-api-1.30.0/noopt/doc/html/cardano-api/src"><span class="hs-identifier hs-var">PlutusScriptLanguage</span></a></span><span> </span><span class="annot"><span class="annottext">PlutusScriptVersion PlutusScriptV1
 </span><a href="../file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.4/cardano-api-1.30.0/noopt/doc/html/cardano-api/src"><span class="hs-identifier hs-var">PlutusScriptV1</span></a></span><span class="hs-special">)</span><span class="hs-special">)</span><span>
 </span><span id="line-169"></span><span>
-</span><span id="line-170"></span><span class="annot"><a href="Test.Cardano.Api.Typed.CBOR.html#prop_roundtrip_UpdateProposal_CBOR"><span class="hs-identifier hs-type">prop_roundtrip_UpdateProposal_CBOR</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><span class="hs-identifier hs-type">Property</span></span><span>
-</span><span id="line-171"></span><span id="prop_roundtrip_UpdateProposal_CBOR"><span class="annot"><span class="annottext">prop_roundtrip_UpdateProposal_CBOR :: Property
+</span><span id="line-170"></span><span class="annot"><a href="Test.Cardano.Api.Typed.CBOR.html#prop_roundtrip_script_PlutusScriptV2_CBOR"><span class="hs-identifier hs-type">prop_roundtrip_script_PlutusScriptV2_CBOR</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><span class="hs-identifier hs-type">Property</span></span><span>
+</span><span id="line-171"></span><span id="prop_roundtrip_script_PlutusScriptV2_CBOR"><span class="annot"><span class="annottext">prop_roundtrip_script_PlutusScriptV2_CBOR :: Property
+</span><a href="Test.Cardano.Api.Typed.CBOR.html#prop_roundtrip_script_PlutusScriptV2_CBOR"><span class="hs-identifier hs-var hs-var">prop_roundtrip_script_PlutusScriptV2_CBOR</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
+</span><span id="line-172"></span><span>  </span><span class="annot"><span class="annottext">AsType (Script PlutusScriptV2)
+-&gt; Gen (Script PlutusScriptV2) -&gt; Property
+forall a.
+(SerialiseAsCBOR a, Eq a, Show a) =&gt;
+AsType a -&gt; Gen a -&gt; Property
+</span><a href="../file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.4/cardano-api-1.30.0/l/gen/noopt/doc/html/cardano-api/src"><span class="hs-identifier hs-var">roundtrip_CBOR</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">AsType PlutusScriptV2 -&gt; AsType (Script PlutusScriptV2)
+forall lang. AsType lang -&gt; AsType (Script lang)
+</span><a href="../file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.4/cardano-api-1.30.0/noopt/doc/html/cardano-api/src"><span class="hs-identifier hs-var">AsScript</span></a></span><span> </span><span class="annot"><span class="annottext">AsType PlutusScriptV2
+</span><a href="../file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.4/cardano-api-1.30.0/noopt/doc/html/cardano-api/src"><span class="hs-identifier hs-var">AsPlutusScriptV2</span></a></span><span class="hs-special">)</span><span>
+</span><span id="line-173"></span><span>                 </span><span class="hs-special">(</span><span class="annot"><span class="annottext">ScriptLanguage PlutusScriptV2 -&gt; Gen (Script PlutusScriptV2)
+forall lang. ScriptLanguage lang -&gt; Gen (Script lang)
+</span><a href="../file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.4/cardano-api-1.30.0/l/gen/noopt/doc/html/cardano-api/src"><span class="hs-identifier hs-var">genScript</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">PlutusScriptVersion PlutusScriptV2 -&gt; ScriptLanguage PlutusScriptV2
+forall lang. PlutusScriptVersion lang -&gt; ScriptLanguage lang
+</span><a href="../file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.4/cardano-api-1.30.0/noopt/doc/html/cardano-api/src"><span class="hs-identifier hs-var">PlutusScriptLanguage</span></a></span><span> </span><span class="annot"><span class="annottext">PlutusScriptVersion PlutusScriptV2
+</span><a href="../file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.4/cardano-api-1.30.0/noopt/doc/html/cardano-api/src"><span class="hs-identifier hs-var">PlutusScriptV2</span></a></span><span class="hs-special">)</span><span class="hs-special">)</span><span>
+</span><span id="line-174"></span><span>
+</span><span id="line-175"></span><span class="annot"><a href="Test.Cardano.Api.Typed.CBOR.html#prop_roundtrip_UpdateProposal_CBOR"><span class="hs-identifier hs-type">prop_roundtrip_UpdateProposal_CBOR</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><span class="hs-identifier hs-type">Property</span></span><span>
+</span><span id="line-176"></span><span id="prop_roundtrip_UpdateProposal_CBOR"><span class="annot"><span class="annottext">prop_roundtrip_UpdateProposal_CBOR :: Property
 </span><a href="Test.Cardano.Api.Typed.CBOR.html#prop_roundtrip_UpdateProposal_CBOR"><span class="hs-identifier hs-var hs-var">prop_roundtrip_UpdateProposal_CBOR</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
-</span><span id="line-172"></span><span>  </span><span class="annot"><span class="annottext">AsType UpdateProposal -&gt; Gen UpdateProposal -&gt; Property
+</span><span id="line-177"></span><span>  </span><span class="annot"><span class="annottext">AsType UpdateProposal -&gt; Gen UpdateProposal -&gt; Property
 forall a.
 (SerialiseAsCBOR a, Eq a, Show a) =&gt;
 AsType a -&gt; Gen a -&gt; Property
 </span><a href="../file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.4/cardano-api-1.30.0/l/gen/noopt/doc/html/cardano-api/src"><span class="hs-identifier hs-var">roundtrip_CBOR</span></a></span><span> </span><span class="annot"><span class="annottext">AsType UpdateProposal
 </span><a href="../file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.4/cardano-api-1.30.0/noopt/doc/html/cardano-api/src"><span class="hs-identifier hs-var">AsUpdateProposal</span></a></span><span> </span><span class="annot"><span class="annottext">Gen UpdateProposal
 </span><a href="../file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.4/cardano-api-1.30.0/l/gen/noopt/doc/html/cardano-api/src"><span class="hs-identifier hs-var">genUpdateProposal</span></a></span><span>
-</span><span id="line-173"></span><span>
-</span><span id="line-174"></span><span class="hs-comment">-- -----------------------------------------------------------------------------</span><span>
-</span><span id="line-175"></span><span>
-</span><span id="line-176"></span><span class="annot"><a href="Test.Cardano.Api.Typed.CBOR.html#tests"><span class="hs-identifier hs-type">tests</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><span class="hs-identifier hs-type">TestTree</span></span><span>
-</span><span id="line-177"></span><span id="tests"><span class="annot"><span class="annottext">tests :: TestTree
+</span><span id="line-178"></span><span>
+</span><span id="line-179"></span><span class="hs-comment">-- -----------------------------------------------------------------------------</span><span>
+</span><span id="line-180"></span><span>
+</span><span id="line-181"></span><span class="annot"><a href="Test.Cardano.Api.Typed.CBOR.html#tests"><span class="hs-identifier hs-type">tests</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><span class="hs-identifier hs-type">TestTree</span></span><span>
+</span><span id="line-182"></span><span id="tests"><span class="annot"><span class="annottext">tests :: TestTree
 </span><a href="Test.Cardano.Api.Typed.CBOR.html#tests"><span class="hs-identifier hs-var hs-var">tests</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">TestName
 [TestTree]
 Property
@@ -646,6 +665,7 @@ TestName -&gt; [TestTree] -&gt; TestTree
 TestName -&gt; Property -&gt; TestTree
 testGroup :: TestName -&gt; [TestTree] -&gt; TestTree
 prop_roundtrip_UpdateProposal_CBOR :: Property
+prop_roundtrip_script_PlutusScriptV2_CBOR :: Property
 prop_roundtrip_script_PlutusScriptV1_CBOR :: Property
 prop_roundtrip_script_SimpleScriptV2_CBOR :: Property
 prop_roundtrip_script_SimpleScriptV1_CBOR :: Property
@@ -683,5 +703,5 @@ prop_roundtrip_txbody_allegra_CBOR :: Property
 prop_roundtrip_txbody_shelley_CBOR :: Property
 prop_roundtrip_txbody_byron_CBOR :: Property
 testProperty :: TestName -&gt; Property -&gt; TestTree
-</span><span class="hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">$testGroupGenerator</span></span><span>
-</span><span id="line-178"></span></pre></body></html>
+</span><span class="hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">$testGroupGenerator</span></span><span>
+</span><span id="line-183"></span></pre></body></html>
