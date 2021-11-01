@@ -22,7 +22,7 @@
 </span><span id="line-22"></span><span class="hs-keyword">import</span><span>           </span><span class="annot"><span class="hs-identifier">Test.Tasty.Hedgehog</span></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="hs-identifier">testProperty</span></span><span class="hs-special">)</span><span>
 </span><span id="line-23"></span><span class="hs-keyword">import</span><span>           </span><span class="annot"><span class="hs-identifier">Test.Tasty.TH</span></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="hs-identifier">testGroupGenerator</span></span><span class="hs-special">)</span><span>
 </span><span id="line-24"></span><span>
-</span><span id="line-25"></span><span class="hs-keyword">import</span><span>           </span><span class="annot"><a href="../file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.4/cardano-api-1.30.0/l/gen/noopt/doc/html/cardano-api/src"><span class="hs-identifier">Gen.Cardano.Api.Typed</span></a></span><span>
+</span><span id="line-25"></span><span class="hs-keyword">import</span><span>           </span><span class="annot"><a href="../file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.4/cardano-api-1.31.0/l/gen/noopt/doc/html/cardano-api/src"><span class="hs-identifier">Gen.Cardano.Api.Typed</span></a></span><span>
 </span><span id="line-26"></span><span class="hs-keyword">import</span><span>           </span><span class="annot"><a href="Test.Cardano.Api.Typed.Orphans.html"><span class="hs-identifier">Test.Cardano.Api.Typed.Orphans</span></a></span><span> </span><span class="hs-special">(</span><span class="hs-special">)</span><span>
 </span><span id="line-27"></span><span>
 </span><span id="line-28"></span><span class="hs-comment">{- HLINT ignore &quot;Use camelCase&quot; -}</span><span>
@@ -47,7 +47,7 @@ forall (m :: * -&gt; *) a.
 (MonadGen m, GenBase m ~ Identity) =&gt;
 m (Maybe a) -&gt; m a
 </span><span class="hs-identifier hs-var">Gen.just</span></span><span> </span><span class="annot"><span class="annottext">GenT Identity (Maybe PraosNonce)
-</span><a href="../file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.4/cardano-api-1.30.0/l/gen/noopt/doc/html/cardano-api/src"><span class="hs-identifier hs-var">genMaybePraosNonce</span></a></span><span>
+</span><a href="../file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.4/cardano-api-1.31.0/l/gen/noopt/doc/html/cardano-api/src"><span class="hs-identifier hs-var">genMaybePraosNonce</span></a></span><span>
 </span><span id="line-33"></span><span>  </span><span class="annot"><span class="annottext">PraosNonce
 -&gt; (PraosNonce -&gt; ByteString)
 -&gt; (ByteString -&gt; Either String PraosNonce)
@@ -76,7 +76,7 @@ forall (m :: * -&gt; *) a.
 (Monad m, Show a, HasCallStack) =&gt;
 Gen a -&gt; PropertyT m a
 </span><span class="hs-identifier hs-var">forAll</span></span><span> </span><span class="annot"><span class="annottext">Gen ProtocolParameters
-</span><a href="../file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.4/cardano-api-1.30.0/l/gen/noopt/doc/html/cardano-api/src"><span class="hs-identifier hs-var">genProtocolParameters</span></a></span><span>
+</span><a href="../file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.4/cardano-api-1.31.0/l/gen/noopt/doc/html/cardano-api/src"><span class="hs-identifier hs-var">genProtocolParameters</span></a></span><span>
 </span><span id="line-38"></span><span>  </span><span class="annot"><span class="annottext">ProtocolParameters
 -&gt; (ProtocolParameters -&gt; ByteString)
 -&gt; (ByteString -&gt; Either String ProtocolParameters)
