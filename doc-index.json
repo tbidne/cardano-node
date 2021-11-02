@@ -1032,6 +1032,12 @@
     "link": "lib/Cardano-Api-Utils.html#v:runParsecParser"
   },
   {
+    "display_html": "<a href=\"#v:note\">note</a> &#8759; <a href=\"file:///home/runner/.ghcup/ghc/8.10.4/share/doc/ghc-8.10.4/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:MonadFail\" title=\"Distribution.Compat.Prelude.Internal\">MonadFail</a> m &#8658; <a href=\"file:///home/runner/.ghcup/ghc/8.10.4/share/doc/ghc-8.10.4/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:String\" title=\"Distribution.Compat.Prelude.Internal\">String</a> &#8594; <a href=\"file:///home/runner/.ghcup/ghc/8.10.4/share/doc/ghc-8.10.4/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:Maybe\" title=\"Distribution.Compat.Prelude.Internal\">Maybe</a> a &#8594; m a",
+    "name": "note",
+    "module": "Cardano.Api.Utils",
+    "link": "lib/Cardano-Api-Utils.html#v:note"
+  },
+  {
     "display_html": "<span class=\"keyword\">class</span> (<a href=\"Cardano-Api-HasTypeProxy.html#t:HasTypeProxy\" title=\"Cardano.Api.HasTypeProxy\">HasTypeProxy</a> a, <a href=\"Cardano-Api-SerialiseRaw.html#t:SerialiseAsRawBytes\" title=\"Cardano.Api.SerialiseRaw\">SerialiseAsRawBytes</a> a) &#8658; <a href=\"#t:SerialiseAsBech32\">SerialiseAsBech32</a> a <span class=\"keyword\">where</span><ul class=\"subs\"><li><a href=\"#v:bech32PrefixFor\">bech32PrefixFor</a> &#8759; a &#8594; <a href=\"file:///home/runner/.ghcup/ghc/8.10.4/share/doc/ghc-8.10.4/html/libraries/text-1.2.4.1/Data-Text.html#t:Text\" title=\"Data.Text\">Text</a></li><li><a href=\"#v:bech32PrefixesPermitted\">bech32PrefixesPermitted</a> &#8759; <a href=\"Cardano-Api-HasTypeProxy.html#t:AsType\" title=\"Cardano.Api.HasTypeProxy\">AsType</a> a &#8594; [<a href=\"file:///home/runner/.ghcup/ghc/8.10.4/share/doc/ghc-8.10.4/html/libraries/text-1.2.4.1/Data-Text.html#t:Text\" title=\"Data.Text\">Text</a>]</li></ul>",
     "name": "SerialiseAsBech32 bech32PrefixFor bech32PrefixesPermitted",
     "module": "Cardano.Api.SerialiseBech32",
@@ -7348,6 +7354,12 @@
     "name": "genScriptData",
     "module": "Gen.Cardano.Api.Typed",
     "link": "lib_gen/Gen-Cardano-Api-Typed.html#v:genScriptData"
+  },
+  {
+    "display_html": "<a href=\"#v:genAssetName\">genAssetName</a> &#8759; Gen <a href=\"file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.4/cardano-api-1.31.0/noopt/doc/html/cardano-api/Cardano-Api-Value.html#t:AssetName\" title=\"Cardano.Api.Value\">AssetName</a>",
+    "name": "genAssetName",
+    "module": "Gen.Cardano.Api.Typed",
+    "link": "lib_gen/Gen-Cardano-Api-Typed.html#v:genAssetName"
   },
   {
     "display_html": "<a href=\"#v:genOperationalCertificate\">genOperationalCertificate</a> &#8759; Gen <a href=\"file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.4/cardano-api-1.31.0/noopt/doc/html/cardano-api/Cardano-Api-OperationalCertificate.html#t:OperationalCertificate\" title=\"Cardano.Api.OperationalCertificate\">OperationalCertificate</a>",
