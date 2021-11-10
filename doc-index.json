@@ -774,6 +774,12 @@
     "link": "lib/Cardano-Api-SerialiseTextEnvelope.html#v:readTextEnvelopeOfTypeFromFile"
   },
   {
+    "display_html": "<a href=\"#v:textEnvelopeToJSON\">textEnvelopeToJSON</a> &#8759; <a href=\"Cardano-Api-SerialiseTextEnvelope.html#t:HasTextEnvelope\" title=\"Cardano.Api.SerialiseTextEnvelope\">HasTextEnvelope</a> a &#8658; <a href=\"file:///home/runner/.ghcup/ghc/8.10.4/share/doc/ghc-8.10.4/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:Maybe\" title=\"Distribution.Compat.Prelude.Internal\">Maybe</a> <a href=\"Cardano-Api-SerialiseTextEnvelope.html#t:TextEnvelopeDescr\" title=\"Cardano.Api.SerialiseTextEnvelope\">TextEnvelopeDescr</a> &#8594; a &#8594; <a href=\"file:///home/runner/.ghcup/ghc/8.10.4/share/doc/ghc-8.10.4/html/libraries/bytestring-0.10.12.0/Data-ByteString-Lazy.html#t:ByteString\" title=\"Data.ByteString.Lazy\">ByteString</a>",
+    "name": "textEnvelopeToJSON",
+    "module": "Cardano.Api.SerialiseTextEnvelope",
+    "link": "lib/Cardano-Api-SerialiseTextEnvelope.html#v:textEnvelopeToJSON"
+  },
+  {
     "display_html": "<span class=\"keyword\">data</span> <a href=\"#t:FromSomeType\">FromSomeType</a> (c &#8759; <a href=\"file:///home/runner/.ghcup/ghc/8.10.4/share/doc/ghc-8.10.4/html/libraries/base-4.14.1.0/Data-Kind.html#t:Type\" title=\"Data.Kind\">Type</a> &#8594; <a href=\"file:///home/runner/.ghcup/ghc/8.10.4/share/doc/ghc-8.10.4/html/libraries/base-4.14.1.0/Data-Kind.html#t:Constraint\" title=\"Data.Kind\">Constraint</a>) b <span class=\"keyword\">where</span><ul class=\"subs\"><li><a href=\"#v:FromSomeType\">FromSomeType</a> &#8759; c a &#8658; <a href=\"Cardano-Api-SerialiseTextEnvelope.html#t:AsType\" title=\"Cardano.Api.SerialiseTextEnvelope\">AsType</a> a &#8594; (a &#8594; b) &#8594; <a href=\"Cardano-Api-SerialiseTextEnvelope.html#t:FromSomeType\" title=\"Cardano.Api.SerialiseTextEnvelope\">FromSomeType</a> c b</li></ul>",
     "name": "FromSomeType FromSomeType",
     "module": "Cardano.Api.SerialiseTextEnvelope",
