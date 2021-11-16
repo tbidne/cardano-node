@@ -22,7 +22,7 @@
 </span><a href="Testnet.Commands.Byron.html#maybeTestnetMagic"><span class="hs-identifier hs-var hs-var">maybeTestnetMagic</span></a></span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Maybe</span></a></span><span> </span><span class="annot"><a href="../file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">Int</span></a></span><span>
 </span><span id="line-22"></span><span>  </span><span class="hs-special">,</span><span> </span><span id="testnetOptions"><span class="annot"><span class="annottext">ByronOptions -&gt; TestnetOptions
 </span><a href="Testnet.Commands.Byron.html#testnetOptions"><span class="hs-identifier hs-var hs-var">testnetOptions</span></a></span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><span class="hs-identifier hs-type">TestnetOptions</span></span><span>
-</span><span id="line-23"></span><span>  </span><span class="hs-special">}</span><span> </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621679079217"><span id="local-6989586621679079219"><span class="annot"><span class="annottext">ByronOptions -&gt; ByronOptions -&gt; Bool
+</span><span id="line-23"></span><span>  </span><span class="hs-special">}</span><span> </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621679138818"><span id="local-6989586621679138820"><span class="annot"><span class="annottext">ByronOptions -&gt; ByronOptions -&gt; Bool
 (ByronOptions -&gt; ByronOptions -&gt; Bool)
 -&gt; (ByronOptions -&gt; ByronOptions -&gt; Bool) -&gt; Eq ByronOptions
 forall a. (a -&gt; a -&gt; Bool) -&gt; (a -&gt; a -&gt; Bool) -&gt; Eq a
@@ -30,7 +30,7 @@ forall a. (a -&gt; a -&gt; Bool) -&gt; (a -&gt; a -&gt; Bool) -&gt; Eq a
 $c/= :: ByronOptions -&gt; ByronOptions -&gt; Bool
 == :: ByronOptions -&gt; ByronOptions -&gt; Bool
 $c== :: ByronOptions -&gt; ByronOptions -&gt; Bool
-</span><a href="../file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">Eq</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679079210"><span id="local-6989586621679079212"><span id="local-6989586621679079214"><span class="annot"><span class="annottext">Int -&gt; ByronOptions -&gt; ShowS
+</span><a href="../file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">Eq</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679138811"><span id="local-6989586621679138813"><span id="local-6989586621679138815"><span class="annot"><span class="annottext">Int -&gt; ByronOptions -&gt; ShowS
 [ByronOptions] -&gt; ShowS
 ByronOptions -&gt; String
 (Int -&gt; ByronOptions -&gt; ShowS)
@@ -90,11 +90,11 @@ forall (f :: * -&gt; *) a b. Applicative f =&gt; f (a -&gt; b) -&gt; f a -&gt; f
 </span><span id="line-35"></span><span>
 </span><span id="line-36"></span><span class="annot"><a href="Testnet.Commands.Byron.html#optsTestnet"><span class="hs-identifier hs-type">optsTestnet</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><span class="hs-identifier hs-type">Parser</span></span><span> </span><span class="annot"><span class="hs-identifier hs-type">TestnetOptions</span></span><span>
 </span><span id="line-37"></span><span id="optsTestnet"><span class="annot"><span class="annottext">optsTestnet :: Parser TestnetOptions
-</span><a href="Testnet.Commands.Byron.html#optsTestnet"><span class="hs-identifier hs-var hs-var">optsTestnet</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Int -&gt; Int -&gt; Int -&gt; Int -&gt; Int -&gt; TestnetOptions
+</span><a href="Testnet.Commands.Byron.html#optsTestnet"><span class="hs-identifier hs-var hs-var">optsTestnet</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Int -&gt; Int -&gt; Int -&gt; Int -&gt; Int -&gt; Bool -&gt; TestnetOptions
 </span><span class="hs-identifier hs-var">TestnetOptions</span></span><span>
-</span><span id="line-38"></span><span>  </span><span class="annot"><span class="annottext">(Int -&gt; Int -&gt; Int -&gt; Int -&gt; Int -&gt; TestnetOptions)
+</span><span id="line-38"></span><span>  </span><span class="annot"><span class="annottext">(Int -&gt; Int -&gt; Int -&gt; Int -&gt; Int -&gt; Bool -&gt; TestnetOptions)
 -&gt; Parser Int
--&gt; Parser (Int -&gt; Int -&gt; Int -&gt; Int -&gt; TestnetOptions)
+-&gt; Parser (Int -&gt; Int -&gt; Int -&gt; Int -&gt; Bool -&gt; TestnetOptions)
 forall (f :: * -&gt; *) a b. Functor f =&gt; (a -&gt; b) -&gt; f a -&gt; f b
 </span><a href="../file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;$&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">ReadM Int -&gt; Mod OptionFields Int -&gt; Parser Int
 forall a. ReadM a -&gt; Mod OptionFields a -&gt; Parser a
@@ -134,8 +134,9 @@ forall (f :: * -&gt; *) a. HasValue f =&gt; a -&gt; Mod f a
 </span><span class="hs-identifier hs-var hs-var">numBftNodes</span></span><span> </span><span class="annot"><span class="annottext">TestnetOptions
 </span><span class="hs-identifier hs-var">defaultTestnetOptions</span></span><span class="hs-special">)</span><span>
 </span><span id="line-44"></span><span>      </span><span class="hs-special">)</span><span>
-</span><span id="line-45"></span><span>  </span><span class="annot"><span class="annottext">Parser (Int -&gt; Int -&gt; Int -&gt; Int -&gt; TestnetOptions)
--&gt; Parser Int -&gt; Parser (Int -&gt; Int -&gt; Int -&gt; TestnetOptions)
+</span><span id="line-45"></span><span>  </span><span class="annot"><span class="annottext">Parser (Int -&gt; Int -&gt; Int -&gt; Int -&gt; Bool -&gt; TestnetOptions)
+-&gt; Parser Int
+-&gt; Parser (Int -&gt; Int -&gt; Int -&gt; Bool -&gt; TestnetOptions)
 forall (f :: * -&gt; *) a b. Applicative f =&gt; f (a -&gt; b) -&gt; f a -&gt; f b
 </span><a href="../file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;*&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">ReadM Int -&gt; Mod OptionFields Int -&gt; Parser Int
 forall a. ReadM a -&gt; Mod OptionFields a -&gt; Parser a
@@ -175,8 +176,8 @@ forall (f :: * -&gt; *) a. HasValue f =&gt; a -&gt; Mod f a
 </span><span class="hs-identifier hs-var hs-var">slotDuration</span></span><span> </span><span class="annot"><span class="annottext">TestnetOptions
 </span><span class="hs-identifier hs-var">defaultTestnetOptions</span></span><span class="hs-special">)</span><span>
 </span><span id="line-51"></span><span>      </span><span class="hs-special">)</span><span>
-</span><span id="line-52"></span><span>  </span><span class="annot"><span class="annottext">Parser (Int -&gt; Int -&gt; Int -&gt; TestnetOptions)
--&gt; Parser Int -&gt; Parser (Int -&gt; Int -&gt; TestnetOptions)
+</span><span id="line-52"></span><span>  </span><span class="annot"><span class="annottext">Parser (Int -&gt; Int -&gt; Int -&gt; Bool -&gt; TestnetOptions)
+-&gt; Parser Int -&gt; Parser (Int -&gt; Int -&gt; Bool -&gt; TestnetOptions)
 forall (f :: * -&gt; *) a b. Applicative f =&gt; f (a -&gt; b) -&gt; f a -&gt; f b
 </span><a href="../file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;*&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">ReadM Int -&gt; Mod OptionFields Int -&gt; Parser Int
 forall a. ReadM a -&gt; Mod OptionFields a -&gt; Parser a
@@ -216,8 +217,8 @@ forall (f :: * -&gt; *) a. HasValue f =&gt; a -&gt; Mod f a
 </span><span class="hs-identifier hs-var hs-var">securityParam</span></span><span> </span><span class="annot"><span class="annottext">TestnetOptions
 </span><span class="hs-identifier hs-var">defaultTestnetOptions</span></span><span class="hs-special">)</span><span>
 </span><span id="line-58"></span><span>      </span><span class="hs-special">)</span><span>
-</span><span id="line-59"></span><span>  </span><span class="annot"><span class="annottext">Parser (Int -&gt; Int -&gt; TestnetOptions)
--&gt; Parser Int -&gt; Parser (Int -&gt; TestnetOptions)
+</span><span id="line-59"></span><span>  </span><span class="annot"><span class="annottext">Parser (Int -&gt; Int -&gt; Bool -&gt; TestnetOptions)
+-&gt; Parser Int -&gt; Parser (Int -&gt; Bool -&gt; TestnetOptions)
 forall (f :: * -&gt; *) a b. Applicative f =&gt; f (a -&gt; b) -&gt; f a -&gt; f b
 </span><a href="../file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;*&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">ReadM Int -&gt; Mod OptionFields Int -&gt; Parser Int
 forall a. ReadM a -&gt; Mod OptionFields a -&gt; Parser a
@@ -257,8 +258,8 @@ forall (f :: * -&gt; *) a. HasValue f =&gt; a -&gt; Mod f a
 </span><span class="hs-identifier hs-var hs-var">nPoorAddresses</span></span><span> </span><span class="annot"><span class="annottext">TestnetOptions
 </span><span class="hs-identifier hs-var">defaultTestnetOptions</span></span><span class="hs-special">)</span><span>
 </span><span id="line-65"></span><span>      </span><span class="hs-special">)</span><span>
-</span><span id="line-66"></span><span>  </span><span class="annot"><span class="annottext">Parser (Int -&gt; TestnetOptions)
--&gt; Parser Int -&gt; Parser TestnetOptions
+</span><span id="line-66"></span><span>  </span><span class="annot"><span class="annottext">Parser (Int -&gt; Bool -&gt; TestnetOptions)
+-&gt; Parser Int -&gt; Parser (Bool -&gt; TestnetOptions)
 forall (f :: * -&gt; *) a b. Applicative f =&gt; f (a -&gt; b) -&gt; f a -&gt; f b
 </span><a href="../file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;*&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">ReadM Int -&gt; Mod OptionFields Int -&gt; Parser Int
 forall a. ReadM a -&gt; Mod OptionFields a -&gt; Parser a
@@ -298,21 +299,62 @@ forall (f :: * -&gt; *) a. HasValue f =&gt; a -&gt; Mod f a
 </span><span class="hs-identifier hs-var hs-var">totalBalance</span></span><span> </span><span class="annot"><span class="annottext">TestnetOptions
 </span><span class="hs-identifier hs-var">defaultTestnetOptions</span></span><span class="hs-special">)</span><span>
 </span><span id="line-72"></span><span>      </span><span class="hs-special">)</span><span>
-</span><span id="line-73"></span><span>
-</span><span id="line-74"></span><span class="annot"><a href="Testnet.Commands.Byron.html#runByronOptions"><span class="hs-identifier hs-type">runByronOptions</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Testnet.Commands.Byron.html#ByronOptions"><span class="hs-identifier hs-type">ByronOptions</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">IO</span></a></span><span> </span><span class="hs-special">(</span><span class="hs-special">)</span><span>
-</span><span id="line-75"></span><span id="runByronOptions"><span class="annot"><span class="annottext">runByronOptions :: ByronOptions -&gt; IO ()
-</span><a href="Testnet.Commands.Byron.html#runByronOptions"><span class="hs-identifier hs-var hs-var">runByronOptions</span></a></span></span><span> </span><span id="local-6989586621679079190"><span class="annot"><span class="annottext">ByronOptions
-</span><a href="#local-6989586621679079190"><span class="hs-identifier hs-var">opts</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Maybe Int -&gt; (Conf -&gt; Integration [String]) -&gt; IO ()
+</span><span id="line-73"></span><span>  </span><span class="annot"><span class="annottext">Parser (Bool -&gt; TestnetOptions)
+-&gt; Parser Bool -&gt; Parser TestnetOptions
+forall (f :: * -&gt; *) a b. Applicative f =&gt; f (a -&gt; b) -&gt; f a -&gt; f b
+</span><a href="../file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;*&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">ReadM Bool -&gt; Mod OptionFields Bool -&gt; Parser Bool
+forall a. ReadM a -&gt; Mod OptionFields a -&gt; Parser a
+</span><span class="hs-identifier hs-var">OA.option</span></span><span> </span><span class="annot"><span class="annottext">ReadM Bool
+forall a. Read a =&gt; ReadM a
+</span><span class="hs-identifier hs-var">auto</span></span><span>
+</span><span id="line-74"></span><span>      </span><span class="hs-special">(</span><span>   </span><span class="annot"><span class="annottext">String -&gt; Mod OptionFields Bool
+forall (f :: * -&gt; *) a. HasName f =&gt; String -&gt; Mod f a
+</span><span class="hs-identifier hs-var">OA.long</span></span><span> </span><span class="annot"><span class="annottext">String
+</span><span class="hs-string">&quot;enable-p2p&quot;</span></span><span>
+</span><span id="line-75"></span><span>      </span><span class="annot"><span class="annottext">Mod OptionFields Bool
+-&gt; Mod OptionFields Bool -&gt; Mod OptionFields Bool
+forall a. Semigroup a =&gt; a -&gt; a -&gt; a
+</span><a href="../file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;&gt;</span></a></span><span>  </span><span class="annot"><span class="annottext">String -&gt; Mod OptionFields Bool
+forall (f :: * -&gt; *) a. String -&gt; Mod f a
+</span><span class="hs-identifier hs-var">OA.help</span></span><span> </span><span class="annot"><span class="annottext">String
+</span><span class="hs-string">&quot;Enable P2P&quot;</span></span><span>
+</span><span id="line-76"></span><span>      </span><span class="annot"><span class="annottext">Mod OptionFields Bool
+-&gt; Mod OptionFields Bool -&gt; Mod OptionFields Bool
+forall a. Semigroup a =&gt; a -&gt; a -&gt; a
+</span><a href="../file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;&gt;</span></a></span><span>  </span><span class="annot"><span class="annottext">String -&gt; Mod OptionFields Bool
+forall (f :: * -&gt; *) a. HasMetavar f =&gt; String -&gt; Mod f a
+</span><span class="hs-identifier hs-var">OA.metavar</span></span><span> </span><span class="annot"><span class="annottext">String
+</span><span class="hs-string">&quot;BOOL&quot;</span></span><span>
+</span><span id="line-77"></span><span>      </span><span class="annot"><span class="annottext">Mod OptionFields Bool
+-&gt; Mod OptionFields Bool -&gt; Mod OptionFields Bool
+forall a. Semigroup a =&gt; a -&gt; a -&gt; a
+</span><a href="../file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;&gt;</span></a></span><span>  </span><span class="annot"><span class="annottext">Mod OptionFields Bool
+forall a (f :: * -&gt; *). Show a =&gt; Mod f a
+</span><span class="hs-identifier hs-var">OA.showDefault</span></span><span>
+</span><span id="line-78"></span><span>      </span><span class="annot"><span class="annottext">Mod OptionFields Bool
+-&gt; Mod OptionFields Bool -&gt; Mod OptionFields Bool
+forall a. Semigroup a =&gt; a -&gt; a -&gt; a
+</span><a href="../file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;&gt;</span></a></span><span>  </span><span class="annot"><span class="annottext">Bool -&gt; Mod OptionFields Bool
+forall (f :: * -&gt; *) a. HasValue f =&gt; a -&gt; Mod f a
+</span><span class="hs-identifier hs-var">OA.value</span></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">TestnetOptions -&gt; Bool
+</span><span class="hs-identifier hs-var hs-var">enableP2P</span></span><span> </span><span class="annot"><span class="annottext">TestnetOptions
+</span><span class="hs-identifier hs-var">defaultTestnetOptions</span></span><span class="hs-special">)</span><span>
+</span><span id="line-79"></span><span>      </span><span class="hs-special">)</span><span>
+</span><span id="line-80"></span><span>
+</span><span id="line-81"></span><span class="annot"><a href="Testnet.Commands.Byron.html#runByronOptions"><span class="hs-identifier hs-type">runByronOptions</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Testnet.Commands.Byron.html#ByronOptions"><span class="hs-identifier hs-type">ByronOptions</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">IO</span></a></span><span> </span><span class="hs-special">(</span><span class="hs-special">)</span><span>
+</span><span id="line-82"></span><span id="runByronOptions"><span class="annot"><span class="annottext">runByronOptions :: ByronOptions -&gt; IO ()
+</span><a href="Testnet.Commands.Byron.html#runByronOptions"><span class="hs-identifier hs-var hs-var">runByronOptions</span></a></span></span><span> </span><span id="local-6989586621679138790"><span class="annot"><span class="annottext">ByronOptions
+</span><a href="#local-6989586621679138790"><span class="hs-identifier hs-var">opts</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Maybe Int -&gt; (Conf -&gt; Integration [String]) -&gt; IO ()
 forall a. Maybe Int -&gt; (Conf -&gt; Integration a) -&gt; IO ()
 </span><a href="Testnet.Run.html#runTestnet"><span class="hs-identifier hs-var">runTestnet</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">ByronOptions -&gt; Maybe Int
 </span><a href="Testnet.Commands.Byron.html#maybeTestnetMagic"><span class="hs-identifier hs-var hs-var">maybeTestnetMagic</span></a></span><span> </span><span class="annot"><span class="annottext">ByronOptions
-</span><a href="#local-6989586621679079190"><span class="hs-identifier hs-var">opts</span></a></span><span class="hs-special">)</span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">TestnetOptions -&gt; Conf -&gt; Integration [String]
+</span><a href="#local-6989586621679138790"><span class="hs-identifier hs-var">opts</span></a></span><span class="hs-special">)</span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">TestnetOptions -&gt; Conf -&gt; Integration [String]
 </span><span class="hs-identifier hs-var">Testnet.Byron.testnet</span></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">ByronOptions -&gt; TestnetOptions
 </span><a href="Testnet.Commands.Byron.html#testnetOptions"><span class="hs-identifier hs-var hs-var">testnetOptions</span></a></span><span> </span><span class="annot"><span class="annottext">ByronOptions
-</span><a href="#local-6989586621679079190"><span class="hs-identifier hs-var">opts</span></a></span><span class="hs-special">)</span><span class="hs-special">)</span><span>
-</span><span id="line-76"></span><span>
-</span><span id="line-77"></span><span class="annot"><a href="Testnet.Commands.Byron.html#cmdByron"><span class="hs-identifier hs-type">cmdByron</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><span class="hs-identifier hs-type">Mod</span></span><span> </span><span class="annot"><span class="hs-identifier hs-type">CommandFields</span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">IO</span></a></span><span> </span><span class="hs-special">(</span><span class="hs-special">)</span><span class="hs-special">)</span><span>
-</span><span id="line-78"></span><span id="cmdByron"><span class="annot"><span class="annottext">cmdByron :: Mod CommandFields (IO ())
+</span><a href="#local-6989586621679138790"><span class="hs-identifier hs-var">opts</span></a></span><span class="hs-special">)</span><span class="hs-special">)</span><span>
+</span><span id="line-83"></span><span>
+</span><span id="line-84"></span><span class="annot"><a href="Testnet.Commands.Byron.html#cmdByron"><span class="hs-identifier hs-type">cmdByron</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><span class="hs-identifier hs-type">Mod</span></span><span> </span><span class="annot"><span class="hs-identifier hs-type">CommandFields</span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">IO</span></a></span><span> </span><span class="hs-special">(</span><span class="hs-special">)</span><span class="hs-special">)</span><span>
+</span><span id="line-85"></span><span id="cmdByron"><span class="annot"><span class="annottext">cmdByron :: Mod CommandFields (IO ())
 </span><a href="Testnet.Commands.Byron.html#cmdByron"><span class="hs-identifier hs-var hs-var">cmdByron</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">String -&gt; ParserInfo (IO ()) -&gt; Mod CommandFields (IO ())
 forall a. String -&gt; ParserInfo a -&gt; Mod CommandFields a
 </span><span class="hs-identifier hs-var">command</span></span><span> </span><span class="annot"><span class="annottext">String
@@ -334,4 +376,4 @@ forall a b. (a -&gt; b) -&gt; a -&gt; b
 forall (f :: * -&gt; *) a b. Functor f =&gt; (a -&gt; b) -&gt; f a -&gt; f b
 </span><a href="../file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;$&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">Parser ByronOptions
 </span><a href="Testnet.Commands.Byron.html#optsByron"><span class="hs-identifier hs-var">optsByron</span></a></span><span>
-</span><span id="line-79"></span></pre></body></html>
+</span><span id="line-86"></span></pre></body></html>
