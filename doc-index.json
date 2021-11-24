@@ -9870,6 +9870,48 @@
     "link": "lib/Cardano-Node-Handlers-TopLevel.html#v:toplevelExceptionHandler"
   },
   {
+    "display_html": "<span class=\"keyword\">class</span> <a href=\"#t:ConvertTxId\">ConvertTxId</a> blk <span class=\"keyword\">where</span><ul class=\"subs\"><li><a href=\"#v:txIdToRawBytes\">txIdToRawBytes</a> &#8759; TxId (GenTx blk) &#8594; <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/bytestring-0.10.12.0/Data-ByteString.html#t:ByteString\" title=\"Data.ByteString\">ByteString</a></li></ul>",
+    "name": "ConvertTxId txIdToRawBytes",
+    "module": "Cardano.Node.Queries",
+    "link": "lib/Cardano-Node-Queries.html#t:ConvertTxId"
+  },
+  {
+    "display_html": "<span class=\"keyword\">newtype</span> <a href=\"#t:MaxKESEvolutions\">MaxKESEvolutions</a> = <a href=\"#v:MaxKESEvolutions\">MaxKESEvolutions</a> <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:Word64\" title=\"Distribution.Compat.Prelude.Internal\">Word64</a>",
+    "name": "MaxKESEvolutions MaxKESEvolutions",
+    "module": "Cardano.Node.Queries",
+    "link": "lib/Cardano-Node-Queries.html#t:MaxKESEvolutions"
+  },
+  {
+    "display_html": "<span class=\"keyword\">newtype</span> <a href=\"#t:OperationalCertStartKESPeriod\">OperationalCertStartKESPeriod</a> = <a href=\"#v:OperationalCertStartKESPeriod\">OperationalCertStartKESPeriod</a> Period",
+    "name": "OperationalCertStartKESPeriod OperationalCertStartKESPeriod",
+    "module": "Cardano.Node.Queries",
+    "link": "lib/Cardano-Node-Queries.html#t:OperationalCertStartKESPeriod"
+  },
+  {
+    "display_html": "<span class=\"keyword\">class</span> <a href=\"#t:HasKESInfo\">HasKESInfo</a> blk <span class=\"keyword\">where</span><ul class=\"subs\"><li><a href=\"#v:getKESInfo\">getKESInfo</a> &#8759; <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:Proxy\" title=\"Distribution.Compat.Prelude.Internal\">Proxy</a> blk &#8594; ForgeStateUpdateError blk &#8594; <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:Maybe\" title=\"Distribution.Compat.Prelude.Internal\">Maybe</a> KESInfo</li></ul>",
+    "name": "HasKESInfo getKESInfo",
+    "module": "Cardano.Node.Queries",
+    "link": "lib/Cardano-Node-Queries.html#t:HasKESInfo"
+  },
+  {
+    "display_html": "<span class=\"keyword\">data</span> <a href=\"#t:KESMetricsData\">KESMetricsData</a><ul class=\"subs\"><li>= <a href=\"#v:NoKESMetricsData\">NoKESMetricsData</a></li><li>| <a href=\"#v:TPraosKESMetricsData\">TPraosKESMetricsData</a> !Period !<a href=\"Cardano-Node-Queries.html#t:MaxKESEvolutions\" title=\"Cardano.Node.Queries\">MaxKESEvolutions</a> !<a href=\"Cardano-Node-Queries.html#t:OperationalCertStartKESPeriod\" title=\"Cardano.Node.Queries\">OperationalCertStartKESPeriod</a></li></ul>",
+    "name": "KESMetricsData NoKESMetricsData TPraosKESMetricsData",
+    "module": "Cardano.Node.Queries",
+    "link": "lib/Cardano-Node-Queries.html#t:KESMetricsData"
+  },
+  {
+    "display_html": "<span class=\"keyword\">class</span> <a href=\"#t:HasKESMetricsData\">HasKESMetricsData</a> blk <span class=\"keyword\">where</span><ul class=\"subs\"><li><a href=\"#v:getKESMetricsData\">getKESMetricsData</a> &#8759; <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:Proxy\" title=\"Distribution.Compat.Prelude.Internal\">Proxy</a> blk &#8594; ForgeStateInfo blk &#8594; <a href=\"Cardano-Node-Queries.html#t:KESMetricsData\" title=\"Cardano.Node.Queries\">KESMetricsData</a></li></ul>",
+    "name": "HasKESMetricsData getKESMetricsData",
+    "module": "Cardano.Node.Queries",
+    "link": "lib/Cardano-Node-Queries.html#t:HasKESMetricsData"
+  },
+  {
+    "display_html": "<span class=\"keyword\">class</span> <a href=\"#t:LedgerQueries\">LedgerQueries</a> blk <span class=\"keyword\">where</span><ul class=\"subs\"><li><a href=\"#v:ledgerUtxoSize\">ledgerUtxoSize</a> &#8759; <a href=\"file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.7/cardano-api-1.31.0/noopt/doc/html/cardano-api/Cardano-Api-Query.html#t:LedgerState\" title=\"Cardano.Api.Query\">LedgerState</a> blk &#8594; <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:Int\" title=\"Distribution.Compat.Prelude.Internal\">Int</a></li><li><a href=\"#v:ledgerDelegMapSize\">ledgerDelegMapSize</a> &#8759; <a href=\"file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.7/cardano-api-1.31.0/noopt/doc/html/cardano-api/Cardano-Api-Query.html#t:LedgerState\" title=\"Cardano.Api.Query\">LedgerState</a> blk &#8594; <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:Int\" title=\"Distribution.Compat.Prelude.Internal\">Int</a></li></ul>",
+    "name": "LedgerQueries ledgerUtxoSize ledgerDelegMapSize",
+    "module": "Cardano.Node.Queries",
+    "link": "lib/Cardano-Node-Queries.html#t:LedgerQueries"
+  },
+  {
     "display_html": "<a href=\"#v:modifyReadTVar\">modifyReadTVar</a> &#8759; <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/GHC-Conc.html#t:TVar\" title=\"GHC.Conc\">TVar</a> a &#8594; (a &#8594; a) &#8594; <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/GHC-Conc.html#t:STM\" title=\"GHC.Conc\">STM</a> a",
     "name": "modifyReadTVar",
     "module": "Cardano.Node.STM",
@@ -9936,295 +9978,7 @@
     "link": "lib/Cardano-Tracing-Config.html#t:TraceInboundGovernorCounters"
   },
   {
-    "display_html": "<span class=\"keyword\">class</span> <a href=\"#t:ConvertTxId\">ConvertTxId</a> blk <span class=\"keyword\">where</span><ul class=\"subs\"><li><a href=\"#v:txIdToRawBytes\">txIdToRawBytes</a> &#8759; TxId (GenTx blk) &#8594; <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/bytestring-0.10.12.0/Data-ByteString.html#t:ByteString\" title=\"Data.ByteString\">ByteString</a></li></ul>",
-    "name": "ConvertTxId txIdToRawBytes",
-    "module": "Cardano.Tracing.ConvertTxId",
-    "link": "lib/Cardano-Tracing-ConvertTxId.html#t:ConvertTxId"
-  },
-  {
-    "display_html": "<span class=\"keyword\">newtype</span> <a href=\"#t:NodeKernelData\">NodeKernelData</a> blk = <a href=\"#v:NodeKernelData\">NodeKernelData</a> {<ul class=\"subs\"><li><a href=\"#v:unNodeKernelData\">unNodeKernelData</a> &#8759; <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/Data-IORef.html#t:IORef\" title=\"Data.IORef\">IORef</a> (<a href=\"Cardano-Tracing-Kernel.html#t:StrictMaybe\" title=\"Cardano.Tracing.Kernel\">StrictMaybe</a> (<a href=\"Cardano-Tracing-Kernel.html#t:NodeKernel\" title=\"Cardano.Tracing.Kernel\">NodeKernel</a> <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/System-IO.html#t:IO\" title=\"System.IO\">IO</a> <a href=\"Cardano-Tracing-Kernel.html#t:RemoteConnectionId\" title=\"Cardano.Tracing.Kernel\">RemoteConnectionId</a> <a href=\"Cardano-Tracing-Kernel.html#t:LocalConnectionId\" title=\"Cardano.Tracing.Kernel\">LocalConnectionId</a> blk))</li></ul>}",
-    "name": "NodeKernelData NodeKernelData unNodeKernelData",
-    "module": "Cardano.Tracing.Kernel",
-    "link": "lib/Cardano-Tracing-Kernel.html#t:NodeKernelData"
-  },
-  {
-    "display_html": "<a href=\"#v:mkNodeKernelData\">mkNodeKernelData</a> &#8759; <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/System-IO.html#t:IO\" title=\"System.IO\">IO</a> (<a href=\"Cardano-Tracing-Kernel.html#t:NodeKernelData\" title=\"Cardano.Tracing.Kernel\">NodeKernelData</a> blk)",
-    "name": "mkNodeKernelData",
-    "module": "Cardano.Tracing.Kernel",
-    "link": "lib/Cardano-Tracing-Kernel.html#v:mkNodeKernelData"
-  },
-  {
-    "display_html": "<a href=\"#v:setNodeKernel\">setNodeKernel</a> &#8759; <a href=\"Cardano-Tracing-Kernel.html#t:NodeKernelData\" title=\"Cardano.Tracing.Kernel\">NodeKernelData</a> blk &#8594; <a href=\"Cardano-Tracing-Kernel.html#t:NodeKernel\" title=\"Cardano.Tracing.Kernel\">NodeKernel</a> <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/System-IO.html#t:IO\" title=\"System.IO\">IO</a> <a href=\"Cardano-Tracing-Kernel.html#t:RemoteConnectionId\" title=\"Cardano.Tracing.Kernel\">RemoteConnectionId</a> <a href=\"Cardano-Tracing-Kernel.html#t:LocalConnectionId\" title=\"Cardano.Tracing.Kernel\">LocalConnectionId</a> blk &#8594; <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/System-IO.html#t:IO\" title=\"System.IO\">IO</a> ()",
-    "name": "setNodeKernel",
-    "module": "Cardano.Tracing.Kernel",
-    "link": "lib/Cardano-Tracing-Kernel.html#v:setNodeKernel"
-  },
-  {
-    "display_html": "<a href=\"#v:mapNodeKernelDataIO\">mapNodeKernelDataIO</a> &#8759; (<a href=\"Cardano-Tracing-Kernel.html#t:NodeKernel\" title=\"Cardano.Tracing.Kernel\">NodeKernel</a> <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/System-IO.html#t:IO\" title=\"System.IO\">IO</a> <a href=\"Cardano-Tracing-Kernel.html#t:RemoteConnectionId\" title=\"Cardano.Tracing.Kernel\">RemoteConnectionId</a> <a href=\"Cardano-Tracing-Kernel.html#t:LocalConnectionId\" title=\"Cardano.Tracing.Kernel\">LocalConnectionId</a> blk &#8594; <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/System-IO.html#t:IO\" title=\"System.IO\">IO</a> a) &#8594; <a href=\"Cardano-Tracing-Kernel.html#t:NodeKernelData\" title=\"Cardano.Tracing.Kernel\">NodeKernelData</a> blk &#8594; <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/System-IO.html#t:IO\" title=\"System.IO\">IO</a> (<a href=\"Cardano-Tracing-Kernel.html#t:StrictMaybe\" title=\"Cardano.Tracing.Kernel\">StrictMaybe</a> a)",
-    "name": "mapNodeKernelDataIO",
-    "module": "Cardano.Tracing.Kernel",
-    "link": "lib/Cardano-Tracing-Kernel.html#v:mapNodeKernelDataIO"
-  },
-  {
-    "display_html": "<a href=\"#v:nkQueryLedger\">nkQueryLedger</a> &#8759; IsLedger (<a href=\"file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.7/cardano-api-1.31.0/noopt/doc/html/cardano-api/Cardano-Api-Query.html#t:LedgerState\" title=\"Cardano.Api.Query\">LedgerState</a> blk) &#8658; (ExtLedgerState blk &#8594; a) &#8594; <a href=\"Cardano-Tracing-Kernel.html#t:NodeKernel\" title=\"Cardano.Tracing.Kernel\">NodeKernel</a> <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/System-IO.html#t:IO\" title=\"System.IO\">IO</a> <a href=\"Cardano-Tracing-Kernel.html#t:RemoteConnectionId\" title=\"Cardano.Tracing.Kernel\">RemoteConnectionId</a> <a href=\"Cardano-Tracing-Kernel.html#t:LocalConnectionId\" title=\"Cardano.Tracing.Kernel\">LocalConnectionId</a> blk &#8594; <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/System-IO.html#t:IO\" title=\"System.IO\">IO</a> a",
-    "name": "nkQueryLedger",
-    "module": "Cardano.Tracing.Kernel",
-    "link": "lib/Cardano-Tracing-Kernel.html#v:nkQueryLedger"
-  },
-  {
-    "display_html": "<a href=\"#v:nkQueryChain\">nkQueryChain</a> &#8759; (AnchoredFragment (Header blk) &#8594; a) &#8594; <a href=\"Cardano-Tracing-Kernel.html#t:NodeKernel\" title=\"Cardano.Tracing.Kernel\">NodeKernel</a> <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/System-IO.html#t:IO\" title=\"System.IO\">IO</a> <a href=\"Cardano-Tracing-Kernel.html#t:RemoteConnectionId\" title=\"Cardano.Tracing.Kernel\">RemoteConnectionId</a> <a href=\"Cardano-Tracing-Kernel.html#t:LocalConnectionId\" title=\"Cardano.Tracing.Kernel\">LocalConnectionId</a> blk &#8594; <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/System-IO.html#t:IO\" title=\"System.IO\">IO</a> a",
-    "name": "nkQueryChain",
-    "module": "Cardano.Tracing.Kernel",
-    "link": "lib/Cardano-Tracing-Kernel.html#v:nkQueryChain"
-  },
-  {
-    "display_html": "<span class=\"keyword\">data</span> <a href=\"#t:NodeKernel\">NodeKernel</a> (m &#8759; <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/Data-Kind.html#t:Type\" title=\"Data.Kind\">Type</a> &#8594; <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/Data-Kind.html#t:Type\" title=\"Data.Kind\">Type</a>) remotePeer localPeer blk = <a href=\"#v:NodeKernel\">NodeKernel</a> {<ul class=\"subs\"><li><a href=\"#v:getChainDB\">getChainDB</a> &#8759; ChainDB m blk</li><li><a href=\"#v:getMempool\">getMempool</a> &#8759; Mempool m blk TicketNo</li><li><a href=\"#v:getTopLevelConfig\">getTopLevelConfig</a> &#8759; TopLevelConfig blk</li><li><a href=\"#v:getFetchClientRegistry\">getFetchClientRegistry</a> &#8759; FetchClientRegistry remotePeer (Header blk) blk m</li><li><a href=\"#v:getFetchMode\">getFetchMode</a> &#8759; STM m FetchMode</li><li><a href=\"#v:getNodeCandidates\">getNodeCandidates</a> &#8759; StrictTVar m (<a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:Map\" title=\"Distribution.Compat.Prelude.Internal\">Map</a> remotePeer (StrictTVar m (AnchoredFragment (Header blk))))</li><li><a href=\"#v:getTracers\">getTracers</a> &#8759; Tracers m remotePeer localPeer blk</li></ul>}",
-    "name": "NodeKernel NodeKernel $sel:getChainDB:NodeKernel $sel:getFetchClientRegistry:NodeKernel $sel:getFetchMode:NodeKernel $sel:getMempool:NodeKernel $sel:getNodeCandidates:NodeKernel $sel:getTopLevelConfig:NodeKernel $sel:getTracers:NodeKernel",
-    "module": "Cardano.Tracing.Kernel",
-    "link": "lib/Cardano-Tracing-Kernel.html#t:NodeKernel"
-  },
-  {
-    "display_html": "<span class=\"keyword\">type</span> <a href=\"#t:LocalConnectionId\">LocalConnectionId</a> = ConnectionId LocalAddress",
-    "name": "LocalConnectionId",
-    "module": "Cardano.Tracing.Kernel",
-    "link": "lib/Cardano-Tracing-Kernel.html#t:LocalConnectionId"
-  },
-  {
-    "display_html": "<span class=\"keyword\">type</span> <a href=\"#t:RemoteConnectionId\">RemoteConnectionId</a> = ConnectionId RemoteAddress",
-    "name": "RemoteConnectionId",
-    "module": "Cardano.Tracing.Kernel",
-    "link": "lib/Cardano-Tracing-Kernel.html#t:RemoteConnectionId"
-  },
-  {
-    "display_html": "<span class=\"keyword\">data</span> <a href=\"#t:StrictMaybe\">StrictMaybe</a> a<ul class=\"subs\"><li>= <a href=\"#v:SNothing\">SNothing</a></li><li>| <a href=\"#v:SJust\">SJust</a> !a</li></ul>",
-    "name": "StrictMaybe SNothing SJust",
-    "module": "Cardano.Tracing.Kernel",
-    "link": "lib/Cardano-Tracing-Kernel.html#t:StrictMaybe"
-  },
-  {
-    "display_html": "<a href=\"#v:fromSMaybe\">fromSMaybe</a> &#8759; a &#8594; <a href=\"Cardano-Tracing-Kernel.html#t:StrictMaybe\" title=\"Cardano.Tracing.Kernel\">StrictMaybe</a> a &#8594; a",
-    "name": "fromSMaybe",
-    "module": "Cardano.Tracing.Kernel",
-    "link": "lib/Cardano-Tracing-Kernel.html#v:fromSMaybe"
-  },
-  {
-    "display_html": "<span class=\"keyword\">data</span> <a href=\"#t:KESMetricsData\">KESMetricsData</a><ul class=\"subs\"><li>= <a href=\"#v:NoKESMetricsData\">NoKESMetricsData</a></li><li>| <a href=\"#v:TPraosKESMetricsData\">TPraosKESMetricsData</a> !Period !<a href=\"Cardano-Tracing-Metrics.html#t:MaxKESEvolutions\" title=\"Cardano.Tracing.Metrics\">MaxKESEvolutions</a> !<a href=\"Cardano-Tracing-Metrics.html#t:OperationalCertStartKESPeriod\" title=\"Cardano.Tracing.Metrics\">OperationalCertStartKESPeriod</a></li></ul>",
-    "name": "KESMetricsData NoKESMetricsData TPraosKESMetricsData",
-    "module": "Cardano.Tracing.Metrics",
-    "link": "lib/Cardano-Tracing-Metrics.html#t:KESMetricsData"
-  },
-  {
-    "display_html": "<span class=\"keyword\">newtype</span> <a href=\"#t:MaxKESEvolutions\">MaxKESEvolutions</a> = <a href=\"#v:MaxKESEvolutions\">MaxKESEvolutions</a> <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:Word64\" title=\"Distribution.Compat.Prelude.Internal\">Word64</a>",
-    "name": "MaxKESEvolutions MaxKESEvolutions",
-    "module": "Cardano.Tracing.Metrics",
-    "link": "lib/Cardano-Tracing-Metrics.html#t:MaxKESEvolutions"
-  },
-  {
-    "display_html": "<span class=\"keyword\">newtype</span> <a href=\"#t:OperationalCertStartKESPeriod\">OperationalCertStartKESPeriod</a> = <a href=\"#v:OperationalCertStartKESPeriod\">OperationalCertStartKESPeriod</a> Period",
-    "name": "OperationalCertStartKESPeriod OperationalCertStartKESPeriod",
-    "module": "Cardano.Tracing.Metrics",
-    "link": "lib/Cardano-Tracing-Metrics.html#t:OperationalCertStartKESPeriod"
-  },
-  {
-    "display_html": "<span class=\"keyword\">class</span> <a href=\"#t:HasKESMetricsData\">HasKESMetricsData</a> blk <span class=\"keyword\">where</span><ul class=\"subs\"><li><a href=\"#v:getKESMetricsData\">getKESMetricsData</a> &#8759; <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:Proxy\" title=\"Distribution.Compat.Prelude.Internal\">Proxy</a> blk &#8594; ForgeStateInfo blk &#8594; <a href=\"Cardano-Tracing-Metrics.html#t:KESMetricsData\" title=\"Cardano.Tracing.Metrics\">KESMetricsData</a></li></ul>",
-    "name": "HasKESMetricsData getKESMetricsData",
-    "module": "Cardano.Tracing.Metrics",
-    "link": "lib/Cardano-Tracing-Metrics.html#t:HasKESMetricsData"
-  },
-  {
-    "display_html": "<span class=\"keyword\">class</span> <a href=\"#t:HasKESInfo\">HasKESInfo</a> blk <span class=\"keyword\">where</span><ul class=\"subs\"><li><a href=\"#v:getKESInfo\">getKESInfo</a> &#8759; <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:Proxy\" title=\"Distribution.Compat.Prelude.Internal\">Proxy</a> blk &#8594; ForgeStateUpdateError blk &#8594; <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:Maybe\" title=\"Distribution.Compat.Prelude.Internal\">Maybe</a> KESInfo</li></ul>",
-    "name": "HasKESInfo getKESInfo",
-    "module": "Cardano.Tracing.Metrics",
-    "link": "lib/Cardano-Tracing-Metrics.html#t:HasKESInfo"
-  },
-  {
-    "display_html": "<span class=\"keyword\">data</span> <a href=\"#t:ForgingStats\">ForgingStats</a> = <a href=\"#v:ForgingStats\">ForgingStats</a> {<ul class=\"subs\"><li><a href=\"#v:fsTxsProcessedNum\">fsTxsProcessedNum</a> &#8759; !(<a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/Data-IORef.html#t:IORef\" title=\"Data.IORef\">IORef</a> <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:Int\" title=\"Distribution.Compat.Prelude.Internal\">Int</a>)</li><li><a href=\"#v:fsState\">fsState</a> &#8759; !(<a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/GHC-Conc.html#t:TVar\" title=\"GHC.Conc\">TVar</a> (<a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:Map\" title=\"Distribution.Compat.Prelude.Internal\">Map</a> <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/Control-Concurrent.html#t:ThreadId\" title=\"Control.Concurrent\">ThreadId</a> (<a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/GHC-Conc.html#t:TVar\" title=\"GHC.Conc\">TVar</a> <a href=\"Cardano-Tracing-Metrics.html#t:ForgeThreadStats\" title=\"Cardano.Tracing.Metrics\">ForgeThreadStats</a>)))</li><li><a href=\"#v:fsBlocksUncoupled\">fsBlocksUncoupled</a> &#8759; !(<a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/GHC-Conc.html#t:TVar\" title=\"GHC.Conc\">TVar</a> <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:Int64\" title=\"Distribution.Compat.Prelude.Internal\">Int64</a>)</li></ul>}",
-    "name": "ForgingStats ForgingStats fsTxsProcessedNum fsState fsBlocksUncoupled",
-    "module": "Cardano.Tracing.Metrics",
-    "link": "lib/Cardano-Tracing-Metrics.html#t:ForgingStats"
-  },
-  {
-    "display_html": "<span class=\"keyword\">data</span> <a href=\"#t:ForgeThreadStats\">ForgeThreadStats</a> = <a href=\"#v:ForgeThreadStats\">ForgeThreadStats</a> {<ul class=\"subs\"><li><a href=\"#v:ftsNodeCannotForgeNum\">ftsNodeCannotForgeNum</a> &#8759; !<a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:Int\" title=\"Distribution.Compat.Prelude.Internal\">Int</a></li><li><a href=\"#v:ftsNodeIsLeaderNum\">ftsNodeIsLeaderNum</a> &#8759; !<a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:Int\" title=\"Distribution.Compat.Prelude.Internal\">Int</a></li><li><a href=\"#v:ftsBlocksForgedNum\">ftsBlocksForgedNum</a> &#8759; !<a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:Int\" title=\"Distribution.Compat.Prelude.Internal\">Int</a></li><li><a href=\"#v:ftsSlotsMissedNum\">ftsSlotsMissedNum</a> &#8759; !<a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:Int\" title=\"Distribution.Compat.Prelude.Internal\">Int</a></li><li><a href=\"#v:ftsLastSlot\">ftsLastSlot</a> &#8759; !<a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:Int\" title=\"Distribution.Compat.Prelude.Internal\">Int</a></li></ul>}",
-    "name": "ForgeThreadStats ForgeThreadStats ftsNodeCannotForgeNum ftsNodeIsLeaderNum ftsBlocksForgedNum ftsSlotsMissedNum ftsLastSlot",
-    "module": "Cardano.Tracing.Metrics",
-    "link": "lib/Cardano-Tracing-Metrics.html#t:ForgeThreadStats"
-  },
-  {
-    "display_html": "<a href=\"#v:mapForgingCurrentThreadStats\">mapForgingCurrentThreadStats</a> &#8759; <a href=\"Cardano-Tracing-Metrics.html#t:ForgingStats\" title=\"Cardano.Tracing.Metrics\">ForgingStats</a> &#8594; (<a href=\"Cardano-Tracing-Metrics.html#t:ForgeThreadStats\" title=\"Cardano.Tracing.Metrics\">ForgeThreadStats</a> &#8594; (<a href=\"Cardano-Tracing-Metrics.html#t:ForgeThreadStats\" title=\"Cardano.Tracing.Metrics\">ForgeThreadStats</a>, a)) &#8594; <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/System-IO.html#t:IO\" title=\"System.IO\">IO</a> a",
-    "name": "mapForgingCurrentThreadStats",
-    "module": "Cardano.Tracing.Metrics",
-    "link": "lib/Cardano-Tracing-Metrics.html#v:mapForgingCurrentThreadStats"
-  },
-  {
-    "display_html": "<a href=\"#v:mapForgingCurrentThreadStats_\">mapForgingCurrentThreadStats_</a> &#8759; <a href=\"Cardano-Tracing-Metrics.html#t:ForgingStats\" title=\"Cardano.Tracing.Metrics\">ForgingStats</a> &#8594; (<a href=\"Cardano-Tracing-Metrics.html#t:ForgeThreadStats\" title=\"Cardano.Tracing.Metrics\">ForgeThreadStats</a> &#8594; <a href=\"Cardano-Tracing-Metrics.html#t:ForgeThreadStats\" title=\"Cardano.Tracing.Metrics\">ForgeThreadStats</a>) &#8594; <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/System-IO.html#t:IO\" title=\"System.IO\">IO</a> ()",
-    "name": "mapForgingCurrentThreadStats_",
-    "module": "Cardano.Tracing.Metrics",
-    "link": "lib/Cardano-Tracing-Metrics.html#v:mapForgingCurrentThreadStats_"
-  },
-  {
-    "display_html": "<a href=\"#v:mapForgingStatsTxsProcessed\">mapForgingStatsTxsProcessed</a> &#8759; <a href=\"Cardano-Tracing-Metrics.html#t:ForgingStats\" title=\"Cardano.Tracing.Metrics\">ForgingStats</a> &#8594; (<a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:Int\" title=\"Distribution.Compat.Prelude.Internal\">Int</a> &#8594; <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:Int\" title=\"Distribution.Compat.Prelude.Internal\">Int</a>) &#8594; <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/System-IO.html#t:IO\" title=\"System.IO\">IO</a> <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:Int\" title=\"Distribution.Compat.Prelude.Internal\">Int</a>",
-    "name": "mapForgingStatsTxsProcessed",
-    "module": "Cardano.Tracing.Metrics",
-    "link": "lib/Cardano-Tracing-Metrics.html#v:mapForgingStatsTxsProcessed"
-  },
-  {
-    "display_html": "<a href=\"#v:mkForgingStats\">mkForgingStats</a> &#8759; <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/System-IO.html#t:IO\" title=\"System.IO\">IO</a> <a href=\"Cardano-Tracing-Metrics.html#t:ForgingStats\" title=\"Cardano.Tracing.Metrics\">ForgingStats</a>",
-    "name": "mkForgingStats",
-    "module": "Cardano.Tracing.Metrics",
-    "link": "lib/Cardano-Tracing-Metrics.html#v:mkForgingStats"
-  },
-  {
-    "display_html": "<a href=\"#v:threadStatsProjection\">threadStatsProjection</a> &#8759; <a href=\"Cardano-Tracing-Metrics.html#t:ForgingStats\" title=\"Cardano.Tracing.Metrics\">ForgingStats</a> &#8594; (<a href=\"Cardano-Tracing-Metrics.html#t:ForgeThreadStats\" title=\"Cardano.Tracing.Metrics\">ForgeThreadStats</a> &#8594; a) &#8594; <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/System-IO.html#t:IO\" title=\"System.IO\">IO</a> [a]",
-    "name": "threadStatsProjection",
-    "module": "Cardano.Tracing.Metrics",
-    "link": "lib/Cardano-Tracing-Metrics.html#v:threadStatsProjection"
-  },
-  {
-    "display_html": "<span class=\"keyword\">class</span> <a href=\"#t:ToObject\">ToObject</a> a <span class=\"keyword\">where</span><ul class=\"subs\"><li><a href=\"#v:toObject\">toObject</a> &#8759; <a href=\"Cardano-Tracing-OrphanInstances-Common.html#t:TracingVerbosity\" title=\"Cardano.Tracing.OrphanInstances.Common\">TracingVerbosity</a> &#8594; a &#8594; Object</li><li><a href=\"#v:textTransformer\">textTransformer</a> &#8759; a &#8594; Object &#8594; <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/text-1.2.4.1/Data-Text.html#t:Text\" title=\"Data.Text\">Text</a></li></ul>",
-    "name": "ToObject textTransformer toObject",
-    "module": "Cardano.Tracing.OrphanInstances.Common",
-    "link": "lib/Cardano-Tracing-OrphanInstances-Common.html#t:ToObject"
-  },
-  {
-    "display_html": "<span class=\"keyword\">data</span> <a href=\"#t:TracingVerbosity\">TracingVerbosity</a><ul class=\"subs\"><li>= <a href=\"#v:MinimalVerbosity\">MinimalVerbosity</a></li><li>| <a href=\"#v:NormalVerbosity\">NormalVerbosity</a></li><li>| <a href=\"#v:MaximalVerbosity\">MaximalVerbosity</a></li></ul>",
-    "name": "TracingVerbosity MinimalVerbosity MaximalVerbosity NormalVerbosity",
-    "module": "Cardano.Tracing.OrphanInstances.Common",
-    "link": "lib/Cardano-Tracing-OrphanInstances-Common.html#t:TracingVerbosity"
-  },
-  {
-    "display_html": "<a href=\"#v:mkObject\">mkObject</a> &#8759; <a href=\"Cardano-Tracing-OrphanInstances-Common.html#t:ToObject\" title=\"Cardano.Tracing.OrphanInstances.Common\">ToObject</a> a &#8658; [(<a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/text-1.2.4.1/Data-Text.html#t:Text\" title=\"Data.Text\">Text</a>, a)] &#8594; HashMap <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/text-1.2.4.1/Data-Text.html#t:Text\" title=\"Data.Text\">Text</a> a",
-    "name": "mkObject",
-    "module": "Cardano.Tracing.OrphanInstances.Common",
-    "link": "lib/Cardano-Tracing-OrphanInstances-Common.html#v:mkObject"
-  },
-  {
-    "display_html": "<a href=\"#v:emptyObject\">emptyObject</a> &#8759; <a href=\"Cardano-Tracing-OrphanInstances-Common.html#t:ToObject\" title=\"Cardano.Tracing.OrphanInstances.Common\">ToObject</a> a &#8658; HashMap <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/text-1.2.4.1/Data-Text.html#t:Text\" title=\"Data.Text\">Text</a> a",
-    "name": "emptyObject",
-    "module": "Cardano.Tracing.OrphanInstances.Common",
-    "link": "lib/Cardano-Tracing-OrphanInstances-Common.html#v:emptyObject"
-  },
-  {
-    "display_html": "<span class=\"keyword\">class</span> <a href=\"#t:ToJSON\">ToJSON</a> a",
-    "name": "ToJSON",
-    "module": "Cardano.Tracing.OrphanInstances.Common",
-    "link": "lib/Cardano-Tracing-OrphanInstances-Common.html#t:ToJSON"
-  },
-  {
-    "display_html": "<a href=\"#v:toJSON\">toJSON</a> &#8759; <a href=\"Cardano-Tracing-OrphanInstances-Common.html#t:ToJSON\" title=\"Cardano.Tracing.OrphanInstances.Common\">ToJSON</a> a &#8658; a &#8594; Value",
-    "name": "toJSON",
-    "module": "Cardano.Tracing.OrphanInstances.Common",
-    "link": "lib/Cardano-Tracing-OrphanInstances-Common.html#v:toJSON"
-  },
-  {
-    "display_html": "<a href=\"#v:.-61-\">(.=)</a> &#8759; (KeyValue kv, <a href=\"Cardano-Tracing-OrphanInstances-Common.html#t:ToJSON\" title=\"Cardano.Tracing.OrphanInstances.Common\">ToJSON</a> v) &#8658; <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/text-1.2.4.1/Data-Text.html#t:Text\" title=\"Data.Text\">Text</a> &#8594; v &#8594; kv",
-    "name": ".=",
-    "module": "Cardano.Tracing.OrphanInstances.Common",
-    "link": "lib/Cardano-Tracing-OrphanInstances-Common.html#v:.-61-"
-  },
-  {
-    "display_html": "<span class=\"keyword\">class</span> (<a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:Monad\" title=\"Distribution.Compat.Prelude.Internal\">Monad</a> m, <a href=\"Cardano-Tracing-OrphanInstances-Common.html#t:HasPrivacyAnnotation\" title=\"Cardano.Tracing.OrphanInstances.Common\">HasPrivacyAnnotation</a> b, <a href=\"Cardano-Tracing-OrphanInstances-Common.html#t:HasSeverityAnnotation\" title=\"Cardano.Tracing.OrphanInstances.Common\">HasSeverityAnnotation</a> b) &#8658; <a href=\"#t:Transformable\">Transformable</a> a (m &#8759; <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/Data-Kind.html#t:Type\" title=\"Data.Kind\">Type</a> &#8594; <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/Data-Kind.html#t:Type\" title=\"Data.Kind\">Type</a>) b <span class=\"keyword\">where</span><ul class=\"subs\"><li><a href=\"#v:trTransformer\">trTransformer</a> &#8759; <a href=\"Cardano-Tracing-OrphanInstances-Common.html#t:TracingVerbosity\" title=\"Cardano.Tracing.OrphanInstances.Common\">TracingVerbosity</a> &#8594; <a href=\"Cardano-Node-Configuration-Logging.html#t:Trace\" title=\"Cardano.Node.Configuration.Logging\">Trace</a> m a &#8594; <a href=\"Cardano-Tracing-OrphanInstances-Common.html#t:Tracer\" title=\"Cardano.Tracing.OrphanInstances.Common\">Tracer</a> m b</li></ul>",
-    "name": "Transformable trTransformer",
-    "module": "Cardano.Tracing.OrphanInstances.Common",
-    "link": "lib/Cardano-Tracing-OrphanInstances-Common.html#t:Transformable"
-  },
-  {
-    "display_html": "<a href=\"#v:trStructured\">trStructured</a> &#8759; &#8704; b (m &#8759; <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/Data-Kind.html#t:Type\" title=\"Data.Kind\">Type</a> &#8594; <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/Data-Kind.html#t:Type\" title=\"Data.Kind\">Type</a>) a. (<a href=\"Cardano-Tracing-OrphanInstances-Common.html#t:ToObject\" title=\"Cardano.Tracing.OrphanInstances.Common\">ToObject</a> b, <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/Control-Monad-IO-Class.html#t:MonadIO\" title=\"Control.Monad.IO.Class\">MonadIO</a> m, <a href=\"Cardano-Tracing-OrphanInstances-Common.html#t:HasPrivacyAnnotation\" title=\"Cardano.Tracing.OrphanInstances.Common\">HasPrivacyAnnotation</a> b, <a href=\"Cardano-Tracing-OrphanInstances-Common.html#t:HasSeverityAnnotation\" title=\"Cardano.Tracing.OrphanInstances.Common\">HasSeverityAnnotation</a> b) &#8658; <a href=\"Cardano-Tracing-OrphanInstances-Common.html#t:TracingVerbosity\" title=\"Cardano.Tracing.OrphanInstances.Common\">TracingVerbosity</a> &#8594; <a href=\"Cardano-Node-Configuration-Logging.html#t:Trace\" title=\"Cardano.Node.Configuration.Logging\">Trace</a> m a &#8594; <a href=\"Cardano-Tracing-OrphanInstances-Common.html#t:Tracer\" title=\"Cardano.Tracing.OrphanInstances.Common\">Tracer</a> m b",
-    "name": "trStructured",
-    "module": "Cardano.Tracing.OrphanInstances.Common",
-    "link": "lib/Cardano-Tracing-OrphanInstances-Common.html#v:trStructured"
-  },
-  {
-    "display_html": "<a href=\"#v:trStructuredText\">trStructuredText</a> &#8759; &#8704; b (m &#8759; <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/Data-Kind.html#t:Type\" title=\"Data.Kind\">Type</a> &#8594; <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/Data-Kind.html#t:Type\" title=\"Data.Kind\">Type</a>) a. (<a href=\"Cardano-Tracing-OrphanInstances-Common.html#t:ToObject\" title=\"Cardano.Tracing.OrphanInstances.Common\">ToObject</a> b, <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/Control-Monad-IO-Class.html#t:MonadIO\" title=\"Control.Monad.IO.Class\">MonadIO</a> m, <a href=\"Cardano-Tracing-OrphanInstances-Common.html#t:HasTextFormatter\" title=\"Cardano.Tracing.OrphanInstances.Common\">HasTextFormatter</a> b, <a href=\"Cardano-Tracing-OrphanInstances-Common.html#t:HasPrivacyAnnotation\" title=\"Cardano.Tracing.OrphanInstances.Common\">HasPrivacyAnnotation</a> b, <a href=\"Cardano-Tracing-OrphanInstances-Common.html#t:HasSeverityAnnotation\" title=\"Cardano.Tracing.OrphanInstances.Common\">HasSeverityAnnotation</a> b) &#8658; <a href=\"Cardano-Tracing-OrphanInstances-Common.html#t:TracingVerbosity\" title=\"Cardano.Tracing.OrphanInstances.Common\">TracingVerbosity</a> &#8594; <a href=\"Cardano-Node-Configuration-Logging.html#t:Trace\" title=\"Cardano.Node.Configuration.Logging\">Trace</a> m a &#8594; <a href=\"Cardano-Tracing-OrphanInstances-Common.html#t:Tracer\" title=\"Cardano.Tracing.OrphanInstances.Common\">Tracer</a> m b",
-    "name": "trStructuredText",
-    "module": "Cardano.Tracing.OrphanInstances.Common",
-    "link": "lib/Cardano-Tracing-OrphanInstances-Common.html#v:trStructuredText"
-  },
-  {
-    "display_html": "<span class=\"keyword\">class</span> <a href=\"#t:HasTextFormatter\">HasTextFormatter</a> a <span class=\"keyword\">where</span><ul class=\"subs\"><li><a href=\"#v:formatText\">formatText</a> &#8759; a &#8594; Object &#8594; <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/text-1.2.4.1/Data-Text.html#t:Text\" title=\"Data.Text\">Text</a></li></ul>",
-    "name": "HasTextFormatter formatText",
-    "module": "Cardano.Tracing.OrphanInstances.Common",
-    "link": "lib/Cardano-Tracing-OrphanInstances-Common.html#t:HasTextFormatter"
-  },
-  {
-    "display_html": "<span class=\"keyword\">class</span> <a href=\"#t:HasSeverityAnnotation\">HasSeverityAnnotation</a> a <span class=\"keyword\">where</span><ul class=\"subs\"><li><a href=\"#v:getSeverityAnnotation\">getSeverityAnnotation</a> &#8759; a &#8594; <a href=\"Cardano-Tracing-OrphanInstances-Common.html#t:Severity\" title=\"Cardano.Tracing.OrphanInstances.Common\">Severity</a></li></ul>",
-    "name": "HasSeverityAnnotation getSeverityAnnotation",
-    "module": "Cardano.Tracing.OrphanInstances.Common",
-    "link": "lib/Cardano-Tracing-OrphanInstances-Common.html#t:HasSeverityAnnotation"
-  },
-  {
-    "display_html": "<span class=\"keyword\">data</span> <a href=\"#t:Severity\">Severity</a><ul class=\"subs\"><li>= <a href=\"#v:Debug\">Debug</a></li><li>| <a href=\"#v:Info\">Info</a></li><li>| <a href=\"#v:Notice\">Notice</a></li><li>| <a href=\"#v:Warning\">Warning</a></li><li>| <a href=\"#v:Error\">Error</a></li><li>| <a href=\"#v:Critical\">Critical</a></li><li>| <a href=\"#v:Alert\">Alert</a></li><li>| <a href=\"#v:Emergency\">Emergency</a></li></ul>",
-    "name": "Severity Debug Error Info Alert Critical Emergency Notice Warning",
-    "module": "Cardano.Tracing.OrphanInstances.Common",
-    "link": "lib/Cardano-Tracing-OrphanInstances-Common.html#t:Severity"
-  },
-  {
-    "display_html": "<span class=\"keyword\">class</span> <a href=\"#t:HasPrivacyAnnotation\">HasPrivacyAnnotation</a> a <span class=\"keyword\">where</span><ul class=\"subs\"><li><a href=\"#v:getPrivacyAnnotation\">getPrivacyAnnotation</a> &#8759; a &#8594; <a href=\"Cardano-Tracing-OrphanInstances-Common.html#t:PrivacyAnnotation\" title=\"Cardano.Tracing.OrphanInstances.Common\">PrivacyAnnotation</a></li></ul>",
-    "name": "HasPrivacyAnnotation getPrivacyAnnotation",
-    "module": "Cardano.Tracing.OrphanInstances.Common",
-    "link": "lib/Cardano-Tracing-OrphanInstances-Common.html#t:HasPrivacyAnnotation"
-  },
-  {
-    "display_html": "<span class=\"keyword\">data</span> <a href=\"#t:PrivacyAnnotation\">PrivacyAnnotation</a><ul class=\"subs\"><li>= <a href=\"#v:Confidential\">Confidential</a></li><li>| <a href=\"#v:Public\">Public</a></li></ul>",
-    "name": "PrivacyAnnotation Confidential Public",
-    "module": "Cardano.Tracing.OrphanInstances.Common",
-    "link": "lib/Cardano-Tracing-OrphanInstances-Common.html#t:PrivacyAnnotation"
-  },
-  {
-    "display_html": "<span class=\"keyword\">data</span> <a href=\"#t:Tracer\">Tracer</a> (m &#8759; <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/Data-Kind.html#t:Type\" title=\"Data.Kind\">Type</a> &#8594; <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/Data-Kind.html#t:Type\" title=\"Data.Kind\">Type</a>) a",
-    "name": "Tracer",
-    "module": "Cardano.Tracing.OrphanInstances.Common",
-    "link": "lib/Cardano-Tracing-OrphanInstances-Common.html#t:Tracer"
-  },
-  {
-    "display_html": "<span class=\"keyword\">data</span> <a href=\"#t:LogObject\">LogObject</a> a = <a href=\"#v:LogObject\">LogObject</a> {<ul class=\"subs\"><li><a href=\"#v:loName\">loName</a> &#8759; <a href=\"Cardano-Node-Configuration-Logging.html#t:LoggerName\" title=\"Cardano.Node.Configuration.Logging\">LoggerName</a></li><li><a href=\"#v:loMeta\">loMeta</a> &#8759; !<a href=\"Cardano-Node-Configuration-Logging.html#t:LOMeta\" title=\"Cardano.Node.Configuration.Logging\">LOMeta</a></li><li><a href=\"#v:loContent\">loContent</a> &#8759; !(<a href=\"Cardano-Tracing-OrphanInstances-Common.html#t:LOContent\" title=\"Cardano.Tracing.OrphanInstances.Common\">LOContent</a> a)</li></ul>}",
-    "name": "LogObject LogObject loMeta loContent loName",
-    "module": "Cardano.Tracing.OrphanInstances.Common",
-    "link": "lib/Cardano-Tracing-OrphanInstances-Common.html#t:LogObject"
-  },
-  {
-    "display_html": "<span class=\"keyword\">data</span> <a href=\"#t:LOContent\">LOContent</a> a<ul class=\"subs\"><li>= <a href=\"#v:LogMessage\">LogMessage</a> a</li><li>| <a href=\"#v:LogError\">LogError</a> !<a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/text-1.2.4.1/Data-Text.html#t:Text\" title=\"Data.Text\">Text</a></li><li>| <a href=\"#v:LogValue\">LogValue</a> !<a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/text-1.2.4.1/Data-Text.html#t:Text\" title=\"Data.Text\">Text</a> !Measurable</li><li>| <a href=\"#v:LogStructuredText\">LogStructuredText</a> Object <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/text-1.2.4.1/Data-Text.html#t:Text\" title=\"Data.Text\">Text</a></li><li>| <a href=\"#v:LogStructured\">LogStructured</a> Object</li><li>| <a href=\"#v:ObserveOpen\">ObserveOpen</a> !CounterState</li><li>| <a href=\"#v:ObserveDiff\">ObserveDiff</a> !CounterState</li><li>| <a href=\"#v:ObserveClose\">ObserveClose</a> !CounterState</li><li>| <a href=\"#v:AggregatedMessage\">AggregatedMessage</a> [(<a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/text-1.2.4.1/Data-Text.html#t:Text\" title=\"Data.Text\">Text</a>, Aggregated)]</li><li>| <a href=\"#v:MonitoringEffect\">MonitoringEffect</a> !MonitorAction</li><li>| <a href=\"#v:Command\">Command</a> !CommandValue</li><li>| <a href=\"#v:KillPill\">KillPill</a></li></ul>",
-    "name": "LOContent Command LogMessage LogStructuredText LogValue AggregatedMessage KillPill LogError LogStructured MonitoringEffect ObserveClose ObserveDiff ObserveOpen",
-    "module": "Cardano.Tracing.OrphanInstances.Common",
-    "link": "lib/Cardano-Tracing-OrphanInstances-Common.html#t:LOContent"
-  },
-  {
-    "display_html": "<a href=\"#v:mkLOMeta\">mkLOMeta</a> &#8759; <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/Control-Monad-IO-Class.html#t:MonadIO\" title=\"Control.Monad.IO.Class\">MonadIO</a> m &#8658; <a href=\"Cardano-Tracing-OrphanInstances-Common.html#t:Severity\" title=\"Cardano.Tracing.OrphanInstances.Common\">Severity</a> &#8594; <a href=\"Cardano-Tracing-OrphanInstances-Common.html#t:PrivacyAnnotation\" title=\"Cardano.Tracing.OrphanInstances.Common\">PrivacyAnnotation</a> &#8594; m <a href=\"Cardano-Node-Configuration-Logging.html#t:LOMeta\" title=\"Cardano.Node.Configuration.Logging\">LOMeta</a>",
-    "name": "mkLOMeta",
-    "module": "Cardano.Tracing.OrphanInstances.Common",
-    "link": "lib/Cardano-Tracing-OrphanInstances-Common.html#v:mkLOMeta"
-  },
-  {
-    "display_html": "<span class=\"keyword\">data</span> <a href=\"#t:Peer\">Peer</a> blk = <a href=\"#v:Peer\">Peer</a> !<a href=\"Cardano-Tracing-Kernel.html#t:RemoteConnectionId\" title=\"Cardano.Tracing.Kernel\">RemoteConnectionId</a> !(AnchoredFragment (Header blk)) !(PeerFetchStatus (Header blk)) !(PeerFetchInFlight (Header blk))",
-    "name": "Peer Peer",
-    "module": "Cardano.Tracing.Peer",
-    "link": "lib/Cardano-Tracing-Peer.html#t:Peer"
-  },
-  {
-    "display_html": "<a href=\"#v:getCurrentPeers\">getCurrentPeers</a> &#8759; <a href=\"Cardano-Tracing-Kernel.html#t:NodeKernelData\" title=\"Cardano.Tracing.Kernel\">NodeKernelData</a> blk &#8594; <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/System-IO.html#t:IO\" title=\"System.IO\">IO</a> [<a href=\"Cardano-Tracing-Peer.html#t:Peer\" title=\"Cardano.Tracing.Peer\">Peer</a> blk]",
-    "name": "getCurrentPeers",
-    "module": "Cardano.Tracing.Peer",
-    "link": "lib/Cardano-Tracing-Peer.html#v:getCurrentPeers"
-  },
-  {
-    "display_html": "<a href=\"#v:ppPeer\">ppPeer</a> &#8759; <a href=\"Cardano-Tracing-Peer.html#t:Peer\" title=\"Cardano.Tracing.Peer\">Peer</a> blk &#8594; <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/text-1.2.4.1/Data-Text.html#t:Text\" title=\"Data.Text\">Text</a>",
-    "name": "ppPeer",
-    "module": "Cardano.Tracing.Peer",
-    "link": "lib/Cardano-Tracing-Peer.html#v:ppPeer"
-  },
-  {
-    "display_html": "<a href=\"#v:tracePeers\">tracePeers</a> &#8759; <a href=\"Cardano-Node-Configuration-Logging.html#t:Trace\" title=\"Cardano.Node.Configuration.Logging\">Trace</a> <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/System-IO.html#t:IO\" title=\"System.IO\">IO</a> <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/text-1.2.4.1/Data-Text.html#t:Text\" title=\"Data.Text\">Text</a> &#8594; [<a href=\"Cardano-Tracing-Peer.html#t:Peer\" title=\"Cardano.Tracing.Peer\">Peer</a> blk] &#8594; <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/System-IO.html#t:IO\" title=\"System.IO\">IO</a> ()",
-    "name": "tracePeers",
-    "module": "Cardano.Tracing.Peer",
-    "link": "lib/Cardano-Tracing-Peer.html#v:tracePeers"
-  },
-  {
-    "display_html": "<span class=\"keyword\">class</span> <a href=\"#t:LedgerQueries\">LedgerQueries</a> blk <span class=\"keyword\">where</span><ul class=\"subs\"><li><a href=\"#v:ledgerUtxoSize\">ledgerUtxoSize</a> &#8759; <a href=\"file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.7/cardano-api-1.31.0/noopt/doc/html/cardano-api/Cardano-Api-Query.html#t:LedgerState\" title=\"Cardano.Api.Query\">LedgerState</a> blk &#8594; <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:Int\" title=\"Distribution.Compat.Prelude.Internal\">Int</a></li><li><a href=\"#v:ledgerDelegMapSize\">ledgerDelegMapSize</a> &#8759; <a href=\"file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.7/cardano-api-1.31.0/noopt/doc/html/cardano-api/Cardano-Api-Query.html#t:LedgerState\" title=\"Cardano.Api.Query\">LedgerState</a> blk &#8594; <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:Int\" title=\"Distribution.Compat.Prelude.Internal\">Int</a></li></ul>",
-    "name": "LedgerQueries ledgerUtxoSize ledgerDelegMapSize",
-    "module": "Cardano.Tracing.Queries",
-    "link": "lib/Cardano-Tracing-Queries.html#t:LedgerQueries"
-  },
-  {
-    "display_html": "<span class=\"keyword\">type</span> <a href=\"#t:TraceConstraints\">TraceConstraints</a> blk = (<a href=\"Cardano-Tracing-ConvertTxId.html#t:ConvertTxId\" title=\"Cardano.Tracing.ConvertTxId\">ConvertTxId</a> blk, HasTxs blk, HasTxId (GenTx blk), <a href=\"Cardano-Tracing-Queries.html#t:LedgerQueries\" title=\"Cardano.Tracing.Queries\">LedgerQueries</a> blk, <a href=\"Cardano-Tracing-OrphanInstances-Common.html#t:ToJSON\" title=\"Cardano.Tracing.OrphanInstances.Common\">ToJSON</a> (TxId (GenTx blk)), <a href=\"Cardano-Tracing-OrphanInstances-Common.html#t:ToJSON\" title=\"Cardano.Tracing.OrphanInstances.Common\">ToJSON</a> (TxOut (AlonzoEra StandardCrypto)), <a href=\"Cardano-Tracing-OrphanInstances-Common.html#t:ToJSON\" title=\"Cardano.Tracing.OrphanInstances.Common\">ToJSON</a> (PParamsUpdate (AlonzoEra StandardCrypto)), <a href=\"Cardano-Tracing-OrphanInstances-Common.html#t:ToObject\" title=\"Cardano.Tracing.OrphanInstances.Common\">ToObject</a> (ApplyTxErr blk), <a href=\"Cardano-Tracing-OrphanInstances-Common.html#t:ToObject\" title=\"Cardano.Tracing.OrphanInstances.Common\">ToObject</a> (GenTx blk), <a href=\"Cardano-Tracing-OrphanInstances-Common.html#t:ToObject\" title=\"Cardano.Tracing.OrphanInstances.Common\">ToObject</a> (Header blk), <a href=\"Cardano-Tracing-OrphanInstances-Common.html#t:ToObject\" title=\"Cardano.Tracing.OrphanInstances.Common\">ToObject</a> (LedgerError blk), <a href=\"Cardano-Tracing-OrphanInstances-Common.html#t:ToObject\" title=\"Cardano.Tracing.OrphanInstances.Common\">ToObject</a> (LedgerEvent blk), <a href=\"Cardano-Tracing-OrphanInstances-Common.html#t:ToObject\" title=\"Cardano.Tracing.OrphanInstances.Common\">ToObject</a> (OtherHeaderEnvelopeError blk), <a href=\"Cardano-Tracing-OrphanInstances-Common.html#t:ToObject\" title=\"Cardano.Tracing.OrphanInstances.Common\">ToObject</a> (ValidationErr (BlockProtocol blk)), <a href=\"Cardano-Tracing-OrphanInstances-Common.html#t:ToObject\" title=\"Cardano.Tracing.OrphanInstances.Common\">ToObject</a> (CannotForge blk), <a href=\"Cardano-Tracing-OrphanInstances-Common.html#t:ToObject\" title=\"Cardano.Tracing.OrphanInstances.Common\">ToObject</a> (ForgeStateUpdateError blk), <a href=\"Cardano-Tracing-OrphanInstances-Common.html#t:ToObject\" title=\"Cardano.Tracing.OrphanInstances.Common\">ToObject</a> (UtxoPredicateFailure (AlonzoEra StandardCrypto)), <a href=\"Cardano-Tracing-OrphanInstances-Common.html#t:ToObject\" title=\"Cardano.Tracing.OrphanInstances.Common\">ToObject</a> (AlonzoBbodyPredFail (AlonzoEra StandardCrypto)), <a href=\"Cardano-Tracing-OrphanInstances-Common.html#t:ToObject\" title=\"Cardano.Tracing.OrphanInstances.Common\">ToObject</a> (AlonzoPredFail (AlonzoEra StandardCrypto)), <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:Show\" title=\"Distribution.Compat.Prelude.Internal\">Show</a> blk, <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:Show\" title=\"Distribution.Compat.Prelude.Internal\">Show</a> (Header blk))",
+    "display_html": "<span class=\"keyword\">type</span> <a href=\"#t:TraceConstraints\">TraceConstraints</a> blk = (<a href=\"Cardano-Node-Queries.html#t:ConvertTxId\" title=\"Cardano.Node.Queries\">ConvertTxId</a> blk, HasTxs blk, HasTxId (GenTx blk), <a href=\"Cardano-Node-Queries.html#t:LedgerQueries\" title=\"Cardano.Node.Queries\">LedgerQueries</a> blk, <a href=\"Cardano-Tracing-OrphanInstances-Common.html#t:ToJSON\" title=\"Cardano.Tracing.OrphanInstances.Common\">ToJSON</a> (TxId (GenTx blk)), <a href=\"Cardano-Tracing-OrphanInstances-Common.html#t:ToJSON\" title=\"Cardano.Tracing.OrphanInstances.Common\">ToJSON</a> (TxOut (AlonzoEra StandardCrypto)), <a href=\"Cardano-Tracing-OrphanInstances-Common.html#t:ToJSON\" title=\"Cardano.Tracing.OrphanInstances.Common\">ToJSON</a> (PParamsUpdate (AlonzoEra StandardCrypto)), <a href=\"Cardano-Tracing-OrphanInstances-Common.html#t:ToObject\" title=\"Cardano.Tracing.OrphanInstances.Common\">ToObject</a> (ApplyTxErr blk), <a href=\"Cardano-Tracing-OrphanInstances-Common.html#t:ToObject\" title=\"Cardano.Tracing.OrphanInstances.Common\">ToObject</a> (GenTx blk), <a href=\"Cardano-Tracing-OrphanInstances-Common.html#t:ToObject\" title=\"Cardano.Tracing.OrphanInstances.Common\">ToObject</a> (Header blk), <a href=\"Cardano-Tracing-OrphanInstances-Common.html#t:ToObject\" title=\"Cardano.Tracing.OrphanInstances.Common\">ToObject</a> (LedgerError blk), <a href=\"Cardano-Tracing-OrphanInstances-Common.html#t:ToObject\" title=\"Cardano.Tracing.OrphanInstances.Common\">ToObject</a> (LedgerEvent blk), <a href=\"Cardano-Tracing-OrphanInstances-Common.html#t:ToObject\" title=\"Cardano.Tracing.OrphanInstances.Common\">ToObject</a> (OtherHeaderEnvelopeError blk), <a href=\"Cardano-Tracing-OrphanInstances-Common.html#t:ToObject\" title=\"Cardano.Tracing.OrphanInstances.Common\">ToObject</a> (ValidationErr (BlockProtocol blk)), <a href=\"Cardano-Tracing-OrphanInstances-Common.html#t:ToObject\" title=\"Cardano.Tracing.OrphanInstances.Common\">ToObject</a> (CannotForge blk), <a href=\"Cardano-Tracing-OrphanInstances-Common.html#t:ToObject\" title=\"Cardano.Tracing.OrphanInstances.Common\">ToObject</a> (ForgeStateUpdateError blk), <a href=\"Cardano-Tracing-OrphanInstances-Common.html#t:ToObject\" title=\"Cardano.Tracing.OrphanInstances.Common\">ToObject</a> (UtxoPredicateFailure (AlonzoEra StandardCrypto)), <a href=\"Cardano-Tracing-OrphanInstances-Common.html#t:ToObject\" title=\"Cardano.Tracing.OrphanInstances.Common\">ToObject</a> (AlonzoBbodyPredFail (AlonzoEra StandardCrypto)), <a href=\"Cardano-Tracing-OrphanInstances-Common.html#t:ToObject\" title=\"Cardano.Tracing.OrphanInstances.Common\">ToObject</a> (AlonzoPredFail (AlonzoEra StandardCrypto)), <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:Show\" title=\"Distribution.Compat.Prelude.Internal\">Show</a> blk, <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:Show\" title=\"Distribution.Compat.Prelude.Internal\">Show</a> (Header blk))",
     "name": "TraceConstraints",
     "module": "Cardano.Tracing.Constraints",
     "link": "lib/Cardano-Tracing-Constraints.html#t:TraceConstraints"
@@ -10236,7 +9990,7 @@
     "link": "lib/Cardano-Node-Protocol-Types.html#t:Protocol"
   },
   {
-    "display_html": "<span class=\"keyword\">data</span> <a href=\"#t:SomeConsensusProtocol\">SomeConsensusProtocol</a> <span class=\"keyword\">where</span><ul class=\"subs\"><li><a href=\"#v:SomeConsensusProtocol\">SomeConsensusProtocol</a> &#8759; &#8704; blk. (<a href=\"file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.7/cardano-api-1.31.0/noopt/doc/html/cardano-api/Cardano-Api-Protocol-Types.html#t:Protocol\" title=\"Cardano.Api.Protocol.Types\">Protocol</a> <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/System-IO.html#t:IO\" title=\"System.IO\">IO</a> blk, <a href=\"Cardano-Tracing-Metrics.html#t:HasKESMetricsData\" title=\"Cardano.Tracing.Metrics\">HasKESMetricsData</a> blk, <a href=\"Cardano-Tracing-Metrics.html#t:HasKESInfo\" title=\"Cardano.Tracing.Metrics\">HasKESInfo</a> blk, <a href=\"Cardano-Tracing-Constraints.html#t:TraceConstraints\" title=\"Cardano.Tracing.Constraints\">TraceConstraints</a> blk) &#8658; <a href=\"file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.7/cardano-api-1.31.0/noopt/doc/html/cardano-api/Cardano-Api-Protocol-Types.html#t:BlockType\" title=\"Cardano.Api.Protocol.Types\">BlockType</a> blk &#8594; <a href=\"file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.7/cardano-api-1.31.0/noopt/doc/html/cardano-api/Cardano-Api-Protocol-Types.html#t:ProtocolInfoArgs\" title=\"Cardano.Api.Protocol.Types\">ProtocolInfoArgs</a> <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/System-IO.html#t:IO\" title=\"System.IO\">IO</a> blk &#8594; <a href=\"Cardano-Node-Protocol-Types.html#t:SomeConsensusProtocol\" title=\"Cardano.Node.Protocol.Types\">SomeConsensusProtocol</a></li></ul>",
+    "display_html": "<span class=\"keyword\">data</span> <a href=\"#t:SomeConsensusProtocol\">SomeConsensusProtocol</a> <span class=\"keyword\">where</span><ul class=\"subs\"><li><a href=\"#v:SomeConsensusProtocol\">SomeConsensusProtocol</a> &#8759; &#8704; blk. (<a href=\"file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.7/cardano-api-1.31.0/noopt/doc/html/cardano-api/Cardano-Api-Protocol-Types.html#t:Protocol\" title=\"Cardano.Api.Protocol.Types\">Protocol</a> <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/System-IO.html#t:IO\" title=\"System.IO\">IO</a> blk, <a href=\"Cardano-Node-Queries.html#t:HasKESMetricsData\" title=\"Cardano.Node.Queries\">HasKESMetricsData</a> blk, <a href=\"Cardano-Node-Queries.html#t:HasKESInfo\" title=\"Cardano.Node.Queries\">HasKESInfo</a> blk, <a href=\"Cardano-Tracing-Constraints.html#t:TraceConstraints\" title=\"Cardano.Tracing.Constraints\">TraceConstraints</a> blk) &#8658; <a href=\"file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.7/cardano-api-1.31.0/noopt/doc/html/cardano-api/Cardano-Api-Protocol-Types.html#t:BlockType\" title=\"Cardano.Api.Protocol.Types\">BlockType</a> blk &#8594; <a href=\"file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.7/cardano-api-1.31.0/noopt/doc/html/cardano-api/Cardano-Api-Protocol-Types.html#t:ProtocolInfoArgs\" title=\"Cardano.Api.Protocol.Types\">ProtocolInfoArgs</a> <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/System-IO.html#t:IO\" title=\"System.IO\">IO</a> blk &#8594; <a href=\"Cardano-Node-Protocol-Types.html#t:SomeConsensusProtocol\" title=\"Cardano.Node.Protocol.Types\">SomeConsensusProtocol</a></li></ul>",
     "name": "SomeConsensusProtocol SomeConsensusProtocol",
     "module": "Cardano.Node.Protocol.Types",
     "link": "lib/Cardano-Node-Protocol-Types.html#t:SomeConsensusProtocol"
@@ -10477,7 +10231,7 @@
   },
   {
     "display_html": "<span class=\"keyword\">data</span> <a href=\"#t:NetworkP2PMode\">NetworkP2PMode</a><ul class=\"subs\"><li>= <a href=\"#v:EnabledP2PMode\">EnabledP2PMode</a></li><li>| <a href=\"#v:DisabledP2PMode\">DisabledP2PMode</a></li></ul>",
-    "name": "NetworkP2PMode DisabledP2PMode EnabledP2PMode",
+    "name": "NetworkP2PMode EnabledP2PMode DisabledP2PMode",
     "module": "Cardano.Node.Configuration.POM",
     "link": "lib/Cardano-Node-Configuration-POM.html#t:NetworkP2PMode"
   },
@@ -10776,6 +10530,252 @@
     "link": "lib/Cardano-Node-Configuration-Socket.html#v:renderSocketConfigError"
   },
   {
+    "display_html": "<span class=\"keyword\">newtype</span> <a href=\"#t:NodeKernelData\">NodeKernelData</a> blk = <a href=\"#v:NodeKernelData\">NodeKernelData</a> {<ul class=\"subs\"><li><a href=\"#v:unNodeKernelData\">unNodeKernelData</a> &#8759; <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/Data-IORef.html#t:IORef\" title=\"Data.IORef\">IORef</a> (<a href=\"Cardano-Tracing-Kernel.html#t:StrictMaybe\" title=\"Cardano.Tracing.Kernel\">StrictMaybe</a> (<a href=\"Cardano-Tracing-Kernel.html#t:NodeKernel\" title=\"Cardano.Tracing.Kernel\">NodeKernel</a> <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/System-IO.html#t:IO\" title=\"System.IO\">IO</a> <a href=\"Cardano-Tracing-Kernel.html#t:RemoteConnectionId\" title=\"Cardano.Tracing.Kernel\">RemoteConnectionId</a> <a href=\"Cardano-Tracing-Kernel.html#t:LocalConnectionId\" title=\"Cardano.Tracing.Kernel\">LocalConnectionId</a> blk))</li></ul>}",
+    "name": "NodeKernelData NodeKernelData unNodeKernelData",
+    "module": "Cardano.Tracing.Kernel",
+    "link": "lib/Cardano-Tracing-Kernel.html#t:NodeKernelData"
+  },
+  {
+    "display_html": "<a href=\"#v:mkNodeKernelData\">mkNodeKernelData</a> &#8759; <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/System-IO.html#t:IO\" title=\"System.IO\">IO</a> (<a href=\"Cardano-Tracing-Kernel.html#t:NodeKernelData\" title=\"Cardano.Tracing.Kernel\">NodeKernelData</a> blk)",
+    "name": "mkNodeKernelData",
+    "module": "Cardano.Tracing.Kernel",
+    "link": "lib/Cardano-Tracing-Kernel.html#v:mkNodeKernelData"
+  },
+  {
+    "display_html": "<a href=\"#v:setNodeKernel\">setNodeKernel</a> &#8759; <a href=\"Cardano-Tracing-Kernel.html#t:NodeKernelData\" title=\"Cardano.Tracing.Kernel\">NodeKernelData</a> blk &#8594; <a href=\"Cardano-Tracing-Kernel.html#t:NodeKernel\" title=\"Cardano.Tracing.Kernel\">NodeKernel</a> <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/System-IO.html#t:IO\" title=\"System.IO\">IO</a> <a href=\"Cardano-Tracing-Kernel.html#t:RemoteConnectionId\" title=\"Cardano.Tracing.Kernel\">RemoteConnectionId</a> <a href=\"Cardano-Tracing-Kernel.html#t:LocalConnectionId\" title=\"Cardano.Tracing.Kernel\">LocalConnectionId</a> blk &#8594; <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/System-IO.html#t:IO\" title=\"System.IO\">IO</a> ()",
+    "name": "setNodeKernel",
+    "module": "Cardano.Tracing.Kernel",
+    "link": "lib/Cardano-Tracing-Kernel.html#v:setNodeKernel"
+  },
+  {
+    "display_html": "<a href=\"#v:mapNodeKernelDataIO\">mapNodeKernelDataIO</a> &#8759; (<a href=\"Cardano-Tracing-Kernel.html#t:NodeKernel\" title=\"Cardano.Tracing.Kernel\">NodeKernel</a> <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/System-IO.html#t:IO\" title=\"System.IO\">IO</a> <a href=\"Cardano-Tracing-Kernel.html#t:RemoteConnectionId\" title=\"Cardano.Tracing.Kernel\">RemoteConnectionId</a> <a href=\"Cardano-Tracing-Kernel.html#t:LocalConnectionId\" title=\"Cardano.Tracing.Kernel\">LocalConnectionId</a> blk &#8594; <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/System-IO.html#t:IO\" title=\"System.IO\">IO</a> a) &#8594; <a href=\"Cardano-Tracing-Kernel.html#t:NodeKernelData\" title=\"Cardano.Tracing.Kernel\">NodeKernelData</a> blk &#8594; <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/System-IO.html#t:IO\" title=\"System.IO\">IO</a> (<a href=\"Cardano-Tracing-Kernel.html#t:StrictMaybe\" title=\"Cardano.Tracing.Kernel\">StrictMaybe</a> a)",
+    "name": "mapNodeKernelDataIO",
+    "module": "Cardano.Tracing.Kernel",
+    "link": "lib/Cardano-Tracing-Kernel.html#v:mapNodeKernelDataIO"
+  },
+  {
+    "display_html": "<a href=\"#v:nkQueryLedger\">nkQueryLedger</a> &#8759; IsLedger (<a href=\"file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.7/cardano-api-1.31.0/noopt/doc/html/cardano-api/Cardano-Api-Query.html#t:LedgerState\" title=\"Cardano.Api.Query\">LedgerState</a> blk) &#8658; (ExtLedgerState blk &#8594; a) &#8594; <a href=\"Cardano-Tracing-Kernel.html#t:NodeKernel\" title=\"Cardano.Tracing.Kernel\">NodeKernel</a> <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/System-IO.html#t:IO\" title=\"System.IO\">IO</a> <a href=\"Cardano-Tracing-Kernel.html#t:RemoteConnectionId\" title=\"Cardano.Tracing.Kernel\">RemoteConnectionId</a> <a href=\"Cardano-Tracing-Kernel.html#t:LocalConnectionId\" title=\"Cardano.Tracing.Kernel\">LocalConnectionId</a> blk &#8594; <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/System-IO.html#t:IO\" title=\"System.IO\">IO</a> a",
+    "name": "nkQueryLedger",
+    "module": "Cardano.Tracing.Kernel",
+    "link": "lib/Cardano-Tracing-Kernel.html#v:nkQueryLedger"
+  },
+  {
+    "display_html": "<a href=\"#v:nkQueryChain\">nkQueryChain</a> &#8759; (AnchoredFragment (Header blk) &#8594; a) &#8594; <a href=\"Cardano-Tracing-Kernel.html#t:NodeKernel\" title=\"Cardano.Tracing.Kernel\">NodeKernel</a> <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/System-IO.html#t:IO\" title=\"System.IO\">IO</a> <a href=\"Cardano-Tracing-Kernel.html#t:RemoteConnectionId\" title=\"Cardano.Tracing.Kernel\">RemoteConnectionId</a> <a href=\"Cardano-Tracing-Kernel.html#t:LocalConnectionId\" title=\"Cardano.Tracing.Kernel\">LocalConnectionId</a> blk &#8594; <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/System-IO.html#t:IO\" title=\"System.IO\">IO</a> a",
+    "name": "nkQueryChain",
+    "module": "Cardano.Tracing.Kernel",
+    "link": "lib/Cardano-Tracing-Kernel.html#v:nkQueryChain"
+  },
+  {
+    "display_html": "<span class=\"keyword\">data</span> <a href=\"#t:NodeKernel\">NodeKernel</a> (m &#8759; <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/Data-Kind.html#t:Type\" title=\"Data.Kind\">Type</a> &#8594; <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/Data-Kind.html#t:Type\" title=\"Data.Kind\">Type</a>) remotePeer localPeer blk = <a href=\"#v:NodeKernel\">NodeKernel</a> {<ul class=\"subs\"><li><a href=\"#v:getChainDB\">getChainDB</a> &#8759; ChainDB m blk</li><li><a href=\"#v:getMempool\">getMempool</a> &#8759; Mempool m blk TicketNo</li><li><a href=\"#v:getTopLevelConfig\">getTopLevelConfig</a> &#8759; TopLevelConfig blk</li><li><a href=\"#v:getFetchClientRegistry\">getFetchClientRegistry</a> &#8759; FetchClientRegistry remotePeer (Header blk) blk m</li><li><a href=\"#v:getFetchMode\">getFetchMode</a> &#8759; STM m FetchMode</li><li><a href=\"#v:getNodeCandidates\">getNodeCandidates</a> &#8759; StrictTVar m (<a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:Map\" title=\"Distribution.Compat.Prelude.Internal\">Map</a> remotePeer (StrictTVar m (AnchoredFragment (Header blk))))</li><li><a href=\"#v:getTracers\">getTracers</a> &#8759; Tracers m remotePeer localPeer blk</li></ul>}",
+    "name": "NodeKernel NodeKernel $sel:getChainDB:NodeKernel $sel:getFetchClientRegistry:NodeKernel $sel:getFetchMode:NodeKernel $sel:getMempool:NodeKernel $sel:getNodeCandidates:NodeKernel $sel:getTopLevelConfig:NodeKernel $sel:getTracers:NodeKernel",
+    "module": "Cardano.Tracing.Kernel",
+    "link": "lib/Cardano-Tracing-Kernel.html#t:NodeKernel"
+  },
+  {
+    "display_html": "<span class=\"keyword\">type</span> <a href=\"#t:LocalConnectionId\">LocalConnectionId</a> = ConnectionId LocalAddress",
+    "name": "LocalConnectionId",
+    "module": "Cardano.Tracing.Kernel",
+    "link": "lib/Cardano-Tracing-Kernel.html#t:LocalConnectionId"
+  },
+  {
+    "display_html": "<span class=\"keyword\">type</span> <a href=\"#t:RemoteConnectionId\">RemoteConnectionId</a> = ConnectionId RemoteAddress",
+    "name": "RemoteConnectionId",
+    "module": "Cardano.Tracing.Kernel",
+    "link": "lib/Cardano-Tracing-Kernel.html#t:RemoteConnectionId"
+  },
+  {
+    "display_html": "<span class=\"keyword\">data</span> <a href=\"#t:StrictMaybe\">StrictMaybe</a> a<ul class=\"subs\"><li>= <a href=\"#v:SNothing\">SNothing</a></li><li>| <a href=\"#v:SJust\">SJust</a> !a</li></ul>",
+    "name": "StrictMaybe SNothing SJust",
+    "module": "Cardano.Tracing.Kernel",
+    "link": "lib/Cardano-Tracing-Kernel.html#t:StrictMaybe"
+  },
+  {
+    "display_html": "<a href=\"#v:fromSMaybe\">fromSMaybe</a> &#8759; a &#8594; <a href=\"Cardano-Tracing-Kernel.html#t:StrictMaybe\" title=\"Cardano.Tracing.Kernel\">StrictMaybe</a> a &#8594; a",
+    "name": "fromSMaybe",
+    "module": "Cardano.Tracing.Kernel",
+    "link": "lib/Cardano-Tracing-Kernel.html#v:fromSMaybe"
+  },
+  {
+    "display_html": "<span class=\"keyword\">data</span> <a href=\"#t:ForgingStats\">ForgingStats</a> = <a href=\"#v:ForgingStats\">ForgingStats</a> {<ul class=\"subs\"><li><a href=\"#v:fsTxsProcessedNum\">fsTxsProcessedNum</a> &#8759; !(<a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/Data-IORef.html#t:IORef\" title=\"Data.IORef\">IORef</a> <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:Int\" title=\"Distribution.Compat.Prelude.Internal\">Int</a>)</li><li><a href=\"#v:fsState\">fsState</a> &#8759; !(<a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/GHC-Conc.html#t:TVar\" title=\"GHC.Conc\">TVar</a> (<a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:Map\" title=\"Distribution.Compat.Prelude.Internal\">Map</a> <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/Control-Concurrent.html#t:ThreadId\" title=\"Control.Concurrent\">ThreadId</a> (<a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/GHC-Conc.html#t:TVar\" title=\"GHC.Conc\">TVar</a> <a href=\"Cardano-Tracing-Metrics.html#t:ForgeThreadStats\" title=\"Cardano.Tracing.Metrics\">ForgeThreadStats</a>)))</li><li><a href=\"#v:fsBlocksUncoupled\">fsBlocksUncoupled</a> &#8759; !(<a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/GHC-Conc.html#t:TVar\" title=\"GHC.Conc\">TVar</a> <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:Int64\" title=\"Distribution.Compat.Prelude.Internal\">Int64</a>)</li></ul>}",
+    "name": "ForgingStats ForgingStats fsTxsProcessedNum fsState fsBlocksUncoupled",
+    "module": "Cardano.Tracing.Metrics",
+    "link": "lib/Cardano-Tracing-Metrics.html#t:ForgingStats"
+  },
+  {
+    "display_html": "<span class=\"keyword\">data</span> <a href=\"#t:ForgeThreadStats\">ForgeThreadStats</a> = <a href=\"#v:ForgeThreadStats\">ForgeThreadStats</a> {<ul class=\"subs\"><li><a href=\"#v:ftsNodeCannotForgeNum\">ftsNodeCannotForgeNum</a> &#8759; !<a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:Int\" title=\"Distribution.Compat.Prelude.Internal\">Int</a></li><li><a href=\"#v:ftsNodeIsLeaderNum\">ftsNodeIsLeaderNum</a> &#8759; !<a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:Int\" title=\"Distribution.Compat.Prelude.Internal\">Int</a></li><li><a href=\"#v:ftsBlocksForgedNum\">ftsBlocksForgedNum</a> &#8759; !<a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:Int\" title=\"Distribution.Compat.Prelude.Internal\">Int</a></li><li><a href=\"#v:ftsSlotsMissedNum\">ftsSlotsMissedNum</a> &#8759; !<a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:Int\" title=\"Distribution.Compat.Prelude.Internal\">Int</a></li><li><a href=\"#v:ftsLastSlot\">ftsLastSlot</a> &#8759; !<a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:Int\" title=\"Distribution.Compat.Prelude.Internal\">Int</a></li></ul>}",
+    "name": "ForgeThreadStats ForgeThreadStats ftsNodeCannotForgeNum ftsNodeIsLeaderNum ftsBlocksForgedNum ftsSlotsMissedNum ftsLastSlot",
+    "module": "Cardano.Tracing.Metrics",
+    "link": "lib/Cardano-Tracing-Metrics.html#t:ForgeThreadStats"
+  },
+  {
+    "display_html": "<a href=\"#v:mapForgingCurrentThreadStats\">mapForgingCurrentThreadStats</a> &#8759; <a href=\"Cardano-Tracing-Metrics.html#t:ForgingStats\" title=\"Cardano.Tracing.Metrics\">ForgingStats</a> &#8594; (<a href=\"Cardano-Tracing-Metrics.html#t:ForgeThreadStats\" title=\"Cardano.Tracing.Metrics\">ForgeThreadStats</a> &#8594; (<a href=\"Cardano-Tracing-Metrics.html#t:ForgeThreadStats\" title=\"Cardano.Tracing.Metrics\">ForgeThreadStats</a>, a)) &#8594; <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/System-IO.html#t:IO\" title=\"System.IO\">IO</a> a",
+    "name": "mapForgingCurrentThreadStats",
+    "module": "Cardano.Tracing.Metrics",
+    "link": "lib/Cardano-Tracing-Metrics.html#v:mapForgingCurrentThreadStats"
+  },
+  {
+    "display_html": "<a href=\"#v:mapForgingCurrentThreadStats_\">mapForgingCurrentThreadStats_</a> &#8759; <a href=\"Cardano-Tracing-Metrics.html#t:ForgingStats\" title=\"Cardano.Tracing.Metrics\">ForgingStats</a> &#8594; (<a href=\"Cardano-Tracing-Metrics.html#t:ForgeThreadStats\" title=\"Cardano.Tracing.Metrics\">ForgeThreadStats</a> &#8594; <a href=\"Cardano-Tracing-Metrics.html#t:ForgeThreadStats\" title=\"Cardano.Tracing.Metrics\">ForgeThreadStats</a>) &#8594; <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/System-IO.html#t:IO\" title=\"System.IO\">IO</a> ()",
+    "name": "mapForgingCurrentThreadStats_",
+    "module": "Cardano.Tracing.Metrics",
+    "link": "lib/Cardano-Tracing-Metrics.html#v:mapForgingCurrentThreadStats_"
+  },
+  {
+    "display_html": "<a href=\"#v:mapForgingStatsTxsProcessed\">mapForgingStatsTxsProcessed</a> &#8759; <a href=\"Cardano-Tracing-Metrics.html#t:ForgingStats\" title=\"Cardano.Tracing.Metrics\">ForgingStats</a> &#8594; (<a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:Int\" title=\"Distribution.Compat.Prelude.Internal\">Int</a> &#8594; <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:Int\" title=\"Distribution.Compat.Prelude.Internal\">Int</a>) &#8594; <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/System-IO.html#t:IO\" title=\"System.IO\">IO</a> <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:Int\" title=\"Distribution.Compat.Prelude.Internal\">Int</a>",
+    "name": "mapForgingStatsTxsProcessed",
+    "module": "Cardano.Tracing.Metrics",
+    "link": "lib/Cardano-Tracing-Metrics.html#v:mapForgingStatsTxsProcessed"
+  },
+  {
+    "display_html": "<a href=\"#v:mkForgingStats\">mkForgingStats</a> &#8759; <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/System-IO.html#t:IO\" title=\"System.IO\">IO</a> <a href=\"Cardano-Tracing-Metrics.html#t:ForgingStats\" title=\"Cardano.Tracing.Metrics\">ForgingStats</a>",
+    "name": "mkForgingStats",
+    "module": "Cardano.Tracing.Metrics",
+    "link": "lib/Cardano-Tracing-Metrics.html#v:mkForgingStats"
+  },
+  {
+    "display_html": "<a href=\"#v:threadStatsProjection\">threadStatsProjection</a> &#8759; <a href=\"Cardano-Tracing-Metrics.html#t:ForgingStats\" title=\"Cardano.Tracing.Metrics\">ForgingStats</a> &#8594; (<a href=\"Cardano-Tracing-Metrics.html#t:ForgeThreadStats\" title=\"Cardano.Tracing.Metrics\">ForgeThreadStats</a> &#8594; a) &#8594; <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/System-IO.html#t:IO\" title=\"System.IO\">IO</a> [a]",
+    "name": "threadStatsProjection",
+    "module": "Cardano.Tracing.Metrics",
+    "link": "lib/Cardano-Tracing-Metrics.html#v:threadStatsProjection"
+  },
+  {
+    "display_html": "<span class=\"keyword\">class</span> <a href=\"#t:ToObject\">ToObject</a> a <span class=\"keyword\">where</span><ul class=\"subs\"><li><a href=\"#v:toObject\">toObject</a> &#8759; <a href=\"Cardano-Tracing-OrphanInstances-Common.html#t:TracingVerbosity\" title=\"Cardano.Tracing.OrphanInstances.Common\">TracingVerbosity</a> &#8594; a &#8594; Object</li><li><a href=\"#v:textTransformer\">textTransformer</a> &#8759; a &#8594; Object &#8594; <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/text-1.2.4.1/Data-Text.html#t:Text\" title=\"Data.Text\">Text</a></li></ul>",
+    "name": "ToObject textTransformer toObject",
+    "module": "Cardano.Tracing.OrphanInstances.Common",
+    "link": "lib/Cardano-Tracing-OrphanInstances-Common.html#t:ToObject"
+  },
+  {
+    "display_html": "<span class=\"keyword\">data</span> <a href=\"#t:TracingVerbosity\">TracingVerbosity</a><ul class=\"subs\"><li>= <a href=\"#v:MinimalVerbosity\">MinimalVerbosity</a></li><li>| <a href=\"#v:NormalVerbosity\">NormalVerbosity</a></li><li>| <a href=\"#v:MaximalVerbosity\">MaximalVerbosity</a></li></ul>",
+    "name": "TracingVerbosity MinimalVerbosity MaximalVerbosity NormalVerbosity",
+    "module": "Cardano.Tracing.OrphanInstances.Common",
+    "link": "lib/Cardano-Tracing-OrphanInstances-Common.html#t:TracingVerbosity"
+  },
+  {
+    "display_html": "<a href=\"#v:mkObject\">mkObject</a> &#8759; <a href=\"Cardano-Tracing-OrphanInstances-Common.html#t:ToObject\" title=\"Cardano.Tracing.OrphanInstances.Common\">ToObject</a> a &#8658; [(<a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/text-1.2.4.1/Data-Text.html#t:Text\" title=\"Data.Text\">Text</a>, a)] &#8594; HashMap <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/text-1.2.4.1/Data-Text.html#t:Text\" title=\"Data.Text\">Text</a> a",
+    "name": "mkObject",
+    "module": "Cardano.Tracing.OrphanInstances.Common",
+    "link": "lib/Cardano-Tracing-OrphanInstances-Common.html#v:mkObject"
+  },
+  {
+    "display_html": "<a href=\"#v:emptyObject\">emptyObject</a> &#8759; <a href=\"Cardano-Tracing-OrphanInstances-Common.html#t:ToObject\" title=\"Cardano.Tracing.OrphanInstances.Common\">ToObject</a> a &#8658; HashMap <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/text-1.2.4.1/Data-Text.html#t:Text\" title=\"Data.Text\">Text</a> a",
+    "name": "emptyObject",
+    "module": "Cardano.Tracing.OrphanInstances.Common",
+    "link": "lib/Cardano-Tracing-OrphanInstances-Common.html#v:emptyObject"
+  },
+  {
+    "display_html": "<span class=\"keyword\">class</span> <a href=\"#t:ToJSON\">ToJSON</a> a",
+    "name": "ToJSON",
+    "module": "Cardano.Tracing.OrphanInstances.Common",
+    "link": "lib/Cardano-Tracing-OrphanInstances-Common.html#t:ToJSON"
+  },
+  {
+    "display_html": "<a href=\"#v:toJSON\">toJSON</a> &#8759; <a href=\"Cardano-Tracing-OrphanInstances-Common.html#t:ToJSON\" title=\"Cardano.Tracing.OrphanInstances.Common\">ToJSON</a> a &#8658; a &#8594; Value",
+    "name": "toJSON",
+    "module": "Cardano.Tracing.OrphanInstances.Common",
+    "link": "lib/Cardano-Tracing-OrphanInstances-Common.html#v:toJSON"
+  },
+  {
+    "display_html": "<a href=\"#v:.-61-\">(.=)</a> &#8759; (KeyValue kv, <a href=\"Cardano-Tracing-OrphanInstances-Common.html#t:ToJSON\" title=\"Cardano.Tracing.OrphanInstances.Common\">ToJSON</a> v) &#8658; <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/text-1.2.4.1/Data-Text.html#t:Text\" title=\"Data.Text\">Text</a> &#8594; v &#8594; kv",
+    "name": ".=",
+    "module": "Cardano.Tracing.OrphanInstances.Common",
+    "link": "lib/Cardano-Tracing-OrphanInstances-Common.html#v:.-61-"
+  },
+  {
+    "display_html": "<span class=\"keyword\">class</span> (<a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:Monad\" title=\"Distribution.Compat.Prelude.Internal\">Monad</a> m, <a href=\"Cardano-Tracing-OrphanInstances-Common.html#t:HasPrivacyAnnotation\" title=\"Cardano.Tracing.OrphanInstances.Common\">HasPrivacyAnnotation</a> b, <a href=\"Cardano-Tracing-OrphanInstances-Common.html#t:HasSeverityAnnotation\" title=\"Cardano.Tracing.OrphanInstances.Common\">HasSeverityAnnotation</a> b) &#8658; <a href=\"#t:Transformable\">Transformable</a> a (m &#8759; <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/Data-Kind.html#t:Type\" title=\"Data.Kind\">Type</a> &#8594; <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/Data-Kind.html#t:Type\" title=\"Data.Kind\">Type</a>) b <span class=\"keyword\">where</span><ul class=\"subs\"><li><a href=\"#v:trTransformer\">trTransformer</a> &#8759; <a href=\"Cardano-Tracing-OrphanInstances-Common.html#t:TracingVerbosity\" title=\"Cardano.Tracing.OrphanInstances.Common\">TracingVerbosity</a> &#8594; <a href=\"Cardano-Node-Configuration-Logging.html#t:Trace\" title=\"Cardano.Node.Configuration.Logging\">Trace</a> m a &#8594; <a href=\"Cardano-Tracing-OrphanInstances-Common.html#t:Tracer\" title=\"Cardano.Tracing.OrphanInstances.Common\">Tracer</a> m b</li></ul>",
+    "name": "Transformable trTransformer",
+    "module": "Cardano.Tracing.OrphanInstances.Common",
+    "link": "lib/Cardano-Tracing-OrphanInstances-Common.html#t:Transformable"
+  },
+  {
+    "display_html": "<a href=\"#v:trStructured\">trStructured</a> &#8759; &#8704; b (m &#8759; <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/Data-Kind.html#t:Type\" title=\"Data.Kind\">Type</a> &#8594; <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/Data-Kind.html#t:Type\" title=\"Data.Kind\">Type</a>) a. (<a href=\"Cardano-Tracing-OrphanInstances-Common.html#t:ToObject\" title=\"Cardano.Tracing.OrphanInstances.Common\">ToObject</a> b, <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/Control-Monad-IO-Class.html#t:MonadIO\" title=\"Control.Monad.IO.Class\">MonadIO</a> m, <a href=\"Cardano-Tracing-OrphanInstances-Common.html#t:HasPrivacyAnnotation\" title=\"Cardano.Tracing.OrphanInstances.Common\">HasPrivacyAnnotation</a> b, <a href=\"Cardano-Tracing-OrphanInstances-Common.html#t:HasSeverityAnnotation\" title=\"Cardano.Tracing.OrphanInstances.Common\">HasSeverityAnnotation</a> b) &#8658; <a href=\"Cardano-Tracing-OrphanInstances-Common.html#t:TracingVerbosity\" title=\"Cardano.Tracing.OrphanInstances.Common\">TracingVerbosity</a> &#8594; <a href=\"Cardano-Node-Configuration-Logging.html#t:Trace\" title=\"Cardano.Node.Configuration.Logging\">Trace</a> m a &#8594; <a href=\"Cardano-Tracing-OrphanInstances-Common.html#t:Tracer\" title=\"Cardano.Tracing.OrphanInstances.Common\">Tracer</a> m b",
+    "name": "trStructured",
+    "module": "Cardano.Tracing.OrphanInstances.Common",
+    "link": "lib/Cardano-Tracing-OrphanInstances-Common.html#v:trStructured"
+  },
+  {
+    "display_html": "<a href=\"#v:trStructuredText\">trStructuredText</a> &#8759; &#8704; b (m &#8759; <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/Data-Kind.html#t:Type\" title=\"Data.Kind\">Type</a> &#8594; <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/Data-Kind.html#t:Type\" title=\"Data.Kind\">Type</a>) a. (<a href=\"Cardano-Tracing-OrphanInstances-Common.html#t:ToObject\" title=\"Cardano.Tracing.OrphanInstances.Common\">ToObject</a> b, <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/Control-Monad-IO-Class.html#t:MonadIO\" title=\"Control.Monad.IO.Class\">MonadIO</a> m, <a href=\"Cardano-Tracing-OrphanInstances-Common.html#t:HasTextFormatter\" title=\"Cardano.Tracing.OrphanInstances.Common\">HasTextFormatter</a> b, <a href=\"Cardano-Tracing-OrphanInstances-Common.html#t:HasPrivacyAnnotation\" title=\"Cardano.Tracing.OrphanInstances.Common\">HasPrivacyAnnotation</a> b, <a href=\"Cardano-Tracing-OrphanInstances-Common.html#t:HasSeverityAnnotation\" title=\"Cardano.Tracing.OrphanInstances.Common\">HasSeverityAnnotation</a> b) &#8658; <a href=\"Cardano-Tracing-OrphanInstances-Common.html#t:TracingVerbosity\" title=\"Cardano.Tracing.OrphanInstances.Common\">TracingVerbosity</a> &#8594; <a href=\"Cardano-Node-Configuration-Logging.html#t:Trace\" title=\"Cardano.Node.Configuration.Logging\">Trace</a> m a &#8594; <a href=\"Cardano-Tracing-OrphanInstances-Common.html#t:Tracer\" title=\"Cardano.Tracing.OrphanInstances.Common\">Tracer</a> m b",
+    "name": "trStructuredText",
+    "module": "Cardano.Tracing.OrphanInstances.Common",
+    "link": "lib/Cardano-Tracing-OrphanInstances-Common.html#v:trStructuredText"
+  },
+  {
+    "display_html": "<span class=\"keyword\">class</span> <a href=\"#t:HasTextFormatter\">HasTextFormatter</a> a <span class=\"keyword\">where</span><ul class=\"subs\"><li><a href=\"#v:formatText\">formatText</a> &#8759; a &#8594; Object &#8594; <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/text-1.2.4.1/Data-Text.html#t:Text\" title=\"Data.Text\">Text</a></li></ul>",
+    "name": "HasTextFormatter formatText",
+    "module": "Cardano.Tracing.OrphanInstances.Common",
+    "link": "lib/Cardano-Tracing-OrphanInstances-Common.html#t:HasTextFormatter"
+  },
+  {
+    "display_html": "<span class=\"keyword\">class</span> <a href=\"#t:HasSeverityAnnotation\">HasSeverityAnnotation</a> a <span class=\"keyword\">where</span><ul class=\"subs\"><li><a href=\"#v:getSeverityAnnotation\">getSeverityAnnotation</a> &#8759; a &#8594; <a href=\"Cardano-Tracing-OrphanInstances-Common.html#t:Severity\" title=\"Cardano.Tracing.OrphanInstances.Common\">Severity</a></li></ul>",
+    "name": "HasSeverityAnnotation getSeverityAnnotation",
+    "module": "Cardano.Tracing.OrphanInstances.Common",
+    "link": "lib/Cardano-Tracing-OrphanInstances-Common.html#t:HasSeverityAnnotation"
+  },
+  {
+    "display_html": "<span class=\"keyword\">data</span> <a href=\"#t:Severity\">Severity</a><ul class=\"subs\"><li>= <a href=\"#v:Debug\">Debug</a></li><li>| <a href=\"#v:Info\">Info</a></li><li>| <a href=\"#v:Notice\">Notice</a></li><li>| <a href=\"#v:Warning\">Warning</a></li><li>| <a href=\"#v:Error\">Error</a></li><li>| <a href=\"#v:Critical\">Critical</a></li><li>| <a href=\"#v:Alert\">Alert</a></li><li>| <a href=\"#v:Emergency\">Emergency</a></li></ul>",
+    "name": "Severity Debug Error Info Alert Critical Emergency Notice Warning",
+    "module": "Cardano.Tracing.OrphanInstances.Common",
+    "link": "lib/Cardano-Tracing-OrphanInstances-Common.html#t:Severity"
+  },
+  {
+    "display_html": "<span class=\"keyword\">class</span> <a href=\"#t:HasPrivacyAnnotation\">HasPrivacyAnnotation</a> a <span class=\"keyword\">where</span><ul class=\"subs\"><li><a href=\"#v:getPrivacyAnnotation\">getPrivacyAnnotation</a> &#8759; a &#8594; <a href=\"Cardano-Tracing-OrphanInstances-Common.html#t:PrivacyAnnotation\" title=\"Cardano.Tracing.OrphanInstances.Common\">PrivacyAnnotation</a></li></ul>",
+    "name": "HasPrivacyAnnotation getPrivacyAnnotation",
+    "module": "Cardano.Tracing.OrphanInstances.Common",
+    "link": "lib/Cardano-Tracing-OrphanInstances-Common.html#t:HasPrivacyAnnotation"
+  },
+  {
+    "display_html": "<span class=\"keyword\">data</span> <a href=\"#t:PrivacyAnnotation\">PrivacyAnnotation</a><ul class=\"subs\"><li>= <a href=\"#v:Confidential\">Confidential</a></li><li>| <a href=\"#v:Public\">Public</a></li></ul>",
+    "name": "PrivacyAnnotation Confidential Public",
+    "module": "Cardano.Tracing.OrphanInstances.Common",
+    "link": "lib/Cardano-Tracing-OrphanInstances-Common.html#t:PrivacyAnnotation"
+  },
+  {
+    "display_html": "<span class=\"keyword\">data</span> <a href=\"#t:Tracer\">Tracer</a> (m &#8759; <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/Data-Kind.html#t:Type\" title=\"Data.Kind\">Type</a> &#8594; <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/Data-Kind.html#t:Type\" title=\"Data.Kind\">Type</a>) a",
+    "name": "Tracer",
+    "module": "Cardano.Tracing.OrphanInstances.Common",
+    "link": "lib/Cardano-Tracing-OrphanInstances-Common.html#t:Tracer"
+  },
+  {
+    "display_html": "<span class=\"keyword\">data</span> <a href=\"#t:LogObject\">LogObject</a> a = <a href=\"#v:LogObject\">LogObject</a> {<ul class=\"subs\"><li><a href=\"#v:loName\">loName</a> &#8759; <a href=\"Cardano-Node-Configuration-Logging.html#t:LoggerName\" title=\"Cardano.Node.Configuration.Logging\">LoggerName</a></li><li><a href=\"#v:loMeta\">loMeta</a> &#8759; !<a href=\"Cardano-Node-Configuration-Logging.html#t:LOMeta\" title=\"Cardano.Node.Configuration.Logging\">LOMeta</a></li><li><a href=\"#v:loContent\">loContent</a> &#8759; !(<a href=\"Cardano-Tracing-OrphanInstances-Common.html#t:LOContent\" title=\"Cardano.Tracing.OrphanInstances.Common\">LOContent</a> a)</li></ul>}",
+    "name": "LogObject LogObject loMeta loContent loName",
+    "module": "Cardano.Tracing.OrphanInstances.Common",
+    "link": "lib/Cardano-Tracing-OrphanInstances-Common.html#t:LogObject"
+  },
+  {
+    "display_html": "<span class=\"keyword\">data</span> <a href=\"#t:LOContent\">LOContent</a> a<ul class=\"subs\"><li>= <a href=\"#v:LogMessage\">LogMessage</a> a</li><li>| <a href=\"#v:LogError\">LogError</a> !<a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/text-1.2.4.1/Data-Text.html#t:Text\" title=\"Data.Text\">Text</a></li><li>| <a href=\"#v:LogValue\">LogValue</a> !<a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/text-1.2.4.1/Data-Text.html#t:Text\" title=\"Data.Text\">Text</a> !Measurable</li><li>| <a href=\"#v:LogStructuredText\">LogStructuredText</a> Object <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/text-1.2.4.1/Data-Text.html#t:Text\" title=\"Data.Text\">Text</a></li><li>| <a href=\"#v:LogStructured\">LogStructured</a> Object</li><li>| <a href=\"#v:ObserveOpen\">ObserveOpen</a> !CounterState</li><li>| <a href=\"#v:ObserveDiff\">ObserveDiff</a> !CounterState</li><li>| <a href=\"#v:ObserveClose\">ObserveClose</a> !CounterState</li><li>| <a href=\"#v:AggregatedMessage\">AggregatedMessage</a> [(<a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/text-1.2.4.1/Data-Text.html#t:Text\" title=\"Data.Text\">Text</a>, Aggregated)]</li><li>| <a href=\"#v:MonitoringEffect\">MonitoringEffect</a> !MonitorAction</li><li>| <a href=\"#v:Command\">Command</a> !CommandValue</li><li>| <a href=\"#v:KillPill\">KillPill</a></li></ul>",
+    "name": "LOContent Command LogMessage LogStructuredText LogValue AggregatedMessage KillPill LogError LogStructured MonitoringEffect ObserveClose ObserveDiff ObserveOpen",
+    "module": "Cardano.Tracing.OrphanInstances.Common",
+    "link": "lib/Cardano-Tracing-OrphanInstances-Common.html#t:LOContent"
+  },
+  {
+    "display_html": "<a href=\"#v:mkLOMeta\">mkLOMeta</a> &#8759; <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/Control-Monad-IO-Class.html#t:MonadIO\" title=\"Control.Monad.IO.Class\">MonadIO</a> m &#8658; <a href=\"Cardano-Tracing-OrphanInstances-Common.html#t:Severity\" title=\"Cardano.Tracing.OrphanInstances.Common\">Severity</a> &#8594; <a href=\"Cardano-Tracing-OrphanInstances-Common.html#t:PrivacyAnnotation\" title=\"Cardano.Tracing.OrphanInstances.Common\">PrivacyAnnotation</a> &#8594; m <a href=\"Cardano-Node-Configuration-Logging.html#t:LOMeta\" title=\"Cardano.Node.Configuration.Logging\">LOMeta</a>",
+    "name": "mkLOMeta",
+    "module": "Cardano.Tracing.OrphanInstances.Common",
+    "link": "lib/Cardano-Tracing-OrphanInstances-Common.html#v:mkLOMeta"
+  },
+  {
+    "display_html": "<span class=\"keyword\">data</span> <a href=\"#t:Peer\">Peer</a> blk = <a href=\"#v:Peer\">Peer</a> !<a href=\"Cardano-Tracing-Kernel.html#t:RemoteConnectionId\" title=\"Cardano.Tracing.Kernel\">RemoteConnectionId</a> !(AnchoredFragment (Header blk)) !(PeerFetchStatus (Header blk)) !(PeerFetchInFlight (Header blk))",
+    "name": "Peer Peer",
+    "module": "Cardano.Tracing.Peer",
+    "link": "lib/Cardano-Tracing-Peer.html#t:Peer"
+  },
+  {
+    "display_html": "<a href=\"#v:getCurrentPeers\">getCurrentPeers</a> &#8759; <a href=\"Cardano-Tracing-Kernel.html#t:NodeKernelData\" title=\"Cardano.Tracing.Kernel\">NodeKernelData</a> blk &#8594; <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/System-IO.html#t:IO\" title=\"System.IO\">IO</a> [<a href=\"Cardano-Tracing-Peer.html#t:Peer\" title=\"Cardano.Tracing.Peer\">Peer</a> blk]",
+    "name": "getCurrentPeers",
+    "module": "Cardano.Tracing.Peer",
+    "link": "lib/Cardano-Tracing-Peer.html#v:getCurrentPeers"
+  },
+  {
+    "display_html": "<a href=\"#v:ppPeer\">ppPeer</a> &#8759; <a href=\"Cardano-Tracing-Peer.html#t:Peer\" title=\"Cardano.Tracing.Peer\">Peer</a> blk &#8594; <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/text-1.2.4.1/Data-Text.html#t:Text\" title=\"Data.Text\">Text</a>",
+    "name": "ppPeer",
+    "module": "Cardano.Tracing.Peer",
+    "link": "lib/Cardano-Tracing-Peer.html#v:ppPeer"
+  },
+  {
+    "display_html": "<a href=\"#v:tracePeers\">tracePeers</a> &#8759; <a href=\"Cardano-Node-Configuration-Logging.html#t:Trace\" title=\"Cardano.Node.Configuration.Logging\">Trace</a> <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/System-IO.html#t:IO\" title=\"System.IO\">IO</a> <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/text-1.2.4.1/Data-Text.html#t:Text\" title=\"Data.Text\">Text</a> &#8594; [<a href=\"Cardano-Tracing-Peer.html#t:Peer\" title=\"Cardano.Tracing.Peer\">Peer</a> blk] &#8594; <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/System-IO.html#t:IO\" title=\"System.IO\">IO</a> ()",
+    "name": "tracePeers",
+    "module": "Cardano.Tracing.Peer",
+    "link": "lib/Cardano-Tracing-Peer.html#v:tracePeers"
+  },
+  {
     "display_html": "<a href=\"#v:renderBlockOrEBB\">renderBlockOrEBB</a> &#8759; BlockOrEBB &#8594; <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/text-1.2.4.1/Data-Text.html#t:Text\" title=\"Data.Text\">Text</a>",
     "name": "renderBlockOrEBB",
     "module": "Cardano.Tracing.Render",
@@ -10866,13 +10866,13 @@
     "link": "lib/Cardano-Tracing-Render.html#v:renderTipForVerbosity"
   },
   {
-    "display_html": "<a href=\"#v:renderTxId\">renderTxId</a> &#8759; <a href=\"Cardano-Tracing-ConvertTxId.html#t:ConvertTxId\" title=\"Cardano.Tracing.ConvertTxId\">ConvertTxId</a> blk &#8658; TxId (GenTx blk) &#8594; <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/text-1.2.4.1/Data-Text.html#t:Text\" title=\"Data.Text\">Text</a>",
+    "display_html": "<a href=\"#v:renderTxId\">renderTxId</a> &#8759; <a href=\"Cardano-Node-Queries.html#t:ConvertTxId\" title=\"Cardano.Node.Queries\">ConvertTxId</a> blk &#8658; TxId (GenTx blk) &#8594; <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/text-1.2.4.1/Data-Text.html#t:Text\" title=\"Data.Text\">Text</a>",
     "name": "renderTxId",
     "module": "Cardano.Tracing.Render",
     "link": "lib/Cardano-Tracing-Render.html#v:renderTxId"
   },
   {
-    "display_html": "<a href=\"#v:renderTxIdForVerbosity\">renderTxIdForVerbosity</a> &#8759; <a href=\"Cardano-Tracing-ConvertTxId.html#t:ConvertTxId\" title=\"Cardano.Tracing.ConvertTxId\">ConvertTxId</a> blk &#8658; <a href=\"Cardano-Tracing-OrphanInstances-Common.html#t:TracingVerbosity\" title=\"Cardano.Tracing.OrphanInstances.Common\">TracingVerbosity</a> &#8594; TxId (GenTx blk) &#8594; <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/text-1.2.4.1/Data-Text.html#t:Text\" title=\"Data.Text\">Text</a>",
+    "display_html": "<a href=\"#v:renderTxIdForVerbosity\">renderTxIdForVerbosity</a> &#8759; <a href=\"Cardano-Node-Queries.html#t:ConvertTxId\" title=\"Cardano.Node.Queries\">ConvertTxId</a> blk &#8658; <a href=\"Cardano-Tracing-OrphanInstances-Common.html#t:TracingVerbosity\" title=\"Cardano.Tracing.OrphanInstances.Common\">TracingVerbosity</a> &#8594; TxId (GenTx blk) &#8594; <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/text-1.2.4.1/Data-Text.html#t:Text\" title=\"Data.Text\">Text</a>",
     "name": "renderTxIdForVerbosity",
     "module": "Cardano.Tracing.Render",
     "link": "lib/Cardano-Tracing-Render.html#v:renderTxIdForVerbosity"
@@ -11004,7 +11004,7 @@
     "link": "lib/Cardano-Node-Protocol.html#v:mkConsensusProtocol"
   },
   {
-    "display_html": "<span class=\"keyword\">data</span> <a href=\"#t:SomeConsensusProtocol\">SomeConsensusProtocol</a> <span class=\"keyword\">where</span><ul class=\"subs\"><li><a href=\"#v:SomeConsensusProtocol\">SomeConsensusProtocol</a> &#8759; &#8704; blk. (<a href=\"file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.7/cardano-api-1.31.0/noopt/doc/html/cardano-api/Cardano-Api-Protocol-Types.html#t:Protocol\" title=\"Cardano.Api.Protocol.Types\">Protocol</a> <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/System-IO.html#t:IO\" title=\"System.IO\">IO</a> blk, <a href=\"Cardano-Tracing-Metrics.html#t:HasKESMetricsData\" title=\"Cardano.Tracing.Metrics\">HasKESMetricsData</a> blk, <a href=\"Cardano-Tracing-Metrics.html#t:HasKESInfo\" title=\"Cardano.Tracing.Metrics\">HasKESInfo</a> blk, <a href=\"Cardano-Tracing-Constraints.html#t:TraceConstraints\" title=\"Cardano.Tracing.Constraints\">TraceConstraints</a> blk) &#8658; <a href=\"file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.7/cardano-api-1.31.0/noopt/doc/html/cardano-api/Cardano-Api-Protocol-Types.html#t:BlockType\" title=\"Cardano.Api.Protocol.Types\">BlockType</a> blk &#8594; <a href=\"file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.7/cardano-api-1.31.0/noopt/doc/html/cardano-api/Cardano-Api-Protocol-Types.html#t:ProtocolInfoArgs\" title=\"Cardano.Api.Protocol.Types\">ProtocolInfoArgs</a> <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/System-IO.html#t:IO\" title=\"System.IO\">IO</a> blk &#8594; <a href=\"Cardano-Node-Protocol.html#t:SomeConsensusProtocol\" title=\"Cardano.Node.Protocol\">SomeConsensusProtocol</a></li></ul>",
+    "display_html": "<span class=\"keyword\">data</span> <a href=\"#t:SomeConsensusProtocol\">SomeConsensusProtocol</a> <span class=\"keyword\">where</span><ul class=\"subs\"><li><a href=\"#v:SomeConsensusProtocol\">SomeConsensusProtocol</a> &#8759; &#8704; blk. (<a href=\"file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.7/cardano-api-1.31.0/noopt/doc/html/cardano-api/Cardano-Api-Protocol-Types.html#t:Protocol\" title=\"Cardano.Api.Protocol.Types\">Protocol</a> <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/System-IO.html#t:IO\" title=\"System.IO\">IO</a> blk, <a href=\"Cardano-Node-Queries.html#t:HasKESMetricsData\" title=\"Cardano.Node.Queries\">HasKESMetricsData</a> blk, <a href=\"Cardano-Node-Queries.html#t:HasKESInfo\" title=\"Cardano.Node.Queries\">HasKESInfo</a> blk, <a href=\"Cardano-Tracing-Constraints.html#t:TraceConstraints\" title=\"Cardano.Tracing.Constraints\">TraceConstraints</a> blk) &#8658; <a href=\"file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.7/cardano-api-1.31.0/noopt/doc/html/cardano-api/Cardano-Api-Protocol-Types.html#t:BlockType\" title=\"Cardano.Api.Protocol.Types\">BlockType</a> blk &#8594; <a href=\"file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.7/cardano-api-1.31.0/noopt/doc/html/cardano-api/Cardano-Api-Protocol-Types.html#t:ProtocolInfoArgs\" title=\"Cardano.Api.Protocol.Types\">ProtocolInfoArgs</a> <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/System-IO.html#t:IO\" title=\"System.IO\">IO</a> blk &#8594; <a href=\"Cardano-Node-Protocol.html#t:SomeConsensusProtocol\" title=\"Cardano.Node.Protocol\">SomeConsensusProtocol</a></li></ul>",
     "name": "SomeConsensusProtocol SomeConsensusProtocol",
     "module": "Cardano.Node.Protocol",
     "link": "lib/Cardano-Node-Protocol.html#t:SomeConsensusProtocol"
@@ -11154,7 +11154,7 @@
     "link": "lib/Cardano-Tracing-Tracers.html#t:TraceOptions"
   },
   {
-    "display_html": "<a href=\"#v:mkTracers\">mkTracers</a> &#8759; &#8704; blk p2p. (RunNode blk, <a href=\"Cardano-Tracing-Metrics.html#t:HasKESMetricsData\" title=\"Cardano.Tracing.Metrics\">HasKESMetricsData</a> blk, <a href=\"Cardano-Tracing-Metrics.html#t:HasKESInfo\" title=\"Cardano.Tracing.Metrics\">HasKESInfo</a> blk, <a href=\"Cardano-Tracing-Constraints.html#t:TraceConstraints\" title=\"Cardano.Tracing.Constraints\">TraceConstraints</a> blk) &#8658; BlockConfig blk &#8594; <a href=\"Cardano-Tracing-Tracers.html#t:TraceOptions\" title=\"Cardano.Tracing.Tracers\">TraceOptions</a> &#8594; <a href=\"Cardano-Node-Configuration-Logging.html#t:Trace\" title=\"Cardano.Node.Configuration.Logging\">Trace</a> <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/System-IO.html#t:IO\" title=\"System.IO\">IO</a> <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/text-1.2.4.1/Data-Text.html#t:Text\" title=\"Data.Text\">Text</a> &#8594; <a href=\"Cardano-Tracing-Kernel.html#t:NodeKernelData\" title=\"Cardano.Tracing.Kernel\">NodeKernelData</a> blk &#8594; <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:Maybe\" title=\"Distribution.Compat.Prelude.Internal\">Maybe</a> <a href=\"Cardano-Node-Configuration-Logging.html#t:EKGDirect\" title=\"Cardano.Node.Configuration.Logging\">EKGDirect</a> &#8594; NetworkP2PMode p2p &#8594; <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/System-IO.html#t:IO\" title=\"System.IO\">IO</a> (<a href=\"Cardano-Tracing-Tracers.html#t:Tracers\" title=\"Cardano.Tracing.Tracers\">Tracers</a> (ConnectionId RemoteAddress) (ConnectionId LocalAddress) blk p2p)",
+    "display_html": "<a href=\"#v:mkTracers\">mkTracers</a> &#8759; &#8704; blk p2p. (RunNode blk, <a href=\"Cardano-Node-Queries.html#t:HasKESMetricsData\" title=\"Cardano.Node.Queries\">HasKESMetricsData</a> blk, <a href=\"Cardano-Node-Queries.html#t:HasKESInfo\" title=\"Cardano.Node.Queries\">HasKESInfo</a> blk, <a href=\"Cardano-Tracing-Constraints.html#t:TraceConstraints\" title=\"Cardano.Tracing.Constraints\">TraceConstraints</a> blk) &#8658; BlockConfig blk &#8594; <a href=\"Cardano-Tracing-Tracers.html#t:TraceOptions\" title=\"Cardano.Tracing.Tracers\">TraceOptions</a> &#8594; <a href=\"Cardano-Node-Configuration-Logging.html#t:Trace\" title=\"Cardano.Node.Configuration.Logging\">Trace</a> <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/System-IO.html#t:IO\" title=\"System.IO\">IO</a> <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/text-1.2.4.1/Data-Text.html#t:Text\" title=\"Data.Text\">Text</a> &#8594; <a href=\"Cardano-Tracing-Kernel.html#t:NodeKernelData\" title=\"Cardano.Tracing.Kernel\">NodeKernelData</a> blk &#8594; <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:Maybe\" title=\"Distribution.Compat.Prelude.Internal\">Maybe</a> <a href=\"Cardano-Node-Configuration-Logging.html#t:EKGDirect\" title=\"Cardano.Node.Configuration.Logging\">EKGDirect</a> &#8594; NetworkP2PMode p2p &#8594; <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/System-IO.html#t:IO\" title=\"System.IO\">IO</a> (<a href=\"Cardano-Tracing-Tracers.html#t:Tracers\" title=\"Cardano.Tracing.Tracers\">Tracers</a> (ConnectionId RemoteAddress) (ConnectionId LocalAddress) blk p2p)",
     "name": "mkTracers",
     "module": "Cardano.Tracing.Tracers",
     "link": "lib/Cardano-Tracing-Tracers.html#v:mkTracers"
