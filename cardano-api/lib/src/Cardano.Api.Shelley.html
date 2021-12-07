@@ -182,28 +182,29 @@
 </span><span id="line-182"></span><span>    </span><span class="annot"><a href="Cardano.Api.Query.html#UTxO"><span class="hs-identifier">UTxO</span></a></span><span class="hs-special">(</span><span class="hs-glyph">..</span><span class="hs-special">)</span><span class="hs-special">,</span><span>
 </span><span id="line-183"></span><span>
 </span><span id="line-184"></span><span>    </span><span class="annot"><span class="hs-comment">-- ** Conversions</span></span><span>
-</span><span id="line-185"></span><span>    </span><span class="hs-comment">--TODO: arrange not to export these</span><span>
-</span><span id="line-186"></span><span>    </span><span class="annot"><a href="Cardano.Api.NetworkId.html#toShelleyNetwork"><span class="hs-identifier">toShelleyNetwork</span></a></span><span class="hs-special">,</span><span>
-</span><span id="line-187"></span><span>    </span><span class="annot"><a href="Cardano.Api.ProtocolParameters.html#fromShelleyPParams"><span class="hs-identifier">fromShelleyPParams</span></a></span><span class="hs-special">,</span><span>
-</span><span id="line-188"></span><span>
-</span><span id="line-189"></span><span>  </span><span class="hs-special">)</span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-190"></span><span>
-</span><span id="line-191"></span><span class="hs-keyword">import</span><span>           </span><span class="annot"><a href="Cardano.Api.html"><span class="hs-identifier">Cardano.Api</span></a></span><span>
-</span><span id="line-192"></span><span class="hs-keyword">import</span><span>           </span><span class="annot"><a href="Cardano.Api.Address.html"><span class="hs-identifier">Cardano.Api.Address</span></a></span><span>
-</span><span id="line-193"></span><span class="hs-keyword">import</span><span>           </span><span class="annot"><a href="Cardano.Api.Certificate.html"><span class="hs-identifier">Cardano.Api.Certificate</span></a></span><span>
-</span><span id="line-194"></span><span class="hs-keyword">import</span><span>           </span><span class="annot"><a href="Cardano.Api.Eras.html"><span class="hs-identifier">Cardano.Api.Eras</span></a></span><span>
-</span><span id="line-195"></span><span class="hs-keyword">import</span><span>           </span><span class="annot"><a href="Cardano.Api.IPC.html"><span class="hs-identifier">Cardano.Api.IPC</span></a></span><span>
-</span><span id="line-196"></span><span class="hs-keyword">import</span><span>           </span><span class="annot"><a href="Cardano.Api.KeysPraos.html"><span class="hs-identifier">Cardano.Api.KeysPraos</span></a></span><span>
-</span><span id="line-197"></span><span class="hs-keyword">import</span><span>           </span><span class="annot"><a href="Cardano.Api.KeysShelley.html"><span class="hs-identifier">Cardano.Api.KeysShelley</span></a></span><span>
-</span><span id="line-198"></span><span class="hs-keyword">import</span><span>           </span><span class="annot"><a href="Cardano.Api.NetworkId.html"><span class="hs-identifier">Cardano.Api.NetworkId</span></a></span><span>
-</span><span id="line-199"></span><span class="hs-keyword">import</span><span>           </span><span class="annot"><a href="Cardano.Api.OperationalCertificate.html"><span class="hs-identifier">Cardano.Api.OperationalCertificate</span></a></span><span>
-</span><span id="line-200"></span><span class="hs-keyword">import</span><span>           </span><span class="annot"><a href="Cardano.Api.ProtocolParameters.html"><span class="hs-identifier">Cardano.Api.ProtocolParameters</span></a></span><span>
-</span><span id="line-201"></span><span class="hs-keyword">import</span><span>           </span><span class="annot"><a href="Cardano.Api.Query.html"><span class="hs-identifier">Cardano.Api.Query</span></a></span><span>
-</span><span id="line-202"></span><span class="hs-keyword">import</span><span>           </span><span class="annot"><a href="Cardano.Api.Script.html"><span class="hs-identifier">Cardano.Api.Script</span></a></span><span>
-</span><span id="line-203"></span><span class="hs-keyword">import</span><span>           </span><span class="annot"><a href="Cardano.Api.Shelley.Genesis.html"><span class="hs-identifier">Cardano.Api.Shelley.Genesis</span></a></span><span>
-</span><span id="line-204"></span><span class="hs-keyword">import</span><span>           </span><span class="annot"><a href="Cardano.Api.StakePoolMetadata.html"><span class="hs-identifier">Cardano.Api.StakePoolMetadata</span></a></span><span>
-</span><span id="line-205"></span><span class="hs-keyword">import</span><span>           </span><span class="annot"><a href="Cardano.Api.Tx.html"><span class="hs-identifier">Cardano.Api.Tx</span></a></span><span>
-</span><span id="line-206"></span><span class="hs-keyword">import</span><span>           </span><span class="annot"><a href="Cardano.Api.TxBody.html"><span class="hs-identifier">Cardano.Api.TxBody</span></a></span><span>
-</span><span id="line-207"></span><span class="hs-keyword">import</span><span>           </span><span class="annot"><a href="Cardano.Api.TxMetadata.html"><span class="hs-identifier">Cardano.Api.TxMetadata</span></a></span><span>
-</span><span id="line-208"></span><span class="hs-keyword">import</span><span>           </span><span class="annot"><a href="Cardano.Api.Value.html"><span class="hs-identifier">Cardano.Api.Value</span></a></span><span>
-</span><span id="line-209"></span></pre></body></html>
+</span><span id="line-185"></span><span>    </span><span class="annot"><a href="Cardano.Api.Address.html#shelleyPayAddrToPlutusPubKHash"><span class="hs-identifier">shelleyPayAddrToPlutusPubKHash</span></a></span><span class="hs-special">,</span><span>
+</span><span id="line-186"></span><span>    </span><span class="hs-comment">--TODO: arrange not to export these</span><span>
+</span><span id="line-187"></span><span>    </span><span class="annot"><a href="Cardano.Api.NetworkId.html#toShelleyNetwork"><span class="hs-identifier">toShelleyNetwork</span></a></span><span class="hs-special">,</span><span>
+</span><span id="line-188"></span><span>    </span><span class="annot"><a href="Cardano.Api.ProtocolParameters.html#fromShelleyPParams"><span class="hs-identifier">fromShelleyPParams</span></a></span><span class="hs-special">,</span><span>
+</span><span id="line-189"></span><span>
+</span><span id="line-190"></span><span>  </span><span class="hs-special">)</span><span> </span><span class="hs-keyword">where</span><span>
+</span><span id="line-191"></span><span>
+</span><span id="line-192"></span><span class="hs-keyword">import</span><span>           </span><span class="annot"><a href="Cardano.Api.html"><span class="hs-identifier">Cardano.Api</span></a></span><span>
+</span><span id="line-193"></span><span class="hs-keyword">import</span><span>           </span><span class="annot"><a href="Cardano.Api.Address.html"><span class="hs-identifier">Cardano.Api.Address</span></a></span><span>
+</span><span id="line-194"></span><span class="hs-keyword">import</span><span>           </span><span class="annot"><a href="Cardano.Api.Certificate.html"><span class="hs-identifier">Cardano.Api.Certificate</span></a></span><span>
+</span><span id="line-195"></span><span class="hs-keyword">import</span><span>           </span><span class="annot"><a href="Cardano.Api.Eras.html"><span class="hs-identifier">Cardano.Api.Eras</span></a></span><span>
+</span><span id="line-196"></span><span class="hs-keyword">import</span><span>           </span><span class="annot"><a href="Cardano.Api.IPC.html"><span class="hs-identifier">Cardano.Api.IPC</span></a></span><span>
+</span><span id="line-197"></span><span class="hs-keyword">import</span><span>           </span><span class="annot"><a href="Cardano.Api.KeysPraos.html"><span class="hs-identifier">Cardano.Api.KeysPraos</span></a></span><span>
+</span><span id="line-198"></span><span class="hs-keyword">import</span><span>           </span><span class="annot"><a href="Cardano.Api.KeysShelley.html"><span class="hs-identifier">Cardano.Api.KeysShelley</span></a></span><span>
+</span><span id="line-199"></span><span class="hs-keyword">import</span><span>           </span><span class="annot"><a href="Cardano.Api.NetworkId.html"><span class="hs-identifier">Cardano.Api.NetworkId</span></a></span><span>
+</span><span id="line-200"></span><span class="hs-keyword">import</span><span>           </span><span class="annot"><a href="Cardano.Api.OperationalCertificate.html"><span class="hs-identifier">Cardano.Api.OperationalCertificate</span></a></span><span>
+</span><span id="line-201"></span><span class="hs-keyword">import</span><span>           </span><span class="annot"><a href="Cardano.Api.ProtocolParameters.html"><span class="hs-identifier">Cardano.Api.ProtocolParameters</span></a></span><span>
+</span><span id="line-202"></span><span class="hs-keyword">import</span><span>           </span><span class="annot"><a href="Cardano.Api.Query.html"><span class="hs-identifier">Cardano.Api.Query</span></a></span><span>
+</span><span id="line-203"></span><span class="hs-keyword">import</span><span>           </span><span class="annot"><a href="Cardano.Api.Script.html"><span class="hs-identifier">Cardano.Api.Script</span></a></span><span>
+</span><span id="line-204"></span><span class="hs-keyword">import</span><span>           </span><span class="annot"><a href="Cardano.Api.Shelley.Genesis.html"><span class="hs-identifier">Cardano.Api.Shelley.Genesis</span></a></span><span>
+</span><span id="line-205"></span><span class="hs-keyword">import</span><span>           </span><span class="annot"><a href="Cardano.Api.StakePoolMetadata.html"><span class="hs-identifier">Cardano.Api.StakePoolMetadata</span></a></span><span>
+</span><span id="line-206"></span><span class="hs-keyword">import</span><span>           </span><span class="annot"><a href="Cardano.Api.Tx.html"><span class="hs-identifier">Cardano.Api.Tx</span></a></span><span>
+</span><span id="line-207"></span><span class="hs-keyword">import</span><span>           </span><span class="annot"><a href="Cardano.Api.TxBody.html"><span class="hs-identifier">Cardano.Api.TxBody</span></a></span><span>
+</span><span id="line-208"></span><span class="hs-keyword">import</span><span>           </span><span class="annot"><a href="Cardano.Api.TxMetadata.html"><span class="hs-identifier">Cardano.Api.TxMetadata</span></a></span><span>
+</span><span id="line-209"></span><span class="hs-keyword">import</span><span>           </span><span class="annot"><a href="Cardano.Api.Value.html"><span class="hs-identifier">Cardano.Api.Value</span></a></span><span>
+</span><span id="line-210"></span></pre></body></html>

@@ -42,8 +42,8 @@ PropertyT IO () -&gt; Property
 </span><span class="hs-identifier hs-var">Hedgehog.property</span></span><span> </span><span class="annot"><span class="annottext">(PropertyT IO () -&gt; Property) -&gt; PropertyT IO () -&gt; Property
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="hs-keyword">do</span><span>
-</span><span id="line-33"></span><span>    </span><span class="hs-keyword">let</span><span> </span><span id="local-6989586621679124831"><span class="annot"><span class="annottext">combinedPartials :: PartialNodeConfiguration
-</span><a href="#local-6989586621679124831"><span class="hs-identifier hs-var hs-var">combinedPartials</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">PartialNodeConfiguration
+</span><span id="line-33"></span><span>    </span><span class="hs-keyword">let</span><span> </span><span id="local-6989586621679124833"><span class="annot"><span class="annottext">combinedPartials :: PartialNodeConfiguration
+</span><a href="#local-6989586621679124833"><span class="hs-identifier hs-var hs-var">combinedPartials</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">PartialNodeConfiguration
 </span><a href="../file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.7/cardano-node-1.31.0/noopt/doc/html/cardano-node/src"><span class="hs-identifier hs-var">defaultPartialNodeConfiguration</span></a></span><span>
 </span><span id="line-34"></span><span>                             </span><span class="annot"><span class="annottext">PartialNodeConfiguration
 -&gt; PartialNodeConfiguration -&gt; PartialNodeConfiguration
@@ -55,14 +55,14 @@ forall a. Semigroup a =&gt; a -&gt; a -&gt; a
 forall a. Semigroup a =&gt; a -&gt; a -&gt; a
 </span><a href="../file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">PartialNodeConfiguration
 </span><a href="Test.Cardano.Node.POM.html#testPartialCliConfig"><span class="hs-identifier hs-var">testPartialCliConfig</span></a></span><span>
-</span><span id="line-36"></span><span>        </span><span id="local-6989586621679124827"><span class="annot"><span class="annottext">nc :: Either String NodeConfiguration
-</span><a href="#local-6989586621679124827"><span class="hs-identifier hs-var hs-var">nc</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">PartialNodeConfiguration -&gt; Either String NodeConfiguration
+</span><span id="line-36"></span><span>        </span><span id="local-6989586621679124829"><span class="annot"><span class="annottext">nc :: Either String NodeConfiguration
+</span><a href="#local-6989586621679124829"><span class="hs-identifier hs-var hs-var">nc</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">PartialNodeConfiguration -&gt; Either String NodeConfiguration
 </span><a href="../file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.7/cardano-node-1.31.0/noopt/doc/html/cardano-node/src"><span class="hs-identifier hs-var">makeNodeConfiguration</span></a></span><span> </span><span class="annot"><span class="annottext">PartialNodeConfiguration
-</span><a href="#local-6989586621679124831"><span class="hs-identifier hs-var">combinedPartials</span></a></span><span>
+</span><a href="#local-6989586621679124833"><span class="hs-identifier hs-var">combinedPartials</span></a></span><span>
 </span><span id="line-37"></span><span>    </span><span class="hs-keyword">case</span><span> </span><span class="annot"><span class="annottext">Either String NodeConfiguration
-</span><a href="#local-6989586621679124827"><span class="hs-identifier hs-var">nc</span></a></span><span> </span><span class="hs-keyword">of</span><span>
-</span><span id="line-38"></span><span>      </span><span class="annot"><a href="../file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Left</span></a></span><span> </span><span id="local-6989586621679124825"><span class="annot"><span class="annottext">String
-</span><a href="#local-6989586621679124825"><span class="hs-identifier hs-var">err</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">Maybe Diff -&gt; String -&gt; PropertyT IO ()
+</span><a href="#local-6989586621679124829"><span class="hs-identifier hs-var">nc</span></a></span><span> </span><span class="hs-keyword">of</span><span>
+</span><span id="line-38"></span><span>      </span><span class="annot"><a href="../file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Left</span></a></span><span> </span><span id="local-6989586621679124827"><span class="annot"><span class="annottext">String
+</span><a href="#local-6989586621679124827"><span class="hs-identifier hs-var">err</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">Maybe Diff -&gt; String -&gt; PropertyT IO ()
 forall (m :: * -&gt; *) a.
 (MonadTest m, HasCallStack) =&gt;
 Maybe Diff -&gt; String -&gt; m a
@@ -74,10 +74,10 @@ forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><span class="hs-string">&quot;Partial Options Monoid sanity check failure: &quot;</span></span><span> </span><span class="annot"><span class="annottext">String -&gt; String -&gt; String
 forall a. Semigroup a =&gt; a -&gt; a -&gt; a
 </span><a href="../file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">String
-</span><a href="#local-6989586621679124825"><span class="hs-identifier hs-var">err</span></a></span><span>
-</span><span id="line-39"></span><span>      </span><span class="annot"><a href="../file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Right</span></a></span><span> </span><span id="local-6989586621679124824"><span class="annot"><span class="annottext">NodeConfiguration
-</span><a href="#local-6989586621679124824"><span class="hs-identifier hs-var">config</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">NodeConfiguration
-</span><a href="#local-6989586621679124824"><span class="hs-identifier hs-var">config</span></a></span><span> </span><span class="annot"><span class="annottext">NodeConfiguration -&gt; NodeConfiguration -&gt; PropertyT IO ()
+</span><a href="#local-6989586621679124827"><span class="hs-identifier hs-var">err</span></a></span><span>
+</span><span id="line-39"></span><span>      </span><span class="annot"><a href="../file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Right</span></a></span><span> </span><span id="local-6989586621679124826"><span class="annot"><span class="annottext">NodeConfiguration
+</span><a href="#local-6989586621679124826"><span class="hs-identifier hs-var">config</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">NodeConfiguration
+</span><a href="#local-6989586621679124826"><span class="hs-identifier hs-var">config</span></a></span><span> </span><span class="annot"><span class="annottext">NodeConfiguration -&gt; NodeConfiguration -&gt; PropertyT IO ()
 forall (m :: * -&gt; *) a.
 (MonadTest m, Eq a, Show a, HasCallStack) =&gt;
 a -&gt; a -&gt; m ()

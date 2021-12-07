@@ -1950,6 +1950,12 @@
     "link": "lib/Cardano-Api-Address.html#t:StakeExtendedKey"
   },
   {
+    "display_html": "<a href=\"#v:shelleyPayAddrToPlutusPubKHash\">shelleyPayAddrToPlutusPubKHash</a> &#8759; <a href=\"Cardano-Api-Address.html#t:Address\" title=\"Cardano.Api.Address\">Address</a> <a href=\"Cardano-Api-Address.html#t:ShelleyAddr\" title=\"Cardano.Api.Address\">ShelleyAddr</a> &#8594; <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:Maybe\" title=\"Distribution.Compat.Prelude.Internal\">Maybe</a> PubKeyHash",
+    "name": "shelleyPayAddrToPlutusPubKHash",
+    "module": "Cardano.Api.Address",
+    "link": "lib/Cardano-Api-Address.html#v:shelleyPayAddrToPlutusPubKHash"
+  },
+  {
     "display_html": "<a href=\"#v:toShelleyAddr\">toShelleyAddr</a> &#8759; <a href=\"Cardano-Api-Address.html#t:AddressInEra\" title=\"Cardano.Api.Address\">AddressInEra</a> era &#8594; Addr StandardCrypto",
     "name": "toShelleyAddr",
     "module": "Cardano.Api.Address",
@@ -7000,6 +7006,12 @@
     "name": "UTxO UTxO unUTxO",
     "module": "Cardano.Api.Shelley",
     "link": "lib/Cardano-Api-Shelley.html#t:UTxO"
+  },
+  {
+    "display_html": "<a href=\"#v:shelleyPayAddrToPlutusPubKHash\">shelleyPayAddrToPlutusPubKHash</a> &#8759; <a href=\"Cardano-Api-Shelley.html#t:Address\" title=\"Cardano.Api.Shelley\">Address</a> <a href=\"Cardano-Api-Address.html#t:ShelleyAddr\" title=\"Cardano.Api.Address\">ShelleyAddr</a> &#8594; <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:Maybe\" title=\"Distribution.Compat.Prelude.Internal\">Maybe</a> PubKeyHash",
+    "name": "shelleyPayAddrToPlutusPubKHash",
+    "module": "Cardano.Api.Shelley",
+    "link": "lib/Cardano-Api-Shelley.html#v:shelleyPayAddrToPlutusPubKHash"
   },
   {
     "display_html": "<a href=\"#v:toShelleyNetwork\">toShelleyNetwork</a> &#8759; <a href=\"Cardano-Api-Shelley.html#t:NetworkId\" title=\"Cardano.Api.Shelley\">NetworkId</a> &#8594; Network",
