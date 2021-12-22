@@ -12,11 +12,11 @@
 </span><span id="line-12"></span><span class="hs-keyword">import</span><span>           </span><span class="annot"><a href="../file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.7/cardano-node-1.33.0/noopt/doc/html/cardano-node/src"><span class="hs-identifier">Cardano.Node.Configuration.POM</span></a></span><span>
 </span><span id="line-13"></span><span class="hs-keyword">import</span><span>           </span><span class="annot"><a href="../file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.7/cardano-node-1.33.0/noopt/doc/html/cardano-node/src"><span class="hs-identifier">Cardano.Node.Types</span></a></span><span>
 </span><span id="line-14"></span><span class="hs-keyword">import</span><span>           </span><span class="annot"><a href="../file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.7/cardano-node-1.33.0/noopt/doc/html/cardano-node/src"><span class="hs-identifier">Cardano.Tracing.Config</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.7/cardano-node-1.33.0/noopt/doc/html/cardano-node/src"><span class="hs-identifier">TraceOptions</span></a></span><span> </span><span class="hs-special">(</span><span class="hs-glyph">..</span><span class="hs-special">)</span><span class="hs-special">)</span><span>
-</span><span id="line-15"></span><span class="hs-keyword">import</span><span>           </span><span class="annot"><span class="hs-identifier">Ouroboros.Network.Block</span></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="hs-identifier">MaxSlotNo</span></span><span> </span><span class="hs-special">(</span><span class="hs-glyph">..</span><span class="hs-special">)</span><span class="hs-special">,</span><span> </span><span class="annot"><span class="hs-identifier">SlotNo</span></span><span> </span><span class="hs-special">(</span><span class="hs-glyph">..</span><span class="hs-special">)</span><span class="hs-special">)</span><span>
-</span><span id="line-16"></span><span class="hs-keyword">import</span><span>           </span><span class="annot"><span class="hs-identifier">Ouroboros.Network.NodeToNode</span></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="hs-identifier">DiffusionMode</span></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="hs-identifier">InitiatorAndResponderDiffusionMode</span></span><span class="hs-special">)</span><span class="hs-special">,</span><span>
-</span><span id="line-17"></span><span>                   </span><span class="annot"><span class="hs-identifier">AcceptedConnectionsLimit</span></span><span class="hs-special">(</span><span class="hs-glyph">..</span><span class="hs-special">)</span><span class="hs-special">)</span><span>
-</span><span id="line-18"></span><span class="hs-keyword">import</span><span>           </span><span class="annot"><span class="hs-identifier">Ouroboros.Consensus.Storage.LedgerDB.DiskPolicy</span></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="hs-identifier">SnapshotInterval</span></span><span> </span><span class="hs-special">(</span><span class="hs-glyph">..</span><span class="hs-special">)</span><span class="hs-special">)</span><span>
-</span><span id="line-19"></span><span class="hs-keyword">import</span><span> </span><span class="hs-keyword">qualified</span><span> </span><span class="annot"><span class="hs-identifier">Ouroboros.Consensus.Node</span></span><span> </span><span class="hs-keyword">as</span><span> </span><span class="annot"><span class="hs-identifier">Consensus</span></span><span> </span><span class="hs-special">(</span><span> </span><span class="annot"><span class="hs-identifier">NetworkP2PMode</span></span><span> </span><span class="hs-special">(</span><span class="hs-glyph">..</span><span class="hs-special">)</span><span> </span><span class="hs-special">)</span><span>
+</span><span id="line-15"></span><span class="hs-keyword">import</span><span> </span><span class="hs-keyword">qualified</span><span> </span><span class="annot"><span class="hs-identifier">Ouroboros.Consensus.Node</span></span><span> </span><span class="hs-keyword">as</span><span> </span><span class="annot"><span class="hs-identifier">Consensus</span></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="hs-identifier">NetworkP2PMode</span></span><span> </span><span class="hs-special">(</span><span class="hs-glyph">..</span><span class="hs-special">)</span><span class="hs-special">)</span><span>
+</span><span id="line-16"></span><span class="hs-keyword">import</span><span>           </span><span class="annot"><span class="hs-identifier">Ouroboros.Consensus.Storage.LedgerDB.DiskPolicy</span></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="hs-identifier">SnapshotInterval</span></span><span> </span><span class="hs-special">(</span><span class="hs-glyph">..</span><span class="hs-special">)</span><span class="hs-special">)</span><span>
+</span><span id="line-17"></span><span class="hs-keyword">import</span><span>           </span><span class="annot"><span class="hs-identifier">Ouroboros.Network.Block</span></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="hs-identifier">MaxSlotNo</span></span><span> </span><span class="hs-special">(</span><span class="hs-glyph">..</span><span class="hs-special">)</span><span class="hs-special">,</span><span> </span><span class="annot"><span class="hs-identifier">SlotNo</span></span><span> </span><span class="hs-special">(</span><span class="hs-glyph">..</span><span class="hs-special">)</span><span class="hs-special">)</span><span>
+</span><span id="line-18"></span><span class="hs-keyword">import</span><span>           </span><span class="annot"><span class="hs-identifier">Ouroboros.Network.NodeToNode</span></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="hs-identifier">AcceptedConnectionsLimit</span></span><span> </span><span class="hs-special">(</span><span class="hs-glyph">..</span><span class="hs-special">)</span><span class="hs-special">,</span><span>
+</span><span id="line-19"></span><span>                   </span><span class="annot"><span class="hs-identifier">DiffusionMode</span></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="hs-identifier">InitiatorAndResponderDiffusionMode</span></span><span class="hs-special">)</span><span class="hs-special">)</span><span>
 </span><span id="line-20"></span><span>
 </span><span id="line-21"></span><span class="hs-keyword">import</span><span>           </span><span class="annot"><span class="hs-identifier">Hedgehog</span></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="hs-identifier">Property</span></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="hs-identifier">discover</span></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="hs-identifier">withTests</span></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="hs-operator">(===)</span></span><span class="hs-special">)</span><span>
 </span><span id="line-22"></span><span class="hs-keyword">import</span><span> </span><span class="hs-keyword">qualified</span><span> </span><span class="annot"><span class="hs-identifier">Hedgehog</span></span><span>
@@ -43,8 +43,8 @@ PropertyT IO () -&gt; Property
 </span><span class="hs-identifier hs-var">Hedgehog.property</span></span><span> </span><span class="annot"><span class="annottext">(PropertyT IO () -&gt; Property) -&gt; PropertyT IO () -&gt; Property
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="hs-keyword">do</span><span>
-</span><span id="line-34"></span><span>    </span><span class="hs-keyword">let</span><span> </span><span id="local-6989586621679124617"><span class="annot"><span class="annottext">combinedPartials :: PartialNodeConfiguration
-</span><a href="#local-6989586621679124617"><span class="hs-identifier hs-var hs-var">combinedPartials</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">PartialNodeConfiguration
+</span><span id="line-34"></span><span>    </span><span class="hs-keyword">let</span><span> </span><span id="local-6989586621679124556"><span class="annot"><span class="annottext">combinedPartials :: PartialNodeConfiguration
+</span><a href="#local-6989586621679124556"><span class="hs-identifier hs-var hs-var">combinedPartials</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">PartialNodeConfiguration
 </span><a href="../file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.7/cardano-node-1.33.0/noopt/doc/html/cardano-node/src"><span class="hs-identifier hs-var">defaultPartialNodeConfiguration</span></a></span><span>
 </span><span id="line-35"></span><span>                             </span><span class="annot"><span class="annottext">PartialNodeConfiguration
 -&gt; PartialNodeConfiguration -&gt; PartialNodeConfiguration
@@ -56,14 +56,14 @@ forall a. Semigroup a =&gt; a -&gt; a -&gt; a
 forall a. Semigroup a =&gt; a -&gt; a -&gt; a
 </span><a href="../file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">PartialNodeConfiguration
 </span><a href="Test.Cardano.Node.POM.html#testPartialCliConfig"><span class="hs-identifier hs-var">testPartialCliConfig</span></a></span><span>
-</span><span id="line-37"></span><span>        </span><span id="local-6989586621679124613"><span class="annot"><span class="annottext">nc :: Either String NodeConfiguration
-</span><a href="#local-6989586621679124613"><span class="hs-identifier hs-var hs-var">nc</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">PartialNodeConfiguration -&gt; Either String NodeConfiguration
+</span><span id="line-37"></span><span>        </span><span id="local-6989586621679124552"><span class="annot"><span class="annottext">nc :: Either String NodeConfiguration
+</span><a href="#local-6989586621679124552"><span class="hs-identifier hs-var hs-var">nc</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">PartialNodeConfiguration -&gt; Either String NodeConfiguration
 </span><a href="../file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.7/cardano-node-1.33.0/noopt/doc/html/cardano-node/src"><span class="hs-identifier hs-var">makeNodeConfiguration</span></a></span><span> </span><span class="annot"><span class="annottext">PartialNodeConfiguration
-</span><a href="#local-6989586621679124617"><span class="hs-identifier hs-var">combinedPartials</span></a></span><span>
+</span><a href="#local-6989586621679124556"><span class="hs-identifier hs-var">combinedPartials</span></a></span><span>
 </span><span id="line-38"></span><span>    </span><span class="hs-keyword">case</span><span> </span><span class="annot"><span class="annottext">Either String NodeConfiguration
-</span><a href="#local-6989586621679124613"><span class="hs-identifier hs-var">nc</span></a></span><span> </span><span class="hs-keyword">of</span><span>
-</span><span id="line-39"></span><span>      </span><span class="annot"><a href="../file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Left</span></a></span><span> </span><span id="local-6989586621679124611"><span class="annot"><span class="annottext">String
-</span><a href="#local-6989586621679124611"><span class="hs-identifier hs-var">err</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">Maybe Diff -&gt; String -&gt; PropertyT IO ()
+</span><a href="#local-6989586621679124552"><span class="hs-identifier hs-var">nc</span></a></span><span> </span><span class="hs-keyword">of</span><span>
+</span><span id="line-39"></span><span>      </span><span class="annot"><a href="../file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Left</span></a></span><span> </span><span id="local-6989586621679124550"><span class="annot"><span class="annottext">String
+</span><a href="#local-6989586621679124550"><span class="hs-identifier hs-var">err</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">Maybe Diff -&gt; String -&gt; PropertyT IO ()
 forall (m :: * -&gt; *) a.
 (MonadTest m, HasCallStack) =&gt;
 Maybe Diff -&gt; String -&gt; m a
@@ -75,10 +75,10 @@ forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><span class="hs-string">&quot;Partial Options Monoid sanity check failure: &quot;</span></span><span> </span><span class="annot"><span class="annottext">String -&gt; String -&gt; String
 forall a. Semigroup a =&gt; a -&gt; a -&gt; a
 </span><a href="../file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">String
-</span><a href="#local-6989586621679124611"><span class="hs-identifier hs-var">err</span></a></span><span>
-</span><span id="line-40"></span><span>      </span><span class="annot"><a href="../file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Right</span></a></span><span> </span><span id="local-6989586621679124610"><span class="annot"><span class="annottext">NodeConfiguration
-</span><a href="#local-6989586621679124610"><span class="hs-identifier hs-var">config</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">NodeConfiguration
-</span><a href="#local-6989586621679124610"><span class="hs-identifier hs-var">config</span></a></span><span> </span><span class="annot"><span class="annottext">NodeConfiguration -&gt; NodeConfiguration -&gt; PropertyT IO ()
+</span><a href="#local-6989586621679124550"><span class="hs-identifier hs-var">err</span></a></span><span>
+</span><span id="line-40"></span><span>      </span><span class="annot"><a href="../file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Right</span></a></span><span> </span><span id="local-6989586621679124549"><span class="annot"><span class="annottext">NodeConfiguration
+</span><a href="#local-6989586621679124549"><span class="hs-identifier hs-var">config</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">NodeConfiguration
+</span><a href="#local-6989586621679124549"><span class="hs-identifier hs-var">config</span></a></span><span> </span><span class="annot"><span class="annottext">NodeConfiguration -&gt; NodeConfiguration -&gt; PropertyT IO ()
 forall (m :: * -&gt; *) a.
 (MonadTest m, Eq a, Show a, HasCallStack) =&gt;
 a -&gt; a -&gt; m ()
@@ -98,7 +98,7 @@ a -&gt; a -&gt; m ()
 -&gt; Last DbFile
 -&gt; Last ProtocolFilepaths
 -&gt; Last Bool
--&gt; Last (Maybe Fd)
+-&gt; Last Fd
 -&gt; Last MaxSlotNo
 -&gt; Last NodeProtocolConfiguration
 -&gt; Last SocketPath
@@ -251,8 +251,8 @@ forall a. Monoid a =&gt; a
 </span><a href="../file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.7/cardano-node-1.33.0/noopt/doc/html/cardano-node/src"><span class="hs-identifier hs-var">pncValidateDB</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Last Bool
 forall a. Monoid a =&gt; a
 </span><a href="../file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">mempty</span></a></span><span>
-</span><span id="line-68"></span><span>    </span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">pncShutdownIPC :: Last (Maybe Fd)
-</span><a href="../file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.7/cardano-node-1.33.0/noopt/doc/html/cardano-node/src"><span class="hs-identifier hs-var">pncShutdownIPC</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Last (Maybe Fd)
+</span><span id="line-68"></span><span>    </span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">pncShutdownIPC :: Last Fd
+</span><a href="../file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.7/cardano-node-1.33.0/noopt/doc/html/cardano-node/src"><span class="hs-identifier hs-var">pncShutdownIPC</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Last Fd
 forall a. Monoid a =&gt; a
 </span><a href="../file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">mempty</span></a></span><span>
 </span><span id="line-69"></span><span>    </span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">pncShutdownOnSlotSynced :: Last MaxSlotNo
@@ -313,7 +313,7 @@ forall a. a -&gt; Maybe a
 -&gt; Last DbFile
 -&gt; Last ProtocolFilepaths
 -&gt; Last Bool
--&gt; Last (Maybe Fd)
+-&gt; Last Fd
 -&gt; Last MaxSlotNo
 -&gt; Last NodeProtocolConfiguration
 -&gt; Last SocketPath
@@ -447,15 +447,10 @@ forall a b. (a -&gt; b) -&gt; a -&gt; b
 forall a. a -&gt; Maybe a
 </span><a href="../file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">Just</span></a></span><span> </span><span class="annot"><span class="annottext">Bool
 </span><a href="../file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var">True</span></a></span><span>
-</span><span id="line-98"></span><span>    </span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">pncShutdownIPC :: Last (Maybe Fd)
-</span><a href="../file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.7/cardano-node-1.33.0/noopt/doc/html/cardano-node/src"><span class="hs-identifier hs-var">pncShutdownIPC</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Maybe (Maybe Fd) -&gt; Last (Maybe Fd)
+</span><span id="line-98"></span><span>    </span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">pncShutdownIPC :: Last Fd
+</span><a href="../file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.7/cardano-node-1.33.0/noopt/doc/html/cardano-node/src"><span class="hs-identifier hs-var">pncShutdownIPC</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Maybe Fd -&gt; Last Fd
 forall a. Maybe a -&gt; Last a
-</span><a href="../file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">Last</span></a></span><span> </span><span class="annot"><span class="annottext">(Maybe (Maybe Fd) -&gt; Last (Maybe Fd))
--&gt; Maybe (Maybe Fd) -&gt; Last (Maybe Fd)
-forall a b. (a -&gt; b) -&gt; a -&gt; b
-</span><a href="../file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">Maybe Fd -&gt; Maybe (Maybe Fd)
-forall a. a -&gt; Maybe a
-</span><a href="../file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">Just</span></a></span><span> </span><span class="annot"><span class="annottext">Maybe Fd
+</span><a href="../file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">Last</span></a></span><span> </span><span class="annot"><span class="annottext">Maybe Fd
 forall a. Maybe a
 </span><a href="../file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">Nothing</span></a></span><span>
 </span><span id="line-99"></span><span>    </span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">pncShutdownOnSlotSynced :: Last MaxSlotNo
