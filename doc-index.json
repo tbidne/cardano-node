@@ -4614,6 +4614,12 @@
     "link": "lib/Cardano-Api.html#v:txOutValueToValue"
   },
   {
+    "display_html": "<a href=\"#v:lovelaceToTxOutValue\">lovelaceToTxOutValue</a> &#8759; <a href=\"Cardano-Api.html#t:IsCardanoEra\" title=\"Cardano.Api\">IsCardanoEra</a> era &#8658; <a href=\"Cardano-Api.html#t:Lovelace\" title=\"Cardano.Api\">Lovelace</a> &#8594; <a href=\"Cardano-Api.html#t:TxOutValue\" title=\"Cardano.Api\">TxOutValue</a> era",
+    "name": "lovelaceToTxOutValue",
+    "module": "Cardano.Api",
+    "link": "lib/Cardano-Api.html#v:lovelaceToTxOutValue"
+  },
+  {
     "display_html": "<span class=\"keyword\">data</span> <a href=\"#t:TxOutDatum\">TxOutDatum</a> ctx era <span class=\"keyword\">where</span><ul class=\"subs\"><li><a href=\"#v:TxOutDatumNone\">TxOutDatumNone</a> &#8759; <a href=\"Cardano-Api.html#t:TxOutDatum\" title=\"Cardano.Api\">TxOutDatum</a> ctx era</li><li><a href=\"#v:TxOutDatumHash\">TxOutDatumHash</a> &#8759; <a href=\"Cardano-Api.html#t:ScriptDataSupportedInEra\" title=\"Cardano.Api\">ScriptDataSupportedInEra</a> era &#8594; <a href=\"Cardano-Api.html#t:Hash\" title=\"Cardano.Api\">Hash</a> <a href=\"Cardano-Api.html#t:ScriptData\" title=\"Cardano.Api\">ScriptData</a> &#8594; <a href=\"Cardano-Api.html#t:TxOutDatum\" title=\"Cardano.Api\">TxOutDatum</a> ctx era</li><li><span class=\"keyword\">pattern</span> <a href=\"#v:TxOutDatum\">TxOutDatum</a> &#8759; <a href=\"Cardano-Api.html#t:ScriptDataSupportedInEra\" title=\"Cardano.Api\">ScriptDataSupportedInEra</a> era &#8594; <a href=\"Cardano-Api.html#t:ScriptData\" title=\"Cardano.Api\">ScriptData</a> &#8594; <a href=\"Cardano-Api.html#t:TxOutDatum\" title=\"Cardano.Api\">TxOutDatum</a> <a href=\"Cardano-Api.html#t:CtxTx\" title=\"Cardano.Api\">CtxTx</a> era</li></ul>",
     "name": "TxOutDatum TxOutDatum TxOutDatumNone TxOutDatumHash",
     "module": "Cardano.Api",
