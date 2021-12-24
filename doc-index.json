@@ -7500,6 +7500,12 @@
     "link": "lib_gen/Gen-Cardano-Api-Typed.html#v:genTxBody"
   },
   {
+    "display_html": "<a href=\"#v:genLovelace\">genLovelace</a> &#8759; Gen <a href=\"file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.7/cardano-api-1.33.0/noopt/doc/html/cardano-api/Cardano-Api-Value.html#t:Lovelace\" title=\"Cardano.Api.Value\">Lovelace</a>",
+    "name": "genLovelace",
+    "module": "Gen.Cardano.Api.Typed",
+    "link": "lib_gen/Gen-Cardano-Api-Typed.html#v:genLovelace"
+  },
+  {
     "display_html": "<a href=\"#v:genValue\">genValue</a> &#8759; Gen <a href=\"file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.7/cardano-api-1.33.0/noopt/doc/html/cardano-api/Cardano-Api-Value.html#t:AssetId\" title=\"Cardano.Api.Value\">AssetId</a> &#8594; Gen <a href=\"file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.7/cardano-api-1.33.0/noopt/doc/html/cardano-api/Cardano-Api-Value.html#t:Quantity\" title=\"Cardano.Api.Value\">Quantity</a> &#8594; Gen <a href=\"file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.7/cardano-api-1.33.0/noopt/doc/html/cardano-api/Cardano-Api-Value.html#t:Value\" title=\"Cardano.Api.Value\">Value</a>",
     "name": "genValue",
     "module": "Gen.Cardano.Api.Typed",
@@ -8232,12 +8238,6 @@
     "link": "lib/Cardano-CLI-Shelley-Commands.html#t:MetadataFile"
   },
   {
-    "display_html": "<span class=\"keyword\">newtype</span> <a href=\"#t:PoolId\">PoolId</a> = <a href=\"#v:PoolId\">PoolId</a> <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:String\" title=\"Distribution.Compat.Prelude.Internal\">String</a>",
-    "name": "PoolId PoolId",
-    "module": "Cardano.CLI.Shelley.Commands",
-    "link": "lib/Cardano-CLI-Shelley-Commands.html#t:PoolId"
-  },
-  {
     "display_html": "<span class=\"keyword\">newtype</span> <a href=\"#t:PoolMetadataFile\">PoolMetadataFile</a> = <a href=\"#v:PoolMetadataFile\">PoolMetadataFile</a> {<ul class=\"subs\"><li><a href=\"#v:unPoolMetadataFile\">unPoolMetadataFile</a> &#8759; <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:FilePath\" title=\"Distribution.Compat.Prelude.Internal\">FilePath</a></li></ul>}",
     "name": "PoolMetadataFile PoolMetadataFile unPoolMetadataFile",
     "module": "Cardano.CLI.Shelley.Commands",
@@ -8574,6 +8574,12 @@
     "link": "lib/Cardano-CLI-Environment.html#v:renderEnvSocketError"
   },
   {
+    "display_html": "<span class=\"keyword\">newtype</span> <a href=\"#t:DelegationsAndRewards\">DelegationsAndRewards</a> = <a href=\"#v:DelegationsAndRewards\">DelegationsAndRewards</a> (<a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:Map\" title=\"Distribution.Compat.Prelude.Internal\">Map</a> <a href=\"file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.7/cardano-api-1.33.0/noopt/doc/html/cardano-api/Cardano-Api-Address.html#t:StakeAddress\" title=\"Cardano.Api.Address\">StakeAddress</a> <a href=\"file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.7/cardano-api-1.33.0/noopt/doc/html/cardano-api/Cardano-Api-Value.html#t:Lovelace\" title=\"Cardano.Api.Value\">Lovelace</a>, <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:Map\" title=\"Distribution.Compat.Prelude.Internal\">Map</a> <a href=\"file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.7/cardano-api-1.33.0/noopt/doc/html/cardano-api/Cardano-Api-Address.html#t:StakeAddress\" title=\"Cardano.Api.Address\">StakeAddress</a> <a href=\"file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.7/cardano-api-1.33.0/noopt/doc/html/cardano-api/Cardano-Api-Certificate.html#t:PoolId\" title=\"Cardano.Api.Certificate\">PoolId</a>)",
+    "name": "DelegationsAndRewards DelegationsAndRewards",
+    "module": "Cardano.CLI.Shelley.Run.Query",
+    "link": "lib/Cardano-CLI-Shelley-Run-Query.html#t:DelegationsAndRewards"
+  },
+  {
     "display_html": "<span class=\"keyword\">data</span> <a href=\"#t:ShelleyQueryCmdError\">ShelleyQueryCmdError</a>",
     "name": "ShelleyQueryCmdError",
     "module": "Cardano.CLI.Shelley.Run.Query",
@@ -8602,6 +8608,12 @@
     "name": "runQueryCmd",
     "module": "Cardano.CLI.Shelley.Run.Query",
     "link": "lib/Cardano-CLI-Shelley-Run-Query.html#v:runQueryCmd"
+  },
+  {
+    "display_html": "<a href=\"#v:mergeDelegsAndRewards\">mergeDelegsAndRewards</a> &#8759; <a href=\"Cardano-CLI-Shelley-Run-Query.html#t:DelegationsAndRewards\" title=\"Cardano.CLI.Shelley.Run.Query\">DelegationsAndRewards</a> &#8594; [(<a href=\"file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.7/cardano-api-1.33.0/noopt/doc/html/cardano-api/Cardano-Api-Address.html#t:StakeAddress\" title=\"Cardano.Api.Address\">StakeAddress</a>, <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:Maybe\" title=\"Distribution.Compat.Prelude.Internal\">Maybe</a> <a href=\"file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.7/cardano-api-1.33.0/noopt/doc/html/cardano-api/Cardano-Api-Value.html#t:Lovelace\" title=\"Cardano.Api.Value\">Lovelace</a>, <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:Maybe\" title=\"Distribution.Compat.Prelude.Internal\">Maybe</a> <a href=\"file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.7/cardano-api-1.33.0/noopt/doc/html/cardano-api/Cardano-Api-Certificate.html#t:PoolId\" title=\"Cardano.Api.Certificate\">PoolId</a>)]",
+    "name": "mergeDelegsAndRewards",
+    "module": "Cardano.CLI.Shelley.Run.Query",
+    "link": "lib/Cardano-CLI-Shelley-Run-Query.html#v:mergeDelegsAndRewards"
   },
   {
     "display_html": "<a href=\"#v:percentage\">percentage</a> &#8759; RelativeTime &#8594; RelativeTime &#8594; RelativeTime &#8594; <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/text-1.2.4.1/Data-Text.html#t:Text\" title=\"Data.Text\">Text</a>",
@@ -9676,6 +9688,30 @@
     "name": "main",
     "module": "Main",
     "link": "test_cardano-cli-golden/Main.html#v:main"
+  },
+  {
+    "display_html": "<a href=\"#v:prop_json_roundtrip_delegations_and_rewards\">prop_json_roundtrip_delegations_and_rewards</a> &#8759; Property",
+    "name": "prop_json_roundtrip_delegations_and_rewards",
+    "module": "Test.Cli.JSON",
+    "link": "test_cardano-cli-test/Test-Cli-JSON.html#v:prop_json_roundtrip_delegations_and_rewards"
+  },
+  {
+    "display_html": "<a href=\"#v:genDelegationsAndRewards\">genDelegationsAndRewards</a> &#8759; Gen <a href=\"file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.7/cardano-cli-1.33.0/noopt/doc/html/cardano-cli/Cardano-CLI-Shelley-Run-Query.html#t:DelegationsAndRewards\" title=\"Cardano.CLI.Shelley.Run.Query\">DelegationsAndRewards</a>",
+    "name": "genDelegationsAndRewards",
+    "module": "Test.Cli.JSON",
+    "link": "test_cardano-cli-test/Test-Cli-JSON.html#v:genDelegationsAndRewards"
+  },
+  {
+    "display_html": "<a href=\"#v:genPoolId\">genPoolId</a> &#8759; Gen (<a href=\"file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.7/cardano-api-1.33.0/noopt/doc/html/cardano-api/Cardano-Api-Hash.html#t:Hash\" title=\"Cardano.Api.Hash\">Hash</a> <a href=\"file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.7/cardano-api-1.33.0/noopt/doc/html/cardano-api/Cardano-Api-KeysShelley.html#t:StakePoolKey\" title=\"Cardano.Api.KeysShelley\">StakePoolKey</a>)",
+    "name": "genPoolId",
+    "module": "Test.Cli.JSON",
+    "link": "test_cardano-cli-test/Test-Cli-JSON.html#v:genPoolId"
+  },
+  {
+    "display_html": "<a href=\"#v:tests\">tests</a> &#8759; <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/System-IO.html#t:IO\" title=\"System.IO\">IO</a> <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:Bool\" title=\"Distribution.Compat.Prelude.Internal\">Bool</a>",
+    "name": "tests",
+    "module": "Test.Cli.JSON",
+    "link": "test_cardano-cli-test/Test-Cli-JSON.html#v:tests"
   },
   {
     "display_html": "<a href=\"#v:prop_roundtrip_Value_parse_render\">prop_roundtrip_Value_parse_render</a> &#8759; Property",
