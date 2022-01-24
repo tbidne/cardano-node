@@ -7920,8 +7920,8 @@
     "link": "lib/Cardano-CLI-Types.html#t:ScriptFile"
   },
   {
-    "display_html": "<span class=\"keyword\">data</span> <a href=\"#t:ScriptDataOrFile\">ScriptDataOrFile</a><ul class=\"subs\"><li>= <a href=\"#v:ScriptDataFile\">ScriptDataFile</a> <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:FilePath\" title=\"Distribution.Compat.Prelude.Internal\">FilePath</a></li><li>| <a href=\"#v:ScriptDataValue\">ScriptDataValue</a> <a href=\"file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.7/cardano-api-1.33.0/noopt/doc/html/cardano-api/Cardano-Api-ScriptData.html#t:ScriptData\" title=\"Cardano.Api.ScriptData\">ScriptData</a></li></ul>",
-    "name": "ScriptDataOrFile ScriptDataFile ScriptDataValue",
+    "display_html": "<span class=\"keyword\">data</span> <a href=\"#t:ScriptDataOrFile\">ScriptDataOrFile</a><ul class=\"subs\"><li>= <a href=\"#v:ScriptDataCborFile\">ScriptDataCborFile</a> <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:FilePath\" title=\"Distribution.Compat.Prelude.Internal\">FilePath</a></li><li>| <a href=\"#v:ScriptDataJsonFile\">ScriptDataJsonFile</a> <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:FilePath\" title=\"Distribution.Compat.Prelude.Internal\">FilePath</a></li><li>| <a href=\"#v:ScriptDataValue\">ScriptDataValue</a> <a href=\"file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.7/cardano-api-1.33.0/noopt/doc/html/cardano-api/Cardano-Api-ScriptData.html#t:ScriptData\" title=\"Cardano.Api.ScriptData\">ScriptData</a></li></ul>",
+    "name": "ScriptDataOrFile ScriptDataCborFile ScriptDataJsonFile ScriptDataValue",
     "module": "Cardano.CLI.Types",
     "link": "lib/Cardano-CLI-Types.html#t:ScriptDataOrFile"
   },
