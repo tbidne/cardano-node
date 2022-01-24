@@ -20,11 +20,15 @@ import qualified Cardano.Ledger.Shelley.API as Shelley
 import           Cardano.Prelude
 import           Data.Aeson (Value (..), object, toJSON, (.=))
 import qualified Data.Aeson as Aeson
-import qualified Data.Aeson.Key as Aeson
+import qualified Data.Aeson.Key as AesonKey
+import qualified Data.Aeson.Text as Aeson
 import qualified Data.Aeson.Types as Aeson
+import qualified Data.ByteString.Base16 as Base16
 import qualified Data.ByteString.Char8 as BSC
 import qualified Data.Map.Strict as Map
 import qualified Data.Text as Text
+import           Data.Text.Encoding (decodeLatin1)
+import qualified Data.Text.Lazy as LText
 import           Data.Yaml (array)
 import           Data.Yaml.Pretty (setConfCompare)
 import qualified Data.Yaml.Pretty as Yaml
@@ -148,31 +152,56 @@ friendlyTxOut (TxOut addr amount mdatum _) =
               , "amount" .= friendlyTxOutValue amount
               ]
 
-    AddressInEra (ShelleyAddressInEra sbe) saddr@(ShelleyAddress net cred stake) ->
-      let preAlonzo :: [Aeson.Pair]
-          preAlonzo =
-            [ "address era" .= Aeson.String "Shelley"
-            , "network" .= net
-            , "payment credential" .= cred
-            , "stake reference" .= friendlyStakeReference stake
-            , "address" .= serialiseAddress saddr
-            , "amount" .= friendlyTxOutValue amount
-            ]
-          datum :: ShelleyBasedEra era -> [Aeson.Pair]
-          datum ShelleyBasedEraShelley = []
-          datum ShelleyBasedEraAllegra = []
-          datum ShelleyBasedEraMary = []
-          datum ShelleyBasedEraAlonzo = ["datum" .= renderDatum mdatum]
-          datum ShelleyBasedEraBabbage = panic "TODO: Babbage"
-      in object $ preAlonzo ++ datum sbe
+    AddressInEra
+      (ShelleyAddressInEra sbe)
+      saddr@(ShelleyAddress net cred stake) ->
+        object $ preAlonzo ++ datum
+     where
+      preAlonzo =
+        [ "address era" .= Aeson.String "Shelley"
+        , "network" .= net
+        , "payment credential" .= cred
+        , "stake reference" .= friendlyStakeReference stake
+        , "address" .= serialiseAddress saddr
+        , "amount" .= friendlyTxOutValue amount
+        ]
+      datum =
+        [ friendlyDatum mdatum
+        | isJust $ scriptDataSupportedInEra $ shelleyBasedToCardanoEra sbe
+        ]
+
+friendlyDatum :: TxOutDatum CtxTx era -> Aeson.Pair
+friendlyDatum = \case
+  TxOutDatumNone -> "datum" .= Null
+  TxOutDatumHash _ h -> "datum hash" .= String (serialiseToRawBytesHexText h)
+  TxOutDatumInTx _ datum -> "datum" .= conv datum
+  TxOutDatumInline _ datum -> "datum (inline)" .= conv datum
   where
-   renderDatum :: TxOutDatum CtxTx era -> Aeson.Value
-   renderDatum TxOutDatumNone = Aeson.Null
-   renderDatum (TxOutDatumHash _ h) =
-     Aeson.String $ serialiseToRawBytesHexText h
-   renderDatum (TxOutDatumInTx _ sData) =
-     scriptDataToJson ScriptDataJsonDetailedSchema sData
-   renderDatum (TxOutDatumInline _ _) = panic "TODO: Babbage"
+
+    -- | 'ScriptData' does not support text, only byte strings.
+    -- 'ScriptData.scriptDataToJson' formats byte strings as Base16 blobs.
+    -- So here we try to display text data where byte strings look like text.
+    conv :: ScriptData -> Aeson.Value
+    conv = \case
+      ScriptDataNumber n -> Number $ fromInteger n
+      ScriptDataBytes bs -> String $ convBS bs
+      ScriptDataList vs -> array $ map conv vs
+      ScriptDataMap kvs -> object [convKey k .= conv v | (k, v) <- kvs]
+      ScriptDataConstructor n vs ->
+        array [Number $ fromInteger n, array $ map conv vs]
+
+    convKey :: ScriptData -> Aeson.Key
+    convKey =
+      AesonKey.fromText
+      . \case
+          ScriptDataNumber n -> textShow n
+          ScriptDataBytes bs -> convBS bs
+          v -> LText.toStrict . Aeson.encodeToLazyText $ conv v
+
+    convBS bs
+      | Right s <- decodeUtf8' bs, Text.all isPrint s = s
+      | otherwise = "0x" <> decodeLatin1 (Base16.encode bs)
+
 
 friendlyStakeReference :: Crypto crypto => Shelley.StakeReference crypto -> Aeson.Value
 friendlyStakeReference = \case
@@ -305,7 +334,7 @@ friendlyValue v =
     [ case bundle of
         ValueNestedBundleAda q -> "lovelace" .= q
         ValueNestedBundle policy assets ->
-          Aeson.fromText (friendlyPolicyId policy) .= friendlyAssets assets
+          AesonKey.fromText (friendlyPolicyId policy) .= friendlyAssets assets
     | bundle <- bundles
     ]
   where
