@@ -1986,7 +1986,7 @@
     "link": "lib/Cardano-Api-Address.html#v:toShelleyStakeCredential"
   },
   {
-    "display_html": "<a href=\"#v:fromShelleyAddr\">fromShelleyAddr</a> &#8759; <a href=\"Cardano-Api-Eras.html#t:IsShelleyBasedEra\" title=\"Cardano.Api.Eras\">IsShelleyBasedEra</a> era &#8658; Addr StandardCrypto &#8594; <a href=\"Cardano-Api-Address.html#t:AddressInEra\" title=\"Cardano.Api.Address\">AddressInEra</a> era",
+    "display_html": "<a href=\"#v:fromShelleyAddr\">fromShelleyAddr</a> &#8759; <a href=\"Cardano-Api-Eras.html#t:ShelleyBasedEra\" title=\"Cardano.Api.Eras\">ShelleyBasedEra</a> era &#8594; Addr StandardCrypto &#8594; <a href=\"Cardano-Api-Address.html#t:AddressInEra\" title=\"Cardano.Api.Address\">AddressInEra</a> era",
     "name": "fromShelleyAddr",
     "module": "Cardano.Api.Address",
     "link": "lib/Cardano-Api-Address.html#v:fromShelleyAddr"
@@ -6498,7 +6498,7 @@
     "link": "lib/Cardano-Api-Shelley.html#v:toShelleyAddr"
   },
   {
-    "display_html": "<a href=\"#v:fromShelleyAddr\">fromShelleyAddr</a> &#8759; <a href=\"Cardano-Api-Eras.html#t:IsShelleyBasedEra\" title=\"Cardano.Api.Eras\">IsShelleyBasedEra</a> era &#8658; Addr StandardCrypto &#8594; <a href=\"Cardano-Api-Address.html#t:AddressInEra\" title=\"Cardano.Api.Address\">AddressInEra</a> era",
+    "display_html": "<a href=\"#v:fromShelleyAddr\">fromShelleyAddr</a> &#8759; <a href=\"Cardano-Api-Eras.html#t:ShelleyBasedEra\" title=\"Cardano.Api.Eras\">ShelleyBasedEra</a> era &#8594; Addr StandardCrypto &#8594; <a href=\"Cardano-Api-Address.html#t:AddressInEra\" title=\"Cardano.Api.Address\">AddressInEra</a> era",
     "name": "fromShelleyAddr",
     "module": "Cardano.Api.Shelley",
     "link": "lib/Cardano-Api-Shelley.html#v:fromShelleyAddr"
