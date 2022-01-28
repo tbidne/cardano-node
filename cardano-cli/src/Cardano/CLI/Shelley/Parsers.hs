@@ -1617,7 +1617,9 @@ pMaybeOutputFile =
       Opt.strOption
         (  Opt.long "out-file"
         <> Opt.metavar "FILE"
-        <> Opt.help "Optional output file. Default is to write to stdout."
+        <> Opt.help
+              "Optional output file. Default is to write to stdout. \
+              \Forces enabling JSON format (--json)."
         <> Opt.completer (Opt.bashCompleter "file")
         )
 
