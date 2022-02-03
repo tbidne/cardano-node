@@ -17,7 +17,7 @@
 </span><span id="line-17"></span><span class="hs-keyword">import</span><span>           </span><span class="annot"><span class="hs-identifier">Cardano.Ledger.Shelley.Scripts</span></span><span> </span><span class="hs-special">(</span><span class="hs-special">)</span><span>
 </span><span id="line-18"></span><span class="hs-keyword">import</span><span>           </span><span class="annot"><span class="hs-identifier">Cardano.Slotting.Time</span></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="hs-identifier">SystemStart</span></span><span> </span><span class="hs-special">(</span><span class="hs-glyph">..</span><span class="hs-special">)</span><span class="hs-special">)</span><span>
 </span><span id="line-19"></span><span>
-</span><span id="line-20"></span><span class="hs-keyword">data</span><span> </span><span id="QueryTipLocalState"><span class="annot"><a href="Cardano.CLI.Shelley.Output.html#QueryTipLocalState"><span class="hs-identifier hs-var">QueryTipLocalState</span></a></span></span><span> </span><span id="local-6989586621679335963"><span class="annot"><a href="#local-6989586621679335963"><span class="hs-identifier hs-type">mode</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="QueryTipLocalState"><span class="annot"><a href="Cardano.CLI.Shelley.Output.html#QueryTipLocalState"><span class="hs-identifier hs-var">QueryTipLocalState</span></a></span></span><span>
+</span><span id="line-20"></span><span class="hs-keyword">data</span><span> </span><span id="QueryTipLocalState"><span class="annot"><a href="Cardano.CLI.Shelley.Output.html#QueryTipLocalState"><span class="hs-identifier hs-var">QueryTipLocalState</span></a></span></span><span> </span><span id="local-6989586621679336371"><span class="annot"><a href="#local-6989586621679336371"><span class="hs-identifier hs-type">mode</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="QueryTipLocalState"><span class="annot"><a href="Cardano.CLI.Shelley.Output.html#QueryTipLocalState"><span class="hs-identifier hs-var">QueryTipLocalState</span></a></span></span><span>
 </span><span id="line-21"></span><span>  </span><span class="hs-special">{</span><span> </span><span id="%24sel%3Aera%3AQueryTipLocalState"><span class="annot"><span class="annottext">QueryTipLocalState mode -&gt; AnyCardanoEra
 </span><a href="Cardano.CLI.Shelley.Output.html#%24sel%3Aera%3AQueryTipLocalState"><span class="hs-identifier hs-var hs-var">era</span></a></span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.7/cardano-api-1.33.0/noopt/doc/html/cardano-api/src"><span class="hs-identifier hs-type">AnyCardanoEra</span></a></span><span>
 </span><span id="line-22"></span><span>  </span><span class="hs-special">,</span><span> </span><span id="%24sel%3AeraHistory%3AQueryTipLocalState"><span class="annot"><span class="annottext">QueryTipLocalState mode -&gt; EraHistory CardanoMode
@@ -37,7 +37,7 @@
 </span><a href="Cardano.CLI.Shelley.Output.html#%24sel%3AmEpoch%3AQueryTipLocalStateOutput"><span class="hs-identifier hs-var hs-var">mEpoch</span></a></span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Maybe</span></a></span><span> </span><span class="annot"><span class="hs-identifier hs-type">EpochNo</span></span><span>
 </span><span id="line-31"></span><span>  </span><span class="hs-special">,</span><span> </span><span id="%24sel%3AmSyncProgress%3AQueryTipLocalStateOutput"><span class="annot"><span class="annottext">QueryTipLocalStateOutput -&gt; Maybe Text
 </span><a href="Cardano.CLI.Shelley.Output.html#%24sel%3AmSyncProgress%3AQueryTipLocalStateOutput"><span class="hs-identifier hs-var hs-var">mSyncProgress</span></a></span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Maybe</span></a></span><span> </span><span class="annot"><a href="../file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/text-1.2.4.1/src"><span class="hs-identifier hs-type">Text</span></a></span><span>
-</span><span id="line-32"></span><span>  </span><span class="hs-special">}</span><span> </span><span class="hs-keyword">deriving</span><span> </span><span id="local-6989586621679335947"><span id="local-6989586621679335949"><span id="local-6989586621679335951"><span class="annot"><span class="annottext">Int -&gt; QueryTipLocalStateOutput -&gt; ShowS
+</span><span id="line-32"></span><span>  </span><span class="hs-special">}</span><span> </span><span class="hs-keyword">deriving</span><span> </span><span id="local-6989586621679336355"><span id="local-6989586621679336357"><span id="local-6989586621679336359"><span class="annot"><span class="annottext">Int -&gt; QueryTipLocalStateOutput -&gt; ShowS
 [QueryTipLocalStateOutput] -&gt; ShowS
 QueryTipLocalStateOutput -&gt; String
 (Int -&gt; QueryTipLocalStateOutput -&gt; ShowS)
@@ -55,31 +55,31 @@ $cshowsPrec :: Int -&gt; QueryTipLocalStateOutput -&gt; ShowS
 </span><a href="../file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Show</span></a></span></span></span></span><span>
 </span><span id="line-33"></span><span>
 </span><span id="line-34"></span><span class="hs-comment">-- | A key-value pair difference list for encoding a JSON object.</span><span>
-</span><span id="line-35"></span><span id="local-6989586621679335983"><span id="local-6989586621679335984"><span class="annot"><a href="Cardano.CLI.Shelley.Output.html#..%3D"><span class="hs-operator hs-type">(..=)</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="hs-special">(</span><span class="annot"><span class="hs-identifier hs-type">KeyValue</span></span><span> </span><span class="annot"><a href="#local-6989586621679335984"><span class="hs-identifier hs-type">kv</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="hs-identifier hs-type">ToJSON</span></span><span> </span><span class="annot"><a href="#local-6989586621679335983"><span class="hs-identifier hs-type">v</span></a></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=&gt;</span><span> </span><span class="annot"><a href="../file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/text-1.2.4.1/src"><span class="hs-identifier hs-type">Text</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="#local-6989586621679335983"><span class="hs-identifier hs-type">v</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-special">[</span><span class="annot"><a href="#local-6989586621679335984"><span class="hs-identifier hs-type">kv</span></a></span><span class="hs-special">]</span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-special">[</span><span class="annot"><a href="#local-6989586621679335984"><span class="hs-identifier hs-type">kv</span></a></span><span class="hs-special">]</span></span></span><span>
+</span><span id="line-35"></span><span id="local-6989586621679336391"><span id="local-6989586621679336392"><span class="annot"><a href="Cardano.CLI.Shelley.Output.html#..%3D"><span class="hs-operator hs-type">(..=)</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="hs-special">(</span><span class="annot"><span class="hs-identifier hs-type">KeyValue</span></span><span> </span><span class="annot"><a href="#local-6989586621679336392"><span class="hs-identifier hs-type">kv</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="hs-identifier hs-type">ToJSON</span></span><span> </span><span class="annot"><a href="#local-6989586621679336391"><span class="hs-identifier hs-type">v</span></a></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=&gt;</span><span> </span><span class="annot"><a href="../file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/text-1.2.4.1/src"><span class="hs-identifier hs-type">Text</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="#local-6989586621679336391"><span class="hs-identifier hs-type">v</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-special">[</span><span class="annot"><a href="#local-6989586621679336392"><span class="hs-identifier hs-type">kv</span></a></span><span class="hs-special">]</span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-special">[</span><span class="annot"><a href="#local-6989586621679336392"><span class="hs-identifier hs-type">kv</span></a></span><span class="hs-special">]</span></span></span><span>
 </span><span id="line-36"></span><span id="..%3D"><span class="annot"><span class="annottext">..= :: Text -&gt; v -&gt; [kv] -&gt; [kv]
-</span><a href="Cardano.CLI.Shelley.Output.html#..%3D"><span class="hs-operator hs-var hs-var">(..=)</span></a></span></span><span> </span><span id="local-6989586621679335944"><span class="annot"><span class="annottext">Text
-</span><a href="#local-6989586621679335944"><span class="hs-identifier hs-var">n</span></a></span></span><span> </span><span id="local-6989586621679335943"><span class="annot"><span class="annottext">v
-</span><a href="#local-6989586621679335943"><span class="hs-identifier hs-var">v</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Text
-</span><a href="#local-6989586621679335944"><span class="hs-identifier hs-var">n</span></a></span><span> </span><span class="annot"><span class="annottext">Text -&gt; v -&gt; kv
+</span><a href="Cardano.CLI.Shelley.Output.html#..%3D"><span class="hs-operator hs-var hs-var">(..=)</span></a></span></span><span> </span><span id="local-6989586621679336352"><span class="annot"><span class="annottext">Text
+</span><a href="#local-6989586621679336352"><span class="hs-identifier hs-var">n</span></a></span></span><span> </span><span id="local-6989586621679336351"><span class="annot"><span class="annottext">v
+</span><a href="#local-6989586621679336351"><span class="hs-identifier hs-var">v</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Text
+</span><a href="#local-6989586621679336352"><span class="hs-identifier hs-var">n</span></a></span><span> </span><span class="annot"><span class="annottext">Text -&gt; v -&gt; kv
 forall kv v. (KeyValue kv, ToJSON v) =&gt; Text -&gt; v -&gt; kv
 </span><span class="hs-operator hs-var">.=</span></span><span> </span><span class="annot"><span class="annottext">v
-</span><a href="#local-6989586621679335943"><span class="hs-identifier hs-var">v</span></a></span><span class="annot"><span class="annottext">kv -&gt; [kv] -&gt; [kv]
+</span><a href="#local-6989586621679336351"><span class="hs-identifier hs-var">v</span></a></span><span class="annot"><span class="annottext">kv -&gt; [kv] -&gt; [kv]
 forall a. a -&gt; [a] -&gt; [a]
 </span><a href="../file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/ghc-prim-0.6.1/src"><span class="hs-glyph hs-var">:</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-37"></span><span>
 </span><span id="line-38"></span><span class="hs-comment">-- | A key-value pair difference list for encoding a JSON object where Nothing encodes absence of the key-value pair.</span><span>
-</span><span id="line-39"></span><span id="local-6989586621679335992"><span id="local-6989586621679335993"><span class="annot"><a href="Cardano.CLI.Shelley.Output.html#..%3D%3F"><span class="hs-operator hs-type">(..=?)</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="hs-special">(</span><span class="annot"><span class="hs-identifier hs-type">KeyValue</span></span><span> </span><span class="annot"><a href="#local-6989586621679335993"><span class="hs-identifier hs-type">kv</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="hs-identifier hs-type">ToJSON</span></span><span> </span><span class="annot"><a href="#local-6989586621679335992"><span class="hs-identifier hs-type">v</span></a></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=&gt;</span><span> </span><span class="annot"><a href="../file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/text-1.2.4.1/src"><span class="hs-identifier hs-type">Text</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Maybe</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679335992"><span class="hs-identifier hs-type">v</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-special">[</span><span class="annot"><a href="#local-6989586621679335993"><span class="hs-identifier hs-type">kv</span></a></span><span class="hs-special">]</span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-special">[</span><span class="annot"><a href="#local-6989586621679335993"><span class="hs-identifier hs-type">kv</span></a></span><span class="hs-special">]</span></span></span><span>
+</span><span id="line-39"></span><span id="local-6989586621679336400"><span id="local-6989586621679336401"><span class="annot"><a href="Cardano.CLI.Shelley.Output.html#..%3D%3F"><span class="hs-operator hs-type">(..=?)</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="hs-special">(</span><span class="annot"><span class="hs-identifier hs-type">KeyValue</span></span><span> </span><span class="annot"><a href="#local-6989586621679336401"><span class="hs-identifier hs-type">kv</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="hs-identifier hs-type">ToJSON</span></span><span> </span><span class="annot"><a href="#local-6989586621679336400"><span class="hs-identifier hs-type">v</span></a></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=&gt;</span><span> </span><span class="annot"><a href="../file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/text-1.2.4.1/src"><span class="hs-identifier hs-type">Text</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Maybe</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679336400"><span class="hs-identifier hs-type">v</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-special">[</span><span class="annot"><a href="#local-6989586621679336401"><span class="hs-identifier hs-type">kv</span></a></span><span class="hs-special">]</span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-special">[</span><span class="annot"><a href="#local-6989586621679336401"><span class="hs-identifier hs-type">kv</span></a></span><span class="hs-special">]</span></span></span><span>
 </span><span id="line-40"></span><span id="..%3D%3F"><span class="annot"><span class="annottext">..=? :: Text -&gt; Maybe v -&gt; [kv] -&gt; [kv]
-</span><a href="Cardano.CLI.Shelley.Output.html#..%3D%3F"><span class="hs-operator hs-var hs-var">(..=?)</span></a></span></span><span> </span><span id="local-6989586621679335941"><span class="annot"><span class="annottext">Text
-</span><a href="#local-6989586621679335941"><span class="hs-identifier hs-var">n</span></a></span></span><span> </span><span id="local-6989586621679335940"><span class="annot"><span class="annottext">Maybe v
-</span><a href="#local-6989586621679335940"><span class="hs-identifier hs-var">mv</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-keyword">case</span><span> </span><span class="annot"><span class="annottext">Maybe v
-</span><a href="#local-6989586621679335940"><span class="hs-identifier hs-var">mv</span></a></span><span> </span><span class="hs-keyword">of</span><span>
-</span><span id="line-41"></span><span>  </span><span class="annot"><a href="../file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Just</span></a></span><span> </span><span id="local-6989586621679335939"><span class="annot"><span class="annottext">v
-</span><a href="#local-6989586621679335939"><span class="hs-identifier hs-var">v</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Text
-</span><a href="#local-6989586621679335941"><span class="hs-identifier hs-var">n</span></a></span><span> </span><span class="annot"><span class="annottext">Text -&gt; v -&gt; kv
+</span><a href="Cardano.CLI.Shelley.Output.html#..%3D%3F"><span class="hs-operator hs-var hs-var">(..=?)</span></a></span></span><span> </span><span id="local-6989586621679336349"><span class="annot"><span class="annottext">Text
+</span><a href="#local-6989586621679336349"><span class="hs-identifier hs-var">n</span></a></span></span><span> </span><span id="local-6989586621679336348"><span class="annot"><span class="annottext">Maybe v
+</span><a href="#local-6989586621679336348"><span class="hs-identifier hs-var">mv</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-keyword">case</span><span> </span><span class="annot"><span class="annottext">Maybe v
+</span><a href="#local-6989586621679336348"><span class="hs-identifier hs-var">mv</span></a></span><span> </span><span class="hs-keyword">of</span><span>
+</span><span id="line-41"></span><span>  </span><span class="annot"><a href="../file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Just</span></a></span><span> </span><span id="local-6989586621679336347"><span class="annot"><span class="annottext">v
+</span><a href="#local-6989586621679336347"><span class="hs-identifier hs-var">v</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Text
+</span><a href="#local-6989586621679336349"><span class="hs-identifier hs-var">n</span></a></span><span> </span><span class="annot"><span class="annottext">Text -&gt; v -&gt; kv
 forall kv v. (KeyValue kv, ToJSON v) =&gt; Text -&gt; v -&gt; kv
 </span><span class="hs-operator hs-var">.=</span></span><span> </span><span class="annot"><span class="annottext">v
-</span><a href="#local-6989586621679335939"><span class="hs-identifier hs-var">v</span></a></span><span class="annot"><span class="annottext">kv -&gt; [kv] -&gt; [kv]
+</span><a href="#local-6989586621679336347"><span class="hs-identifier hs-var">v</span></a></span><span class="annot"><span class="annottext">kv -&gt; [kv] -&gt; [kv]
 forall a. a -&gt; [a] -&gt; [a]
 </span><a href="../file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/ghc-prim-0.6.1/src"><span class="hs-glyph hs-var">:</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-42"></span><span>  </span><span class="annot"><span class="annottext">Maybe v
@@ -87,12 +87,12 @@ forall a. a -&gt; [a] -&gt; [a]
 forall a. a -&gt; a
 </span><a href="../file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">id</span></a></span><span>
 </span><span id="line-43"></span><span>
-</span><span id="line-44"></span><span class="hs-keyword">instance</span><span> </span><span id="local-6989586621679335932"><span id="local-6989586621679335934"><span class="annot"><span class="hs-identifier hs-type">ToJSON</span></span><span> </span><span class="annot"><a href="Cardano.CLI.Shelley.Output.html#QueryTipLocalStateOutput"><span class="hs-identifier hs-type">QueryTipLocalStateOutput</span></a></span></span></span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-45"></span><span>  </span><span id="local-6989586621679335930"><span class="annot"><span class="annottext">toJSON :: QueryTipLocalStateOutput -&gt; Value
-</span><span class="hs-identifier hs-var hs-var hs-var hs-var">toJSON</span></span></span><span> </span><span id="local-6989586621679335928"><span class="annot"><span class="annottext">QueryTipLocalStateOutput
-</span><a href="#local-6989586621679335928"><span class="hs-identifier hs-var">a</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-keyword">case</span><span> </span><span class="annot"><span class="annottext">QueryTipLocalStateOutput -&gt; ChainTip
+</span><span id="line-44"></span><span class="hs-keyword">instance</span><span> </span><span id="local-6989586621679336340"><span id="local-6989586621679336342"><span class="annot"><span class="hs-identifier hs-type">ToJSON</span></span><span> </span><span class="annot"><a href="Cardano.CLI.Shelley.Output.html#QueryTipLocalStateOutput"><span class="hs-identifier hs-type">QueryTipLocalStateOutput</span></a></span></span></span><span> </span><span class="hs-keyword">where</span><span>
+</span><span id="line-45"></span><span>  </span><span id="local-6989586621679336338"><span class="annot"><span class="annottext">toJSON :: QueryTipLocalStateOutput -&gt; Value
+</span><span class="hs-identifier hs-var hs-var hs-var hs-var">toJSON</span></span></span><span> </span><span id="local-6989586621679336336"><span class="annot"><span class="annottext">QueryTipLocalStateOutput
+</span><a href="#local-6989586621679336336"><span class="hs-identifier hs-var">a</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-keyword">case</span><span> </span><span class="annot"><span class="annottext">QueryTipLocalStateOutput -&gt; ChainTip
 </span><a href="Cardano.CLI.Shelley.Output.html#%24sel%3AlocalStateChainTip%3AQueryTipLocalStateOutput"><span class="hs-identifier hs-var hs-var">localStateChainTip</span></a></span><span> </span><span class="annot"><span class="annottext">QueryTipLocalStateOutput
-</span><a href="#local-6989586621679335928"><span class="hs-identifier hs-var">a</span></a></span><span> </span><span class="hs-keyword">of</span><span>
+</span><a href="#local-6989586621679336336"><span class="hs-identifier hs-var">a</span></a></span><span> </span><span class="hs-keyword">of</span><span>
 </span><span id="line-46"></span><span>    </span><span class="annot"><span class="annottext">ChainTip
 </span><a href="../file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.7/cardano-api-1.33.0/noopt/doc/html/cardano-api/src"><span class="hs-identifier hs-var">ChainTipAtGenesis</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span>
 </span><span id="line-47"></span><span>      </span><span class="annot"><span class="annottext">[Pair] -&gt; Value
@@ -106,7 +106,7 @@ forall kv v.
 Text -&gt; Maybe v -&gt; [kv] -&gt; [kv]
 </span><a href="Cardano.CLI.Shelley.Output.html#..%3D%3F"><span class="hs-operator hs-var">..=?</span></a></span><span> </span><span class="annot"><span class="annottext">QueryTipLocalStateOutput -&gt; Maybe AnyCardanoEra
 </span><a href="Cardano.CLI.Shelley.Output.html#%24sel%3AmEra%3AQueryTipLocalStateOutput"><span class="hs-identifier hs-var hs-var">mEra</span></a></span><span> </span><span class="annot"><span class="annottext">QueryTipLocalStateOutput
-</span><a href="#local-6989586621679335928"><span class="hs-identifier hs-var">a</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679336336"><span class="hs-identifier hs-var">a</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-49"></span><span>        </span><span class="annot"><span class="annottext">([Pair] -&gt; [Pair]) -&gt; ([Pair] -&gt; [Pair]) -&gt; [Pair] -&gt; [Pair]
 forall b c a. (b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; c
 </span><a href="../file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">.</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Text
@@ -116,7 +116,7 @@ forall kv v.
 Text -&gt; Maybe v -&gt; [kv] -&gt; [kv]
 </span><a href="Cardano.CLI.Shelley.Output.html#..%3D%3F"><span class="hs-operator hs-var">..=?</span></a></span><span> </span><span class="annot"><span class="annottext">QueryTipLocalStateOutput -&gt; Maybe EpochNo
 </span><a href="Cardano.CLI.Shelley.Output.html#%24sel%3AmEpoch%3AQueryTipLocalStateOutput"><span class="hs-identifier hs-var hs-var">mEpoch</span></a></span><span> </span><span class="annot"><span class="annottext">QueryTipLocalStateOutput
-</span><a href="#local-6989586621679335928"><span class="hs-identifier hs-var">a</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679336336"><span class="hs-identifier hs-var">a</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-50"></span><span>        </span><span class="annot"><span class="annottext">([Pair] -&gt; [Pair]) -&gt; ([Pair] -&gt; [Pair]) -&gt; [Pair] -&gt; [Pair]
 forall b c a. (b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; c
 </span><a href="../file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">.</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Text
@@ -126,12 +126,12 @@ forall kv v.
 Text -&gt; Maybe v -&gt; [kv] -&gt; [kv]
 </span><a href="Cardano.CLI.Shelley.Output.html#..%3D%3F"><span class="hs-operator hs-var">..=?</span></a></span><span> </span><span class="annot"><span class="annottext">QueryTipLocalStateOutput -&gt; Maybe Text
 </span><a href="Cardano.CLI.Shelley.Output.html#%24sel%3AmSyncProgress%3AQueryTipLocalStateOutput"><span class="hs-identifier hs-var hs-var">mSyncProgress</span></a></span><span> </span><span class="annot"><span class="annottext">QueryTipLocalStateOutput
-</span><a href="#local-6989586621679335928"><span class="hs-identifier hs-var">a</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679336336"><span class="hs-identifier hs-var">a</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-51"></span><span>        </span><span class="hs-special">)</span><span> </span><span class="hs-special">[</span><span class="hs-special">]</span><span>
-</span><span id="line-52"></span><span>    </span><span class="annot"><a href="../file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.7/cardano-api-1.33.0/noopt/doc/html/cardano-api/src"><span class="hs-identifier hs-type">ChainTip</span></a></span><span> </span><span id="local-6989586621679335924"><span class="annot"><span class="annottext">SlotNo
-</span><a href="#local-6989586621679335924"><span class="hs-identifier hs-var">slotNo</span></a></span></span><span> </span><span id="local-6989586621679335923"><span class="annot"><span class="annottext">Hash BlockHeader
-</span><a href="#local-6989586621679335923"><span class="hs-identifier hs-var">blockHeader</span></a></span></span><span> </span><span id="local-6989586621679335922"><span class="annot"><span class="annottext">BlockNo
-</span><a href="#local-6989586621679335922"><span class="hs-identifier hs-var">blockNo</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span>
+</span><span id="line-52"></span><span>    </span><span class="annot"><a href="../file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.7/cardano-api-1.33.0/noopt/doc/html/cardano-api/src"><span class="hs-identifier hs-type">ChainTip</span></a></span><span> </span><span id="local-6989586621679336332"><span class="annot"><span class="annottext">SlotNo
+</span><a href="#local-6989586621679336332"><span class="hs-identifier hs-var">slotNo</span></a></span></span><span> </span><span id="local-6989586621679336331"><span class="annot"><span class="annottext">Hash BlockHeader
+</span><a href="#local-6989586621679336331"><span class="hs-identifier hs-var">blockHeader</span></a></span></span><span> </span><span id="local-6989586621679336330"><span class="annot"><span class="annottext">BlockNo
+</span><a href="#local-6989586621679336330"><span class="hs-identifier hs-var">blockNo</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span>
 </span><span id="line-53"></span><span>      </span><span class="annot"><span class="annottext">[Pair] -&gt; Value
 </span><span class="hs-identifier hs-var">object</span></span><span> </span><span class="annot"><span class="annottext">([Pair] -&gt; Value) -&gt; [Pair] -&gt; Value
 forall a b. (a -&gt; b) -&gt; a -&gt; b
@@ -140,7 +140,7 @@ forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><span class="hs-string">&quot;slot&quot;</span></span><span> </span><span class="annot"><span class="annottext">Text -&gt; SlotNo -&gt; [Pair] -&gt; [Pair]
 forall kv v. (KeyValue kv, ToJSON v) =&gt; Text -&gt; v -&gt; [kv] -&gt; [kv]
 </span><a href="Cardano.CLI.Shelley.Output.html#..%3D"><span class="hs-operator hs-var">..=</span></a></span><span> </span><span class="annot"><span class="annottext">SlotNo
-</span><a href="#local-6989586621679335924"><span class="hs-identifier hs-var">slotNo</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679336332"><span class="hs-identifier hs-var">slotNo</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-55"></span><span>        </span><span class="annot"><span class="annottext">([Pair] -&gt; [Pair]) -&gt; ([Pair] -&gt; [Pair]) -&gt; [Pair] -&gt; [Pair]
 forall b c a. (b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; c
 </span><a href="../file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">.</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Text
@@ -149,14 +149,14 @@ forall kv v. (KeyValue kv, ToJSON v) =&gt; Text -&gt; v -&gt; [kv] -&gt; [kv]
 </span><a href="Cardano.CLI.Shelley.Output.html#..%3D"><span class="hs-operator hs-var">..=</span></a></span><span> </span><span class="annot"><span class="annottext">Hash BlockHeader -&gt; Text
 forall a. SerialiseAsRawBytes a =&gt; a -&gt; Text
 </span><a href="../file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.7/cardano-api-1.33.0/noopt/doc/html/cardano-api/src"><span class="hs-identifier hs-var">serialiseToRawBytesHexText</span></a></span><span> </span><span class="annot"><span class="annottext">Hash BlockHeader
-</span><a href="#local-6989586621679335923"><span class="hs-identifier hs-var">blockHeader</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679336331"><span class="hs-identifier hs-var">blockHeader</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-56"></span><span>        </span><span class="annot"><span class="annottext">([Pair] -&gt; [Pair]) -&gt; ([Pair] -&gt; [Pair]) -&gt; [Pair] -&gt; [Pair]
 forall b c a. (b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; c
 </span><a href="../file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">.</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Text
 </span><span class="hs-string">&quot;block&quot;</span></span><span> </span><span class="annot"><span class="annottext">Text -&gt; BlockNo -&gt; [Pair] -&gt; [Pair]
 forall kv v. (KeyValue kv, ToJSON v) =&gt; Text -&gt; v -&gt; [kv] -&gt; [kv]
 </span><a href="Cardano.CLI.Shelley.Output.html#..%3D"><span class="hs-operator hs-var">..=</span></a></span><span> </span><span class="annot"><span class="annottext">BlockNo
-</span><a href="#local-6989586621679335922"><span class="hs-identifier hs-var">blockNo</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679336330"><span class="hs-identifier hs-var">blockNo</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-57"></span><span>        </span><span class="annot"><span class="annottext">([Pair] -&gt; [Pair]) -&gt; ([Pair] -&gt; [Pair]) -&gt; [Pair] -&gt; [Pair]
 forall b c a. (b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; c
 </span><a href="../file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">.</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Text
@@ -166,7 +166,7 @@ forall kv v.
 Text -&gt; Maybe v -&gt; [kv] -&gt; [kv]
 </span><a href="Cardano.CLI.Shelley.Output.html#..%3D%3F"><span class="hs-operator hs-var">..=?</span></a></span><span> </span><span class="annot"><span class="annottext">QueryTipLocalStateOutput -&gt; Maybe AnyCardanoEra
 </span><a href="Cardano.CLI.Shelley.Output.html#%24sel%3AmEra%3AQueryTipLocalStateOutput"><span class="hs-identifier hs-var hs-var">mEra</span></a></span><span> </span><span class="annot"><span class="annottext">QueryTipLocalStateOutput
-</span><a href="#local-6989586621679335928"><span class="hs-identifier hs-var">a</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679336336"><span class="hs-identifier hs-var">a</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-58"></span><span>        </span><span class="annot"><span class="annottext">([Pair] -&gt; [Pair]) -&gt; ([Pair] -&gt; [Pair]) -&gt; [Pair] -&gt; [Pair]
 forall b c a. (b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; c
 </span><a href="../file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">.</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Text
@@ -176,7 +176,7 @@ forall kv v.
 Text -&gt; Maybe v -&gt; [kv] -&gt; [kv]
 </span><a href="Cardano.CLI.Shelley.Output.html#..%3D%3F"><span class="hs-operator hs-var">..=?</span></a></span><span> </span><span class="annot"><span class="annottext">QueryTipLocalStateOutput -&gt; Maybe EpochNo
 </span><a href="Cardano.CLI.Shelley.Output.html#%24sel%3AmEpoch%3AQueryTipLocalStateOutput"><span class="hs-identifier hs-var hs-var">mEpoch</span></a></span><span> </span><span class="annot"><span class="annottext">QueryTipLocalStateOutput
-</span><a href="#local-6989586621679335928"><span class="hs-identifier hs-var">a</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679336336"><span class="hs-identifier hs-var">a</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-59"></span><span>        </span><span class="annot"><span class="annottext">([Pair] -&gt; [Pair]) -&gt; ([Pair] -&gt; [Pair]) -&gt; [Pair] -&gt; [Pair]
 forall b c a. (b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; c
 </span><a href="../file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">.</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Text
@@ -186,13 +186,13 @@ forall kv v.
 Text -&gt; Maybe v -&gt; [kv] -&gt; [kv]
 </span><a href="Cardano.CLI.Shelley.Output.html#..%3D%3F"><span class="hs-operator hs-var">..=?</span></a></span><span> </span><span class="annot"><span class="annottext">QueryTipLocalStateOutput -&gt; Maybe Text
 </span><a href="Cardano.CLI.Shelley.Output.html#%24sel%3AmSyncProgress%3AQueryTipLocalStateOutput"><span class="hs-identifier hs-var hs-var">mSyncProgress</span></a></span><span> </span><span class="annot"><span class="annottext">QueryTipLocalStateOutput
-</span><a href="#local-6989586621679335928"><span class="hs-identifier hs-var">a</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679336336"><span class="hs-identifier hs-var">a</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-60"></span><span>        </span><span class="hs-special">)</span><span> </span><span class="hs-special">[</span><span class="hs-special">]</span><span>
-</span><span id="line-61"></span><span>  </span><span id="local-6989586621679335920"><span class="annot"><span class="annottext">toEncoding :: QueryTipLocalStateOutput -&gt; Encoding
-</span><span class="hs-identifier hs-var hs-var hs-var hs-var">toEncoding</span></span></span><span> </span><span id="local-6989586621679335918"><span class="annot"><span class="annottext">QueryTipLocalStateOutput
-</span><a href="#local-6989586621679335918"><span class="hs-identifier hs-var">a</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-keyword">case</span><span> </span><span class="annot"><span class="annottext">QueryTipLocalStateOutput -&gt; ChainTip
+</span><span id="line-61"></span><span>  </span><span id="local-6989586621679336328"><span class="annot"><span class="annottext">toEncoding :: QueryTipLocalStateOutput -&gt; Encoding
+</span><span class="hs-identifier hs-var hs-var hs-var hs-var">toEncoding</span></span></span><span> </span><span id="local-6989586621679336326"><span class="annot"><span class="annottext">QueryTipLocalStateOutput
+</span><a href="#local-6989586621679336326"><span class="hs-identifier hs-var">a</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-keyword">case</span><span> </span><span class="annot"><span class="annottext">QueryTipLocalStateOutput -&gt; ChainTip
 </span><a href="Cardano.CLI.Shelley.Output.html#%24sel%3AlocalStateChainTip%3AQueryTipLocalStateOutput"><span class="hs-identifier hs-var hs-var">localStateChainTip</span></a></span><span> </span><span class="annot"><span class="annottext">QueryTipLocalStateOutput
-</span><a href="#local-6989586621679335918"><span class="hs-identifier hs-var">a</span></a></span><span> </span><span class="hs-keyword">of</span><span>
+</span><a href="#local-6989586621679336326"><span class="hs-identifier hs-var">a</span></a></span><span> </span><span class="hs-keyword">of</span><span>
 </span><span id="line-62"></span><span>    </span><span class="annot"><span class="annottext">ChainTip
 </span><a href="../file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.7/cardano-api-1.33.0/noopt/doc/html/cardano-api/src"><span class="hs-identifier hs-var">ChainTipAtGenesis</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span>
 </span><span id="line-63"></span><span>      </span><span class="annot"><span class="annottext">Series -&gt; Encoding
@@ -210,7 +210,7 @@ forall kv v.
 Text -&gt; Maybe v -&gt; [kv] -&gt; [kv]
 </span><a href="Cardano.CLI.Shelley.Output.html#..%3D%3F"><span class="hs-operator hs-var">..=?</span></a></span><span> </span><span class="annot"><span class="annottext">QueryTipLocalStateOutput -&gt; Maybe AnyCardanoEra
 </span><a href="Cardano.CLI.Shelley.Output.html#%24sel%3AmEra%3AQueryTipLocalStateOutput"><span class="hs-identifier hs-var hs-var">mEra</span></a></span><span> </span><span class="annot"><span class="annottext">QueryTipLocalStateOutput
-</span><a href="#local-6989586621679335918"><span class="hs-identifier hs-var">a</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679336326"><span class="hs-identifier hs-var">a</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-65"></span><span>        </span><span class="annot"><span class="annottext">([Series] -&gt; [Series])
 -&gt; ([Series] -&gt; [Series]) -&gt; [Series] -&gt; [Series]
 forall b c a. (b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; c
@@ -221,7 +221,7 @@ forall kv v.
 Text -&gt; Maybe v -&gt; [kv] -&gt; [kv]
 </span><a href="Cardano.CLI.Shelley.Output.html#..%3D%3F"><span class="hs-operator hs-var">..=?</span></a></span><span> </span><span class="annot"><span class="annottext">QueryTipLocalStateOutput -&gt; Maybe EpochNo
 </span><a href="Cardano.CLI.Shelley.Output.html#%24sel%3AmEpoch%3AQueryTipLocalStateOutput"><span class="hs-identifier hs-var hs-var">mEpoch</span></a></span><span> </span><span class="annot"><span class="annottext">QueryTipLocalStateOutput
-</span><a href="#local-6989586621679335918"><span class="hs-identifier hs-var">a</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679336326"><span class="hs-identifier hs-var">a</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-66"></span><span>        </span><span class="annot"><span class="annottext">([Series] -&gt; [Series])
 -&gt; ([Series] -&gt; [Series]) -&gt; [Series] -&gt; [Series]
 forall b c a. (b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; c
@@ -232,12 +232,12 @@ forall kv v.
 Text -&gt; Maybe v -&gt; [kv] -&gt; [kv]
 </span><a href="Cardano.CLI.Shelley.Output.html#..%3D%3F"><span class="hs-operator hs-var">..=?</span></a></span><span> </span><span class="annot"><span class="annottext">QueryTipLocalStateOutput -&gt; Maybe Text
 </span><a href="Cardano.CLI.Shelley.Output.html#%24sel%3AmSyncProgress%3AQueryTipLocalStateOutput"><span class="hs-identifier hs-var hs-var">mSyncProgress</span></a></span><span> </span><span class="annot"><span class="annottext">QueryTipLocalStateOutput
-</span><a href="#local-6989586621679335918"><span class="hs-identifier hs-var">a</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679336326"><span class="hs-identifier hs-var">a</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-67"></span><span>        </span><span class="hs-special">)</span><span> </span><span class="hs-special">[</span><span class="hs-special">]</span><span>
-</span><span id="line-68"></span><span>    </span><span class="annot"><a href="../file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.7/cardano-api-1.33.0/noopt/doc/html/cardano-api/src"><span class="hs-identifier hs-type">ChainTip</span></a></span><span> </span><span id="local-6989586621679335917"><span class="annot"><span class="annottext">SlotNo
-</span><a href="#local-6989586621679335917"><span class="hs-identifier hs-var">slotNo</span></a></span></span><span> </span><span id="local-6989586621679335916"><span class="annot"><span class="annottext">Hash BlockHeader
-</span><a href="#local-6989586621679335916"><span class="hs-identifier hs-var">blockHeader</span></a></span></span><span> </span><span id="local-6989586621679335915"><span class="annot"><span class="annottext">BlockNo
-</span><a href="#local-6989586621679335915"><span class="hs-identifier hs-var">blockNo</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span>
+</span><span id="line-68"></span><span>    </span><span class="annot"><a href="../file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.7/cardano-api-1.33.0/noopt/doc/html/cardano-api/src"><span class="hs-identifier hs-type">ChainTip</span></a></span><span> </span><span id="local-6989586621679336325"><span class="annot"><span class="annottext">SlotNo
+</span><a href="#local-6989586621679336325"><span class="hs-identifier hs-var">slotNo</span></a></span></span><span> </span><span id="local-6989586621679336324"><span class="annot"><span class="annottext">Hash BlockHeader
+</span><a href="#local-6989586621679336324"><span class="hs-identifier hs-var">blockHeader</span></a></span></span><span> </span><span id="local-6989586621679336323"><span class="annot"><span class="annottext">BlockNo
+</span><a href="#local-6989586621679336323"><span class="hs-identifier hs-var">blockNo</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span>
 </span><span id="line-69"></span><span>      </span><span class="annot"><span class="annottext">Series -&gt; Encoding
 </span><span class="hs-identifier hs-var">pairs</span></span><span> </span><span class="annot"><span class="annottext">(Series -&gt; Encoding) -&gt; Series -&gt; Encoding
 forall a b. (a -&gt; b) -&gt; a -&gt; b
@@ -250,7 +250,7 @@ forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><span class="hs-string">&quot;slot&quot;</span></span><span> </span><span class="annot"><span class="annottext">Text -&gt; SlotNo -&gt; [Series] -&gt; [Series]
 forall kv v. (KeyValue kv, ToJSON v) =&gt; Text -&gt; v -&gt; [kv] -&gt; [kv]
 </span><a href="Cardano.CLI.Shelley.Output.html#..%3D"><span class="hs-operator hs-var">..=</span></a></span><span> </span><span class="annot"><span class="annottext">SlotNo
-</span><a href="#local-6989586621679335917"><span class="hs-identifier hs-var">slotNo</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679336325"><span class="hs-identifier hs-var">slotNo</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-71"></span><span>        </span><span class="annot"><span class="annottext">([Series] -&gt; [Series])
 -&gt; ([Series] -&gt; [Series]) -&gt; [Series] -&gt; [Series]
 forall b c a. (b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; c
@@ -260,7 +260,7 @@ forall kv v. (KeyValue kv, ToJSON v) =&gt; Text -&gt; v -&gt; [kv] -&gt; [kv]
 </span><a href="Cardano.CLI.Shelley.Output.html#..%3D"><span class="hs-operator hs-var">..=</span></a></span><span> </span><span class="annot"><span class="annottext">Hash BlockHeader -&gt; Text
 forall a. SerialiseAsRawBytes a =&gt; a -&gt; Text
 </span><a href="../file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.7/cardano-api-1.33.0/noopt/doc/html/cardano-api/src"><span class="hs-identifier hs-var">serialiseToRawBytesHexText</span></a></span><span> </span><span class="annot"><span class="annottext">Hash BlockHeader
-</span><a href="#local-6989586621679335916"><span class="hs-identifier hs-var">blockHeader</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679336324"><span class="hs-identifier hs-var">blockHeader</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-72"></span><span>        </span><span class="annot"><span class="annottext">([Series] -&gt; [Series])
 -&gt; ([Series] -&gt; [Series]) -&gt; [Series] -&gt; [Series]
 forall b c a. (b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; c
@@ -268,7 +268,7 @@ forall b c a. (b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; c
 </span><span class="hs-string">&quot;block&quot;</span></span><span> </span><span class="annot"><span class="annottext">Text -&gt; BlockNo -&gt; [Series] -&gt; [Series]
 forall kv v. (KeyValue kv, ToJSON v) =&gt; Text -&gt; v -&gt; [kv] -&gt; [kv]
 </span><a href="Cardano.CLI.Shelley.Output.html#..%3D"><span class="hs-operator hs-var">..=</span></a></span><span> </span><span class="annot"><span class="annottext">BlockNo
-</span><a href="#local-6989586621679335915"><span class="hs-identifier hs-var">blockNo</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679336323"><span class="hs-identifier hs-var">blockNo</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-73"></span><span>        </span><span class="annot"><span class="annottext">([Series] -&gt; [Series])
 -&gt; ([Series] -&gt; [Series]) -&gt; [Series] -&gt; [Series]
 forall b c a. (b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; c
@@ -279,7 +279,7 @@ forall kv v.
 Text -&gt; Maybe v -&gt; [kv] -&gt; [kv]
 </span><a href="Cardano.CLI.Shelley.Output.html#..%3D%3F"><span class="hs-operator hs-var">..=?</span></a></span><span> </span><span class="annot"><span class="annottext">QueryTipLocalStateOutput -&gt; Maybe AnyCardanoEra
 </span><a href="Cardano.CLI.Shelley.Output.html#%24sel%3AmEra%3AQueryTipLocalStateOutput"><span class="hs-identifier hs-var hs-var">mEra</span></a></span><span> </span><span class="annot"><span class="annottext">QueryTipLocalStateOutput
-</span><a href="#local-6989586621679335918"><span class="hs-identifier hs-var">a</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679336326"><span class="hs-identifier hs-var">a</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-74"></span><span>        </span><span class="annot"><span class="annottext">([Series] -&gt; [Series])
 -&gt; ([Series] -&gt; [Series]) -&gt; [Series] -&gt; [Series]
 forall b c a. (b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; c
@@ -290,7 +290,7 @@ forall kv v.
 Text -&gt; Maybe v -&gt; [kv] -&gt; [kv]
 </span><a href="Cardano.CLI.Shelley.Output.html#..%3D%3F"><span class="hs-operator hs-var">..=?</span></a></span><span> </span><span class="annot"><span class="annottext">QueryTipLocalStateOutput -&gt; Maybe EpochNo
 </span><a href="Cardano.CLI.Shelley.Output.html#%24sel%3AmEpoch%3AQueryTipLocalStateOutput"><span class="hs-identifier hs-var hs-var">mEpoch</span></a></span><span> </span><span class="annot"><span class="annottext">QueryTipLocalStateOutput
-</span><a href="#local-6989586621679335918"><span class="hs-identifier hs-var">a</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679336326"><span class="hs-identifier hs-var">a</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-75"></span><span>        </span><span class="annot"><span class="annottext">([Series] -&gt; [Series])
 -&gt; ([Series] -&gt; [Series]) -&gt; [Series] -&gt; [Series]
 forall b c a. (b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; c
@@ -301,11 +301,11 @@ forall kv v.
 Text -&gt; Maybe v -&gt; [kv] -&gt; [kv]
 </span><a href="Cardano.CLI.Shelley.Output.html#..%3D%3F"><span class="hs-operator hs-var">..=?</span></a></span><span> </span><span class="annot"><span class="annottext">QueryTipLocalStateOutput -&gt; Maybe Text
 </span><a href="Cardano.CLI.Shelley.Output.html#%24sel%3AmSyncProgress%3AQueryTipLocalStateOutput"><span class="hs-identifier hs-var hs-var">mSyncProgress</span></a></span><span> </span><span class="annot"><span class="annottext">QueryTipLocalStateOutput
-</span><a href="#local-6989586621679335918"><span class="hs-identifier hs-var">a</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679336326"><span class="hs-identifier hs-var">a</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-76"></span><span>        </span><span class="hs-special">)</span><span> </span><span class="hs-special">[</span><span class="hs-special">]</span><span>
 </span><span id="line-77"></span><span>
-</span><span id="line-78"></span><span class="hs-keyword">instance</span><span> </span><span id="local-6989586621679335912"><span class="annot"><span class="hs-identifier hs-type">FromJSON</span></span><span> </span><span class="annot"><a href="Cardano.CLI.Shelley.Output.html#QueryTipLocalStateOutput"><span class="hs-identifier hs-type">QueryTipLocalStateOutput</span></a></span></span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-79"></span><span>  </span><span id="local-6989586621679335910"><span class="annot"><span class="annottext">parseJSON :: Value -&gt; Parser QueryTipLocalStateOutput
+</span><span id="line-78"></span><span class="hs-keyword">instance</span><span> </span><span id="local-6989586621679336320"><span class="annot"><span class="hs-identifier hs-type">FromJSON</span></span><span> </span><span class="annot"><a href="Cardano.CLI.Shelley.Output.html#QueryTipLocalStateOutput"><span class="hs-identifier hs-type">QueryTipLocalStateOutput</span></a></span></span><span> </span><span class="hs-keyword">where</span><span>
+</span><span id="line-79"></span><span>  </span><span id="local-6989586621679336318"><span class="annot"><span class="annottext">parseJSON :: Value -&gt; Parser QueryTipLocalStateOutput
 </span><span class="hs-identifier hs-var hs-var hs-var hs-var">parseJSON</span></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">String
 -&gt; (Object -&gt; Parser QueryTipLocalStateOutput)
 -&gt; Value
@@ -318,49 +318,49 @@ forall a. String -&gt; (Object -&gt; Parser a) -&gt; Value -&gt; Parser a
 -&gt; Value
 -&gt; Parser QueryTipLocalStateOutput
 forall a b. (a -&gt; b) -&gt; a -&gt; b
-</span><a href="../file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="hs-glyph">\</span><span id="local-6989586621679335908"><span class="annot"><span class="annottext">Object
-</span><a href="#local-6989586621679335908"><span class="hs-identifier hs-var">o</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-keyword">do</span><span>
-</span><span id="line-80"></span><span>    </span><span id="local-6989586621679335907"><span class="annot"><span class="annottext">Maybe AnyCardanoEra
-</span><a href="#local-6989586621679335907"><span class="hs-identifier hs-var">mEra'</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Object
-</span><a href="#local-6989586621679335908"><span class="hs-identifier hs-var">o</span></a></span><span> </span><span class="annot"><span class="annottext">Object -&gt; Text -&gt; Parser (Maybe AnyCardanoEra)
+</span><a href="../file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="hs-glyph">\</span><span id="local-6989586621679336316"><span class="annot"><span class="annottext">Object
+</span><a href="#local-6989586621679336316"><span class="hs-identifier hs-var">o</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-keyword">do</span><span>
+</span><span id="line-80"></span><span>    </span><span id="local-6989586621679336315"><span class="annot"><span class="annottext">Maybe AnyCardanoEra
+</span><a href="#local-6989586621679336315"><span class="hs-identifier hs-var">mEra'</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Object
+</span><a href="#local-6989586621679336316"><span class="hs-identifier hs-var">o</span></a></span><span> </span><span class="annot"><span class="annottext">Object -&gt; Text -&gt; Parser (Maybe AnyCardanoEra)
 forall a. FromJSON a =&gt; Object -&gt; Text -&gt; Parser (Maybe a)
 </span><span class="hs-operator hs-var">.:?</span></span><span> </span><span class="annot"><span class="annottext">Text
 </span><span class="hs-string">&quot;era&quot;</span></span><span>
-</span><span id="line-81"></span><span>    </span><span id="local-6989586621679335906"><span class="annot"><span class="annottext">Maybe EpochNo
-</span><a href="#local-6989586621679335906"><span class="hs-identifier hs-var">mEpoch'</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Object
-</span><a href="#local-6989586621679335908"><span class="hs-identifier hs-var">o</span></a></span><span> </span><span class="annot"><span class="annottext">Object -&gt; Text -&gt; Parser (Maybe EpochNo)
+</span><span id="line-81"></span><span>    </span><span id="local-6989586621679336314"><span class="annot"><span class="annottext">Maybe EpochNo
+</span><a href="#local-6989586621679336314"><span class="hs-identifier hs-var">mEpoch'</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Object
+</span><a href="#local-6989586621679336316"><span class="hs-identifier hs-var">o</span></a></span><span> </span><span class="annot"><span class="annottext">Object -&gt; Text -&gt; Parser (Maybe EpochNo)
 forall a. FromJSON a =&gt; Object -&gt; Text -&gt; Parser (Maybe a)
 </span><span class="hs-operator hs-var">.:?</span></span><span> </span><span class="annot"><span class="annottext">Text
 </span><span class="hs-string">&quot;epoch&quot;</span></span><span>
-</span><span id="line-82"></span><span>    </span><span id="local-6989586621679335905"><span class="annot"><span class="annottext">Maybe Text
-</span><a href="#local-6989586621679335905"><span class="hs-identifier hs-var">mSyncProgress'</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Object
-</span><a href="#local-6989586621679335908"><span class="hs-identifier hs-var">o</span></a></span><span> </span><span class="annot"><span class="annottext">Object -&gt; Text -&gt; Parser (Maybe Text)
+</span><span id="line-82"></span><span>    </span><span id="local-6989586621679336313"><span class="annot"><span class="annottext">Maybe Text
+</span><a href="#local-6989586621679336313"><span class="hs-identifier hs-var">mSyncProgress'</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Object
+</span><a href="#local-6989586621679336316"><span class="hs-identifier hs-var">o</span></a></span><span> </span><span class="annot"><span class="annottext">Object -&gt; Text -&gt; Parser (Maybe Text)
 forall a. FromJSON a =&gt; Object -&gt; Text -&gt; Parser (Maybe a)
 </span><span class="hs-operator hs-var">.:?</span></span><span> </span><span class="annot"><span class="annottext">Text
 </span><span class="hs-string">&quot;syncProgress&quot;</span></span><span>
 </span><span id="line-83"></span><span>
-</span><span id="line-84"></span><span>    </span><span id="local-6989586621679335904"><span class="annot"><span class="annottext">Maybe SlotNo
-</span><a href="#local-6989586621679335904"><span class="hs-identifier hs-var">mSlot</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Object
-</span><a href="#local-6989586621679335908"><span class="hs-identifier hs-var">o</span></a></span><span> </span><span class="annot"><span class="annottext">Object -&gt; Text -&gt; Parser (Maybe SlotNo)
+</span><span id="line-84"></span><span>    </span><span id="local-6989586621679336312"><span class="annot"><span class="annottext">Maybe SlotNo
+</span><a href="#local-6989586621679336312"><span class="hs-identifier hs-var">mSlot</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Object
+</span><a href="#local-6989586621679336316"><span class="hs-identifier hs-var">o</span></a></span><span> </span><span class="annot"><span class="annottext">Object -&gt; Text -&gt; Parser (Maybe SlotNo)
 forall a. FromJSON a =&gt; Object -&gt; Text -&gt; Parser (Maybe a)
 </span><span class="hs-operator hs-var">.:?</span></span><span> </span><span class="annot"><span class="annottext">Text
 </span><span class="hs-string">&quot;slot&quot;</span></span><span>
-</span><span id="line-85"></span><span>    </span><span id="local-6989586621679335903"><span class="annot"><span class="annottext">Maybe (Hash BlockHeader)
-</span><a href="#local-6989586621679335903"><span class="hs-identifier hs-var">mHash</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Object
-</span><a href="#local-6989586621679335908"><span class="hs-identifier hs-var">o</span></a></span><span> </span><span class="annot"><span class="annottext">Object -&gt; Text -&gt; Parser (Maybe (Hash BlockHeader))
+</span><span id="line-85"></span><span>    </span><span id="local-6989586621679336311"><span class="annot"><span class="annottext">Maybe (Hash BlockHeader)
+</span><a href="#local-6989586621679336311"><span class="hs-identifier hs-var">mHash</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Object
+</span><a href="#local-6989586621679336316"><span class="hs-identifier hs-var">o</span></a></span><span> </span><span class="annot"><span class="annottext">Object -&gt; Text -&gt; Parser (Maybe (Hash BlockHeader))
 forall a. FromJSON a =&gt; Object -&gt; Text -&gt; Parser (Maybe a)
 </span><span class="hs-operator hs-var">.:?</span></span><span> </span><span class="annot"><span class="annottext">Text
 </span><span class="hs-string">&quot;hash&quot;</span></span><span>
-</span><span id="line-86"></span><span>    </span><span id="local-6989586621679335902"><span class="annot"><span class="annottext">Maybe BlockNo
-</span><a href="#local-6989586621679335902"><span class="hs-identifier hs-var">mBlock</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Object
-</span><a href="#local-6989586621679335908"><span class="hs-identifier hs-var">o</span></a></span><span> </span><span class="annot"><span class="annottext">Object -&gt; Text -&gt; Parser (Maybe BlockNo)
+</span><span id="line-86"></span><span>    </span><span id="local-6989586621679336310"><span class="annot"><span class="annottext">Maybe BlockNo
+</span><a href="#local-6989586621679336310"><span class="hs-identifier hs-var">mBlock</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Object
+</span><a href="#local-6989586621679336316"><span class="hs-identifier hs-var">o</span></a></span><span> </span><span class="annot"><span class="annottext">Object -&gt; Text -&gt; Parser (Maybe BlockNo)
 forall a. FromJSON a =&gt; Object -&gt; Text -&gt; Parser (Maybe a)
 </span><span class="hs-operator hs-var">.:?</span></span><span> </span><span class="annot"><span class="annottext">Text
 </span><span class="hs-string">&quot;block&quot;</span></span><span>
 </span><span id="line-87"></span><span>    </span><span class="hs-keyword">case</span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Maybe SlotNo
-</span><a href="#local-6989586621679335904"><span class="hs-identifier hs-var">mSlot</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">Maybe (Hash BlockHeader)
-</span><a href="#local-6989586621679335903"><span class="hs-identifier hs-var">mHash</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">Maybe BlockNo
-</span><a href="#local-6989586621679335902"><span class="hs-identifier hs-var">mBlock</span></a></span><span class="hs-special">)</span><span> </span><span class="hs-keyword">of</span><span>
+</span><a href="#local-6989586621679336312"><span class="hs-identifier hs-var">mSlot</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">Maybe (Hash BlockHeader)
+</span><a href="#local-6989586621679336311"><span class="hs-identifier hs-var">mHash</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">Maybe BlockNo
+</span><a href="#local-6989586621679336310"><span class="hs-identifier hs-var">mBlock</span></a></span><span class="hs-special">)</span><span> </span><span class="hs-keyword">of</span><span>
 </span><span id="line-88"></span><span>      </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Maybe SlotNo
 </span><a href="../file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">Nothing</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">Maybe (Hash BlockHeader)
 </span><a href="../file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">Nothing</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">Maybe BlockNo
@@ -379,15 +379,15 @@ forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><span id="line-90"></span><span>                 </span><span class="annot"><span class="annottext">ChainTip
 </span><a href="../file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.7/cardano-api-1.33.0/noopt/doc/html/cardano-api/src"><span class="hs-identifier hs-var">ChainTipAtGenesis</span></a></span><span>
 </span><span id="line-91"></span><span>                 </span><span class="annot"><span class="annottext">Maybe AnyCardanoEra
-</span><a href="#local-6989586621679335907"><span class="hs-identifier hs-var">mEra'</span></a></span><span>
+</span><a href="#local-6989586621679336315"><span class="hs-identifier hs-var">mEra'</span></a></span><span>
 </span><span id="line-92"></span><span>                 </span><span class="annot"><span class="annottext">Maybe EpochNo
-</span><a href="#local-6989586621679335906"><span class="hs-identifier hs-var">mEpoch'</span></a></span><span>
+</span><a href="#local-6989586621679336314"><span class="hs-identifier hs-var">mEpoch'</span></a></span><span>
 </span><span id="line-93"></span><span>                 </span><span class="annot"><span class="annottext">Maybe Text
-</span><a href="#local-6989586621679335905"><span class="hs-identifier hs-var">mSyncProgress'</span></a></span><span>
-</span><span id="line-94"></span><span>      </span><span class="hs-special">(</span><span class="annot"><a href="../file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Just</span></a></span><span> </span><span id="local-6989586621679335901"><span class="annot"><span class="annottext">SlotNo
-</span><a href="#local-6989586621679335901"><span class="hs-identifier hs-var">slot</span></a></span></span><span class="hs-special">,</span><span> </span><span class="annot"><a href="../file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Just</span></a></span><span> </span><span id="local-6989586621679335900"><span class="annot"><span class="annottext">Hash BlockHeader
-</span><a href="#local-6989586621679335900"><span class="hs-identifier hs-var">hash</span></a></span></span><span class="hs-special">,</span><span> </span><span class="annot"><a href="../file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Just</span></a></span><span> </span><span id="local-6989586621679335899"><span class="annot"><span class="annottext">BlockNo
-</span><a href="#local-6989586621679335899"><span class="hs-identifier hs-var">block</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">-&gt;</span><span>
+</span><a href="#local-6989586621679336313"><span class="hs-identifier hs-var">mSyncProgress'</span></a></span><span>
+</span><span id="line-94"></span><span>      </span><span class="hs-special">(</span><span class="annot"><a href="../file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Just</span></a></span><span> </span><span id="local-6989586621679336309"><span class="annot"><span class="annottext">SlotNo
+</span><a href="#local-6989586621679336309"><span class="hs-identifier hs-var">slot</span></a></span></span><span class="hs-special">,</span><span> </span><span class="annot"><a href="../file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Just</span></a></span><span> </span><span id="local-6989586621679336308"><span class="annot"><span class="annottext">Hash BlockHeader
+</span><a href="#local-6989586621679336308"><span class="hs-identifier hs-var">hash</span></a></span></span><span class="hs-special">,</span><span> </span><span class="annot"><a href="../file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Just</span></a></span><span> </span><span id="local-6989586621679336307"><span class="annot"><span class="annottext">BlockNo
+</span><a href="#local-6989586621679336307"><span class="hs-identifier hs-var">block</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">-&gt;</span><span>
 </span><span id="line-95"></span><span>        </span><span class="annot"><span class="annottext">QueryTipLocalStateOutput -&gt; Parser QueryTipLocalStateOutput
 forall (f :: * -&gt; *) a. Applicative f =&gt; a -&gt; f a
 </span><a href="../file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">pure</span></a></span><span> </span><span class="annot"><span class="annottext">(QueryTipLocalStateOutput -&gt; Parser QueryTipLocalStateOutput)
@@ -401,15 +401,15 @@ forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="Cardano.CLI.Shelley.Output.html#QueryTipLocalStateOutput"><span class="hs-identifier hs-var">QueryTipLocalStateOutput</span></a></span><span>
 </span><span id="line-96"></span><span>                 </span><span class="hs-special">(</span><span class="annot"><span class="annottext">SlotNo -&gt; Hash BlockHeader -&gt; BlockNo -&gt; ChainTip
 </span><a href="../file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.7/cardano-api-1.33.0/noopt/doc/html/cardano-api/src"><span class="hs-identifier hs-var">ChainTip</span></a></span><span> </span><span class="annot"><span class="annottext">SlotNo
-</span><a href="#local-6989586621679335901"><span class="hs-identifier hs-var">slot</span></a></span><span> </span><span class="annot"><span class="annottext">Hash BlockHeader
-</span><a href="#local-6989586621679335900"><span class="hs-identifier hs-var">hash</span></a></span><span> </span><span class="annot"><span class="annottext">BlockNo
-</span><a href="#local-6989586621679335899"><span class="hs-identifier hs-var">block</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679336309"><span class="hs-identifier hs-var">slot</span></a></span><span> </span><span class="annot"><span class="annottext">Hash BlockHeader
+</span><a href="#local-6989586621679336308"><span class="hs-identifier hs-var">hash</span></a></span><span> </span><span class="annot"><span class="annottext">BlockNo
+</span><a href="#local-6989586621679336307"><span class="hs-identifier hs-var">block</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-97"></span><span>                 </span><span class="annot"><span class="annottext">Maybe AnyCardanoEra
-</span><a href="#local-6989586621679335907"><span class="hs-identifier hs-var">mEra'</span></a></span><span>
+</span><a href="#local-6989586621679336315"><span class="hs-identifier hs-var">mEra'</span></a></span><span>
 </span><span id="line-98"></span><span>                 </span><span class="annot"><span class="annottext">Maybe EpochNo
-</span><a href="#local-6989586621679335906"><span class="hs-identifier hs-var">mEpoch'</span></a></span><span>
+</span><a href="#local-6989586621679336314"><span class="hs-identifier hs-var">mEpoch'</span></a></span><span>
 </span><span id="line-99"></span><span>                 </span><span class="annot"><span class="annottext">Maybe Text
-</span><a href="#local-6989586621679335905"><span class="hs-identifier hs-var">mSyncProgress'</span></a></span><span>
+</span><a href="#local-6989586621679336313"><span class="hs-identifier hs-var">mSyncProgress'</span></a></span><span>
 </span><span id="line-100"></span><span>      </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Maybe SlotNo
 </span><span class="hs-identifier">_</span></span><span class="hs-special">,</span><span class="annot"><span class="annottext">Maybe (Hash BlockHeader)
 </span><span class="hs-identifier">_</span></span><span class="hs-special">,</span><span class="annot"><span class="annottext">Maybe BlockNo
