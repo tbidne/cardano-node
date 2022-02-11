@@ -715,35 +715,40 @@ forall (m :: * -&gt; *).
 </span><span class="hs-string">&quot;ed7c8f68c194cc763ee65ad22ef0973e26481be058c65005fd39fb93f9c43a20\
               \#212&quot;</span></span><span>
 </span><span id="line-254"></span><span>          </span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">FilePath
+</span><span class="hs-string">&quot;--tx-in-collateral&quot;</span></span><span>
+</span><span id="line-255"></span><span>          </span><span class="hs-special">,</span><span>   </span><span class="annot"><span class="annottext">FilePath
+</span><span class="hs-string">&quot;c9765d7d0e3955be8920e6d7a38e1f3f2032eac48c7c59b0b9193caa87727e7e\
+              \#256&quot;</span></span><span>
+</span><span id="line-257"></span><span>          </span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">FilePath
 </span><span class="hs-string">&quot;--fee&quot;</span></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">FilePath
 </span><span class="hs-string">&quot;213&quot;</span></span><span>
-</span><span id="line-255"></span><span>          </span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">FilePath
+</span><span id="line-258"></span><span>          </span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">FilePath
 </span><span class="hs-string">&quot;--update-proposal-file&quot;</span></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">FilePath
 </span><a href="#local-6989586621679212588"><span class="hs-identifier hs-var">updateProposalFile</span></a></span><span>
-</span><span id="line-256"></span><span>          </span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">FilePath
+</span><span id="line-259"></span><span>          </span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">FilePath
 </span><span class="hs-string">&quot;--out-file&quot;</span></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">FilePath
 </span><a href="#local-6989586621679212587"><span class="hs-identifier hs-var">transactionBodyFile</span></a></span><span>
-</span><span id="line-257"></span><span>          </span><span class="hs-special">]</span><span>
-</span><span id="line-258"></span><span>
-</span><span id="line-259"></span><span>      </span><span class="hs-comment">-- View transaction body</span><span>
-</span><span id="line-260"></span><span>      </span><span id="local-6989586621679212586"><span class="annot"><span class="annottext">FilePath
+</span><span id="line-260"></span><span>          </span><span class="hs-special">]</span><span>
+</span><span id="line-261"></span><span>
+</span><span id="line-262"></span><span>      </span><span class="hs-comment">-- View transaction body</span><span>
+</span><span id="line-263"></span><span>      </span><span id="local-6989586621679212586"><span class="annot"><span class="annottext">FilePath
 </span><a href="#local-6989586621679212586"><span class="hs-identifier hs-var">result</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span>
-</span><span id="line-261"></span><span>        </span><span class="annot"><span class="annottext">[FilePath]
+</span><span id="line-264"></span><span>        </span><span class="annot"><span class="annottext">[FilePath]
 -&gt; PropertyT (ReaderT IntegrationState (ResourceT IO)) FilePath
 forall (m :: * -&gt; *).
 (MonadTest m, MonadCatch m, MonadIO m, HasCallStack) =&gt;
 [FilePath] -&gt; m FilePath
 </span><a href="Test.OptParse.html#execCardanoCLI"><span class="hs-identifier hs-var">execCardanoCLI</span></a></span><span>
-</span><span id="line-262"></span><span>          </span><span class="hs-special">[</span><span class="annot"><span class="annottext">FilePath
+</span><span id="line-265"></span><span>          </span><span class="hs-special">[</span><span class="annot"><span class="annottext">FilePath
 </span><span class="hs-string">&quot;transaction&quot;</span></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">FilePath
 </span><span class="hs-string">&quot;view&quot;</span></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">FilePath
 </span><span class="hs-string">&quot;--tx-body-file&quot;</span></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">FilePath
 </span><a href="#local-6989586621679212587"><span class="hs-identifier hs-var">transactionBodyFile</span></a></span><span class="hs-special">]</span><span>
-</span><span id="line-263"></span><span>      </span><span class="annot"><span class="annottext">FilePath -&gt; FilePath -&gt; Integration ()
+</span><span id="line-266"></span><span>      </span><span class="annot"><span class="annottext">FilePath -&gt; FilePath -&gt; Integration ()
 forall (m :: * -&gt; *).
 (MonadIO m, MonadTest m) =&gt;
 FilePath -&gt; FilePath -&gt; m ()
 </span><a href="Test.Utilities.html#diffVsGoldenFile"><span class="hs-identifier hs-var">diffVsGoldenFile</span></a></span><span> </span><span class="annot"><span class="annottext">FilePath
 </span><a href="#local-6989586621679212586"><span class="hs-identifier hs-var">result</span></a></span><span> </span><span class="annot"><span class="annottext">FilePath
 </span><span class="hs-string">&quot;test/data/golden/alonzo/transaction-view.out&quot;</span></span><span>
-</span><span id="line-264"></span></pre></body></html>
+</span><span id="line-267"></span></pre></body></html>
