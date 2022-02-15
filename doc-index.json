@@ -492,6 +492,12 @@
     "link": "lib/Cardano-Api-NetworkId.html#t:NetworkMagic"
   },
   {
+    "display_html": "<a href=\"#v:fromNetworkMagic\">fromNetworkMagic</a> &#8759; <a href=\"Cardano-Api-NetworkId.html#t:NetworkMagic\" title=\"Cardano.Api.NetworkId\">NetworkMagic</a> &#8594; <a href=\"Cardano-Api-NetworkId.html#t:NetworkId\" title=\"Cardano.Api.NetworkId\">NetworkId</a>",
+    "name": "fromNetworkMagic",
+    "module": "Cardano.Api.NetworkId",
+    "link": "lib/Cardano-Api-NetworkId.html#v:fromNetworkMagic"
+  },
+  {
     "display_html": "<a href=\"#v:toNetworkMagic\">toNetworkMagic</a> &#8759; <a href=\"Cardano-Api-NetworkId.html#t:NetworkId\" title=\"Cardano.Api.NetworkId\">NetworkId</a> &#8594; <a href=\"Cardano-Api-NetworkId.html#t:NetworkMagic\" title=\"Cardano.Api.NetworkId\">NetworkMagic</a>",
     "name": "toNetworkMagic",
     "module": "Cardano.Api.NetworkId",
@@ -550,48 +556,6 @@
     "name": "ProtocolClient ProtocolClientInfoArgs protocolClientInfo",
     "module": "Cardano.Api.Protocol.Types",
     "link": "lib/Cardano-Api-Protocol-Types.html#t:ProtocolClient"
-  },
-  {
-    "display_html": "<span class=\"keyword\">data</span> <a href=\"#t:SomeNodeClientProtocol\">SomeNodeClientProtocol</a> <span class=\"keyword\">where</span><ul class=\"subs\"><li><a href=\"#v:SomeNodeClientProtocol\">SomeNodeClientProtocol</a> &#8759; (RunNode blk, <a href=\"Cardano-Api-Protocol-Types.html#t:ProtocolClient\" title=\"Cardano.Api.Protocol.Types\">ProtocolClient</a> blk) &#8658; <a href=\"Cardano-Api-Protocol-Types.html#t:ProtocolClientInfoArgs\" title=\"Cardano.Api.Protocol.Types\">ProtocolClientInfoArgs</a> blk &#8594; <a href=\"Cardano-Api-Protocol-Types.html#t:SomeNodeClientProtocol\" title=\"Cardano.Api.Protocol.Types\">SomeNodeClientProtocol</a></li></ul>",
-    "name": "SomeNodeClientProtocol SomeNodeClientProtocol",
-    "module": "Cardano.Api.Protocol.Types",
-    "link": "lib/Cardano-Api-Protocol-Types.html#t:SomeNodeClientProtocol"
-  },
-  {
-    "display_html": "<a href=\"#v:mkNodeClientProtocolShelley\">mkNodeClientProtocolShelley</a> &#8759; <a href=\"Cardano-Api-Protocol-Types.html#t:ProtocolClientInfoArgs\" title=\"Cardano.Api.Protocol.Types\">ProtocolClientInfoArgs</a> (ShelleyBlockHFC StandardShelley)",
-    "name": "mkNodeClientProtocolShelley",
-    "module": "Cardano.Api.Protocol.Shelley",
-    "link": "lib/Cardano-Api-Protocol-Shelley.html#v:mkNodeClientProtocolShelley"
-  },
-  {
-    "display_html": "<a href=\"#v:mkSomeNodeClientProtocolShelley\">mkSomeNodeClientProtocolShelley</a> &#8759; <a href=\"Cardano-Api-Protocol-Types.html#t:SomeNodeClientProtocol\" title=\"Cardano.Api.Protocol.Types\">SomeNodeClientProtocol</a>",
-    "name": "mkSomeNodeClientProtocolShelley",
-    "module": "Cardano.Api.Protocol.Shelley",
-    "link": "lib/Cardano-Api-Protocol-Shelley.html#v:mkSomeNodeClientProtocolShelley"
-  },
-  {
-    "display_html": "<a href=\"#v:mkNodeClientProtocolCardano\">mkNodeClientProtocolCardano</a> &#8759; <a href=\"Cardano-Api-Modes.html#t:EpochSlots\" title=\"Cardano.Api.Modes\">EpochSlots</a> &#8594; <a href=\"Cardano-Api-Protocol-Types.html#t:ProtocolClientInfoArgs\" title=\"Cardano.Api.Protocol.Types\">ProtocolClientInfoArgs</a> (CardanoBlock StandardCrypto)",
-    "name": "mkNodeClientProtocolCardano",
-    "module": "Cardano.Api.Protocol.Cardano",
-    "link": "lib/Cardano-Api-Protocol-Cardano.html#v:mkNodeClientProtocolCardano"
-  },
-  {
-    "display_html": "<a href=\"#v:mkSomeNodeClientProtocolCardano\">mkSomeNodeClientProtocolCardano</a> &#8759; <a href=\"Cardano-Api-Modes.html#t:EpochSlots\" title=\"Cardano.Api.Modes\">EpochSlots</a> &#8594; <a href=\"Cardano-Api-Protocol-Types.html#t:SomeNodeClientProtocol\" title=\"Cardano.Api.Protocol.Types\">SomeNodeClientProtocol</a>",
-    "name": "mkSomeNodeClientProtocolCardano",
-    "module": "Cardano.Api.Protocol.Cardano",
-    "link": "lib/Cardano-Api-Protocol-Cardano.html#v:mkSomeNodeClientProtocolCardano"
-  },
-  {
-    "display_html": "<a href=\"#v:mkNodeClientProtocolByron\">mkNodeClientProtocolByron</a> &#8759; <a href=\"Cardano-Api-Modes.html#t:EpochSlots\" title=\"Cardano.Api.Modes\">EpochSlots</a> &#8594; <a href=\"Cardano-Api-Protocol-Types.html#t:ProtocolClientInfoArgs\" title=\"Cardano.Api.Protocol.Types\">ProtocolClientInfoArgs</a> ByronBlockHFC",
-    "name": "mkNodeClientProtocolByron",
-    "module": "Cardano.Api.Protocol.Byron",
-    "link": "lib/Cardano-Api-Protocol-Byron.html#v:mkNodeClientProtocolByron"
-  },
-  {
-    "display_html": "<a href=\"#v:mkSomeNodeClientProtocolByron\">mkSomeNodeClientProtocolByron</a> &#8759; <a href=\"Cardano-Api-Modes.html#t:EpochSlots\" title=\"Cardano.Api.Modes\">EpochSlots</a> &#8594; <a href=\"Cardano-Api-Protocol-Types.html#t:SomeNodeClientProtocol\" title=\"Cardano.Api.Protocol.Types\">SomeNodeClientProtocol</a>",
-    "name": "mkSomeNodeClientProtocolByron",
-    "module": "Cardano.Api.Protocol.Byron",
-    "link": "lib/Cardano-Api-Protocol-Byron.html#v:mkSomeNodeClientProtocolByron"
   },
   {
     "display_html": "<span class=\"keyword\">class</span> <a href=\"Cardano-Api-HasTypeProxy.html#t:HasTypeProxy\" title=\"Cardano.Api.HasTypeProxy\">HasTypeProxy</a> a &#8658; <a href=\"#t:SerialiseAsCBOR\">SerialiseAsCBOR</a> a <span class=\"keyword\">where</span><ul class=\"subs\"><li><a href=\"#v:serialiseToCBOR\">serialiseToCBOR</a> &#8759; a &#8594; <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/bytestring-0.10.12.0/Data-ByteString.html#t:ByteString\" title=\"Data.ByteString\">ByteString</a></li><li><a href=\"#v:deserialiseFromCBOR\">deserialiseFromCBOR</a> &#8759; <a href=\"Cardano-Api-HasTypeProxy.html#t:AsType\" title=\"Cardano.Api.HasTypeProxy\">AsType</a> a &#8594; <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/bytestring-0.10.12.0/Data-ByteString.html#t:ByteString\" title=\"Data.ByteString\">ByteString</a> &#8594; <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:Either\" title=\"Distribution.Compat.Prelude.Internal\">Either</a> DecoderError a</li></ul>",
@@ -3390,6 +3354,12 @@
     "link": "lib/Cardano-Api-Block.html#t:BlockHeader"
   },
   {
+    "display_html": "<a href=\"#v:getBlockHeader\">getBlockHeader</a> &#8759; &#8704; era. <a href=\"Cardano-Api-Block.html#t:Block\" title=\"Cardano.Api.Block\">Block</a> era &#8594; <a href=\"Cardano-Api-Block.html#t:BlockHeader\" title=\"Cardano.Api.Block\">BlockHeader</a>",
+    "name": "getBlockHeader",
+    "module": "Cardano.Api.Block",
+    "link": "lib/Cardano-Api-Block.html#v:getBlockHeader"
+  },
+  {
     "display_html": "<span class=\"keyword\">data</span> <a href=\"#t:BlockInMode\">BlockInMode</a> mode <span class=\"keyword\">where</span><ul class=\"subs\"><li><a href=\"#v:BlockInMode\">BlockInMode</a> &#8759; <a href=\"Cardano-Api-Block.html#t:Block\" title=\"Cardano.Api.Block\">Block</a> era &#8594; <a href=\"Cardano-Api-Modes.html#t:EraInMode\" title=\"Cardano.Api.Modes\">EraInMode</a> era mode &#8594; <a href=\"Cardano-Api-Block.html#t:BlockInMode\" title=\"Cardano.Api.Block\">BlockInMode</a> mode</li></ul>",
     "name": "BlockInMode BlockInMode",
     "module": "Cardano.Api.Block",
@@ -3400,6 +3370,12 @@
     "name": "fromConsensusBlock",
     "module": "Cardano.Api.Block",
     "link": "lib/Cardano-Api-Block.html#v:fromConsensusBlock"
+  },
+  {
+    "display_html": "<a href=\"#v:toConsensusBlock\">toConsensusBlock</a> &#8759; <a href=\"Cardano-Api-Modes.html#t:ConsensusBlockForMode\" title=\"Cardano.Api.Modes\">ConsensusBlockForMode</a> mode ~ block &#8658; <a href=\"Cardano-Api-Block.html#t:BlockInMode\" title=\"Cardano.Api.Block\">BlockInMode</a> mode &#8594; block",
+    "name": "toConsensusBlock",
+    "module": "Cardano.Api.Block",
+    "link": "lib/Cardano-Api-Block.html#v:toConsensusBlock"
   },
   {
     "display_html": "<span class=\"keyword\">data</span> <a href=\"#t:ChainPoint\">ChainPoint</a><ul class=\"subs\"><li>= <a href=\"#v:ChainPointAtGenesis\">ChainPointAtGenesis</a></li><li>| <a href=\"#v:ChainPoint\">ChainPoint</a> !<a href=\"Cardano-Api-Block.html#t:SlotNo\" title=\"Cardano.Api.Block\">SlotNo</a> !(<a href=\"Cardano-Api-Block.html#t:Hash\" title=\"Cardano.Api.Block\">Hash</a> <a href=\"Cardano-Api-Block.html#t:BlockHeader\" title=\"Cardano.Api.Block\">BlockHeader</a>)</li></ul>",
@@ -3442,6 +3418,12 @@
     "name": "fromConsensusPointInMode",
     "module": "Cardano.Api.Block",
     "link": "lib/Cardano-Api-Block.html#v:fromConsensusPointInMode"
+  },
+  {
+    "display_html": "<a href=\"#v:toConsensusPointHF\">toConsensusPointHF</a> &#8759; HeaderHash block ~ OneEraHash xs &#8658; <a href=\"Cardano-Api-Block.html#t:ChainPoint\" title=\"Cardano.Api.Block\">ChainPoint</a> &#8594; Point block",
+    "name": "toConsensusPointHF",
+    "module": "Cardano.Api.Block",
+    "link": "lib/Cardano-Api-Block.html#v:toConsensusPointHF"
   },
   {
     "display_html": "<span class=\"keyword\">data</span> <a href=\"#t:ChainTip\">ChainTip</a><ul class=\"subs\"><li>= <a href=\"#v:ChainTipAtGenesis\">ChainTipAtGenesis</a></li><li>| <a href=\"#v:ChainTip\">ChainTip</a> !<a href=\"Cardano-Api-Block.html#t:SlotNo\" title=\"Cardano.Api.Block\">SlotNo</a> !(<a href=\"Cardano-Api-Block.html#t:Hash\" title=\"Cardano.Api.Block\">Hash</a> <a href=\"Cardano-Api-Block.html#t:BlockHeader\" title=\"Cardano.Api.Block\">BlockHeader</a>) !<a href=\"Cardano-Api-Block.html#t:BlockNo\" title=\"Cardano.Api.Block\">BlockNo</a></li></ul>",
@@ -3688,6 +3670,18 @@
     "name": "localConsensusMode",
     "module": "Cardano.Api.IPC",
     "link": "lib/Cardano-Api-IPC.html#v:localConsensusMode"
+  },
+  {
+    "display_html": "<span class=\"keyword\">data</span> <a href=\"#t:LocalNodeClientParams\">LocalNodeClientParams</a> <span class=\"keyword\">where</span><ul class=\"subs\"><li><a href=\"#v:LocalNodeClientParams\">LocalNodeClientParams</a> &#8759; (SerialiseNodeToClientConstraints block, SupportedNetworkProtocolVersion block, ShowProxy block, ShowProxy (ApplyTxErr block), ShowProxy (GenTx block), ShowProxy (Query block), ShowQuery (Query block), <a href=\"Cardano-Api-Protocol-Types.html#t:ProtocolClient\" title=\"Cardano.Api.Protocol.Types\">ProtocolClient</a> block) &#8658; <a href=\"Cardano-Api-Protocol-Types.html#t:ProtocolClientInfoArgs\" title=\"Cardano.Api.Protocol.Types\">ProtocolClientInfoArgs</a> block &#8594; (<a href=\"Cardano-Api-IPC.html#t:NodeToClientVersion\" title=\"Cardano.Api.IPC\">NodeToClientVersion</a> &#8594; LocalNodeClientProtocolsForBlock block) &#8594; <a href=\"Cardano-Api-IPC.html#t:LocalNodeClientParams\" title=\"Cardano.Api.IPC\">LocalNodeClientParams</a></li></ul>",
+    "name": "LocalNodeClientParams LocalNodeClientParams",
+    "module": "Cardano.Api.IPC",
+    "link": "lib/Cardano-Api-IPC.html#t:LocalNodeClientParams"
+  },
+  {
+    "display_html": "<a href=\"#v:mkLocalNodeClientParams\">mkLocalNodeClientParams</a> &#8759; &#8704; mode block. <a href=\"Cardano-Api-Modes.html#t:ConsensusBlockForMode\" title=\"Cardano.Api.Modes\">ConsensusBlockForMode</a> mode ~ block &#8658; <a href=\"Cardano-Api-IPC.html#t:ConsensusModeParams\" title=\"Cardano.Api.IPC\">ConsensusModeParams</a> mode &#8594; (<a href=\"Cardano-Api-IPC.html#t:NodeToClientVersion\" title=\"Cardano.Api.IPC\">NodeToClientVersion</a> &#8594; <a href=\"Cardano-Api-IPC.html#t:LocalNodeClientProtocolsInMode\" title=\"Cardano.Api.IPC\">LocalNodeClientProtocolsInMode</a> mode) &#8594; <a href=\"Cardano-Api-IPC.html#t:LocalNodeClientParams\" title=\"Cardano.Api.IPC\">LocalNodeClientParams</a>",
+    "name": "mkLocalNodeClientParams",
+    "module": "Cardano.Api.IPC",
+    "link": "lib/Cardano-Api-IPC.html#v:mkLocalNodeClientParams"
   },
   {
     "display_html": "<span class=\"keyword\">data</span> <a href=\"#t:LocalNodeClientProtocols\">LocalNodeClientProtocols</a> block point tip tx txerr query m = <a href=\"#v:LocalNodeClientProtocols\">LocalNodeClientProtocols</a> {<ul class=\"subs\"><li><a href=\"#v:localChainSyncClient\">localChainSyncClient</a> &#8759; <a href=\"Cardano-Api-IPC.html#t:LocalChainSyncClient\" title=\"Cardano.Api.IPC\">LocalChainSyncClient</a> block point tip m</li><li><a href=\"#v:localTxSubmissionClient\">localTxSubmissionClient</a> &#8759; <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:Maybe\" title=\"Distribution.Compat.Prelude.Internal\">Maybe</a> (<a href=\"Cardano-Api-IPC.html#t:LocalTxSubmissionClient\" title=\"Cardano.Api.IPC\">LocalTxSubmissionClient</a> tx txerr m ())</li><li><a href=\"#v:localStateQueryClient\">localStateQueryClient</a> &#8759; <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:Maybe\" title=\"Distribution.Compat.Prelude.Internal\">Maybe</a> (<a href=\"Cardano-Api-IPC.html#t:LocalStateQueryClient\" title=\"Cardano.Api.IPC\">LocalStateQueryClient</a> block point query m ())</li></ul>}",
@@ -4630,6 +4624,12 @@
     "name": "BlockHeader BlockHeader",
     "module": "Cardano.Api",
     "link": "lib/Cardano-Api.html#t:BlockHeader"
+  },
+  {
+    "display_html": "<a href=\"#v:getBlockHeader\">getBlockHeader</a> &#8759; &#8704; era. <a href=\"Cardano-Api.html#t:Block\" title=\"Cardano.Api\">Block</a> era &#8594; <a href=\"Cardano-Api.html#t:BlockHeader\" title=\"Cardano.Api\">BlockHeader</a>",
+    "name": "getBlockHeader",
+    "module": "Cardano.Api",
+    "link": "lib/Cardano-Api.html#v:getBlockHeader"
   },
   {
     "display_html": "<span class=\"keyword\">data</span> <a href=\"#t:ChainPoint\">ChainPoint</a><ul class=\"subs\"><li>= <a href=\"#v:ChainPointAtGenesis\">ChainPointAtGenesis</a></li><li>| <a href=\"#v:ChainPoint\">ChainPoint</a> !<a href=\"Cardano-Api.html#t:SlotNo\" title=\"Cardano.Api\">SlotNo</a> !(<a href=\"Cardano-Api.html#t:Hash\" title=\"Cardano.Api\">Hash</a> <a href=\"Cardano-Api.html#t:BlockHeader\" title=\"Cardano.Api\">BlockHeader</a>)</li></ul>",
@@ -6228,6 +6228,18 @@
     "link": "lib/Cardano-Api.html#t:ConsensusModeParams"
   },
   {
+    "display_html": "<span class=\"keyword\">type family</span> <a href=\"#t:ConsensusBlockForMode\">ConsensusBlockForMode</a> mode <span class=\"keyword\">where ...</span>",
+    "name": "ConsensusBlockForMode",
+    "module": "Cardano.Api",
+    "link": "lib/Cardano-Api.html#t:ConsensusBlockForMode"
+  },
+  {
+    "display_html": "<span class=\"keyword\">type family</span> <a href=\"#t:ConsensusBlockForEra\">ConsensusBlockForEra</a> era <span class=\"keyword\">where ...</span>",
+    "name": "ConsensusBlockForEra",
+    "module": "Cardano.Api",
+    "link": "lib/Cardano-Api.html#t:ConsensusBlockForEra"
+  },
+  {
     "display_html": "<span class=\"keyword\">data</span> <a href=\"#t:EraInMode\">EraInMode</a> era mode <span class=\"keyword\">where</span><ul class=\"subs\"><li><a href=\"#v:ByronEraInByronMode\">ByronEraInByronMode</a> &#8759; <a href=\"Cardano-Api.html#t:EraInMode\" title=\"Cardano.Api\">EraInMode</a> <a href=\"Cardano-Api.html#t:ByronEra\" title=\"Cardano.Api\">ByronEra</a> <a href=\"Cardano-Api-Modes.html#t:ByronMode\" title=\"Cardano.Api.Modes\">ByronMode</a></li><li><a href=\"#v:ShelleyEraInShelleyMode\">ShelleyEraInShelleyMode</a> &#8759; <a href=\"Cardano-Api.html#t:EraInMode\" title=\"Cardano.Api\">EraInMode</a> <a href=\"Cardano-Api.html#t:ShelleyEra\" title=\"Cardano.Api\">ShelleyEra</a> <a href=\"Cardano-Api-Modes.html#t:ShelleyMode\" title=\"Cardano.Api.Modes\">ShelleyMode</a></li><li><a href=\"#v:ByronEraInCardanoMode\">ByronEraInCardanoMode</a> &#8759; <a href=\"Cardano-Api.html#t:EraInMode\" title=\"Cardano.Api\">EraInMode</a> <a href=\"Cardano-Api.html#t:ByronEra\" title=\"Cardano.Api\">ByronEra</a> <a href=\"Cardano-Api.html#t:CardanoMode\" title=\"Cardano.Api\">CardanoMode</a></li><li><a href=\"#v:ShelleyEraInCardanoMode\">ShelleyEraInCardanoMode</a> &#8759; <a href=\"Cardano-Api.html#t:EraInMode\" title=\"Cardano.Api\">EraInMode</a> <a href=\"Cardano-Api.html#t:ShelleyEra\" title=\"Cardano.Api\">ShelleyEra</a> <a href=\"Cardano-Api.html#t:CardanoMode\" title=\"Cardano.Api\">CardanoMode</a></li><li><a href=\"#v:AllegraEraInCardanoMode\">AllegraEraInCardanoMode</a> &#8759; <a href=\"Cardano-Api.html#t:EraInMode\" title=\"Cardano.Api\">EraInMode</a> <a href=\"Cardano-Api.html#t:AllegraEra\" title=\"Cardano.Api\">AllegraEra</a> <a href=\"Cardano-Api.html#t:CardanoMode\" title=\"Cardano.Api\">CardanoMode</a></li><li><a href=\"#v:MaryEraInCardanoMode\">MaryEraInCardanoMode</a> &#8759; <a href=\"Cardano-Api.html#t:EraInMode\" title=\"Cardano.Api\">EraInMode</a> <a href=\"Cardano-Api.html#t:MaryEra\" title=\"Cardano.Api\">MaryEra</a> <a href=\"Cardano-Api.html#t:CardanoMode\" title=\"Cardano.Api\">CardanoMode</a></li><li><a href=\"#v:AlonzoEraInCardanoMode\">AlonzoEraInCardanoMode</a> &#8759; <a href=\"Cardano-Api.html#t:EraInMode\" title=\"Cardano.Api\">EraInMode</a> <a href=\"Cardano-Api.html#t:AlonzoEra\" title=\"Cardano.Api\">AlonzoEra</a> <a href=\"Cardano-Api.html#t:CardanoMode\" title=\"Cardano.Api\">CardanoMode</a></li></ul>",
     "name": "EraInMode ByronEraInByronMode ShelleyEraInShelleyMode ByronEraInCardanoMode ShelleyEraInCardanoMode AllegraEraInCardanoMode MaryEraInCardanoMode AlonzoEraInCardanoMode",
     "module": "Cardano.Api",
@@ -6244,6 +6256,18 @@
     "name": "LocalNodeClientProtocols LocalNodeClientProtocols localChainSyncClient localTxSubmissionClient localStateQueryClient",
     "module": "Cardano.Api",
     "link": "lib/Cardano-Api.html#t:LocalNodeClientProtocols"
+  },
+  {
+    "display_html": "<span class=\"keyword\">data</span> <a href=\"#t:LocalNodeClientParams\">LocalNodeClientParams</a> <span class=\"keyword\">where</span><ul class=\"subs\"><li><a href=\"#v:LocalNodeClientParams\">LocalNodeClientParams</a> &#8759; (SerialiseNodeToClientConstraints block, SupportedNetworkProtocolVersion block, ShowProxy block, ShowProxy (ApplyTxErr block), ShowProxy (GenTx block), ShowProxy (Query block), ShowQuery (Query block), <a href=\"Cardano-Api-Protocol-Types.html#t:ProtocolClient\" title=\"Cardano.Api.Protocol.Types\">ProtocolClient</a> block) &#8658; <a href=\"Cardano-Api-Protocol-Types.html#t:ProtocolClientInfoArgs\" title=\"Cardano.Api.Protocol.Types\">ProtocolClientInfoArgs</a> block &#8594; (<a href=\"Cardano-Api.html#t:NodeToClientVersion\" title=\"Cardano.Api\">NodeToClientVersion</a> &#8594; LocalNodeClientProtocolsForBlock block) &#8594; <a href=\"Cardano-Api.html#t:LocalNodeClientParams\" title=\"Cardano.Api\">LocalNodeClientParams</a></li></ul>",
+    "name": "LocalNodeClientParams LocalNodeClientParams",
+    "module": "Cardano.Api",
+    "link": "lib/Cardano-Api.html#t:LocalNodeClientParams"
+  },
+  {
+    "display_html": "<a href=\"#v:mkLocalNodeClientParams\">mkLocalNodeClientParams</a> &#8759; &#8704; mode block. <a href=\"Cardano-Api.html#t:ConsensusBlockForMode\" title=\"Cardano.Api\">ConsensusBlockForMode</a> mode ~ block &#8658; <a href=\"Cardano-Api.html#t:ConsensusModeParams\" title=\"Cardano.Api\">ConsensusModeParams</a> mode &#8594; (<a href=\"Cardano-Api.html#t:NodeToClientVersion\" title=\"Cardano.Api\">NodeToClientVersion</a> &#8594; <a href=\"Cardano-Api.html#t:LocalNodeClientProtocolsInMode\" title=\"Cardano.Api\">LocalNodeClientProtocolsInMode</a> mode) &#8594; <a href=\"Cardano-Api.html#t:LocalNodeClientParams\" title=\"Cardano.Api\">LocalNodeClientParams</a>",
+    "name": "mkLocalNodeClientParams",
+    "module": "Cardano.Api",
+    "link": "lib/Cardano-Api.html#v:mkLocalNodeClientParams"
   },
   {
     "display_html": "<span class=\"keyword\">data</span> <a href=\"#t:LocalChainSyncClient\">LocalChainSyncClient</a> block point tip m<ul class=\"subs\"><li>= <a href=\"#v:NoLocalChainSyncClient\">NoLocalChainSyncClient</a></li><li>| <a href=\"#v:LocalChainSyncClientPipelined\">LocalChainSyncClientPipelined</a> (<a href=\"Cardano-Api.html#t:ChainSyncClientPipelined\" title=\"Cardano.Api\">ChainSyncClientPipelined</a> block point tip m ())</li><li>| <a href=\"#v:LocalChainSyncClient\">LocalChainSyncClient</a> (<a href=\"Cardano-Api.html#t:ChainSyncClient\" title=\"Cardano.Api\">ChainSyncClient</a> block point tip m ())</li></ul>",
@@ -6354,7 +6378,7 @@
     "link": "lib/Cardano-Api.html#v:queryNodeLocalState"
   },
   {
-    "display_html": "<span class=\"keyword\">data</span> <a href=\"#t:EraHistory\">EraHistory</a> mode <span class=\"keyword\">where</span><ul class=\"subs\"><li><a href=\"#v:EraHistory\">EraHistory</a> &#8759; <a href=\"Cardano-Api-Modes.html#t:ConsensusBlockForMode\" title=\"Cardano.Api.Modes\">ConsensusBlockForMode</a> mode ~ HardForkBlock xs &#8658; <a href=\"Cardano-Api.html#t:ConsensusMode\" title=\"Cardano.Api\">ConsensusMode</a> mode &#8594; Interpreter xs &#8594; <a href=\"Cardano-Api.html#t:EraHistory\" title=\"Cardano.Api\">EraHistory</a> mode</li></ul>",
+    "display_html": "<span class=\"keyword\">data</span> <a href=\"#t:EraHistory\">EraHistory</a> mode <span class=\"keyword\">where</span><ul class=\"subs\"><li><a href=\"#v:EraHistory\">EraHistory</a> &#8759; <a href=\"Cardano-Api.html#t:ConsensusBlockForMode\" title=\"Cardano.Api\">ConsensusBlockForMode</a> mode ~ HardForkBlock xs &#8658; <a href=\"Cardano-Api.html#t:ConsensusMode\" title=\"Cardano.Api\">ConsensusMode</a> mode &#8594; Interpreter xs &#8594; <a href=\"Cardano-Api.html#t:EraHistory\" title=\"Cardano.Api\">EraHistory</a> mode</li></ul>",
     "name": "EraHistory EraHistory",
     "module": "Cardano.Api",
     "link": "lib/Cardano-Api.html#t:EraHistory"
@@ -6528,6 +6552,12 @@
     "link": "lib/Cardano-Api.html#v:toCtxUTxOTxOut"
   },
   {
+    "display_html": "<a href=\"#v:fromNetworkMagic\">fromNetworkMagic</a> &#8759; <a href=\"Cardano-Api.html#t:NetworkMagic\" title=\"Cardano.Api\">NetworkMagic</a> &#8594; <a href=\"Cardano-Api.html#t:NetworkId\" title=\"Cardano.Api\">NetworkId</a>",
+    "name": "fromNetworkMagic",
+    "module": "Cardano.Api",
+    "link": "lib/Cardano-Api.html#v:fromNetworkMagic"
+  },
+  {
     "display_html": "<a href=\"#v:toNetworkMagic\">toNetworkMagic</a> &#8759; <a href=\"Cardano-Api.html#t:NetworkId\" title=\"Cardano.Api\">NetworkId</a> &#8594; <a href=\"Cardano-Api.html#t:NetworkMagic\" title=\"Cardano.Api\">NetworkMagic</a>",
     "name": "toNetworkMagic",
     "module": "Cardano.Api",
@@ -6544,12 +6574,6 @@
     "name": "toLedgerUTxO",
     "module": "Cardano.Api",
     "link": "lib/Cardano-Api.html#v:toLedgerUTxO"
-  },
-  {
-    "display_html": "<span class=\"keyword\">data</span> <a href=\"#t:SomeNodeClientProtocol\">SomeNodeClientProtocol</a> <span class=\"keyword\">where</span><ul class=\"subs\"><li><a href=\"#v:SomeNodeClientProtocol\">SomeNodeClientProtocol</a> &#8759; (RunNode blk, <a href=\"Cardano-Api-Protocol-Types.html#t:ProtocolClient\" title=\"Cardano.Api.Protocol.Types\">ProtocolClient</a> blk) &#8658; <a href=\"Cardano-Api-Protocol-Types.html#t:ProtocolClientInfoArgs\" title=\"Cardano.Api.Protocol.Types\">ProtocolClientInfoArgs</a> blk &#8594; <a href=\"Cardano-Api.html#t:SomeNodeClientProtocol\" title=\"Cardano.Api\">SomeNodeClientProtocol</a></li></ul>",
-    "name": "SomeNodeClientProtocol SomeNodeClientProtocol",
-    "module": "Cardano.Api",
-    "link": "lib/Cardano-Api.html#t:SomeNodeClientProtocol"
   },
   {
     "display_html": "<a href=\"#v:runParsecParser\">runParsecParser</a> &#8759; <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/parsec-3.1.14.0/Text-Parsec-String.html#t:Parser\" title=\"Text.Parsec.String\">Parser</a> a &#8594; <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/text-1.2.4.1/Data-Text.html#t:Text\" title=\"Data.Text\">Text</a> &#8594; Parser a",
@@ -6649,7 +6673,7 @@
   },
   {
     "display_html": "<span class=\"keyword\">data family</span> <a href=\"#t:Hash\">Hash</a> keyrole &#8759; <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/Data-Kind.html#t:Type\" title=\"Data.Kind\">Type</a>",
-    "name": "Hash StakePoolKeyHash PaymentKeyHash PaymentExtendedKeyHash StakeKeyHash StakeExtendedKeyHash GenesisKeyHash GenesisExtendedKeyHash GenesisDelegateKeyHash GenesisDelegateExtendedKeyHash GenesisUTxOKeyHash ScriptDataHash ByronKeyHash ByronKeyHashLegacy KesKeyHash VrfKeyHash StakePoolMetadataHash",
+    "name": "Hash StakePoolKeyHash HeaderHash PaymentKeyHash PaymentExtendedKeyHash StakeKeyHash StakeExtendedKeyHash GenesisKeyHash GenesisExtendedKeyHash GenesisDelegateKeyHash GenesisDelegateExtendedKeyHash GenesisUTxOKeyHash ScriptDataHash ByronKeyHash ByronKeyHashLegacy KesKeyHash VrfKeyHash StakePoolMetadataHash",
     "module": "Cardano.Api.Shelley",
     "link": "lib/Cardano-Api-Shelley.html#t:Hash"
   },
@@ -6886,6 +6910,42 @@
     "name": "toShelleySigningKey",
     "module": "Cardano.Api.Shelley",
     "link": "lib/Cardano-Api-Shelley.html#v:toShelleySigningKey"
+  },
+  {
+    "display_html": "<a href=\"#v:fromConsensusBlock\">fromConsensusBlock</a> &#8759; <a href=\"Cardano-Api-Modes.html#t:ConsensusBlockForMode\" title=\"Cardano.Api.Modes\">ConsensusBlockForMode</a> mode ~ block &#8658; <a href=\"Cardano-Api-Shelley.html#t:ConsensusMode\" title=\"Cardano.Api.Shelley\">ConsensusMode</a> mode &#8594; block &#8594; <a href=\"Cardano-Api-Block.html#t:BlockInMode\" title=\"Cardano.Api.Block\">BlockInMode</a> mode",
+    "name": "fromConsensusBlock",
+    "module": "Cardano.Api.Shelley",
+    "link": "lib/Cardano-Api-Shelley.html#v:fromConsensusBlock"
+  },
+  {
+    "display_html": "<a href=\"#v:toConsensusBlock\">toConsensusBlock</a> &#8759; <a href=\"Cardano-Api-Modes.html#t:ConsensusBlockForMode\" title=\"Cardano.Api.Modes\">ConsensusBlockForMode</a> mode ~ block &#8658; <a href=\"Cardano-Api-Block.html#t:BlockInMode\" title=\"Cardano.Api.Block\">BlockInMode</a> mode &#8594; block",
+    "name": "toConsensusBlock",
+    "module": "Cardano.Api.Shelley",
+    "link": "lib/Cardano-Api-Shelley.html#v:toConsensusBlock"
+  },
+  {
+    "display_html": "<a href=\"#v:fromConsensusTip\">fromConsensusTip</a> &#8759; <a href=\"Cardano-Api-Modes.html#t:ConsensusBlockForMode\" title=\"Cardano.Api.Modes\">ConsensusBlockForMode</a> mode ~ block &#8658; <a href=\"Cardano-Api-Shelley.html#t:ConsensusMode\" title=\"Cardano.Api.Shelley\">ConsensusMode</a> mode &#8594; Tip block &#8594; <a href=\"Cardano-Api-Block.html#t:ChainTip\" title=\"Cardano.Api.Block\">ChainTip</a>",
+    "name": "fromConsensusTip",
+    "module": "Cardano.Api.Shelley",
+    "link": "lib/Cardano-Api-Shelley.html#v:fromConsensusTip"
+  },
+  {
+    "display_html": "<a href=\"#v:fromConsensusPointInMode\">fromConsensusPointInMode</a> &#8759; <a href=\"Cardano-Api-Shelley.html#t:ConsensusMode\" title=\"Cardano.Api.Shelley\">ConsensusMode</a> mode &#8594; Point (<a href=\"Cardano-Api-Modes.html#t:ConsensusBlockForMode\" title=\"Cardano.Api.Modes\">ConsensusBlockForMode</a> mode) &#8594; <a href=\"Cardano-Api-Block.html#t:ChainPoint\" title=\"Cardano.Api.Block\">ChainPoint</a>",
+    "name": "fromConsensusPointInMode",
+    "module": "Cardano.Api.Shelley",
+    "link": "lib/Cardano-Api-Shelley.html#v:fromConsensusPointInMode"
+  },
+  {
+    "display_html": "<a href=\"#v:toConsensusPointInMode\">toConsensusPointInMode</a> &#8759; <a href=\"Cardano-Api-Shelley.html#t:ConsensusMode\" title=\"Cardano.Api.Shelley\">ConsensusMode</a> mode &#8594; <a href=\"Cardano-Api-Block.html#t:ChainPoint\" title=\"Cardano.Api.Block\">ChainPoint</a> &#8594; Point (<a href=\"Cardano-Api-Modes.html#t:ConsensusBlockForMode\" title=\"Cardano.Api.Modes\">ConsensusBlockForMode</a> mode)",
+    "name": "toConsensusPointInMode",
+    "module": "Cardano.Api.Shelley",
+    "link": "lib/Cardano-Api-Shelley.html#v:toConsensusPointInMode"
+  },
+  {
+    "display_html": "<a href=\"#v:toConsensusPointHF\">toConsensusPointHF</a> &#8759; HeaderHash block ~ OneEraHash xs &#8658; <a href=\"Cardano-Api-Block.html#t:ChainPoint\" title=\"Cardano.Api.Block\">ChainPoint</a> &#8594; Point block",
+    "name": "toConsensusPointHF",
+    "module": "Cardano.Api.Shelley",
+    "link": "lib/Cardano-Api-Shelley.html#v:toConsensusPointHF"
   },
   {
     "display_html": "<a href=\"#v:toShelleyMetadata\">toShelleyMetadata</a> &#8759; <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:Map\" title=\"Distribution.Compat.Prelude.Internal\">Map</a> <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:Word64\" title=\"Distribution.Compat.Prelude.Internal\">Word64</a> <a href=\"Cardano-Api-TxMetadata.html#t:TxMetadataValue\" title=\"Cardano.Api.TxMetadata\">TxMetadataValue</a> &#8594; <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:Map\" title=\"Distribution.Compat.Prelude.Internal\">Map</a> <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:Word64\" title=\"Distribution.Compat.Prelude.Internal\">Word64</a> Metadatum",
@@ -7248,8 +7308,8 @@
     "link": "lib/Cardano-Api-Shelley.html#t:ShelleyMode"
   },
   {
-    "display_html": "<span class=\"keyword\">data</span> <a href=\"#t:ConsensusMode\">ConsensusMode</a> mode <span class=\"keyword\">where</span><ul class=\"subs\"><li><a href=\"#v:ShelleyMode\">ShelleyMode</a> &#8759; <a href=\"Cardano-Api-Shelley.html#t:ConsensusMode\" title=\"Cardano.Api.Shelley\">ConsensusMode</a> <a href=\"Cardano-Api-Shelley.html#t:ShelleyMode\" title=\"Cardano.Api.Shelley\">ShelleyMode</a></li></ul>",
-    "name": "ConsensusMode ShelleyMode",
+    "display_html": "<span class=\"keyword\">data</span> <a href=\"#t:ConsensusMode\">ConsensusMode</a> mode <span class=\"keyword\">where</span><ul class=\"subs\"><li><a href=\"#v:ByronMode\">ByronMode</a> &#8759; <a href=\"Cardano-Api-Shelley.html#t:ConsensusMode\" title=\"Cardano.Api.Shelley\">ConsensusMode</a> <a href=\"Cardano-Api-Modes.html#t:ByronMode\" title=\"Cardano.Api.Modes\">ByronMode</a></li><li><a href=\"#v:ShelleyMode\">ShelleyMode</a> &#8759; <a href=\"Cardano-Api-Shelley.html#t:ConsensusMode\" title=\"Cardano.Api.Shelley\">ConsensusMode</a> <a href=\"Cardano-Api-Shelley.html#t:ShelleyMode\" title=\"Cardano.Api.Shelley\">ShelleyMode</a></li></ul>",
+    "name": "ConsensusMode ByronMode ShelleyMode",
     "module": "Cardano.Api.Shelley",
     "link": "lib/Cardano-Api-Shelley.html#t:ConsensusMode"
   },
@@ -10140,7 +10200,7 @@
     "link": "lib/Cardano-Git-Rev.html#v:gitRev"
   },
   {
-    "display_html": "<a href=\"#v:chairmanTest\">chairmanTest</a> &#8759; <a href=\"file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.7/cardano-node-1.33.0/noopt/doc/html/cardano-node/Cardano-Tracing-OrphanInstances-Common.html#t:Tracer\" title=\"Cardano.Tracing.OrphanInstances.Common\">Tracer</a> <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/System-IO.html#t:IO\" title=\"System.IO\">IO</a> <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:String\" title=\"Distribution.Compat.Prelude.Internal\">String</a> &#8594; <a href=\"file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.7/cardano-api-1.33.0/noopt/doc/html/cardano-api/Cardano-Api-Protocol-Types.html#t:SomeNodeClientProtocol\" title=\"Cardano.Api.Protocol.Types\">SomeNodeClientProtocol</a> &#8594; <a href=\"file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.7/cardano-api-1.33.0/noopt/doc/html/cardano-api/Cardano-Api-NetworkId.html#t:NetworkMagic\" title=\"Cardano.Api.NetworkId\">NetworkMagic</a> &#8594; SecurityParam &#8594; <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/time-1.9.3/Data-Time-Clock.html#t:DiffTime\" title=\"Data.Time.Clock\">DiffTime</a> &#8594; <a href=\"file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.7/cardano-api-1.33.0/noopt/doc/html/cardano-api/Cardano-Api-Block.html#t:BlockNo\" title=\"Cardano.Api.Block\">BlockNo</a> &#8594; [<a href=\"file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.7/cardano-node-1.33.0/noopt/doc/html/cardano-node/Cardano-Node-Configuration-NodeAddress.html#t:SocketPath\" title=\"Cardano.Node.Configuration.NodeAddress\">SocketPath</a>] &#8594; <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/System-IO.html#t:IO\" title=\"System.IO\">IO</a> ()",
+    "display_html": "<a href=\"#v:chairmanTest\">chairmanTest</a> &#8759; <a href=\"file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.7/cardano-node-1.33.0/noopt/doc/html/cardano-node/Cardano-Tracing-OrphanInstances-Common.html#t:Tracer\" title=\"Cardano.Tracing.OrphanInstances.Common\">Tracer</a> <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/System-IO.html#t:IO\" title=\"System.IO\">IO</a> <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:String\" title=\"Distribution.Compat.Prelude.Internal\">String</a> &#8594; <a href=\"file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.7/cardano-api-1.33.0/noopt/doc/html/cardano-api/Cardano-Api-NetworkId.html#t:NetworkId\" title=\"Cardano.Api.NetworkId\">NetworkId</a> &#8594; <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/time-1.9.3/Data-Time-Clock.html#t:DiffTime\" title=\"Data.Time.Clock\">DiffTime</a> &#8594; <a href=\"file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.7/cardano-api-1.33.0/noopt/doc/html/cardano-api/Cardano-Api-Block.html#t:BlockNo\" title=\"Cardano.Api.Block\">BlockNo</a> &#8594; [<a href=\"file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.7/cardano-node-1.33.0/noopt/doc/html/cardano-node/Cardano-Node-Configuration-NodeAddress.html#t:SocketPath\" title=\"Cardano.Node.Configuration.NodeAddress\">SocketPath</a>] &#8594; <a href=\"file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.7/cardano-api-1.33.0/noopt/doc/html/cardano-api/Cardano-Api-Modes.html#t:AnyConsensusModeParams\" title=\"Cardano.Api.Modes\">AnyConsensusModeParams</a> &#8594; SecurityParam &#8594; <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/System-IO.html#t:IO\" title=\"System.IO\">IO</a> ()",
     "name": "chairmanTest",
     "module": "Cardano.Chairman",
     "link": "exe_cardano-node-chairman/Cardano-Chairman.html#v:chairmanTest"
@@ -12570,7 +12630,7 @@
     "link": "lib/Cardano-Node-Protocol-Cardano.html#t:CardanoProtocolInstantiationError"
   },
   {
-    "display_html": "<a href=\"#v:mkConsensusProtocol\">mkConsensusProtocol</a> &#8759; <a href=\"Cardano-Node-Configuration-POM.html#t:NodeConfiguration\" title=\"Cardano.Node.Configuration.POM\">NodeConfiguration</a> &#8594; <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/mtl-2.2.2/Control-Monad-Except.html#t:ExceptT\" title=\"Control.Monad.Except\">ExceptT</a> <a href=\"Cardano-Node-Protocol.html#t:ProtocolInstantiationError\" title=\"Cardano.Node.Protocol\">ProtocolInstantiationError</a> <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/System-IO.html#t:IO\" title=\"System.IO\">IO</a> <a href=\"Cardano-Node-Protocol.html#t:SomeConsensusProtocol\" title=\"Cardano.Node.Protocol\">SomeConsensusProtocol</a>",
+    "display_html": "<a href=\"#v:mkConsensusProtocol\">mkConsensusProtocol</a> &#8759; <a href=\"Cardano-Node-Types.html#t:NodeProtocolConfiguration\" title=\"Cardano.Node.Types\">NodeProtocolConfiguration</a> &#8594; <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:Maybe\" title=\"Distribution.Compat.Prelude.Internal\">Maybe</a> <a href=\"Cardano-Node-Types.html#t:ProtocolFilepaths\" title=\"Cardano.Node.Types\">ProtocolFilepaths</a> &#8594; <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/mtl-2.2.2/Control-Monad-Except.html#t:ExceptT\" title=\"Control.Monad.Except\">ExceptT</a> <a href=\"Cardano-Node-Protocol.html#t:ProtocolInstantiationError\" title=\"Cardano.Node.Protocol\">ProtocolInstantiationError</a> <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/System-IO.html#t:IO\" title=\"System.IO\">IO</a> <a href=\"Cardano-Node-Protocol.html#t:SomeConsensusProtocol\" title=\"Cardano.Node.Protocol\">SomeConsensusProtocol</a>",
     "name": "mkConsensusProtocol",
     "module": "Cardano.Node.Protocol",
     "link": "lib/Cardano-Node-Protocol.html#v:mkConsensusProtocol"
