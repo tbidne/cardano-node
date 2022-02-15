@@ -1956,6 +1956,12 @@
     "link": "lib/Cardano-Api-Address.html#v:fromShelleyAddr"
   },
   {
+    "display_html": "<a href=\"#v:fromShelleyAddrIsSbe\">fromShelleyAddrIsSbe</a> &#8759; <a href=\"Cardano-Api-Eras.html#t:IsShelleyBasedEra\" title=\"Cardano.Api.Eras\">IsShelleyBasedEra</a> era &#8658; Addr StandardCrypto &#8594; <a href=\"Cardano-Api-Address.html#t:AddressInEra\" title=\"Cardano.Api.Address\">AddressInEra</a> era",
+    "name": "fromShelleyAddrIsSbe",
+    "module": "Cardano.Api.Address",
+    "link": "lib/Cardano-Api-Address.html#v:fromShelleyAddrIsSbe"
+  },
+  {
     "display_html": "<a href=\"#v:fromShelleyPaymentCredential\">fromShelleyPaymentCredential</a> &#8759; PaymentCredential StandardCrypto &#8594; <a href=\"Cardano-Api-Address.html#t:PaymentCredential\" title=\"Cardano.Api.Address\">PaymentCredential</a>",
     "name": "fromShelleyPaymentCredential",
     "module": "Cardano.Api.Address",
@@ -6694,6 +6700,12 @@
     "name": "fromShelleyAddr",
     "module": "Cardano.Api.Shelley",
     "link": "lib/Cardano-Api-Shelley.html#v:fromShelleyAddr"
+  },
+  {
+    "display_html": "<a href=\"#v:fromShelleyAddrIsSbe\">fromShelleyAddrIsSbe</a> &#8759; <a href=\"Cardano-Api-Eras.html#t:IsShelleyBasedEra\" title=\"Cardano.Api.Eras\">IsShelleyBasedEra</a> era &#8658; Addr StandardCrypto &#8594; <a href=\"Cardano-Api-Address.html#t:AddressInEra\" title=\"Cardano.Api.Address\">AddressInEra</a> era",
+    "name": "fromShelleyAddrIsSbe",
+    "module": "Cardano.Api.Shelley",
+    "link": "lib/Cardano-Api-Shelley.html#v:fromShelleyAddrIsSbe"
   },
   {
     "display_html": "<a href=\"#v:toShelleyStakeCredential\">toShelleyStakeCredential</a> &#8759; <a href=\"Cardano-Api-Shelley.html#t:StakeCredential\" title=\"Cardano.Api.Shelley\">StakeCredential</a> &#8594; StakeCredential StandardCrypto",
