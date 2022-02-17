@@ -1962,6 +1962,12 @@
     "link": "lib/Cardano-Api-Address.html#v:fromShelleyAddrIsSbe"
   },
   {
+    "display_html": "<a href=\"#v:fromShelleyAddrToAny\">fromShelleyAddrToAny</a> &#8759; Addr StandardCrypto &#8594; <a href=\"Cardano-Api-Address.html#t:AddressAny\" title=\"Cardano.Api.Address\">AddressAny</a>",
+    "name": "fromShelleyAddrToAny",
+    "module": "Cardano.Api.Address",
+    "link": "lib/Cardano-Api-Address.html#v:fromShelleyAddrToAny"
+  },
+  {
     "display_html": "<a href=\"#v:fromShelleyPaymentCredential\">fromShelleyPaymentCredential</a> &#8759; PaymentCredential StandardCrypto &#8594; <a href=\"Cardano-Api-Address.html#t:PaymentCredential\" title=\"Cardano.Api.Address\">PaymentCredential</a>",
     "name": "fromShelleyPaymentCredential",
     "module": "Cardano.Api.Address",
@@ -6706,6 +6712,12 @@
     "name": "fromShelleyAddrIsSbe",
     "module": "Cardano.Api.Shelley",
     "link": "lib/Cardano-Api-Shelley.html#v:fromShelleyAddrIsSbe"
+  },
+  {
+    "display_html": "<a href=\"#v:fromShelleyAddrToAny\">fromShelleyAddrToAny</a> &#8759; Addr StandardCrypto &#8594; <a href=\"Cardano-Api-Address.html#t:AddressAny\" title=\"Cardano.Api.Address\">AddressAny</a>",
+    "name": "fromShelleyAddrToAny",
+    "module": "Cardano.Api.Shelley",
+    "link": "lib/Cardano-Api-Shelley.html#v:fromShelleyAddrToAny"
   },
   {
     "display_html": "<a href=\"#v:toShelleyStakeCredential\">toShelleyStakeCredential</a> &#8759; <a href=\"Cardano-Api-Shelley.html#t:StakeCredential\" title=\"Cardano.Api.Shelley\">StakeCredential</a> &#8594; StakeCredential StandardCrypto",
