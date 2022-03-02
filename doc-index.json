@@ -12918,6 +12918,12 @@
     "link": "lib/Cardano-Node-Configuration-Logging.html#v:createLoggingLayer"
   },
   {
+    "display_html": "<a href=\"#v:nodeBasicInfo\">nodeBasicInfo</a> &#8759; <a href=\"Cardano-Node-Configuration-POM.html#t:NodeConfiguration\" title=\"Cardano.Node.Configuration.POM\">NodeConfiguration</a> &#8594; <a href=\"Cardano-Node-Protocol-Types.html#t:SomeConsensusProtocol\" title=\"Cardano.Node.Protocol.Types\">SomeConsensusProtocol</a> &#8594; <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/time-1.9.3/Data-Time-Clock.html#t:UTCTime\" title=\"Data.Time.Clock\">UTCTime</a> &#8594; <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/System-IO.html#t:IO\" title=\"System.IO\">IO</a> [<a href=\"Cardano-Tracing-OrphanInstances-Common.html#t:LogObject\" title=\"Cardano.Tracing.OrphanInstances.Common\">LogObject</a> <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/text-1.2.4.1/Data-Text.html#t:Text\" title=\"Data.Text\">Text</a>]",
+    "name": "nodeBasicInfo",
+    "module": "Cardano.Node.Configuration.Logging",
+    "link": "lib/Cardano-Node-Configuration-Logging.html#v:nodeBasicInfo"
+  },
+  {
     "display_html": "<a href=\"#v:shutdownLoggingLayer\">shutdownLoggingLayer</a> &#8759; <a href=\"Cardano-Node-Configuration-Logging.html#t:LoggingLayer\" title=\"Cardano.Node.Configuration.Logging\">LoggingLayer</a> &#8594; <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/System-IO.html#t:IO\" title=\"System.IO\">IO</a> ()",
     "name": "shutdownLoggingLayer",
     "module": "Cardano.Node.Configuration.Logging",
