@@ -15,7 +15,7 @@
 </span><span id="line-15"></span><span>    </span><span class="annot"><a href="Cardano.Api.TxMetadata.html#validateTxMetadata"><span class="hs-identifier">validateTxMetadata</span></a></span><span class="hs-special">,</span><span>
 </span><span id="line-16"></span><span>    </span><span class="annot"><a href="Cardano.Api.TxMetadata.html#TxMetadataRangeError"><span class="hs-identifier">TxMetadataRangeError</span></a></span><span> </span><span class="hs-special">(</span><span class="hs-glyph">..</span><span class="hs-special">)</span><span class="hs-special">,</span><span>
 </span><span id="line-17"></span><span>
-</span><span id="line-18"></span><span>    </span><span class="annot"><span class="hs-comment">-- * Converstion to\/from JSON</span></span><span>
+</span><span id="line-18"></span><span>    </span><span class="annot"><span class="hs-comment">-- * Conversion to\/from JSON</span></span><span>
 </span><span id="line-19"></span><span>    </span><span class="annot"><a href="Cardano.Api.TxMetadata.html#TxMetadataJsonSchema"><span class="hs-identifier">TxMetadataJsonSchema</span></a></span><span> </span><span class="hs-special">(</span><span class="hs-glyph">..</span><span class="hs-special">)</span><span class="hs-special">,</span><span>
 </span><span id="line-20"></span><span>    </span><span class="annot"><a href="Cardano.Api.TxMetadata.html#metadataFromJson"><span class="hs-identifier">metadataFromJson</span></a></span><span class="hs-special">,</span><span>
 </span><span id="line-21"></span><span>    </span><span class="annot"><a href="Cardano.Api.TxMetadata.html#metadataToJson"><span class="hs-identifier">metadataToJson</span></a></span><span class="hs-special">,</span><span>
@@ -999,7 +999,7 @@ forall a b. (a -&gt; b) -&gt; [a] -&gt; [b]
 </span><a href="#local-6989586621679459457"><span class="hs-identifier hs-var">kvs</span></a></span><span> </span><span class="hs-special">]</span><span>
 </span><span id="line-412"></span><span>
 </span><span id="line-413"></span><span>    </span><span class="hs-comment">-- Metadata allows any value as a key, not just string as JSON does.</span><span>
-</span><span id="line-414"></span><span>    </span><span class="hs-comment">-- For simple types we just convert them to string dirctly.</span><span>
+</span><span id="line-414"></span><span>    </span><span class="hs-comment">-- For simple types we just convert them to string directly.</span><span>
 </span><span id="line-415"></span><span>    </span><span class="hs-comment">-- For structured keys we render them as JSON and use that as the string.</span><span>
 </span><span id="line-416"></span><span>    </span><span class="annot"><a href="#local-6989586621679459456"><span class="hs-identifier hs-type">convKey</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Cardano.Api.TxMetadata.html#TxMetadataValue"><span class="hs-identifier hs-type">TxMetadataValue</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/text-1.2.4.1/src"><span class="hs-identifier hs-type">Text</span></a></span><span>
 </span><span id="line-417"></span><span>    </span><span id="local-6989586621679459456"><span class="annot"><span class="annottext">convKey :: TxMetadataValue -&gt; Text

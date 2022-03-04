@@ -9,19 +9,19 @@
 </span><span id="line-9"></span><span>
 </span><span id="line-10"></span><span class="hs-comment">-- | The various Cardano protocol parameters, including:</span><span>
 </span><span id="line-11"></span><span class="hs-comment">--</span><span>
-</span><span id="line-12"></span><span class="hs-comment">-- * the current values of updateable protocol parameters: 'ProtocolParameters'</span><span>
+</span><span id="line-12"></span><span class="hs-comment">-- * the current values of updatable protocol parameters: 'ProtocolParameters'</span><span>
 </span><span id="line-13"></span><span class="hs-comment">-- * updates to protocol parameters: 'ProtocolParametersUpdate'</span><span>
 </span><span id="line-14"></span><span class="hs-comment">-- * update proposals that can be embedded in transactions: 'UpdateProposal'</span><span>
 </span><span id="line-15"></span><span class="hs-comment">-- * parameters fixed in the genesis file: 'GenesisParameters'</span><span>
 </span><span id="line-16"></span><span class="hs-comment">--</span><span>
 </span><span id="line-17"></span><span class="hs-keyword">module</span><span> </span><span class="hs-identifier">Cardano.Api.ProtocolParameters</span><span> </span><span class="hs-special">(</span><span>
-</span><span id="line-18"></span><span>    </span><span class="annot"><span class="hs-comment">-- * The updateable protocol paramaters</span></span><span>
+</span><span id="line-18"></span><span>    </span><span class="annot"><span class="hs-comment">-- * The updatable protocol parameters</span></span><span>
 </span><span id="line-19"></span><span>    </span><span class="annot"><a href="Cardano.Api.ProtocolParameters.html#ProtocolParameters"><span class="hs-identifier">ProtocolParameters</span></a></span><span class="hs-special">(</span><span class="hs-glyph">..</span><span class="hs-special">)</span><span class="hs-special">,</span><span>
 </span><span id="line-20"></span><span>    </span><span class="annot"><a href="Cardano.Api.ProtocolParameters.html#checkProtocolParameters"><span class="hs-identifier">checkProtocolParameters</span></a></span><span class="hs-special">,</span><span>
 </span><span id="line-21"></span><span>    </span><span class="annot"><a href="Cardano.Api.ProtocolParameters.html#ProtocolParametersError"><span class="hs-identifier">ProtocolParametersError</span></a></span><span class="hs-special">(</span><span class="hs-glyph">..</span><span class="hs-special">)</span><span class="hs-special">,</span><span>
 </span><span id="line-22"></span><span>    </span><span class="annot"><span class="hs-identifier">EpochNo</span></span><span class="hs-special">,</span><span>
 </span><span id="line-23"></span><span>
-</span><span id="line-24"></span><span>    </span><span class="annot"><span class="hs-comment">-- * Updates to the protocol paramaters</span></span><span>
+</span><span id="line-24"></span><span>    </span><span class="annot"><span class="hs-comment">-- * Updates to the protocol parameters</span></span><span>
 </span><span id="line-25"></span><span>    </span><span class="annot"><a href="Cardano.Api.ProtocolParameters.html#ProtocolParametersUpdate"><span class="hs-identifier">ProtocolParametersUpdate</span></a></span><span class="hs-special">(</span><span class="hs-glyph">..</span><span class="hs-special">)</span><span class="hs-special">,</span><span>
 </span><span id="line-26"></span><span>
 </span><span id="line-27"></span><span>    </span><span class="annot"><span class="hs-comment">-- * PraosNonce</span></span><span>
@@ -34,7 +34,7 @@
 </span><span id="line-34"></span><span>    </span><span class="annot"><a href="Cardano.Api.ProtocolParameters.html#CostModel"><span class="hs-identifier">CostModel</span></a></span><span class="hs-special">(</span><span class="hs-glyph">..</span><span class="hs-special">)</span><span class="hs-special">,</span><span>
 </span><span id="line-35"></span><span>    </span><span class="annot"><a href="Cardano.Api.ProtocolParameters.html#validateCostModel"><span class="hs-identifier">validateCostModel</span></a></span><span class="hs-special">,</span><span>
 </span><span id="line-36"></span><span>
-</span><span id="line-37"></span><span>    </span><span class="annot"><span class="hs-comment">-- * Update proposals to change the protocol paramaters</span></span><span>
+</span><span id="line-37"></span><span>    </span><span class="annot"><span class="hs-comment">-- * Update proposals to change the protocol parameters</span></span><span>
 </span><span id="line-38"></span><span>    </span><span class="annot"><a href="Cardano.Api.ProtocolParameters.html#UpdateProposal"><span class="hs-identifier">UpdateProposal</span></a></span><span class="hs-special">(</span><span class="hs-glyph">..</span><span class="hs-special">)</span><span class="hs-special">,</span><span>
 </span><span id="line-39"></span><span>    </span><span class="annot"><a href="Cardano.Api.ProtocolParameters.html#makeShelleyUpdateProposal"><span class="hs-identifier">makeShelleyUpdateProposal</span></a></span><span class="hs-special">,</span><span>
 </span><span id="line-40"></span><span>
@@ -113,16 +113,16 @@
 </span><span id="line-113"></span><span class="hs-keyword">import</span><span>           </span><span class="annot"><a href="Cardano.Api.Value.html"><span class="hs-identifier">Cardano.Api.Value</span></a></span><span>
 </span><span id="line-114"></span><span>
 </span><span id="line-115"></span><span>
-</span><span id="line-116"></span><span class="hs-comment">-- | The values of the set of /updateable/ protocol paramaters. At any</span><span>
-</span><span id="line-117"></span><span class="hs-comment">-- particular point on the chain there is a current set of paramaters in use.</span><span>
+</span><span id="line-116"></span><span class="hs-comment">-- | The values of the set of /updatable/ protocol parameters. At any</span><span>
+</span><span id="line-117"></span><span class="hs-comment">-- particular point on the chain there is a current set of parameters in use.</span><span>
 </span><span id="line-118"></span><span class="hs-comment">--</span><span>
-</span><span id="line-119"></span><span class="hs-comment">-- These paramaters can be updated (at epoch boundaries) via an</span><span>
+</span><span id="line-119"></span><span class="hs-comment">-- These parameters can be updated (at epoch boundaries) via an</span><span>
 </span><span id="line-120"></span><span class="hs-comment">-- 'UpdateProposal', which contains a 'ProtocolParametersUpdate'.</span><span>
 </span><span id="line-121"></span><span class="hs-comment">--</span><span>
 </span><span id="line-122"></span><span class="hs-comment">-- The 'ProtocolParametersUpdate' is essentially a diff for the</span><span>
 </span><span id="line-123"></span><span class="hs-comment">-- 'ProtocolParameters'.</span><span>
 </span><span id="line-124"></span><span class="hs-comment">--</span><span>
-</span><span id="line-125"></span><span class="hs-comment">-- There are also paramaters fixed in the Genesis file. See 'GenesisParameters'.</span><span>
+</span><span id="line-125"></span><span class="hs-comment">-- There are also parameters fixed in the Genesis file. See 'GenesisParameters'.</span><span>
 </span><span id="line-126"></span><span class="hs-comment">--</span><span>
 </span><span id="line-127"></span><span id="local-6989586621679468069"><span id="local-6989586621679468070"></span></span><span class="hs-keyword">data</span><span> </span><span id="ProtocolParameters"><span class="annot"><a href="Cardano.Api.ProtocolParameters.html#ProtocolParameters"><span class="hs-identifier hs-var">ProtocolParameters</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-128"></span><span>     </span><span id="ProtocolParameters"><span class="annot"><a href="Cardano.Api.ProtocolParameters.html#ProtocolParameters"><span class="hs-identifier hs-var">ProtocolParameters</span></a></span></span><span> </span><span class="hs-special">{</span><span>
@@ -284,7 +284,7 @@
 </span><span id="line-263"></span><span>       </span><span id="protocolParamMaxBlockExUnits"><span class="annot"><span class="annottext">ProtocolParameters -&gt; Maybe ExecutionUnits
 </span><a href="Cardano.Api.ProtocolParameters.html#protocolParamMaxBlockExUnits"><span class="hs-identifier hs-var hs-var">protocolParamMaxBlockExUnits</span></a></span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Maybe</span></a></span><span> </span><span class="annot"><a href="Cardano.Api.Script.html#ExecutionUnits"><span class="hs-identifier hs-type">ExecutionUnits</span></a></span><span class="hs-special">,</span><span>
 </span><span id="line-264"></span><span>
-</span><span id="line-265"></span><span>       </span><span class="hs-comment">-- | Max size of a Value in a tx ouput.</span><span>
+</span><span id="line-265"></span><span>       </span><span class="hs-comment">-- | Max size of a Value in a tx output.</span><span>
 </span><span id="line-266"></span><span>       </span><span class="hs-comment">--</span><span>
 </span><span id="line-267"></span><span>       </span><span class="hs-comment">-- /Introduced in Alonzo/</span><span>
 </span><span id="line-268"></span><span>       </span><span id="protocolParamMaxValueSize"><span class="annot"><span class="annottext">ProtocolParameters -&gt; Maybe Natural
@@ -1501,7 +1501,7 @@ forall kv v. (KeyValue kv, ToJSON v) =&gt; Text -&gt; v -&gt; kv
 </span><span id="line-345"></span><span>
 </span><span id="line-346"></span><span>
 </span><span id="line-347"></span><span class="hs-comment">-- ----------------------------------------------------------------------------</span><span>
-</span><span id="line-348"></span><span class="hs-comment">-- Updates to the protocol paramaters</span><span>
+</span><span id="line-348"></span><span class="hs-comment">-- Updates to the protocol parameters</span><span>
 </span><span id="line-349"></span><span class="hs-comment">--</span><span>
 </span><span id="line-350"></span><span>
 </span><span id="line-351"></span><span class="hs-comment">-- | The representation of a change in the 'ProtocolParameters'.</span><span>
@@ -1833,7 +1833,7 @@ forall a. (ProtocolParametersUpdate -&gt; Maybe a) -&gt; Maybe a
 forall a. (ProtocolParametersUpdate -&gt; Maybe a) -&gt; Maybe a
 </span><a href="#local-6989586621679467934"><span class="hs-identifier hs-var">merge</span></a></span><span> </span><span class="annot"><span class="annottext">ProtocolParametersUpdate -&gt; Maybe Rational
 </span><a href="Cardano.Api.ProtocolParameters.html#protocolUpdateTreasuryCut"><span class="hs-identifier hs-var hs-var">protocolUpdateTreasuryCut</span></a></span><span>
-</span><span id="line-531"></span><span>      </span><span class="hs-comment">-- Intoduced in Alonzo below.</span><span>
+</span><span id="line-531"></span><span>      </span><span class="hs-comment">-- Introduced in Alonzo below.</span><span>
 </span><span id="line-532"></span><span>      </span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">protocolUpdateUTxOCostPerWord :: Maybe Lovelace
 </span><a href="Cardano.Api.ProtocolParameters.html#protocolUpdateUTxOCostPerWord"><span class="hs-identifier hs-var">protocolUpdateUTxOCostPerWord</span></a></span><span>     </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">(ProtocolParametersUpdate -&gt; Maybe Lovelace) -&gt; Maybe Lovelace
 forall a. (ProtocolParametersUpdate -&gt; Maybe a) -&gt; Maybe a
@@ -5499,7 +5499,7 @@ HKD StrictMaybe Natural
 </span><span id="line-1166"></span><span>
 </span><span id="line-1167"></span><span>
 </span><span id="line-1168"></span><span class="hs-comment">-- ----------------------------------------------------------------------------</span><span>
-</span><span id="line-1169"></span><span class="hs-comment">-- Conversion functions: protocol paramaters to ledger types</span><span>
+</span><span id="line-1169"></span><span class="hs-comment">-- Conversion functions: protocol parameters to ledger types</span><span>
 </span><span id="line-1170"></span><span class="hs-comment">--</span><span>
 </span><span id="line-1171"></span><span>
 </span><span id="line-1172"></span><span class="hs-comment">--TODO: this has to be a Maybe or Either for some of the parameter validation.</span><span>
@@ -6052,7 +6052,7 @@ forall a. HasCallStack =&gt; String -&gt; a
 </span><span id="line-1317"></span><span>
 </span><span id="line-1318"></span><span>
 </span><span id="line-1319"></span><span class="hs-comment">-- ----------------------------------------------------------------------------</span><span>
-</span><span id="line-1320"></span><span class="hs-comment">-- Conversion functions: protocol paramaters from ledger types</span><span>
+</span><span id="line-1320"></span><span class="hs-comment">-- Conversion functions: protocol parameters from ledger types</span><span>
 </span><span id="line-1321"></span><span class="hs-comment">--</span><span>
 </span><span id="line-1322"></span><span>
 </span><span id="line-1323"></span><span id="local-6989586621679467410"><span class="annot"><a href="Cardano.Api.ProtocolParameters.html#fromLedgerPParams"><span class="hs-identifier hs-type">fromLedgerPParams</span></a></span><span>
