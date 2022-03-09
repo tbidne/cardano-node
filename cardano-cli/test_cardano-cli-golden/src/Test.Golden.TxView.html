@@ -60,17 +60,17 @@ FilePath -&gt; (FilePath -&gt; m ()) -&gt; m ()
 </span><span class="hs-string">&quot;tmp&quot;</span></span><span> </span><span class="annot"><span class="annottext">((FilePath -&gt; Integration ()) -&gt; Integration ())
 -&gt; (FilePath -&gt; Integration ()) -&gt; Integration ()
 forall a b. (a -&gt; b) -&gt; a -&gt; b
-</span><a href="../file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="hs-glyph">\</span><span id="local-6989586621679214008"><span class="annot"><span class="annottext">FilePath
-</span><a href="#local-6989586621679214008"><span class="hs-identifier hs-var">tempDir</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-keyword">do</span><span>
-</span><span id="line-32"></span><span>    </span><span id="local-6989586621679214007"><span class="annot"><span class="annottext">FilePath
-</span><a href="#local-6989586621679214007"><span class="hs-identifier hs-var">transactionBodyFile</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">FilePath
+</span><a href="../file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="hs-glyph">\</span><span id="local-6989586621679214009"><span class="annot"><span class="annottext">FilePath
+</span><a href="#local-6989586621679214009"><span class="hs-identifier hs-var">tempDir</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-keyword">do</span><span>
+</span><span id="line-32"></span><span>    </span><span id="local-6989586621679214008"><span class="annot"><span class="annottext">FilePath
+</span><a href="#local-6989586621679214008"><span class="hs-identifier hs-var">transactionBodyFile</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">FilePath
 -&gt; FilePath
 -&gt; PropertyT (ReaderT IntegrationState (ResourceT IO)) FilePath
 forall (m :: * -&gt; *).
 (MonadTest m, HasCallStack) =&gt;
 FilePath -&gt; FilePath -&gt; m FilePath
 </span><a href="Test.OptParse.html#noteTempFile"><span class="hs-identifier hs-var">noteTempFile</span></a></span><span> </span><span class="annot"><span class="annottext">FilePath
-</span><a href="#local-6989586621679214008"><span class="hs-identifier hs-var">tempDir</span></a></span><span> </span><span class="annot"><span class="annottext">FilePath
+</span><a href="#local-6989586621679214009"><span class="hs-identifier hs-var">tempDir</span></a></span><span> </span><span class="annot"><span class="annottext">FilePath
 </span><span class="hs-string">&quot;transaction-body-file&quot;</span></span><span>
 </span><span id="line-33"></span><span>
 </span><span id="line-34"></span><span>    </span><span class="hs-comment">-- Create transaction body</span><span>
@@ -106,12 +106,12 @@ forall (m :: * -&gt; *).
             \+68&quot;</span></span><span>
 </span><span id="line-45"></span><span>        </span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">FilePath
 </span><span class="hs-string">&quot;--out-file&quot;</span></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">FilePath
-</span><a href="#local-6989586621679214007"><span class="hs-identifier hs-var">transactionBodyFile</span></a></span><span>
+</span><a href="#local-6989586621679214008"><span class="hs-identifier hs-var">transactionBodyFile</span></a></span><span>
 </span><span id="line-46"></span><span>        </span><span class="hs-special">]</span><span>
 </span><span id="line-47"></span><span>
 </span><span id="line-48"></span><span>    </span><span class="hs-comment">-- View transaction body</span><span>
-</span><span id="line-49"></span><span>    </span><span id="local-6989586621679214005"><span class="annot"><span class="annottext">FilePath
-</span><a href="#local-6989586621679214005"><span class="hs-identifier hs-var">result</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span>
+</span><span id="line-49"></span><span>    </span><span id="local-6989586621679214006"><span class="annot"><span class="annottext">FilePath
+</span><a href="#local-6989586621679214006"><span class="hs-identifier hs-var">result</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span>
 </span><span id="line-50"></span><span>      </span><span class="annot"><span class="annottext">[FilePath]
 -&gt; PropertyT (ReaderT IntegrationState (ResourceT IO)) FilePath
 forall (m :: * -&gt; *).
@@ -122,13 +122,13 @@ forall (m :: * -&gt; *).
 </span><span class="hs-string">&quot;transaction&quot;</span></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">FilePath
 </span><span class="hs-string">&quot;view&quot;</span></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">FilePath
 </span><span class="hs-string">&quot;--tx-body-file&quot;</span></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">FilePath
-</span><a href="#local-6989586621679214007"><span class="hs-identifier hs-var">transactionBodyFile</span></a></span><span class="hs-special">]</span><span>
+</span><a href="#local-6989586621679214008"><span class="hs-identifier hs-var">transactionBodyFile</span></a></span><span class="hs-special">]</span><span>
 </span><span id="line-52"></span><span>    </span><span class="annot"><span class="annottext">FilePath -&gt; FilePath -&gt; Integration ()
 forall (m :: * -&gt; *).
 (MonadIO m, MonadTest m) =&gt;
 FilePath -&gt; FilePath -&gt; m ()
 </span><a href="Test.Utilities.html#diffVsGoldenFile"><span class="hs-identifier hs-var">diffVsGoldenFile</span></a></span><span> </span><span class="annot"><span class="annottext">FilePath
-</span><a href="#local-6989586621679214005"><span class="hs-identifier hs-var">result</span></a></span><span> </span><span class="annot"><span class="annottext">FilePath
+</span><a href="#local-6989586621679214006"><span class="hs-identifier hs-var">result</span></a></span><span> </span><span class="annot"><span class="annottext">FilePath
 </span><span class="hs-string">&quot;test/data/golden/byron/transaction-view.out&quot;</span></span><span>
 </span><span id="line-53"></span><span>
 </span><span id="line-54"></span><span class="annot"><a href="Test.Golden.TxView.html#golden_view_shelley"><span class="hs-identifier hs-type">golden_view_shelley</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><span class="hs-identifier hs-type">Property</span></span><span>
@@ -147,31 +147,31 @@ FilePath -&gt; (FilePath -&gt; m ()) -&gt; m ()
 </span><span class="hs-string">&quot;tmp&quot;</span></span><span> </span><span class="annot"><span class="annottext">((FilePath -&gt; Integration ()) -&gt; Integration ())
 -&gt; (FilePath -&gt; Integration ()) -&gt; Integration ()
 forall a b. (a -&gt; b) -&gt; a -&gt; b
-</span><a href="../file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="hs-glyph">\</span><span id="local-6989586621679214004"><span class="annot"><span class="annottext">FilePath
-</span><a href="#local-6989586621679214004"><span class="hs-identifier hs-var">tempDir</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-keyword">do</span><span>
-</span><span id="line-58"></span><span>    </span><span id="local-6989586621679214003"><span class="annot"><span class="annottext">FilePath
-</span><a href="#local-6989586621679214003"><span class="hs-identifier hs-var">updateProposalFile</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">FilePath
+</span><a href="../file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="hs-glyph">\</span><span id="local-6989586621679214005"><span class="annot"><span class="annottext">FilePath
+</span><a href="#local-6989586621679214005"><span class="hs-identifier hs-var">tempDir</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-keyword">do</span><span>
+</span><span id="line-58"></span><span>    </span><span id="local-6989586621679214004"><span class="annot"><span class="annottext">FilePath
+</span><a href="#local-6989586621679214004"><span class="hs-identifier hs-var">updateProposalFile</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">FilePath
 -&gt; FilePath
 -&gt; PropertyT (ReaderT IntegrationState (ResourceT IO)) FilePath
 forall (m :: * -&gt; *).
 (MonadTest m, HasCallStack) =&gt;
 FilePath -&gt; FilePath -&gt; m FilePath
 </span><a href="Test.OptParse.html#noteTempFile"><span class="hs-identifier hs-var">noteTempFile</span></a></span><span> </span><span class="annot"><span class="annottext">FilePath
-</span><a href="#local-6989586621679214004"><span class="hs-identifier hs-var">tempDir</span></a></span><span> </span><span class="annot"><span class="annottext">FilePath
+</span><a href="#local-6989586621679214005"><span class="hs-identifier hs-var">tempDir</span></a></span><span> </span><span class="annot"><span class="annottext">FilePath
 </span><span class="hs-string">&quot;update-proposal&quot;</span></span><span>
-</span><span id="line-59"></span><span>    </span><span id="local-6989586621679214002"><span class="annot"><span class="annottext">FilePath
-</span><a href="#local-6989586621679214002"><span class="hs-identifier hs-var">transactionBodyFile</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">FilePath
+</span><span id="line-59"></span><span>    </span><span id="local-6989586621679214003"><span class="annot"><span class="annottext">FilePath
+</span><a href="#local-6989586621679214003"><span class="hs-identifier hs-var">transactionBodyFile</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">FilePath
 -&gt; FilePath
 -&gt; PropertyT (ReaderT IntegrationState (ResourceT IO)) FilePath
 forall (m :: * -&gt; *).
 (MonadTest m, HasCallStack) =&gt;
 FilePath -&gt; FilePath -&gt; m FilePath
 </span><a href="Test.OptParse.html#noteTempFile"><span class="hs-identifier hs-var">noteTempFile</span></a></span><span> </span><span class="annot"><span class="annottext">FilePath
-</span><a href="#local-6989586621679214004"><span class="hs-identifier hs-var">tempDir</span></a></span><span> </span><span class="annot"><span class="annottext">FilePath
+</span><a href="#local-6989586621679214005"><span class="hs-identifier hs-var">tempDir</span></a></span><span> </span><span class="annot"><span class="annottext">FilePath
 </span><span class="hs-string">&quot;transaction-body&quot;</span></span><span>
 </span><span id="line-60"></span><span>
-</span><span id="line-61"></span><span>    </span><span class="hs-keyword">let</span><span> </span><span id="local-6989586621679214001"><span class="annot"><span class="annottext">extraEntropySeed :: FilePath
-</span><a href="#local-6989586621679214001"><span class="hs-identifier hs-var hs-var">extraEntropySeed</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">FilePath
+</span><span id="line-61"></span><span>    </span><span class="hs-keyword">let</span><span> </span><span id="local-6989586621679214002"><span class="annot"><span class="annottext">extraEntropySeed :: FilePath
+</span><a href="#local-6989586621679214002"><span class="hs-identifier hs-var hs-var">extraEntropySeed</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">FilePath
 </span><span class="hs-string">&quot;c0ffee&quot;</span></span><span>
 </span><span id="line-62"></span><span>    </span><span class="annot"><span class="annottext">FilePath -&gt; Integration ()
 forall (m :: * -&gt; *).
@@ -183,7 +183,7 @@ forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><span class="hs-string">&quot;extra entropy seed: &quot;</span></span><span> </span><span class="annot"><span class="annottext">FilePath -&gt; FilePath -&gt; FilePath
 forall a. [a] -&gt; [a] -&gt; [a]
 </span><a href="../file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">++</span></a></span><span> </span><span class="annot"><span class="annottext">FilePath
-</span><a href="#local-6989586621679214001"><span class="hs-identifier hs-var">extraEntropySeed</span></a></span><span>
+</span><a href="#local-6989586621679214002"><span class="hs-identifier hs-var">extraEntropySeed</span></a></span><span>
 </span><span id="line-63"></span><span>    </span><span class="annot"><span class="annottext">FilePath -&gt; Integration ()
 forall (m :: * -&gt; *).
 (MonadTest m, HasCallStack) =&gt;
@@ -229,7 +229,7 @@ forall (m :: * -&gt; *).
 </span><span class="hs-string">&quot;64&quot;</span></span><span>
 </span><span id="line-77"></span><span>        </span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">FilePath
 </span><span class="hs-string">&quot;--extra-entropy&quot;</span></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">FilePath
-</span><a href="#local-6989586621679214001"><span class="hs-identifier hs-var">extraEntropySeed</span></a></span><span>
+</span><a href="#local-6989586621679214002"><span class="hs-identifier hs-var">extraEntropySeed</span></a></span><span>
 </span><span id="line-78"></span><span>        </span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">FilePath
 </span><span class="hs-string">&quot;--genesis-verification-key-file&quot;</span></span><span>
 </span><span id="line-79"></span><span>        </span><span class="hs-special">,</span><span>   </span><span class="annot"><span class="annottext">FilePath
@@ -266,7 +266,7 @@ forall (m :: * -&gt; *).
 </span><span class="hs-string">&quot;80&quot;</span></span><span>
 </span><span id="line-90"></span><span>        </span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">FilePath
 </span><span class="hs-string">&quot;--out-file&quot;</span></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">FilePath
-</span><a href="#local-6989586621679214003"><span class="hs-identifier hs-var">updateProposalFile</span></a></span><span>
+</span><a href="#local-6989586621679214004"><span class="hs-identifier hs-var">updateProposalFile</span></a></span><span>
 </span><span id="line-91"></span><span>        </span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">FilePath
 </span><span class="hs-string">&quot;--pool-influence&quot;</span></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">FilePath
 </span><span class="hs-string">&quot;82/83&quot;</span></span><span>
@@ -330,15 +330,15 @@ forall (m :: * -&gt; *).
             \+42&quot;</span></span><span>
 </span><span id="line-114"></span><span>        </span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">FilePath
 </span><span class="hs-string">&quot;--update-proposal-file&quot;</span></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">FilePath
-</span><a href="#local-6989586621679214003"><span class="hs-identifier hs-var">updateProposalFile</span></a></span><span>
+</span><a href="#local-6989586621679214004"><span class="hs-identifier hs-var">updateProposalFile</span></a></span><span>
 </span><span id="line-115"></span><span>        </span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">FilePath
 </span><span class="hs-string">&quot;--out-file&quot;</span></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">FilePath
-</span><a href="#local-6989586621679214002"><span class="hs-identifier hs-var">transactionBodyFile</span></a></span><span>
+</span><a href="#local-6989586621679214003"><span class="hs-identifier hs-var">transactionBodyFile</span></a></span><span>
 </span><span id="line-116"></span><span>        </span><span class="hs-special">]</span><span>
 </span><span id="line-117"></span><span>
 </span><span id="line-118"></span><span>    </span><span class="hs-comment">-- View transaction body</span><span>
-</span><span id="line-119"></span><span>    </span><span id="local-6989586621679214000"><span class="annot"><span class="annottext">FilePath
-</span><a href="#local-6989586621679214000"><span class="hs-identifier hs-var">result</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span>
+</span><span id="line-119"></span><span>    </span><span id="local-6989586621679214001"><span class="annot"><span class="annottext">FilePath
+</span><a href="#local-6989586621679214001"><span class="hs-identifier hs-var">result</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span>
 </span><span id="line-120"></span><span>      </span><span class="annot"><span class="annottext">[FilePath]
 -&gt; PropertyT (ReaderT IntegrationState (ResourceT IO)) FilePath
 forall (m :: * -&gt; *).
@@ -349,13 +349,13 @@ forall (m :: * -&gt; *).
 </span><span class="hs-string">&quot;transaction&quot;</span></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">FilePath
 </span><span class="hs-string">&quot;view&quot;</span></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">FilePath
 </span><span class="hs-string">&quot;--tx-body-file&quot;</span></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">FilePath
-</span><a href="#local-6989586621679214002"><span class="hs-identifier hs-var">transactionBodyFile</span></a></span><span class="hs-special">]</span><span>
+</span><a href="#local-6989586621679214003"><span class="hs-identifier hs-var">transactionBodyFile</span></a></span><span class="hs-special">]</span><span>
 </span><span id="line-122"></span><span>    </span><span class="annot"><span class="annottext">FilePath -&gt; FilePath -&gt; Integration ()
 forall (m :: * -&gt; *).
 (MonadIO m, MonadTest m) =&gt;
 FilePath -&gt; FilePath -&gt; m ()
 </span><a href="Test.Utilities.html#diffVsGoldenFile"><span class="hs-identifier hs-var">diffVsGoldenFile</span></a></span><span> </span><span class="annot"><span class="annottext">FilePath
-</span><a href="#local-6989586621679214000"><span class="hs-identifier hs-var">result</span></a></span><span> </span><span class="annot"><span class="annottext">FilePath
+</span><a href="#local-6989586621679214001"><span class="hs-identifier hs-var">result</span></a></span><span> </span><span class="annot"><span class="annottext">FilePath
 </span><span class="hs-string">&quot;test/data/golden/shelley/transaction-view.out&quot;</span></span><span>
 </span><span id="line-123"></span><span>
 </span><span id="line-124"></span><span class="annot"><a href="Test.Golden.TxView.html#golden_view_allegra"><span class="hs-identifier hs-type">golden_view_allegra</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><span class="hs-identifier hs-type">Property</span></span><span>
@@ -374,17 +374,17 @@ FilePath -&gt; (FilePath -&gt; m ()) -&gt; m ()
 </span><span class="hs-string">&quot;tmp&quot;</span></span><span> </span><span class="annot"><span class="annottext">((FilePath -&gt; Integration ()) -&gt; Integration ())
 -&gt; (FilePath -&gt; Integration ()) -&gt; Integration ()
 forall a b. (a -&gt; b) -&gt; a -&gt; b
-</span><a href="../file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="hs-glyph">\</span><span id="local-6989586621679213999"><span class="annot"><span class="annottext">FilePath
-</span><a href="#local-6989586621679213999"><span class="hs-identifier hs-var">tempDir</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-keyword">do</span><span>
-</span><span id="line-128"></span><span>    </span><span id="local-6989586621679213998"><span class="annot"><span class="annottext">FilePath
-</span><a href="#local-6989586621679213998"><span class="hs-identifier hs-var">transactionBodyFile</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">FilePath
+</span><a href="../file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="hs-glyph">\</span><span id="local-6989586621679214000"><span class="annot"><span class="annottext">FilePath
+</span><a href="#local-6989586621679214000"><span class="hs-identifier hs-var">tempDir</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-keyword">do</span><span>
+</span><span id="line-128"></span><span>    </span><span id="local-6989586621679213999"><span class="annot"><span class="annottext">FilePath
+</span><a href="#local-6989586621679213999"><span class="hs-identifier hs-var">transactionBodyFile</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">FilePath
 -&gt; FilePath
 -&gt; PropertyT (ReaderT IntegrationState (ResourceT IO)) FilePath
 forall (m :: * -&gt; *).
 (MonadTest m, HasCallStack) =&gt;
 FilePath -&gt; FilePath -&gt; m FilePath
 </span><a href="Test.OptParse.html#noteTempFile"><span class="hs-identifier hs-var">noteTempFile</span></a></span><span> </span><span class="annot"><span class="annottext">FilePath
-</span><a href="#local-6989586621679213999"><span class="hs-identifier hs-var">tempDir</span></a></span><span> </span><span class="annot"><span class="annottext">FilePath
+</span><a href="#local-6989586621679214000"><span class="hs-identifier hs-var">tempDir</span></a></span><span> </span><span class="annot"><span class="annottext">FilePath
 </span><span class="hs-string">&quot;transaction-body-file&quot;</span></span><span>
 </span><span id="line-129"></span><span>
 </span><span id="line-130"></span><span>    </span><span class="hs-comment">-- Create transaction body</span><span>
@@ -428,12 +428,12 @@ forall (m :: * -&gt; *).
 </span><span class="hs-string">&quot;101&quot;</span></span><span>
 </span><span id="line-145"></span><span>        </span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">FilePath
 </span><span class="hs-string">&quot;--out-file&quot;</span></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">FilePath
-</span><a href="#local-6989586621679213998"><span class="hs-identifier hs-var">transactionBodyFile</span></a></span><span>
+</span><a href="#local-6989586621679213999"><span class="hs-identifier hs-var">transactionBodyFile</span></a></span><span>
 </span><span id="line-146"></span><span>        </span><span class="hs-special">]</span><span>
 </span><span id="line-147"></span><span>
 </span><span id="line-148"></span><span>    </span><span class="hs-comment">-- View transaction body</span><span>
-</span><span id="line-149"></span><span>    </span><span id="local-6989586621679213997"><span class="annot"><span class="annottext">FilePath
-</span><a href="#local-6989586621679213997"><span class="hs-identifier hs-var">result</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span>
+</span><span id="line-149"></span><span>    </span><span id="local-6989586621679213998"><span class="annot"><span class="annottext">FilePath
+</span><a href="#local-6989586621679213998"><span class="hs-identifier hs-var">result</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span>
 </span><span id="line-150"></span><span>      </span><span class="annot"><span class="annottext">[FilePath]
 -&gt; PropertyT (ReaderT IntegrationState (ResourceT IO)) FilePath
 forall (m :: * -&gt; *).
@@ -444,13 +444,13 @@ forall (m :: * -&gt; *).
 </span><span class="hs-string">&quot;transaction&quot;</span></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">FilePath
 </span><span class="hs-string">&quot;view&quot;</span></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">FilePath
 </span><span class="hs-string">&quot;--tx-body-file&quot;</span></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">FilePath
-</span><a href="#local-6989586621679213998"><span class="hs-identifier hs-var">transactionBodyFile</span></a></span><span class="hs-special">]</span><span>
+</span><a href="#local-6989586621679213999"><span class="hs-identifier hs-var">transactionBodyFile</span></a></span><span class="hs-special">]</span><span>
 </span><span id="line-152"></span><span>    </span><span class="annot"><span class="annottext">FilePath -&gt; FilePath -&gt; Integration ()
 forall (m :: * -&gt; *).
 (MonadIO m, MonadTest m) =&gt;
 FilePath -&gt; FilePath -&gt; m ()
 </span><a href="Test.Utilities.html#diffVsGoldenFile"><span class="hs-identifier hs-var">diffVsGoldenFile</span></a></span><span> </span><span class="annot"><span class="annottext">FilePath
-</span><a href="#local-6989586621679213997"><span class="hs-identifier hs-var">result</span></a></span><span> </span><span class="annot"><span class="annottext">FilePath
+</span><a href="#local-6989586621679213998"><span class="hs-identifier hs-var">result</span></a></span><span> </span><span class="annot"><span class="annottext">FilePath
 </span><span class="hs-string">&quot;test/data/golden/allegra/transaction-view.out&quot;</span></span><span>
 </span><span id="line-153"></span><span>
 </span><span id="line-154"></span><span class="annot"><a href="Test.Golden.TxView.html#golden_view_mary"><span class="hs-identifier hs-type">golden_view_mary</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><span class="hs-identifier hs-type">Property</span></span><span>
@@ -469,17 +469,17 @@ FilePath -&gt; (FilePath -&gt; m ()) -&gt; m ()
 </span><span class="hs-string">&quot;tmp&quot;</span></span><span> </span><span class="annot"><span class="annottext">((FilePath -&gt; Integration ()) -&gt; Integration ())
 -&gt; (FilePath -&gt; Integration ()) -&gt; Integration ()
 forall a b. (a -&gt; b) -&gt; a -&gt; b
-</span><a href="../file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="hs-glyph">\</span><span id="local-6989586621679213996"><span class="annot"><span class="annottext">FilePath
-</span><a href="#local-6989586621679213996"><span class="hs-identifier hs-var">tempDir</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-keyword">do</span><span>
-</span><span id="line-158"></span><span>    </span><span id="local-6989586621679213995"><span class="annot"><span class="annottext">FilePath
-</span><a href="#local-6989586621679213995"><span class="hs-identifier hs-var">transactionBodyFile</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">FilePath
+</span><a href="../file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="hs-glyph">\</span><span id="local-6989586621679213997"><span class="annot"><span class="annottext">FilePath
+</span><a href="#local-6989586621679213997"><span class="hs-identifier hs-var">tempDir</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-keyword">do</span><span>
+</span><span id="line-158"></span><span>    </span><span id="local-6989586621679213996"><span class="annot"><span class="annottext">FilePath
+</span><a href="#local-6989586621679213996"><span class="hs-identifier hs-var">transactionBodyFile</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">FilePath
 -&gt; FilePath
 -&gt; PropertyT (ReaderT IntegrationState (ResourceT IO)) FilePath
 forall (m :: * -&gt; *).
 (MonadTest m, HasCallStack) =&gt;
 FilePath -&gt; FilePath -&gt; m FilePath
 </span><a href="Test.OptParse.html#noteTempFile"><span class="hs-identifier hs-var">noteTempFile</span></a></span><span> </span><span class="annot"><span class="annottext">FilePath
-</span><a href="#local-6989586621679213996"><span class="hs-identifier hs-var">tempDir</span></a></span><span> </span><span class="annot"><span class="annottext">FilePath
+</span><a href="#local-6989586621679213997"><span class="hs-identifier hs-var">tempDir</span></a></span><span> </span><span class="annot"><span class="annottext">FilePath
 </span><span class="hs-string">&quot;transaction-body-file&quot;</span></span><span>
 </span><span id="line-159"></span><span>
 </span><span id="line-160"></span><span>    </span><span class="hs-comment">-- Create transaction body</span><span>
@@ -564,12 +564,12 @@ forall (m :: * -&gt; *).
 </span><span class="hs-string">&quot;test/data/golden/mary/scripts/mint.sig&quot;</span></span><span>
 </span><span id="line-210"></span><span>        </span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">FilePath
 </span><span class="hs-string">&quot;--out-file&quot;</span></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">FilePath
-</span><a href="#local-6989586621679213995"><span class="hs-identifier hs-var">transactionBodyFile</span></a></span><span>
+</span><a href="#local-6989586621679213996"><span class="hs-identifier hs-var">transactionBodyFile</span></a></span><span>
 </span><span id="line-211"></span><span>        </span><span class="hs-special">]</span><span>
 </span><span id="line-212"></span><span>
 </span><span id="line-213"></span><span>    </span><span class="hs-comment">-- View transaction body</span><span>
-</span><span id="line-214"></span><span>    </span><span id="local-6989586621679213994"><span class="annot"><span class="annottext">FilePath
-</span><a href="#local-6989586621679213994"><span class="hs-identifier hs-var">result</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span>
+</span><span id="line-214"></span><span>    </span><span id="local-6989586621679213995"><span class="annot"><span class="annottext">FilePath
+</span><a href="#local-6989586621679213995"><span class="hs-identifier hs-var">result</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span>
 </span><span id="line-215"></span><span>      </span><span class="annot"><span class="annottext">[FilePath]
 -&gt; PropertyT (ReaderT IntegrationState (ResourceT IO)) FilePath
 forall (m :: * -&gt; *).
@@ -580,20 +580,20 @@ forall (m :: * -&gt; *).
 </span><span class="hs-string">&quot;transaction&quot;</span></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">FilePath
 </span><span class="hs-string">&quot;view&quot;</span></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">FilePath
 </span><span class="hs-string">&quot;--tx-body-file&quot;</span></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">FilePath
-</span><a href="#local-6989586621679213995"><span class="hs-identifier hs-var">transactionBodyFile</span></a></span><span class="hs-special">]</span><span>
+</span><a href="#local-6989586621679213996"><span class="hs-identifier hs-var">transactionBodyFile</span></a></span><span class="hs-special">]</span><span>
 </span><span id="line-217"></span><span>    </span><span class="annot"><span class="annottext">FilePath -&gt; FilePath -&gt; Integration ()
 forall (m :: * -&gt; *).
 (MonadIO m, MonadTest m) =&gt;
 FilePath -&gt; FilePath -&gt; m ()
 </span><a href="Test.Utilities.html#diffVsGoldenFile"><span class="hs-identifier hs-var">diffVsGoldenFile</span></a></span><span> </span><span class="annot"><span class="annottext">FilePath
-</span><a href="#local-6989586621679213994"><span class="hs-identifier hs-var">result</span></a></span><span> </span><span class="annot"><span class="annottext">FilePath
+</span><a href="#local-6989586621679213995"><span class="hs-identifier hs-var">result</span></a></span><span> </span><span class="annot"><span class="annottext">FilePath
 </span><span class="hs-string">&quot;test/data/golden/mary/transaction-view.out&quot;</span></span><span>
 </span><span id="line-218"></span><span>
 </span><span id="line-219"></span><span class="annot"><a href="Test.Golden.TxView.html#createAlonzoTxBody"><span class="hs-identifier hs-type">createAlonzoTxBody</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Maybe</span></a></span><span> </span><span class="annot"><a href="../file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">FilePath</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">FilePath</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="hs-identifier hs-type">Integration</span></span><span> </span><span class="hs-special">(</span><span class="hs-special">)</span><span>
 </span><span id="line-220"></span><span id="createAlonzoTxBody"><span class="annot"><span class="annottext">createAlonzoTxBody :: Maybe FilePath -&gt; FilePath -&gt; Integration ()
-</span><a href="Test.Golden.TxView.html#createAlonzoTxBody"><span class="hs-identifier hs-var hs-var">createAlonzoTxBody</span></a></span></span><span> </span><span id="local-6989586621679213992"><span class="annot"><span class="annottext">Maybe FilePath
-</span><a href="#local-6989586621679213992"><span class="hs-identifier hs-var">mUpdateProposalFile</span></a></span></span><span> </span><span id="local-6989586621679213991"><span class="annot"><span class="annottext">FilePath
-</span><a href="#local-6989586621679213991"><span class="hs-identifier hs-var">transactionBodyFile</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-keyword">do</span><span>
+</span><a href="Test.Golden.TxView.html#createAlonzoTxBody"><span class="hs-identifier hs-var hs-var">createAlonzoTxBody</span></a></span></span><span> </span><span id="local-6989586621679213993"><span class="annot"><span class="annottext">Maybe FilePath
+</span><a href="#local-6989586621679213993"><span class="hs-identifier hs-var">mUpdateProposalFile</span></a></span></span><span> </span><span id="local-6989586621679213992"><span class="annot"><span class="annottext">FilePath
+</span><a href="#local-6989586621679213992"><span class="hs-identifier hs-var">transactionBodyFile</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-keyword">do</span><span>
 </span><span id="line-221"></span><span>  </span><span class="annot"><span class="annottext">PropertyT (ReaderT IntegrationState (ResourceT IO)) FilePath
 -&gt; Integration ()
 forall (f :: * -&gt; *) a. Functor f =&gt; f a -&gt; f ()
@@ -637,7 +637,7 @@ forall (m :: * -&gt; *).
 </span><span class="hs-string">&quot;fafaaac8681b5050a8987f95bce4a7f99362f189879258fdbf733fa4&quot;</span></span><span>
 </span><span id="line-236"></span><span>          </span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">FilePath
 </span><span class="hs-string">&quot;--out-file&quot;</span></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">FilePath
-</span><a href="#local-6989586621679213991"><span class="hs-identifier hs-var">transactionBodyFile</span></a></span><span>
+</span><a href="#local-6989586621679213992"><span class="hs-identifier hs-var">transactionBodyFile</span></a></span><span>
 </span><span id="line-237"></span><span>          </span><span class="hs-special">]</span><span>
 </span><span id="line-238"></span><span>      </span><span class="annot"><span class="annottext">[FilePath] -&gt; [FilePath] -&gt; [FilePath]
 forall a. [a] -&gt; [a] -&gt; [a]
@@ -645,10 +645,10 @@ forall a. [a] -&gt; [a] -&gt; [a]
 </span><span class="hs-string">&quot;--update-proposal-file=&quot;</span></span><span> </span><span class="annot"><span class="annottext">FilePath -&gt; FilePath -&gt; FilePath
 forall a. Semigroup a =&gt; a -&gt; a -&gt; a
 </span><a href="../file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">FilePath
-</span><a href="#local-6989586621679213990"><span class="hs-identifier hs-var">updateProposalFile</span></a></span><span>
-</span><span id="line-239"></span><span>          </span><span class="hs-glyph">|</span><span> </span><span class="annot"><a href="../file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Just</span></a></span><span> </span><span id="local-6989586621679213990"><span class="annot"><span class="annottext">FilePath
-</span><a href="#local-6989586621679213990"><span class="hs-identifier hs-var">updateProposalFile</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="hs-special">[</span><span class="annot"><span class="annottext">Maybe FilePath
-</span><a href="#local-6989586621679213992"><span class="hs-identifier hs-var">mUpdateProposalFile</span></a></span><span class="hs-special">]</span><span>
+</span><a href="#local-6989586621679213991"><span class="hs-identifier hs-var">updateProposalFile</span></a></span><span>
+</span><span id="line-239"></span><span>          </span><span class="hs-glyph">|</span><span> </span><span class="annot"><a href="../file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Just</span></a></span><span> </span><span id="local-6989586621679213991"><span class="annot"><span class="annottext">FilePath
+</span><a href="#local-6989586621679213991"><span class="hs-identifier hs-var">updateProposalFile</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="hs-special">[</span><span class="annot"><span class="annottext">Maybe FilePath
+</span><a href="#local-6989586621679213993"><span class="hs-identifier hs-var">mUpdateProposalFile</span></a></span><span class="hs-special">]</span><span>
 </span><span id="line-240"></span><span>          </span><span class="hs-special">]</span><span>
 </span><span id="line-241"></span><span>      </span><span class="hs-special">)</span><span>
 </span><span id="line-242"></span><span>
@@ -668,27 +668,27 @@ FilePath -&gt; (FilePath -&gt; m ()) -&gt; m ()
 </span><span class="hs-string">&quot;tmp&quot;</span></span><span> </span><span class="annot"><span class="annottext">((FilePath -&gt; Integration ()) -&gt; Integration ())
 -&gt; (FilePath -&gt; Integration ()) -&gt; Integration ()
 forall a b. (a -&gt; b) -&gt; a -&gt; b
-</span><a href="../file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="hs-glyph">\</span><span id="local-6989586621679213989"><span class="annot"><span class="annottext">FilePath
-</span><a href="#local-6989586621679213989"><span class="hs-identifier hs-var">tempDir</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-keyword">do</span><span>
-</span><span id="line-247"></span><span>      </span><span id="local-6989586621679213988"><span class="annot"><span class="annottext">FilePath
-</span><a href="#local-6989586621679213988"><span class="hs-identifier hs-var">updateProposalFile</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">FilePath
+</span><a href="../file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="hs-glyph">\</span><span id="local-6989586621679213990"><span class="annot"><span class="annottext">FilePath
+</span><a href="#local-6989586621679213990"><span class="hs-identifier hs-var">tempDir</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-keyword">do</span><span>
+</span><span id="line-247"></span><span>      </span><span id="local-6989586621679213989"><span class="annot"><span class="annottext">FilePath
+</span><a href="#local-6989586621679213989"><span class="hs-identifier hs-var">updateProposalFile</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">FilePath
 -&gt; FilePath
 -&gt; PropertyT (ReaderT IntegrationState (ResourceT IO)) FilePath
 forall (m :: * -&gt; *).
 (MonadTest m, HasCallStack) =&gt;
 FilePath -&gt; FilePath -&gt; m FilePath
 </span><a href="Test.OptParse.html#noteTempFile"><span class="hs-identifier hs-var">noteTempFile</span></a></span><span> </span><span class="annot"><span class="annottext">FilePath
-</span><a href="#local-6989586621679213989"><span class="hs-identifier hs-var">tempDir</span></a></span><span> </span><span class="annot"><span class="annottext">FilePath
+</span><a href="#local-6989586621679213990"><span class="hs-identifier hs-var">tempDir</span></a></span><span> </span><span class="annot"><span class="annottext">FilePath
 </span><span class="hs-string">&quot;update-proposal&quot;</span></span><span>
-</span><span id="line-248"></span><span>      </span><span id="local-6989586621679213987"><span class="annot"><span class="annottext">FilePath
-</span><a href="#local-6989586621679213987"><span class="hs-identifier hs-var">transactionBodyFile</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">FilePath
+</span><span id="line-248"></span><span>      </span><span id="local-6989586621679213988"><span class="annot"><span class="annottext">FilePath
+</span><a href="#local-6989586621679213988"><span class="hs-identifier hs-var">transactionBodyFile</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">FilePath
 -&gt; FilePath
 -&gt; PropertyT (ReaderT IntegrationState (ResourceT IO)) FilePath
 forall (m :: * -&gt; *).
 (MonadTest m, HasCallStack) =&gt;
 FilePath -&gt; FilePath -&gt; m FilePath
 </span><a href="Test.OptParse.html#noteTempFile"><span class="hs-identifier hs-var">noteTempFile</span></a></span><span> </span><span class="annot"><span class="annottext">FilePath
-</span><a href="#local-6989586621679213989"><span class="hs-identifier hs-var">tempDir</span></a></span><span> </span><span class="annot"><span class="annottext">FilePath
+</span><a href="#local-6989586621679213990"><span class="hs-identifier hs-var">tempDir</span></a></span><span> </span><span class="annot"><span class="annottext">FilePath
 </span><span class="hs-string">&quot;transaction-body&quot;</span></span><span>
 </span><span id="line-249"></span><span>
 </span><span id="line-250"></span><span>      </span><span class="annot"><span class="annottext">FilePath -&gt; Integration ()
@@ -752,19 +752,19 @@ forall (m :: * -&gt; *).
 </span><span class="hs-string">&quot;201&quot;</span></span><span>
 </span><span id="line-269"></span><span>          </span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">FilePath
 </span><span class="hs-string">&quot;--out-file&quot;</span></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">FilePath
-</span><a href="#local-6989586621679213988"><span class="hs-identifier hs-var">updateProposalFile</span></a></span><span>
+</span><a href="#local-6989586621679213989"><span class="hs-identifier hs-var">updateProposalFile</span></a></span><span>
 </span><span id="line-270"></span><span>          </span><span class="hs-special">]</span><span>
 </span><span id="line-271"></span><span>
 </span><span id="line-272"></span><span>      </span><span class="annot"><span class="annottext">Maybe FilePath -&gt; FilePath -&gt; Integration ()
 </span><a href="Test.Golden.TxView.html#createAlonzoTxBody"><span class="hs-identifier hs-var">createAlonzoTxBody</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">FilePath -&gt; Maybe FilePath
 forall a. a -&gt; Maybe a
 </span><a href="../file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">Just</span></a></span><span> </span><span class="annot"><span class="annottext">FilePath
-</span><a href="#local-6989586621679213988"><span class="hs-identifier hs-var">updateProposalFile</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">FilePath
-</span><a href="#local-6989586621679213987"><span class="hs-identifier hs-var">transactionBodyFile</span></a></span><span>
+</span><a href="#local-6989586621679213989"><span class="hs-identifier hs-var">updateProposalFile</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">FilePath
+</span><a href="#local-6989586621679213988"><span class="hs-identifier hs-var">transactionBodyFile</span></a></span><span>
 </span><span id="line-273"></span><span>
 </span><span id="line-274"></span><span>      </span><span class="hs-comment">-- View transaction body</span><span>
-</span><span id="line-275"></span><span>      </span><span id="local-6989586621679213986"><span class="annot"><span class="annottext">FilePath
-</span><a href="#local-6989586621679213986"><span class="hs-identifier hs-var">result</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span>
+</span><span id="line-275"></span><span>      </span><span id="local-6989586621679213987"><span class="annot"><span class="annottext">FilePath
+</span><a href="#local-6989586621679213987"><span class="hs-identifier hs-var">result</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span>
 </span><span id="line-276"></span><span>        </span><span class="annot"><span class="annottext">[FilePath]
 -&gt; PropertyT (ReaderT IntegrationState (ResourceT IO)) FilePath
 forall (m :: * -&gt; *).
@@ -775,20 +775,20 @@ forall (m :: * -&gt; *).
 </span><span class="hs-string">&quot;transaction&quot;</span></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">FilePath
 </span><span class="hs-string">&quot;view&quot;</span></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">FilePath
 </span><span class="hs-string">&quot;--tx-body-file&quot;</span></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">FilePath
-</span><a href="#local-6989586621679213987"><span class="hs-identifier hs-var">transactionBodyFile</span></a></span><span class="hs-special">]</span><span>
+</span><a href="#local-6989586621679213988"><span class="hs-identifier hs-var">transactionBodyFile</span></a></span><span class="hs-special">]</span><span>
 </span><span id="line-278"></span><span>      </span><span class="annot"><span class="annottext">FilePath -&gt; FilePath -&gt; Integration ()
 forall (m :: * -&gt; *).
 (MonadIO m, MonadTest m) =&gt;
 FilePath -&gt; FilePath -&gt; m ()
 </span><a href="Test.Utilities.html#diffVsGoldenFile"><span class="hs-identifier hs-var">diffVsGoldenFile</span></a></span><span> </span><span class="annot"><span class="annottext">FilePath
-</span><a href="#local-6989586621679213986"><span class="hs-identifier hs-var">result</span></a></span><span> </span><span class="annot"><span class="annottext">FilePath
+</span><a href="#local-6989586621679213987"><span class="hs-identifier hs-var">result</span></a></span><span> </span><span class="annot"><span class="annottext">FilePath
 </span><span class="hs-string">&quot;test/data/golden/alonzo/transaction-view.out&quot;</span></span><span>
 </span><span id="line-279"></span><span>
 </span><span id="line-280"></span><span class="annot"><a href="Test.Golden.TxView.html#golden_view_alonzo_signed"><span class="hs-identifier hs-type">golden_view_alonzo_signed</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><span class="hs-identifier hs-type">Property</span></span><span>
 </span><span id="line-281"></span><span id="golden_view_alonzo_signed"><span class="annot"><span class="annottext">golden_view_alonzo_signed :: Property
 </span><a href="Test.Golden.TxView.html#golden_view_alonzo_signed"><span class="hs-identifier hs-var hs-var">golden_view_alonzo_signed</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
-</span><span id="line-282"></span><span>  </span><span class="hs-keyword">let</span><span> </span><span id="local-6989586621679213985"><span class="annot"><span class="annottext">testData :: FilePath
-</span><a href="#local-6989586621679213985"><span class="hs-identifier hs-var hs-var">testData</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">FilePath
+</span><span id="line-282"></span><span>  </span><span class="hs-keyword">let</span><span> </span><span id="local-6989586621679213986"><span class="annot"><span class="annottext">testData :: FilePath
+</span><a href="#local-6989586621679213986"><span class="hs-identifier hs-var hs-var">testData</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">FilePath
 </span><span class="hs-string">&quot;test/data/golden/alonzo&quot;</span></span><span>
 </span><span id="line-283"></span><span>  </span><span class="hs-keyword">in</span><span>
 </span><span id="line-284"></span><span>  </span><span class="annot"><span class="annottext">HasCallStack =&gt; Integration () -&gt; Property
@@ -804,34 +804,34 @@ FilePath -&gt; (FilePath -&gt; m ()) -&gt; m ()
 </span><span class="hs-string">&quot;tmp&quot;</span></span><span> </span><span class="annot"><span class="annottext">((FilePath -&gt; Integration ()) -&gt; Integration ())
 -&gt; (FilePath -&gt; Integration ()) -&gt; Integration ()
 forall a b. (a -&gt; b) -&gt; a -&gt; b
-</span><a href="../file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="hs-glyph">\</span><span id="local-6989586621679213984"><span class="annot"><span class="annottext">FilePath
-</span><a href="#local-6989586621679213984"><span class="hs-identifier hs-var">tempDir</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-keyword">do</span><span>
-</span><span id="line-286"></span><span>      </span><span id="local-6989586621679213983"><span class="annot"><span class="annottext">FilePath
-</span><a href="#local-6989586621679213983"><span class="hs-identifier hs-var">transactionBodyFile</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">FilePath
+</span><a href="../file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="hs-glyph">\</span><span id="local-6989586621679213985"><span class="annot"><span class="annottext">FilePath
+</span><a href="#local-6989586621679213985"><span class="hs-identifier hs-var">tempDir</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-keyword">do</span><span>
+</span><span id="line-286"></span><span>      </span><span id="local-6989586621679213984"><span class="annot"><span class="annottext">FilePath
+</span><a href="#local-6989586621679213984"><span class="hs-identifier hs-var">transactionBodyFile</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">FilePath
 -&gt; FilePath
 -&gt; PropertyT (ReaderT IntegrationState (ResourceT IO)) FilePath
 forall (m :: * -&gt; *).
 (MonadTest m, HasCallStack) =&gt;
 FilePath -&gt; FilePath -&gt; m FilePath
 </span><a href="Test.OptParse.html#noteTempFile"><span class="hs-identifier hs-var">noteTempFile</span></a></span><span> </span><span class="annot"><span class="annottext">FilePath
-</span><a href="#local-6989586621679213984"><span class="hs-identifier hs-var">tempDir</span></a></span><span> </span><span class="annot"><span class="annottext">FilePath
+</span><a href="#local-6989586621679213985"><span class="hs-identifier hs-var">tempDir</span></a></span><span> </span><span class="annot"><span class="annottext">FilePath
 </span><span class="hs-string">&quot;transaction-body&quot;</span></span><span>
-</span><span id="line-287"></span><span>      </span><span id="local-6989586621679213982"><span class="annot"><span class="annottext">FilePath
-</span><a href="#local-6989586621679213982"><span class="hs-identifier hs-var">transactionFile</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">FilePath
+</span><span id="line-287"></span><span>      </span><span id="local-6989586621679213983"><span class="annot"><span class="annottext">FilePath
+</span><a href="#local-6989586621679213983"><span class="hs-identifier hs-var">transactionFile</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">FilePath
 -&gt; FilePath
 -&gt; PropertyT (ReaderT IntegrationState (ResourceT IO)) FilePath
 forall (m :: * -&gt; *).
 (MonadTest m, HasCallStack) =&gt;
 FilePath -&gt; FilePath -&gt; m FilePath
 </span><a href="Test.OptParse.html#noteTempFile"><span class="hs-identifier hs-var">noteTempFile</span></a></span><span> </span><span class="annot"><span class="annottext">FilePath
-</span><a href="#local-6989586621679213984"><span class="hs-identifier hs-var">tempDir</span></a></span><span> </span><span class="annot"><span class="annottext">FilePath
+</span><a href="#local-6989586621679213985"><span class="hs-identifier hs-var">tempDir</span></a></span><span> </span><span class="annot"><span class="annottext">FilePath
 </span><span class="hs-string">&quot;transaction&quot;</span></span><span>
 </span><span id="line-288"></span><span>
 </span><span id="line-289"></span><span>      </span><span class="annot"><span class="annottext">Maybe FilePath -&gt; FilePath -&gt; Integration ()
 </span><a href="Test.Golden.TxView.html#createAlonzoTxBody"><span class="hs-identifier hs-var">createAlonzoTxBody</span></a></span><span> </span><span class="annot"><span class="annottext">Maybe FilePath
 forall a. Maybe a
 </span><a href="../file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">Nothing</span></a></span><span> </span><span class="annot"><span class="annottext">FilePath
-</span><a href="#local-6989586621679213983"><span class="hs-identifier hs-var">transactionBodyFile</span></a></span><span>
+</span><a href="#local-6989586621679213984"><span class="hs-identifier hs-var">transactionBodyFile</span></a></span><span>
 </span><span id="line-290"></span><span>
 </span><span id="line-291"></span><span>      </span><span class="hs-comment">-- Sign</span><span>
 </span><span id="line-292"></span><span>      </span><span class="annot"><span class="annottext">PropertyT (ReaderT IntegrationState (ResourceT IO)) FilePath
@@ -854,20 +854,20 @@ forall (m :: * -&gt; *).
 </span><span class="hs-string">&quot;sign&quot;</span></span><span>
 </span><span id="line-295"></span><span>          </span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">FilePath
 </span><span class="hs-string">&quot;--tx-body-file&quot;</span></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">FilePath
-</span><a href="#local-6989586621679213983"><span class="hs-identifier hs-var">transactionBodyFile</span></a></span><span>
+</span><a href="#local-6989586621679213984"><span class="hs-identifier hs-var">transactionBodyFile</span></a></span><span>
 </span><span id="line-296"></span><span>          </span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">FilePath
 </span><span class="hs-string">&quot;--signing-key-file&quot;</span></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">FilePath
-</span><a href="#local-6989586621679213985"><span class="hs-identifier hs-var">testData</span></a></span><span> </span><span class="annot"><span class="annottext">FilePath -&gt; FilePath -&gt; FilePath
+</span><a href="#local-6989586621679213986"><span class="hs-identifier hs-var">testData</span></a></span><span> </span><span class="annot"><span class="annottext">FilePath -&gt; FilePath -&gt; FilePath
 </span><a href="../file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/filepath-1.4.2.1/src"><span class="hs-operator hs-var">&lt;/&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">FilePath
 </span><span class="hs-string">&quot;signing.key&quot;</span></span><span>
 </span><span id="line-297"></span><span>          </span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">FilePath
 </span><span class="hs-string">&quot;--out-file&quot;</span></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">FilePath
-</span><a href="#local-6989586621679213982"><span class="hs-identifier hs-var">transactionFile</span></a></span><span>
+</span><a href="#local-6989586621679213983"><span class="hs-identifier hs-var">transactionFile</span></a></span><span>
 </span><span id="line-298"></span><span>          </span><span class="hs-special">]</span><span>
 </span><span id="line-299"></span><span>
 </span><span id="line-300"></span><span>      </span><span class="hs-comment">-- View transaction body</span><span>
-</span><span id="line-301"></span><span>      </span><span id="local-6989586621679213981"><span class="annot"><span class="annottext">FilePath
-</span><a href="#local-6989586621679213981"><span class="hs-identifier hs-var">result</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span>
+</span><span id="line-301"></span><span>      </span><span id="local-6989586621679213982"><span class="annot"><span class="annottext">FilePath
+</span><a href="#local-6989586621679213982"><span class="hs-identifier hs-var">result</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span>
 </span><span id="line-302"></span><span>        </span><span class="annot"><span class="annottext">[FilePath]
 -&gt; PropertyT (ReaderT IntegrationState (ResourceT IO)) FilePath
 forall (m :: * -&gt; *).
@@ -878,14 +878,14 @@ forall (m :: * -&gt; *).
 </span><span class="hs-string">&quot;transaction&quot;</span></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">FilePath
 </span><span class="hs-string">&quot;view&quot;</span></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">FilePath
 </span><span class="hs-string">&quot;--tx-file&quot;</span></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">FilePath
-</span><a href="#local-6989586621679213982"><span class="hs-identifier hs-var">transactionFile</span></a></span><span class="hs-special">]</span><span>
+</span><a href="#local-6989586621679213983"><span class="hs-identifier hs-var">transactionFile</span></a></span><span class="hs-special">]</span><span>
 </span><span id="line-304"></span><span>      </span><span class="annot"><span class="annottext">FilePath -&gt; FilePath -&gt; Integration ()
 forall (m :: * -&gt; *).
 (MonadIO m, MonadTest m) =&gt;
 FilePath -&gt; FilePath -&gt; m ()
 </span><a href="Test.Utilities.html#diffVsGoldenFile"><span class="hs-identifier hs-var">diffVsGoldenFile</span></a></span><span> </span><span class="annot"><span class="annottext">FilePath
-</span><a href="#local-6989586621679213981"><span class="hs-identifier hs-var">result</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">FilePath
-</span><a href="#local-6989586621679213985"><span class="hs-identifier hs-var">testData</span></a></span><span> </span><span class="annot"><span class="annottext">FilePath -&gt; FilePath -&gt; FilePath
+</span><a href="#local-6989586621679213982"><span class="hs-identifier hs-var">result</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">FilePath
+</span><a href="#local-6989586621679213986"><span class="hs-identifier hs-var">testData</span></a></span><span> </span><span class="annot"><span class="annottext">FilePath -&gt; FilePath -&gt; FilePath
 </span><a href="../file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/filepath-1.4.2.1/src"><span class="hs-operator hs-var">&lt;/&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">FilePath
 </span><span class="hs-string">&quot;signed-transaction-view.out&quot;</span></span><span class="hs-special">)</span><span>
 </span><span id="line-305"></span></pre></body></html>
