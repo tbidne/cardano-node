@@ -51,6 +51,7 @@ launchAcceptorsSimple mode localSock dpName = do
     , ekgRequestFreq = Just 1.0
     , hasEKG         = Nothing
     , hasPrometheus  = Nothing
+    , hasRTView      = Nothing
     , logging        = NE.fromList [LoggingParams "/tmp/demo-acceptor" FileMode ForHuman]
     , rotation       = Nothing
     , verbosity      = Just Minimum
