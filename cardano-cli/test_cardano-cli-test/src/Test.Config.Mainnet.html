@@ -35,7 +35,7 @@ Integration () -&gt; Property
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="hs-keyword">do</span><span>
 </span><span id="line-32"></span><span>  </span><span id="local-6989586621679271838"><span class="annot"><span class="annottext">String
-</span><a href="#local-6989586621679271838"><span class="hs-identifier hs-var">projectBase</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">String
+</span><a href="#local-6989586621679271838"><span class="hs-identifier hs-var">base</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">String
 -&gt; PropertyT (ReaderT IntegrationState (ResourceT IO)) String
 forall (m :: * -&gt; *).
 (MonadTest m, HasCallStack) =&gt;
@@ -95,7 +95,7 @@ forall a b. (a -&gt; b) -&gt; a -&gt; b
 -&gt; String -&gt; ExceptT InitialLedgerStateError IO (Env, LedgerState)
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">String
-</span><a href="#local-6989586621679271838"><span class="hs-identifier hs-var">projectBase</span></a></span><span> </span><span class="annot"><span class="annottext">String -&gt; String -&gt; String
+</span><a href="#local-6989586621679271838"><span class="hs-identifier hs-var">base</span></a></span><span> </span><span class="annot"><span class="annottext">String -&gt; String -&gt; String
 </span><a href="../file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/filepath-1.4.2.1/src"><span class="hs-operator hs-var">&lt;/&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">String
 </span><span class="hs-string">&quot;configuration/cardano/mainnet-config.json&quot;</span></span><span>
 </span><span id="line-34"></span><span>  </span><span class="hs-keyword">case</span><span> </span><span class="annot"><span class="annottext">Either InitialLedgerStateError (Env, LedgerState)
@@ -127,7 +127,7 @@ Integration () -&gt; Property
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="hs-keyword">do</span><span>
 </span><span id="line-40"></span><span>  </span><span id="local-6989586621679271824"><span class="annot"><span class="annottext">String
-</span><a href="#local-6989586621679271824"><span class="hs-identifier hs-var">projectBase</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">String
+</span><a href="#local-6989586621679271824"><span class="hs-identifier hs-var">base</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">String
 -&gt; PropertyT (ReaderT IntegrationState (ResourceT IO)) String
 forall (m :: * -&gt; *).
 (MonadTest m, HasCallStack) =&gt;
@@ -187,7 +187,7 @@ forall a. FromJSON a =&gt; String -&gt; IO (Either ParseException a)
      (Either ParseException Value)
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">String
-</span><a href="#local-6989586621679271824"><span class="hs-identifier hs-var">projectBase</span></a></span><span> </span><span class="annot"><span class="annottext">String -&gt; String -&gt; String
+</span><a href="#local-6989586621679271824"><span class="hs-identifier hs-var">base</span></a></span><span> </span><span class="annot"><span class="annottext">String -&gt; String -&gt; String
 </span><a href="../file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/filepath-1.4.2.1/src"><span class="hs-operator hs-var">&lt;/&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">String
 </span><span class="hs-string">&quot;configuration/cardano/mainnet-config.yaml&quot;</span></span><span>
 </span><span id="line-42"></span><span>  </span><span id="local-6989586621679271821"><span class="annot"><span class="annottext">Value
@@ -238,7 +238,7 @@ forall a. FromJSON a =&gt; String -&gt; IO (Either String a)
      (ReaderT IntegrationState (ResourceT IO)) (Either String Value)
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">String
-</span><a href="#local-6989586621679271824"><span class="hs-identifier hs-var">projectBase</span></a></span><span> </span><span class="annot"><span class="annottext">String -&gt; String -&gt; String
+</span><a href="#local-6989586621679271824"><span class="hs-identifier hs-var">base</span></a></span><span> </span><span class="annot"><span class="annottext">String -&gt; String -&gt; String
 </span><a href="../file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/filepath-1.4.2.1/src"><span class="hs-operator hs-var">&lt;/&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">String
 </span><span class="hs-string">&quot;configuration/cardano/mainnet-config.json&quot;</span></span><span>
 </span><span id="line-46"></span><span>  </span><span id="local-6989586621679271815"><span class="annot"><span class="annottext">Value
