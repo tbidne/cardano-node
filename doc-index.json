@@ -3018,6 +3018,12 @@
     "link": "lib/Cardano-Api-TxBody.html#v:mapTxScriptWitnesses"
   },
   {
+    "display_html": "<a href=\"#v:toByronTxId\">toByronTxId</a> &#8759; <a href=\"Cardano-Api-TxBody.html#t:TxId\" title=\"Cardano.Api.TxBody\">TxId</a> &#8594; TxId",
+    "name": "toByronTxId",
+    "module": "Cardano.Api.TxBody",
+    "link": "lib/Cardano-Api-TxBody.html#v:toByronTxId"
+  },
+  {
     "display_html": "<a href=\"#v:toShelleyTxId\">toShelleyTxId</a> &#8759; <a href=\"Cardano-Api-TxBody.html#t:TxId\" title=\"Cardano.Api.TxBody\">TxId</a> &#8594; TxId StandardCrypto",
     "name": "toShelleyTxId",
     "module": "Cardano.Api.TxBody",
@@ -3214,36 +3220,6 @@
     "name": "AsType AsTx AsByronTx AsShelleyTx AsMaryTx AsAllegraTx AsAlonzoTx AsKeyWitness AsByronWitness AsShelleyWitness",
     "module": "Cardano.Api.Tx",
     "link": "lib/Cardano-Api-Tx.html#t:AsType"
-  },
-  {
-    "display_html": "<span class=\"keyword\">data</span> <a href=\"#t:TxInMode\">TxInMode</a> mode <span class=\"keyword\">where</span><ul class=\"subs\"><li><a href=\"#v:TxInMode\">TxInMode</a> &#8759; <a href=\"Cardano-Api-Tx.html#t:Tx\" title=\"Cardano.Api.Tx\">Tx</a> era &#8594; <a href=\"Cardano-Api-Modes.html#t:EraInMode\" title=\"Cardano.Api.Modes\">EraInMode</a> era mode &#8594; <a href=\"Cardano-Api-TxInMode.html#t:TxInMode\" title=\"Cardano.Api.TxInMode\">TxInMode</a> mode</li><li><a href=\"#v:TxInByronSpecial\">TxInByronSpecial</a> &#8759; GenTx ByronBlock &#8594; <a href=\"Cardano-Api-Modes.html#t:EraInMode\" title=\"Cardano.Api.Modes\">EraInMode</a> <a href=\"Cardano-Api-Eras.html#t:ByronEra\" title=\"Cardano.Api.Eras\">ByronEra</a> mode &#8594; <a href=\"Cardano-Api-TxInMode.html#t:TxInMode\" title=\"Cardano.Api.TxInMode\">TxInMode</a> mode</li></ul>",
-    "name": "TxInMode TxInMode TxInByronSpecial",
-    "module": "Cardano.Api.TxInMode",
-    "link": "lib/Cardano-Api-TxInMode.html#t:TxInMode"
-  },
-  {
-    "display_html": "<a href=\"#v:toConsensusGenTx\">toConsensusGenTx</a> &#8759; <a href=\"Cardano-Api-Modes.html#t:ConsensusBlockForMode\" title=\"Cardano.Api.Modes\">ConsensusBlockForMode</a> mode ~ block &#8658; <a href=\"Cardano-Api-TxInMode.html#t:TxInMode\" title=\"Cardano.Api.TxInMode\">TxInMode</a> mode &#8594; GenTx block",
-    "name": "toConsensusGenTx",
-    "module": "Cardano.Api.TxInMode",
-    "link": "lib/Cardano-Api-TxInMode.html#v:toConsensusGenTx"
-  },
-  {
-    "display_html": "<span class=\"keyword\">data</span> <a href=\"#t:TxValidationError\">TxValidationError</a> era <span class=\"keyword\">where</span><ul class=\"subs\"><li><a href=\"#v:ByronTxValidationError\">ByronTxValidationError</a> &#8759; ApplyTxErr ByronBlock &#8594; <a href=\"Cardano-Api-TxInMode.html#t:TxValidationError\" title=\"Cardano.Api.TxInMode\">TxValidationError</a> <a href=\"Cardano-Api-Eras.html#t:ByronEra\" title=\"Cardano.Api.Eras\">ByronEra</a></li><li><a href=\"#v:ShelleyTxValidationError\">ShelleyTxValidationError</a> &#8759; <a href=\"Cardano-Api-Eras.html#t:ShelleyBasedEra\" title=\"Cardano.Api.Eras\">ShelleyBasedEra</a> era &#8594; ApplyTxErr (ShelleyBlock (<a href=\"Cardano-Api-Eras.html#t:ShelleyLedgerEra\" title=\"Cardano.Api.Eras\">ShelleyLedgerEra</a> era)) &#8594; <a href=\"Cardano-Api-TxInMode.html#t:TxValidationError\" title=\"Cardano.Api.TxInMode\">TxValidationError</a> era</li></ul>",
-    "name": "TxValidationError ByronTxValidationError ShelleyTxValidationError",
-    "module": "Cardano.Api.TxInMode",
-    "link": "lib/Cardano-Api-TxInMode.html#t:TxValidationError"
-  },
-  {
-    "display_html": "<span class=\"keyword\">data</span> <a href=\"#t:TxValidationErrorInMode\">TxValidationErrorInMode</a> mode <span class=\"keyword\">where</span><ul class=\"subs\"><li><a href=\"#v:TxValidationErrorInMode\">TxValidationErrorInMode</a> &#8759; <a href=\"Cardano-Api-TxInMode.html#t:TxValidationError\" title=\"Cardano.Api.TxInMode\">TxValidationError</a> era &#8594; <a href=\"Cardano-Api-Modes.html#t:EraInMode\" title=\"Cardano.Api.Modes\">EraInMode</a> era mode &#8594; <a href=\"Cardano-Api-TxInMode.html#t:TxValidationErrorInMode\" title=\"Cardano.Api.TxInMode\">TxValidationErrorInMode</a> mode</li><li><a href=\"#v:TxValidationEraMismatch\">TxValidationEraMismatch</a> &#8759; EraMismatch &#8594; <a href=\"Cardano-Api-TxInMode.html#t:TxValidationErrorInMode\" title=\"Cardano.Api.TxInMode\">TxValidationErrorInMode</a> mode</li></ul>",
-    "name": "TxValidationErrorInMode TxValidationErrorInMode TxValidationEraMismatch",
-    "module": "Cardano.Api.TxInMode",
-    "link": "lib/Cardano-Api-TxInMode.html#t:TxValidationErrorInMode"
-  },
-  {
-    "display_html": "<a href=\"#v:fromConsensusApplyTxErr\">fromConsensusApplyTxErr</a> &#8759; <a href=\"Cardano-Api-Modes.html#t:ConsensusBlockForMode\" title=\"Cardano.Api.Modes\">ConsensusBlockForMode</a> mode ~ block &#8658; <a href=\"Cardano-Api-Modes.html#t:ConsensusMode\" title=\"Cardano.Api.Modes\">ConsensusMode</a> mode &#8594; ApplyTxErr block &#8594; <a href=\"Cardano-Api-TxInMode.html#t:TxValidationErrorInMode\" title=\"Cardano.Api.TxInMode\">TxValidationErrorInMode</a> mode",
-    "name": "fromConsensusApplyTxErr",
-    "module": "Cardano.Api.TxInMode",
-    "link": "lib/Cardano-Api-TxInMode.html#v:fromConsensusApplyTxErr"
   },
   {
     "display_html": "<span class=\"keyword\">data</span> <a href=\"#t:TextEnvelopeCddl\">TextEnvelopeCddl</a> = <a href=\"#v:TextEnvelopeCddl\">TextEnvelopeCddl</a> {<ul class=\"subs\"><li><a href=\"#v:teCddlType\">teCddlType</a> &#8759; !<a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/text-1.2.4.1/Data-Text.html#t:Text\" title=\"Data.Text\">Text</a></li><li><a href=\"#v:teCddlDescription\">teCddlDescription</a> &#8759; !<a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/text-1.2.4.1/Data-Text.html#t:Text\" title=\"Data.Text\">Text</a></li><li><a href=\"#v:teCddlRawCBOR\">teCddlRawCBOR</a> &#8759; !<a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/bytestring-0.10.12.0/Data-ByteString.html#t:ByteString\" title=\"Data.ByteString\">ByteString</a></li></ul>}",
@@ -3666,6 +3642,54 @@
     "link": "lib/Cardano-Api-Query.html#v:fromLedgerUTxO"
   },
   {
+    "display_html": "<span class=\"keyword\">data</span> <a href=\"#t:TxInMode\">TxInMode</a> mode <span class=\"keyword\">where</span><ul class=\"subs\"><li><a href=\"#v:TxInMode\">TxInMode</a> &#8759; <a href=\"Cardano-Api-Tx.html#t:Tx\" title=\"Cardano.Api.Tx\">Tx</a> era &#8594; <a href=\"Cardano-Api-Modes.html#t:EraInMode\" title=\"Cardano.Api.Modes\">EraInMode</a> era mode &#8594; <a href=\"Cardano-Api-InMode.html#t:TxInMode\" title=\"Cardano.Api.InMode\">TxInMode</a> mode</li><li><a href=\"#v:TxInByronSpecial\">TxInByronSpecial</a> &#8759; GenTx ByronBlock &#8594; <a href=\"Cardano-Api-Modes.html#t:EraInMode\" title=\"Cardano.Api.Modes\">EraInMode</a> <a href=\"Cardano-Api-Eras.html#t:ByronEra\" title=\"Cardano.Api.Eras\">ByronEra</a> mode &#8594; <a href=\"Cardano-Api-InMode.html#t:TxInMode\" title=\"Cardano.Api.InMode\">TxInMode</a> mode</li></ul>",
+    "name": "TxInMode TxInMode TxInByronSpecial",
+    "module": "Cardano.Api.InMode",
+    "link": "lib/Cardano-Api-InMode.html#t:TxInMode"
+  },
+  {
+    "display_html": "<a href=\"#v:fromConsensusGenTx\">fromConsensusGenTx</a> &#8759; <a href=\"Cardano-Api-Modes.html#t:ConsensusBlockForMode\" title=\"Cardano.Api.Modes\">ConsensusBlockForMode</a> mode ~ block &#8658; <a href=\"Cardano-Api-Modes.html#t:ConsensusMode\" title=\"Cardano.Api.Modes\">ConsensusMode</a> mode &#8594; GenTx block &#8594; <a href=\"Cardano-Api-InMode.html#t:TxInMode\" title=\"Cardano.Api.InMode\">TxInMode</a> mode",
+    "name": "fromConsensusGenTx",
+    "module": "Cardano.Api.InMode",
+    "link": "lib/Cardano-Api-InMode.html#v:fromConsensusGenTx"
+  },
+  {
+    "display_html": "<a href=\"#v:toConsensusGenTx\">toConsensusGenTx</a> &#8759; <a href=\"Cardano-Api-Modes.html#t:ConsensusBlockForMode\" title=\"Cardano.Api.Modes\">ConsensusBlockForMode</a> mode ~ block &#8658; <a href=\"Cardano-Api-InMode.html#t:TxInMode\" title=\"Cardano.Api.InMode\">TxInMode</a> mode &#8594; GenTx block",
+    "name": "toConsensusGenTx",
+    "module": "Cardano.Api.InMode",
+    "link": "lib/Cardano-Api-InMode.html#v:toConsensusGenTx"
+  },
+  {
+    "display_html": "<span class=\"keyword\">data</span> <a href=\"#t:TxIdInMode\">TxIdInMode</a> mode <span class=\"keyword\">where</span><ul class=\"subs\"><li><a href=\"#v:TxIdInMode\">TxIdInMode</a> &#8759; <a href=\"Cardano-Api-TxBody.html#t:TxId\" title=\"Cardano.Api.TxBody\">TxId</a> &#8594; <a href=\"Cardano-Api-Modes.html#t:EraInMode\" title=\"Cardano.Api.Modes\">EraInMode</a> era mode &#8594; <a href=\"Cardano-Api-InMode.html#t:TxIdInMode\" title=\"Cardano.Api.InMode\">TxIdInMode</a> mode</li></ul>",
+    "name": "TxIdInMode TxIdInMode",
+    "module": "Cardano.Api.InMode",
+    "link": "lib/Cardano-Api-InMode.html#t:TxIdInMode"
+  },
+  {
+    "display_html": "<a href=\"#v:toConsensusTxId\">toConsensusTxId</a> &#8759; <a href=\"Cardano-Api-Modes.html#t:ConsensusBlockForMode\" title=\"Cardano.Api.Modes\">ConsensusBlockForMode</a> mode ~ block &#8658; <a href=\"Cardano-Api-InMode.html#t:TxIdInMode\" title=\"Cardano.Api.InMode\">TxIdInMode</a> mode &#8594; TxId (GenTx block)",
+    "name": "toConsensusTxId",
+    "module": "Cardano.Api.InMode",
+    "link": "lib/Cardano-Api-InMode.html#v:toConsensusTxId"
+  },
+  {
+    "display_html": "<span class=\"keyword\">data</span> <a href=\"#t:TxValidationError\">TxValidationError</a> era <span class=\"keyword\">where</span><ul class=\"subs\"><li><a href=\"#v:ByronTxValidationError\">ByronTxValidationError</a> &#8759; ApplyTxErr ByronBlock &#8594; <a href=\"Cardano-Api-InMode.html#t:TxValidationError\" title=\"Cardano.Api.InMode\">TxValidationError</a> <a href=\"Cardano-Api-Eras.html#t:ByronEra\" title=\"Cardano.Api.Eras\">ByronEra</a></li><li><a href=\"#v:ShelleyTxValidationError\">ShelleyTxValidationError</a> &#8759; <a href=\"Cardano-Api-Eras.html#t:ShelleyBasedEra\" title=\"Cardano.Api.Eras\">ShelleyBasedEra</a> era &#8594; ApplyTxErr (ShelleyBlock (<a href=\"Cardano-Api-Eras.html#t:ShelleyLedgerEra\" title=\"Cardano.Api.Eras\">ShelleyLedgerEra</a> era)) &#8594; <a href=\"Cardano-Api-InMode.html#t:TxValidationError\" title=\"Cardano.Api.InMode\">TxValidationError</a> era</li></ul>",
+    "name": "TxValidationError ByronTxValidationError ShelleyTxValidationError",
+    "module": "Cardano.Api.InMode",
+    "link": "lib/Cardano-Api-InMode.html#t:TxValidationError"
+  },
+  {
+    "display_html": "<span class=\"keyword\">data</span> <a href=\"#t:TxValidationErrorInMode\">TxValidationErrorInMode</a> mode <span class=\"keyword\">where</span><ul class=\"subs\"><li><a href=\"#v:TxValidationErrorInMode\">TxValidationErrorInMode</a> &#8759; <a href=\"Cardano-Api-InMode.html#t:TxValidationError\" title=\"Cardano.Api.InMode\">TxValidationError</a> era &#8594; <a href=\"Cardano-Api-Modes.html#t:EraInMode\" title=\"Cardano.Api.Modes\">EraInMode</a> era mode &#8594; <a href=\"Cardano-Api-InMode.html#t:TxValidationErrorInMode\" title=\"Cardano.Api.InMode\">TxValidationErrorInMode</a> mode</li><li><a href=\"#v:TxValidationEraMismatch\">TxValidationEraMismatch</a> &#8759; EraMismatch &#8594; <a href=\"Cardano-Api-InMode.html#t:TxValidationErrorInMode\" title=\"Cardano.Api.InMode\">TxValidationErrorInMode</a> mode</li></ul>",
+    "name": "TxValidationErrorInMode TxValidationErrorInMode TxValidationEraMismatch",
+    "module": "Cardano.Api.InMode",
+    "link": "lib/Cardano-Api-InMode.html#t:TxValidationErrorInMode"
+  },
+  {
+    "display_html": "<a href=\"#v:fromConsensusApplyTxErr\">fromConsensusApplyTxErr</a> &#8759; <a href=\"Cardano-Api-Modes.html#t:ConsensusBlockForMode\" title=\"Cardano.Api.Modes\">ConsensusBlockForMode</a> mode ~ block &#8658; <a href=\"Cardano-Api-Modes.html#t:ConsensusMode\" title=\"Cardano.Api.Modes\">ConsensusMode</a> mode &#8594; ApplyTxErr block &#8594; <a href=\"Cardano-Api-InMode.html#t:TxValidationErrorInMode\" title=\"Cardano.Api.InMode\">TxValidationErrorInMode</a> mode",
+    "name": "fromConsensusApplyTxErr",
+    "module": "Cardano.Api.InMode",
+    "link": "lib/Cardano-Api-InMode.html#v:fromConsensusApplyTxErr"
+  },
+  {
     "display_html": "<a href=\"#v:connectToLocalNode\">connectToLocalNode</a> &#8759; <a href=\"Cardano-Api-IPC.html#t:LocalNodeConnectInfo\" title=\"Cardano.Api.IPC\">LocalNodeConnectInfo</a> mode &#8594; <a href=\"Cardano-Api-IPC.html#t:LocalNodeClientProtocolsInMode\" title=\"Cardano.Api.IPC\">LocalNodeClientProtocolsInMode</a> mode &#8594; <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/System-IO.html#t:IO\" title=\"System.IO\">IO</a> ()",
     "name": "connectToLocalNode",
     "module": "Cardano.Api.IPC",
@@ -3702,8 +3726,8 @@
     "link": "lib/Cardano-Api-IPC.html#v:mkLocalNodeClientParams"
   },
   {
-    "display_html": "<span class=\"keyword\">data</span> <a href=\"#t:LocalNodeClientProtocols\">LocalNodeClientProtocols</a> block point tip tx txerr query m = <a href=\"#v:LocalNodeClientProtocols\">LocalNodeClientProtocols</a> {<ul class=\"subs\"><li><a href=\"#v:localChainSyncClient\">localChainSyncClient</a> &#8759; <a href=\"Cardano-Api-IPC.html#t:LocalChainSyncClient\" title=\"Cardano.Api.IPC\">LocalChainSyncClient</a> block point tip m</li><li><a href=\"#v:localTxSubmissionClient\">localTxSubmissionClient</a> &#8759; <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:Maybe\" title=\"Distribution.Compat.Prelude.Internal\">Maybe</a> (<a href=\"Cardano-Api-IPC.html#t:LocalTxSubmissionClient\" title=\"Cardano.Api.IPC\">LocalTxSubmissionClient</a> tx txerr m ())</li><li><a href=\"#v:localStateQueryClient\">localStateQueryClient</a> &#8759; <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:Maybe\" title=\"Distribution.Compat.Prelude.Internal\">Maybe</a> (<a href=\"Cardano-Api-IPC.html#t:LocalStateQueryClient\" title=\"Cardano.Api.IPC\">LocalStateQueryClient</a> block point query m ())</li></ul>}",
-    "name": "LocalNodeClientProtocols LocalNodeClientProtocols localChainSyncClient localTxSubmissionClient localStateQueryClient",
+    "display_html": "<span class=\"keyword\">data</span> <a href=\"#t:LocalNodeClientProtocols\">LocalNodeClientProtocols</a> block point tip slot tx txid txerr query m = <a href=\"#v:LocalNodeClientProtocols\">LocalNodeClientProtocols</a> {<ul class=\"subs\"><li><a href=\"#v:localChainSyncClient\">localChainSyncClient</a> &#8759; <a href=\"Cardano-Api-IPC.html#t:LocalChainSyncClient\" title=\"Cardano.Api.IPC\">LocalChainSyncClient</a> block point tip m</li><li><a href=\"#v:localTxSubmissionClient\">localTxSubmissionClient</a> &#8759; <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:Maybe\" title=\"Distribution.Compat.Prelude.Internal\">Maybe</a> (<a href=\"Cardano-Api-IPC.html#t:LocalTxSubmissionClient\" title=\"Cardano.Api.IPC\">LocalTxSubmissionClient</a> tx txerr m ())</li><li><a href=\"#v:localStateQueryClient\">localStateQueryClient</a> &#8759; <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:Maybe\" title=\"Distribution.Compat.Prelude.Internal\">Maybe</a> (<a href=\"Cardano-Api-IPC.html#t:LocalStateQueryClient\" title=\"Cardano.Api.IPC\">LocalStateQueryClient</a> block point query m ())</li><li><a href=\"#v:localTxMonitoringClient\">localTxMonitoringClient</a> &#8759; <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:Maybe\" title=\"Distribution.Compat.Prelude.Internal\">Maybe</a> (<a href=\"Cardano-Api-IPC.html#t:LocalTxMonitorClient\" title=\"Cardano.Api.IPC\">LocalTxMonitorClient</a> txid tx slot m ())</li></ul>}",
+    "name": "LocalNodeClientProtocols LocalNodeClientProtocols localChainSyncClient localTxSubmissionClient localStateQueryClient localTxMonitoringClient",
     "module": "Cardano.Api.IPC",
     "link": "lib/Cardano-Api-IPC.html#t:LocalNodeClientProtocols"
   },
@@ -3714,7 +3738,7 @@
     "link": "lib/Cardano-Api-IPC.html#t:LocalChainSyncClient"
   },
   {
-    "display_html": "<span class=\"keyword\">type</span> <a href=\"#t:LocalNodeClientProtocolsInMode\">LocalNodeClientProtocolsInMode</a> mode = <a href=\"Cardano-Api-IPC.html#t:LocalNodeClientProtocols\" title=\"Cardano.Api.IPC\">LocalNodeClientProtocols</a> (<a href=\"Cardano-Api-IPC.html#t:BlockInMode\" title=\"Cardano.Api.IPC\">BlockInMode</a> mode) <a href=\"Cardano-Api-Block.html#t:ChainPoint\" title=\"Cardano.Api.Block\">ChainPoint</a> <a href=\"Cardano-Api-Block.html#t:ChainTip\" title=\"Cardano.Api.Block\">ChainTip</a> (<a href=\"Cardano-Api-IPC.html#t:TxInMode\" title=\"Cardano.Api.IPC\">TxInMode</a> mode) (<a href=\"Cardano-Api-IPC.html#t:TxValidationErrorInMode\" title=\"Cardano.Api.IPC\">TxValidationErrorInMode</a> mode) (<a href=\"Cardano-Api-IPC.html#t:QueryInMode\" title=\"Cardano.Api.IPC\">QueryInMode</a> mode) <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/System-IO.html#t:IO\" title=\"System.IO\">IO</a>",
+    "display_html": "<span class=\"keyword\">type</span> <a href=\"#t:LocalNodeClientProtocolsInMode\">LocalNodeClientProtocolsInMode</a> mode = <a href=\"Cardano-Api-IPC.html#t:LocalNodeClientProtocols\" title=\"Cardano.Api.IPC\">LocalNodeClientProtocols</a> (<a href=\"Cardano-Api-IPC.html#t:BlockInMode\" title=\"Cardano.Api.IPC\">BlockInMode</a> mode) <a href=\"Cardano-Api-Block.html#t:ChainPoint\" title=\"Cardano.Api.Block\">ChainPoint</a> <a href=\"Cardano-Api-Block.html#t:ChainTip\" title=\"Cardano.Api.Block\">ChainTip</a> <a href=\"Cardano-Api-Block.html#t:SlotNo\" title=\"Cardano.Api.Block\">SlotNo</a> (<a href=\"Cardano-Api-IPC.html#t:TxInMode\" title=\"Cardano.Api.IPC\">TxInMode</a> mode) (<a href=\"Cardano-Api-InMode.html#t:TxIdInMode\" title=\"Cardano.Api.InMode\">TxIdInMode</a> mode) (<a href=\"Cardano-Api-IPC.html#t:TxValidationErrorInMode\" title=\"Cardano.Api.IPC\">TxValidationErrorInMode</a> mode) (<a href=\"Cardano-Api-IPC.html#t:QueryInMode\" title=\"Cardano.Api.IPC\">QueryInMode</a> mode) <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/System-IO.html#t:IO\" title=\"System.IO\">IO</a>",
     "name": "LocalNodeClientProtocolsInMode",
     "module": "Cardano.Api.IPC",
     "link": "lib/Cardano-Api-IPC.html#t:LocalNodeClientProtocolsInMode"
@@ -3838,6 +3862,36 @@
     "name": "queryNodeLocalState",
     "module": "Cardano.Api.IPC",
     "link": "lib/Cardano-Api-IPC.html#v:queryNodeLocalState"
+  },
+  {
+    "display_html": "<span class=\"keyword\">newtype</span> <a href=\"#t:LocalTxMonitorClient\">LocalTxMonitorClient</a> txid tx slot (m &#8759; <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/Data-Kind.html#t:Type\" title=\"Data.Kind\">Type</a> &#8594; <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/Data-Kind.html#t:Type\" title=\"Data.Kind\">Type</a>) a = <a href=\"#v:LocalTxMonitorClient\">LocalTxMonitorClient</a> {<ul class=\"subs\"><li><a href=\"#v:runLocalTxMonitorClient\">runLocalTxMonitorClient</a> &#8759; m (ClientStIdle txid tx slot m a)</li></ul>}",
+    "name": "LocalTxMonitorClient LocalTxMonitorClient runLocalTxMonitorClient",
+    "module": "Cardano.Api.IPC",
+    "link": "lib/Cardano-Api-IPC.html#t:LocalTxMonitorClient"
+  },
+  {
+    "display_html": "<span class=\"keyword\">data</span> <a href=\"#t:LocalTxMonitoringQuery\">LocalTxMonitoringQuery</a> mode<ul class=\"subs\"><li>= <a href=\"#v:LocalTxMonitoringQueryTx\">LocalTxMonitoringQueryTx</a> (<a href=\"Cardano-Api-InMode.html#t:TxIdInMode\" title=\"Cardano.Api.InMode\">TxIdInMode</a> mode)</li><li>| <a href=\"#v:LocalTxMonitoringSendNextTx\">LocalTxMonitoringSendNextTx</a></li><li>| <a href=\"#v:LocalTxMonitoringMempoolInformation\">LocalTxMonitoringMempoolInformation</a></li></ul>",
+    "name": "LocalTxMonitoringQuery LocalTxMonitoringQueryTx LocalTxMonitoringSendNextTx LocalTxMonitoringMempoolInformation",
+    "module": "Cardano.Api.IPC",
+    "link": "lib/Cardano-Api-IPC.html#t:LocalTxMonitoringQuery"
+  },
+  {
+    "display_html": "<span class=\"keyword\">data</span> <a href=\"#t:LocalTxMonitoringResult\">LocalTxMonitoringResult</a> mode<ul class=\"subs\"><li>= <a href=\"#v:LocalTxMonitoringTxExists\">LocalTxMonitoringTxExists</a> <a href=\"Cardano-Api-TxBody.html#t:TxId\" title=\"Cardano.Api.TxBody\">TxId</a> <a href=\"Cardano-Api-Block.html#t:SlotNo\" title=\"Cardano.Api.Block\">SlotNo</a></li><li>| <a href=\"#v:LocalTxMonitoringTxDoesNotExist\">LocalTxMonitoringTxDoesNotExist</a> <a href=\"Cardano-Api-TxBody.html#t:TxId\" title=\"Cardano.Api.TxBody\">TxId</a> <a href=\"Cardano-Api-Block.html#t:SlotNo\" title=\"Cardano.Api.Block\">SlotNo</a></li><li>| <a href=\"#v:LocalTxMonitoringNextTx\">LocalTxMonitoringNextTx</a> (<a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:Maybe\" title=\"Distribution.Compat.Prelude.Internal\">Maybe</a> (<a href=\"Cardano-Api-IPC.html#t:TxInMode\" title=\"Cardano.Api.IPC\">TxInMode</a> mode)) <a href=\"Cardano-Api-Block.html#t:SlotNo\" title=\"Cardano.Api.Block\">SlotNo</a></li><li>| <a href=\"#v:LocalTxMonitoringMempoolSizeAndCapacity\">LocalTxMonitoringMempoolSizeAndCapacity</a> <a href=\"Cardano-Api-IPC.html#t:MempoolSizeAndCapacity\" title=\"Cardano.Api.IPC\">MempoolSizeAndCapacity</a> <a href=\"Cardano-Api-Block.html#t:SlotNo\" title=\"Cardano.Api.Block\">SlotNo</a></li></ul>",
+    "name": "LocalTxMonitoringResult LocalTxMonitoringTxExists LocalTxMonitoringTxDoesNotExist LocalTxMonitoringNextTx LocalTxMonitoringMempoolSizeAndCapacity",
+    "module": "Cardano.Api.IPC",
+    "link": "lib/Cardano-Api-IPC.html#t:LocalTxMonitoringResult"
+  },
+  {
+    "display_html": "<span class=\"keyword\">data</span> <a href=\"#t:MempoolSizeAndCapacity\">MempoolSizeAndCapacity</a> = <a href=\"#v:MempoolSizeAndCapacity\">MempoolSizeAndCapacity</a> {<ul class=\"subs\"><li><a href=\"#v:capacityInBytes\">capacityInBytes</a> &#8759; !<a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:Word32\" title=\"Distribution.Compat.Prelude.Internal\">Word32</a></li><li><a href=\"#v:sizeInBytes\">sizeInBytes</a> &#8759; !<a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:Word32\" title=\"Distribution.Compat.Prelude.Internal\">Word32</a></li><li><a href=\"#v:numberOfTxs\">numberOfTxs</a> &#8759; !<a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:Word32\" title=\"Distribution.Compat.Prelude.Internal\">Word32</a></li></ul>}",
+    "name": "MempoolSizeAndCapacity MempoolSizeAndCapacity sizeInBytes capacityInBytes numberOfTxs",
+    "module": "Cardano.Api.IPC",
+    "link": "lib/Cardano-Api-IPC.html#t:MempoolSizeAndCapacity"
+  },
+  {
+    "display_html": "<a href=\"#v:queryTxMonitoringLocal\">queryTxMonitoringLocal</a> &#8759; &#8704; mode. <a href=\"Cardano-Api-IPC.html#t:LocalNodeConnectInfo\" title=\"Cardano.Api.IPC\">LocalNodeConnectInfo</a> mode &#8594; <a href=\"Cardano-Api-IPC.html#t:LocalTxMonitoringQuery\" title=\"Cardano.Api.IPC\">LocalTxMonitoringQuery</a> mode &#8594; <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/System-IO.html#t:IO\" title=\"System.IO\">IO</a> (<a href=\"Cardano-Api-IPC.html#t:LocalTxMonitoringResult\" title=\"Cardano.Api.IPC\">LocalTxMonitoringResult</a> mode)",
+    "name": "queryTxMonitoringLocal",
+    "module": "Cardano.Api.IPC",
+    "link": "lib/Cardano-Api-IPC.html#v:queryTxMonitoringLocal"
   },
   {
     "display_html": "<span class=\"keyword\">data</span> <a href=\"#t:EraHistory\">EraHistory</a> mode <span class=\"keyword\">where</span><ul class=\"subs\"><li><a href=\"#v:EraHistory\">EraHistory</a> &#8759; <a href=\"Cardano-Api-Modes.html#t:ConsensusBlockForMode\" title=\"Cardano.Api.Modes\">ConsensusBlockForMode</a> mode ~ HardForkBlock xs &#8658; <a href=\"Cardano-Api-IPC.html#t:ConsensusMode\" title=\"Cardano.Api.IPC\">ConsensusMode</a> mode &#8594; Interpreter xs &#8594; <a href=\"Cardano-Api-IPC.html#t:EraHistory\" title=\"Cardano.Api.IPC\">EraHistory</a> mode</li></ul>",
@@ -6270,8 +6324,8 @@
     "link": "lib/Cardano-Api.html#v:toEraInMode"
   },
   {
-    "display_html": "<span class=\"keyword\">data</span> <a href=\"#t:LocalNodeClientProtocols\">LocalNodeClientProtocols</a> block point tip tx txerr query m = <a href=\"#v:LocalNodeClientProtocols\">LocalNodeClientProtocols</a> {<ul class=\"subs\"><li><a href=\"#v:localChainSyncClient\">localChainSyncClient</a> &#8759; <a href=\"Cardano-Api.html#t:LocalChainSyncClient\" title=\"Cardano.Api\">LocalChainSyncClient</a> block point tip m</li><li><a href=\"#v:localTxSubmissionClient\">localTxSubmissionClient</a> &#8759; <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:Maybe\" title=\"Distribution.Compat.Prelude.Internal\">Maybe</a> (<a href=\"Cardano-Api.html#t:LocalTxSubmissionClient\" title=\"Cardano.Api\">LocalTxSubmissionClient</a> tx txerr m ())</li><li><a href=\"#v:localStateQueryClient\">localStateQueryClient</a> &#8759; <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:Maybe\" title=\"Distribution.Compat.Prelude.Internal\">Maybe</a> (<a href=\"Cardano-Api.html#t:LocalStateQueryClient\" title=\"Cardano.Api\">LocalStateQueryClient</a> block point query m ())</li></ul>}",
-    "name": "LocalNodeClientProtocols LocalNodeClientProtocols localChainSyncClient localTxSubmissionClient localStateQueryClient",
+    "display_html": "<span class=\"keyword\">data</span> <a href=\"#t:LocalNodeClientProtocols\">LocalNodeClientProtocols</a> block point tip slot tx txid txerr query m = <a href=\"#v:LocalNodeClientProtocols\">LocalNodeClientProtocols</a> {<ul class=\"subs\"><li><a href=\"#v:localChainSyncClient\">localChainSyncClient</a> &#8759; <a href=\"Cardano-Api.html#t:LocalChainSyncClient\" title=\"Cardano.Api\">LocalChainSyncClient</a> block point tip m</li><li><a href=\"#v:localTxSubmissionClient\">localTxSubmissionClient</a> &#8759; <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:Maybe\" title=\"Distribution.Compat.Prelude.Internal\">Maybe</a> (<a href=\"Cardano-Api.html#t:LocalTxSubmissionClient\" title=\"Cardano.Api\">LocalTxSubmissionClient</a> tx txerr m ())</li><li><a href=\"#v:localStateQueryClient\">localStateQueryClient</a> &#8759; <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:Maybe\" title=\"Distribution.Compat.Prelude.Internal\">Maybe</a> (<a href=\"Cardano-Api.html#t:LocalStateQueryClient\" title=\"Cardano.Api\">LocalStateQueryClient</a> block point query m ())</li><li><a href=\"#v:localTxMonitoringClient\">localTxMonitoringClient</a> &#8759; <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:Maybe\" title=\"Distribution.Compat.Prelude.Internal\">Maybe</a> (<a href=\"Cardano-Api.html#t:LocalTxMonitorClient\" title=\"Cardano.Api\">LocalTxMonitorClient</a> txid tx slot m ())</li></ul>}",
+    "name": "LocalNodeClientProtocols LocalNodeClientProtocols localChainSyncClient localTxSubmissionClient localStateQueryClient localTxMonitoringClient",
     "module": "Cardano.Api",
     "link": "lib/Cardano-Api.html#t:LocalNodeClientProtocols"
   },
@@ -6318,7 +6372,7 @@
     "link": "lib/Cardano-Api.html#t:BlockInMode"
   },
   {
-    "display_html": "<span class=\"keyword\">type</span> <a href=\"#t:LocalNodeClientProtocolsInMode\">LocalNodeClientProtocolsInMode</a> mode = <a href=\"Cardano-Api.html#t:LocalNodeClientProtocols\" title=\"Cardano.Api\">LocalNodeClientProtocols</a> (<a href=\"Cardano-Api.html#t:BlockInMode\" title=\"Cardano.Api\">BlockInMode</a> mode) <a href=\"Cardano-Api.html#t:ChainPoint\" title=\"Cardano.Api\">ChainPoint</a> <a href=\"Cardano-Api.html#t:ChainTip\" title=\"Cardano.Api\">ChainTip</a> (<a href=\"Cardano-Api.html#t:TxInMode\" title=\"Cardano.Api\">TxInMode</a> mode) (<a href=\"Cardano-Api.html#t:TxValidationErrorInMode\" title=\"Cardano.Api\">TxValidationErrorInMode</a> mode) (<a href=\"Cardano-Api.html#t:QueryInMode\" title=\"Cardano.Api\">QueryInMode</a> mode) <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/System-IO.html#t:IO\" title=\"System.IO\">IO</a>",
+    "display_html": "<span class=\"keyword\">type</span> <a href=\"#t:LocalNodeClientProtocolsInMode\">LocalNodeClientProtocolsInMode</a> mode = <a href=\"Cardano-Api.html#t:LocalNodeClientProtocols\" title=\"Cardano.Api\">LocalNodeClientProtocols</a> (<a href=\"Cardano-Api.html#t:BlockInMode\" title=\"Cardano.Api\">BlockInMode</a> mode) <a href=\"Cardano-Api.html#t:ChainPoint\" title=\"Cardano.Api\">ChainPoint</a> <a href=\"Cardano-Api.html#t:ChainTip\" title=\"Cardano.Api\">ChainTip</a> <a href=\"Cardano-Api.html#t:SlotNo\" title=\"Cardano.Api\">SlotNo</a> (<a href=\"Cardano-Api.html#t:TxInMode\" title=\"Cardano.Api\">TxInMode</a> mode) (<a href=\"Cardano-Api-InMode.html#t:TxIdInMode\" title=\"Cardano.Api.InMode\">TxIdInMode</a> mode) (<a href=\"Cardano-Api.html#t:TxValidationErrorInMode\" title=\"Cardano.Api\">TxValidationErrorInMode</a> mode) (<a href=\"Cardano-Api.html#t:QueryInMode\" title=\"Cardano.Api\">QueryInMode</a> mode) <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/System-IO.html#t:IO\" title=\"System.IO\">IO</a>",
     "name": "LocalNodeClientProtocolsInMode",
     "module": "Cardano.Api",
     "link": "lib/Cardano-Api.html#t:LocalNodeClientProtocolsInMode"
@@ -6336,7 +6390,7 @@
     "link": "lib/Cardano-Api.html#t:TxInMode"
   },
   {
-    "display_html": "<span class=\"keyword\">data</span> <a href=\"#t:TxValidationErrorInMode\">TxValidationErrorInMode</a> mode <span class=\"keyword\">where</span><ul class=\"subs\"><li><a href=\"#v:TxValidationErrorInMode\">TxValidationErrorInMode</a> &#8759; <a href=\"Cardano-Api-TxInMode.html#t:TxValidationError\" title=\"Cardano.Api.TxInMode\">TxValidationError</a> era &#8594; <a href=\"Cardano-Api.html#t:EraInMode\" title=\"Cardano.Api\">EraInMode</a> era mode &#8594; <a href=\"Cardano-Api.html#t:TxValidationErrorInMode\" title=\"Cardano.Api\">TxValidationErrorInMode</a> mode</li><li><a href=\"#v:TxValidationEraMismatch\">TxValidationEraMismatch</a> &#8759; EraMismatch &#8594; <a href=\"Cardano-Api.html#t:TxValidationErrorInMode\" title=\"Cardano.Api\">TxValidationErrorInMode</a> mode</li></ul>",
+    "display_html": "<span class=\"keyword\">data</span> <a href=\"#t:TxValidationErrorInMode\">TxValidationErrorInMode</a> mode <span class=\"keyword\">where</span><ul class=\"subs\"><li><a href=\"#v:TxValidationErrorInMode\">TxValidationErrorInMode</a> &#8759; <a href=\"Cardano-Api-InMode.html#t:TxValidationError\" title=\"Cardano.Api.InMode\">TxValidationError</a> era &#8594; <a href=\"Cardano-Api.html#t:EraInMode\" title=\"Cardano.Api\">EraInMode</a> era mode &#8594; <a href=\"Cardano-Api.html#t:TxValidationErrorInMode\" title=\"Cardano.Api\">TxValidationErrorInMode</a> mode</li><li><a href=\"#v:TxValidationEraMismatch\">TxValidationEraMismatch</a> &#8759; EraMismatch &#8594; <a href=\"Cardano-Api.html#t:TxValidationErrorInMode\" title=\"Cardano.Api\">TxValidationErrorInMode</a> mode</li></ul>",
     "name": "TxValidationErrorInMode TxValidationErrorInMode TxValidationEraMismatch",
     "module": "Cardano.Api",
     "link": "lib/Cardano-Api.html#t:TxValidationErrorInMode"
@@ -6394,6 +6448,36 @@
     "name": "queryNodeLocalState",
     "module": "Cardano.Api",
     "link": "lib/Cardano-Api.html#v:queryNodeLocalState"
+  },
+  {
+    "display_html": "<span class=\"keyword\">newtype</span> <a href=\"#t:LocalTxMonitorClient\">LocalTxMonitorClient</a> txid tx slot (m &#8759; <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/Data-Kind.html#t:Type\" title=\"Data.Kind\">Type</a> &#8594; <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/Data-Kind.html#t:Type\" title=\"Data.Kind\">Type</a>) a = <a href=\"#v:LocalTxMonitorClient\">LocalTxMonitorClient</a> {<ul class=\"subs\"><li><a href=\"#v:runLocalTxMonitorClient\">runLocalTxMonitorClient</a> &#8759; m (ClientStIdle txid tx slot m a)</li></ul>}",
+    "name": "LocalTxMonitorClient LocalTxMonitorClient runLocalTxMonitorClient",
+    "module": "Cardano.Api",
+    "link": "lib/Cardano-Api.html#t:LocalTxMonitorClient"
+  },
+  {
+    "display_html": "<span class=\"keyword\">data</span> <a href=\"#t:LocalTxMonitoringQuery\">LocalTxMonitoringQuery</a> mode<ul class=\"subs\"><li>= <a href=\"#v:LocalTxMonitoringQueryTx\">LocalTxMonitoringQueryTx</a> (<a href=\"Cardano-Api-InMode.html#t:TxIdInMode\" title=\"Cardano.Api.InMode\">TxIdInMode</a> mode)</li><li>| <a href=\"#v:LocalTxMonitoringSendNextTx\">LocalTxMonitoringSendNextTx</a></li><li>| <a href=\"#v:LocalTxMonitoringMempoolInformation\">LocalTxMonitoringMempoolInformation</a></li></ul>",
+    "name": "LocalTxMonitoringQuery LocalTxMonitoringQueryTx LocalTxMonitoringSendNextTx LocalTxMonitoringMempoolInformation",
+    "module": "Cardano.Api",
+    "link": "lib/Cardano-Api.html#t:LocalTxMonitoringQuery"
+  },
+  {
+    "display_html": "<span class=\"keyword\">data</span> <a href=\"#t:LocalTxMonitoringResult\">LocalTxMonitoringResult</a> mode<ul class=\"subs\"><li>= <a href=\"#v:LocalTxMonitoringTxExists\">LocalTxMonitoringTxExists</a> <a href=\"Cardano-Api.html#t:TxId\" title=\"Cardano.Api\">TxId</a> <a href=\"Cardano-Api.html#t:SlotNo\" title=\"Cardano.Api\">SlotNo</a></li><li>| <a href=\"#v:LocalTxMonitoringTxDoesNotExist\">LocalTxMonitoringTxDoesNotExist</a> <a href=\"Cardano-Api.html#t:TxId\" title=\"Cardano.Api\">TxId</a> <a href=\"Cardano-Api.html#t:SlotNo\" title=\"Cardano.Api\">SlotNo</a></li><li>| <a href=\"#v:LocalTxMonitoringNextTx\">LocalTxMonitoringNextTx</a> (<a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:Maybe\" title=\"Distribution.Compat.Prelude.Internal\">Maybe</a> (<a href=\"Cardano-Api.html#t:TxInMode\" title=\"Cardano.Api\">TxInMode</a> mode)) <a href=\"Cardano-Api.html#t:SlotNo\" title=\"Cardano.Api\">SlotNo</a></li><li>| <a href=\"#v:LocalTxMonitoringMempoolSizeAndCapacity\">LocalTxMonitoringMempoolSizeAndCapacity</a> <a href=\"Cardano-Api.html#t:MempoolSizeAndCapacity\" title=\"Cardano.Api\">MempoolSizeAndCapacity</a> <a href=\"Cardano-Api.html#t:SlotNo\" title=\"Cardano.Api\">SlotNo</a></li></ul>",
+    "name": "LocalTxMonitoringResult LocalTxMonitoringTxExists LocalTxMonitoringTxDoesNotExist LocalTxMonitoringNextTx LocalTxMonitoringMempoolSizeAndCapacity",
+    "module": "Cardano.Api",
+    "link": "lib/Cardano-Api.html#t:LocalTxMonitoringResult"
+  },
+  {
+    "display_html": "<span class=\"keyword\">data</span> <a href=\"#t:MempoolSizeAndCapacity\">MempoolSizeAndCapacity</a> = <a href=\"#v:MempoolSizeAndCapacity\">MempoolSizeAndCapacity</a> {<ul class=\"subs\"><li><a href=\"#v:capacityInBytes\">capacityInBytes</a> &#8759; !<a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:Word32\" title=\"Distribution.Compat.Prelude.Internal\">Word32</a></li><li><a href=\"#v:sizeInBytes\">sizeInBytes</a> &#8759; !<a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:Word32\" title=\"Distribution.Compat.Prelude.Internal\">Word32</a></li><li><a href=\"#v:numberOfTxs\">numberOfTxs</a> &#8759; !<a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:Word32\" title=\"Distribution.Compat.Prelude.Internal\">Word32</a></li></ul>}",
+    "name": "MempoolSizeAndCapacity MempoolSizeAndCapacity sizeInBytes capacityInBytes numberOfTxs",
+    "module": "Cardano.Api",
+    "link": "lib/Cardano-Api.html#t:MempoolSizeAndCapacity"
+  },
+  {
+    "display_html": "<a href=\"#v:queryTxMonitoringLocal\">queryTxMonitoringLocal</a> &#8759; &#8704; mode. <a href=\"Cardano-Api.html#t:LocalNodeConnectInfo\" title=\"Cardano.Api\">LocalNodeConnectInfo</a> mode &#8594; <a href=\"Cardano-Api.html#t:LocalTxMonitoringQuery\" title=\"Cardano.Api\">LocalTxMonitoringQuery</a> mode &#8594; <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/base-4.14.3.0/System-IO.html#t:IO\" title=\"System.IO\">IO</a> (<a href=\"Cardano-Api.html#t:LocalTxMonitoringResult\" title=\"Cardano.Api\">LocalTxMonitoringResult</a> mode)",
+    "name": "queryTxMonitoringLocal",
+    "module": "Cardano.Api",
+    "link": "lib/Cardano-Api.html#v:queryTxMonitoringLocal"
   },
   {
     "display_html": "<span class=\"keyword\">data</span> <a href=\"#t:EraHistory\">EraHistory</a> mode <span class=\"keyword\">where</span><ul class=\"subs\"><li><a href=\"#v:EraHistory\">EraHistory</a> &#8759; <a href=\"Cardano-Api.html#t:ConsensusBlockForMode\" title=\"Cardano.Api\">ConsensusBlockForMode</a> mode ~ HardForkBlock xs &#8658; <a href=\"Cardano-Api.html#t:ConsensusMode\" title=\"Cardano.Api\">ConsensusMode</a> mode &#8594; Interpreter xs &#8594; <a href=\"Cardano-Api.html#t:EraHistory\" title=\"Cardano.Api\">EraHistory</a> mode</li></ul>",
@@ -7356,7 +7440,7 @@
     "link": "lib/Cardano-Api-Shelley.html#t:ConsensusMode"
   },
   {
-    "display_html": "<span class=\"keyword\">data</span> <a href=\"#t:LocalNodeClientProtocols\">LocalNodeClientProtocols</a> block point tip tx txerr query m = <a href=\"#v:LocalNodeClientProtocols\">LocalNodeClientProtocols</a> (<a href=\"Cardano-Api-IPC.html#t:LocalChainSyncClient\" title=\"Cardano.Api.IPC\">LocalChainSyncClient</a> block point tip m) (<a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:Maybe\" title=\"Distribution.Compat.Prelude.Internal\">Maybe</a> (<a href=\"Cardano-Api-IPC.html#t:LocalTxSubmissionClient\" title=\"Cardano.Api.IPC\">LocalTxSubmissionClient</a> tx txerr m ())) (<a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:Maybe\" title=\"Distribution.Compat.Prelude.Internal\">Maybe</a> (<a href=\"Cardano-Api-IPC.html#t:LocalStateQueryClient\" title=\"Cardano.Api.IPC\">LocalStateQueryClient</a> block point query m ()))",
+    "display_html": "<span class=\"keyword\">data</span> <a href=\"#t:LocalNodeClientProtocols\">LocalNodeClientProtocols</a> block point tip slot tx txid txerr query m = <a href=\"#v:LocalNodeClientProtocols\">LocalNodeClientProtocols</a> (<a href=\"Cardano-Api-IPC.html#t:LocalChainSyncClient\" title=\"Cardano.Api.IPC\">LocalChainSyncClient</a> block point tip m) (<a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:Maybe\" title=\"Distribution.Compat.Prelude.Internal\">Maybe</a> (<a href=\"Cardano-Api-IPC.html#t:LocalTxSubmissionClient\" title=\"Cardano.Api.IPC\">LocalTxSubmissionClient</a> tx txerr m ())) (<a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:Maybe\" title=\"Distribution.Compat.Prelude.Internal\">Maybe</a> (<a href=\"Cardano-Api-IPC.html#t:LocalStateQueryClient\" title=\"Cardano.Api.IPC\">LocalStateQueryClient</a> block point query m ())) (<a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:Maybe\" title=\"Distribution.Compat.Prelude.Internal\">Maybe</a> (<a href=\"Cardano-Api-IPC.html#t:LocalTxMonitorClient\" title=\"Cardano.Api.IPC\">LocalTxMonitorClient</a> txid tx slot m ()))",
     "name": "LocalNodeClientProtocols LocalNodeClientProtocols",
     "module": "Cardano.Api.Shelley",
     "link": "lib/Cardano-Api-Shelley.html#t:LocalNodeClientProtocols"
@@ -7566,7 +7650,7 @@
     "link": "lib/Cardano-Api-Byron.html#t:ConsensusMode"
   },
   {
-    "display_html": "<span class=\"keyword\">data</span> <a href=\"#t:LocalNodeClientProtocols\">LocalNodeClientProtocols</a> block point tip tx txerr query m = <a href=\"#v:LocalNodeClientProtocols\">LocalNodeClientProtocols</a> (<a href=\"Cardano-Api-IPC.html#t:LocalChainSyncClient\" title=\"Cardano.Api.IPC\">LocalChainSyncClient</a> block point tip m) (<a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:Maybe\" title=\"Distribution.Compat.Prelude.Internal\">Maybe</a> (<a href=\"Cardano-Api-Byron.html#t:LocalTxSubmissionClient\" title=\"Cardano.Api.Byron\">LocalTxSubmissionClient</a> tx txerr m ())) (<a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:Maybe\" title=\"Distribution.Compat.Prelude.Internal\">Maybe</a> (<a href=\"Cardano-Api-Byron.html#t:LocalStateQueryClient\" title=\"Cardano.Api.Byron\">LocalStateQueryClient</a> block point query m ()))",
+    "display_html": "<span class=\"keyword\">data</span> <a href=\"#t:LocalNodeClientProtocols\">LocalNodeClientProtocols</a> block point tip slot tx txid txerr query m = <a href=\"#v:LocalNodeClientProtocols\">LocalNodeClientProtocols</a> (<a href=\"Cardano-Api-IPC.html#t:LocalChainSyncClient\" title=\"Cardano.Api.IPC\">LocalChainSyncClient</a> block point tip m) (<a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:Maybe\" title=\"Distribution.Compat.Prelude.Internal\">Maybe</a> (<a href=\"Cardano-Api-Byron.html#t:LocalTxSubmissionClient\" title=\"Cardano.Api.Byron\">LocalTxSubmissionClient</a> tx txerr m ())) (<a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:Maybe\" title=\"Distribution.Compat.Prelude.Internal\">Maybe</a> (<a href=\"Cardano-Api-Byron.html#t:LocalStateQueryClient\" title=\"Cardano.Api.Byron\">LocalStateQueryClient</a> block point query m ())) (<a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:Maybe\" title=\"Distribution.Compat.Prelude.Internal\">Maybe</a> (<a href=\"Cardano-Api-IPC.html#t:LocalTxMonitorClient\" title=\"Cardano.Api.IPC\">LocalTxMonitorClient</a> txid tx slot m ()))",
     "name": "LocalNodeClientProtocols LocalNodeClientProtocols",
     "module": "Cardano.Api.Byron",
     "link": "lib/Cardano-Api-Byron.html#t:LocalNodeClientProtocols"
