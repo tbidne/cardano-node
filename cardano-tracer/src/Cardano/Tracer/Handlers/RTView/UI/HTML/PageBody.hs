@@ -2,15 +2,21 @@ module Cardano.Tracer.Handlers.RTView.UI.HTML.PageBody
   ( mkPageBody
   ) where
 
+import           Data.List (intersperse)
+import qualified Data.List.NonEmpty as NE
 import qualified Graphics.UI.Threepenny as UI
 import           Graphics.UI.Threepenny.Core
 
+import           Cardano.Tracer.Configuration
 import           Cardano.Tracer.Handlers.RTView.UI.Img.Icons
 import           Cardano.Tracer.Handlers.RTView.UI.HTML.OwnInfo (mkOwnInfo)
 import           Cardano.Tracer.Handlers.RTView.UI.Utils
 
-mkPageBody :: UI.Window -> UI Element
-mkPageBody window =
+mkPageBody
+  :: UI.Window
+  -> Network
+  -> UI Element
+mkPageBody window networkConfig =
   UI.getBody window #+
     [ UI.div ## "preloader" #. "pageloader is-active" #+
         [ UI.span #. "title" # set text "Just a second..."
@@ -22,6 +28,7 @@ mkPageBody window =
             [ string "There are no connected nodes. Yet."
             ]
         ]
+    , noNodesInfo networkConfig
     , UI.mkElement "section" #. "section" #+
         [ UI.div ## "main-table"
                  #. "table-container rt-view-main-table-container"
@@ -64,6 +71,11 @@ mkPageBody window =
                                    , string "Uptime"
                                    ]
                         ]
+                    , UI.tr ## "node-logs-row" #+
+                        [ UI.td #+ [ image "rt-view-overview-icon" logsSVG
+                                   , string "Logs"
+                                   ]
+                        ]
                     , UI.tr ## "node-peers-row" #+
                         [ UI.td #+ [ image "rt-view-overview-icon" peersSVG
                                    , string "Peers"
@@ -89,12 +101,16 @@ topNavigation :: UI Element
 topNavigation = do
   closeInfo <- UI.button #. "modal-close is-large" #+ []
   info <- mkOwnInfo closeInfo
-  infoIcon <- image "mr-4 rt-view-info-icon" rtViewInfoSVG # set UI.title__ "RTView info"
+  infoIcon <- image "mr-4 rt-view-info-icon" rtViewInfoSVG
+                    -- #. "has-tooltip-right"
+                    -- # set dataTooltip "RTView info"
   registerClicksForModal info infoIcon closeInfo
 
   --closeNotifications <- UI.button #. "modal-close is-large" #+ []
   --notifications <- mkOwnInfo closeNotifications
-  notifyIcon <- image "rt-view-notify-icon" rtViewNotifySVG # set UI.title__ "RTView notifications"
+  notifyIcon <- image "rt-view-notify-icon" rtViewNotifySVG
+                      #. "has-tooltip-bottom"
+                      # set dataTooltip "RTView notifications"
   --registerClicksForModal notifications notifyIcon closeNotifications
 
   UI.div #. "navbar rt-view-top-bar" #+
@@ -118,3 +134,62 @@ topNavigation = do
   registerClicksForModal modal iconToOpen iconToClose = do
     on UI.click iconToOpen  . const $ element modal #. "modal is-active"
     on UI.click iconToClose . const $ element modal #. "modal"
+
+-- | If the user doesn't see connected nodes - possible reason of it is
+--   misconfiguration of 'cardano-tracer' and/or 'cardano-node'.
+--   So we have to show basic explanation.
+noNodesInfo :: Network -> UI Element
+noNodesInfo networkConfig = do
+  closeIt <- UI.button #. "delete"
+  infoNote <-
+    UI.div ## "no-nodes-info"
+           #. "container notification is-link rt-view-no-nodes-info" #+
+      [ element closeIt
+      , UI.p #. "mb-4 is-size-4" # set text "«Hey, where are my nodes?»"
+      , UI.p #+
+          [ string "If you are sure that your nodes should already be connected, "
+          , string "please check your configuration files."
+          ]
+      , UI.p #+
+          [ string "For more details, please read "
+          , UI.anchor # set UI.href "https://github.com/input-output-hk/cardano-node/blob/master/cardano-tracer/docs/cardano-tracer.md#configuration"
+                      # set text "our documentation"
+          , string "."
+          ]
+      , UI.p #. "mt-4" #+
+          [ UI.span # set UI.html ("Currently, your <code>cardano-tracer</code> is configured as a " <> mode)
+          , UI.span # set UI.html (", so it " <> whatItDoes)
+          ]
+      , UI.p #. "mt-4" #+
+          [ UI.span # set UI.html ("Correspondingly, your " <> nodeConfigNotice)
+          ]
+      ]
+  on UI.click closeIt . const $ element infoNote # hideIt
+  return infoNote
+ where
+  (mode, whatItDoes, nodeConfigNotice) =
+    case networkConfig of
+      AcceptAt (LocalSocket p) ->
+        ( "server"
+        , "accepts connections from your nodes via the local socket <code>" <> p <> "</code>."
+        , "nodes should be configured as clients: make sure <code>TraceOptionForwarder.mode</code>"
+          <> " is <code>Initiator</code>, also check <code>TraceOptionForwarder.address</code> path."
+        )
+      ConnectTo addrs ->
+        let manySocks = NE.length addrs > 1 in
+        ( "client"
+        , "connects to your "
+          <> (if manySocks then "nodes" else "node")
+          <> " via the local "
+          <> (if manySocks
+               then
+                 let socks = map (\(LocalSocket p) -> "<code>" <> p <> "</code>") $ NE.toList addrs
+                 in "sockets " <> concat (intersperse ", " socks) <> "."
+               else
+                 "socket <code>" <> let LocalSocket p = NE.head addrs in p <> "</code>.")
+        , (if manySocks then "nodes" else "node")
+          <> " should be configured as "
+          <> (if manySocks then "servers" else "a server")
+          <> ": make sure <code>TraceOptionForwarder.mode</code>"
+          <> " is <code>Responder</code>, also check <code>TraceOptionForwarder.address</code> path."
+        )

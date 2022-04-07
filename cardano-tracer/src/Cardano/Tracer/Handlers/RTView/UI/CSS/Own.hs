@@ -21,6 +21,12 @@ body {
   min-height: 100%;
 }
 
+code {
+  color: #1d359f;
+  padding: 0.11em 0.2em 0.11em;
+  border-radius: 3px;
+}
+
 .pageloader {
   background: #2c2b3b !important;
   opacity: 0.95 !important;
@@ -233,5 +239,10 @@ span[data-tooltip] {
   background-color: #2c2b3b;
   color: whitesmoke;
   font-size: 19px;
+}
+
+.rt-view-no-nodes-info {
+  max-width: 600px !important;
+  margin-top: 80px;
 }
 |]

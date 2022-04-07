@@ -87,8 +87,12 @@ deleteColumnsForDisconnected window connected disconnected = do
 checkNoNodesState :: UI.Window -> Set NodeId -> UI ()
 checkNoNodesState window connected =
   if S.null connected
-    then findAndShow window "no-nodes"
-    else findAndHide window "no-nodes"
+    then do
+      findAndShow window "no-nodes"
+      findAndShow window "no-nodes-info"
+    else do
+      findAndHide window "no-nodes"
+      findAndHide window "no-nodes-info"
 
 checkAcceptedTraceObjects
   :: UI.Window

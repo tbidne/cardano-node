@@ -45,7 +45,7 @@ runRTView
   -> DataPointRequestors
   -> SavedTraceObjects
   -> IO ()
-runRTView TracerConfig{hasRTView, ekgRequestFreq}
+runRTView TracerConfig{network, hasRTView, ekgRequestFreq}
           connectedNodes acceptedMetrics dpRequestors savedTO =
   whenJust hasRTView $ \(Endpoint host port) -> do
     -- Initialize displayed stuff outside of main page renderer,
@@ -61,6 +61,7 @@ runRTView TracerConfig{hasRTView, ekgRequestFreq}
         savedTO
         reloadFlag
         ekgRequestFreq
+        network
  where
   config h p = UI.defaultConfig
     { UI.jsPort = Just . fromIntegral $ p
@@ -75,10 +76,11 @@ mkMainPage
   -> SavedTraceObjects
   -> PageReloadedFlag
   -> Maybe Pico
+  -> Network
   -> UI.Window
   -> UI ()
 mkMainPage connectedNodes displayedElements acceptedMetrics
-           dpRequestors savedTO reloadFlag ekgFreq window = do
+           dpRequestors savedTO reloadFlag ekgFreq networkConfig window = do
   void $ return window # set UI.title pageTitle
   void $ UI.getHead window #+
     [ UI.link # set UI.rel "icon"
@@ -92,7 +94,7 @@ mkMainPage connectedNodes displayedElements acceptedMetrics
     -- , UI.mkElement "script" # set UI.html chartJS
     ]
 
-  pageBody <- mkPageBody window
+  pageBody <- mkPageBody window networkConfig
 
   -- Prepare and run the timer, which will hide the page preloader.
   preloaderTimer <- UI.timer # set UI.interval 10

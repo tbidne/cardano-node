@@ -25,7 +25,7 @@ import           Trace.Forward.Protocol.DataPoint.Type (DataPointName)
 import           Cardano.Node.Startup (NodeInfo (..))
 
 import           Cardano.Tracer.Handlers.RTView.State.Displayed
-import           Cardano.Tracer.Handlers.RTView.UI.Img.Icons
+-- import           Cardano.Tracer.Handlers.RTView.UI.Img.Icons
 import           Cardano.Tracer.Handlers.RTView.UI.Utils
 import           Cardano.Tracer.Types
 
@@ -56,7 +56,7 @@ askNSetNodeInfo window dpRequestors newlyConnected displayedElements =
   unless (S.null newlyConnected) $
     forM_ newlyConnected $ \nodeId@(NodeId anId) ->
       whenJustM (liftIO $ askDataPoint dpRequestors nodeId "NodeInfo") $ \ni -> do
-        setName (niName ni) anId (anId <> "__node-name")
+        findAndSet' (niName ni) (anId <> "__node-name")
         findAndSet' (niVersion ni) (anId <> "__node-version")
         setProtocol (niProtocol ni) (anId <> "__node-protocol")
         findAndSet' (T.take 7 $ niCommit ni) (anId <> "__node-commit")
@@ -73,12 +73,6 @@ askNSetNodeInfo window dpRequestors newlyConnected displayedElements =
   findAndSet' t = findAndSet (set text $ T.unpack t) window
 
   nodeLink commit = T.unpack $ "https://github.com/input-output-hk/cardano-node/commit/" <> T.take 7 commit
-
-  setName name anId id' = do
-    findAndSet' name id'
-    findAndAdd [ image "rt-view-node-link-icon has-tooltip-multiline has-tooltip-right" rtViewInfoSVG
-                       # set dataTooltip ("Node identifier is " <> T.unpack anId)
-               ] window id'
 
   setProtocol p id' = do
     findAndSet' "" id'

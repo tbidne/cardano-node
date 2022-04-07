@@ -48,6 +48,7 @@ addNodeColumn window (NodeId anId) = do
   addNodeCell "start-time"        [UI.span ## (id' <> "__node-start-time")        # set text "—"]
   addNodeCell "system-start-time" [UI.span ## (id' <> "__node-system-start-time") # set text "—"]
   addNodeCell "uptime"   [UI.span ## (id' <> "__node-uptime")   # set text "—"]
+  addNodeCell "logs"     [UI.span ## (id' <> "__node-logs")     # set text "—"]
   addNodeCell "peers"    [UI.span ## (id' <> "__node-peers")    # set text "—"]
   addNodeCell "chain"    [UI.span ## (id' <> "__node-chain")    # set text "—"]
   addNodeCell "errors"   [UI.span ## (id' <> "__node-errors")   # set text "No errors"]
