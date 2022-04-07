@@ -109,8 +109,8 @@ topNavigation = do
   --closeNotifications <- UI.button #. "modal-close is-large" #+ []
   --notifications <- mkOwnInfo closeNotifications
   notifyIcon <- image "rt-view-notify-icon" rtViewNotifySVG
-                      #. "has-tooltip-bottom"
-                      # set dataTooltip "RTView notifications"
+                      -- #. "has-tooltip-bottom"
+                      -- # set dataTooltip "RTView notifications"
   --registerClicksForModal notifications notifyIcon closeNotifications
 
   UI.div #. "navbar rt-view-top-bar" #+

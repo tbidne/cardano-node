@@ -11,6 +11,7 @@ import           Control.Concurrent.STM (atomically)
 import           Control.Concurrent.STM.TVar (readTVar, readTVarIO)
 import           Control.Monad (forM_, unless, when)
 import           Control.Monad.Extra (whenJust, whenJustM)
+import           Data.List.NonEmpty (NonEmpty)
 import qualified Data.Map.Strict as M
 import           Data.Set (Set, (\\))
 import qualified Data.Set as S
@@ -22,6 +23,7 @@ import qualified Graphics.UI.Threepenny as UI
 import           Graphics.UI.Threepenny.Core
 import           Text.Read (readMaybe)
 
+import           Cardano.Tracer.Configuration
 import           Cardano.Tracer.Handlers.Metrics.Utils
 import           Cardano.Tracer.Handlers.RTView.State.Displayed
 import           Cardano.Tracer.Handlers.RTView.State.TraceObjects
@@ -37,8 +39,9 @@ updateUI
   -> DataPointRequestors
   -> SavedTraceObjects
   -> PageReloadedFlag
+  -> NonEmpty LoggingParams
   -> UI ()
-updateUI window connectedNodes displayedElements dpRequestors savedTO reloadFlag = do
+updateUI window connectedNodes displayedElements dpRequestors savedTO reloadFlag loggingConfig = do
   (connected, displayedEls, afterReload) <- liftIO . atomically $ (,,)
     <$> readTVar connectedNodes
     <*> readTVar displayedElements
@@ -47,7 +50,7 @@ updateUI window connectedNodes displayedElements dpRequestors savedTO reloadFlag
     then do
       -- Ok, web-page was reload (i.e. it's the first update after DOM-rendering),
       -- so displayed state should be restored immediately.
-      addColumnsForConnected window connected
+      addColumnsForConnected window connected loggingConfig
       checkNoNodesState window connected
       askNSetNodeInfo window dpRequestors connected displayedElements
       liftIO $ updateDisplayedElements displayedElements connected
@@ -59,7 +62,7 @@ updateUI window connectedNodes displayedElements dpRequestors savedTO reloadFlag
         let disconnected   = displayed \\ connected -- In 'displayed' but not in 'connected'.
             newlyConnected = connected \\ displayed -- In 'connected' but not in 'displayed'.
         deleteColumnsForDisconnected window connected disconnected
-        addColumnsForConnected window newlyConnected
+        addColumnsForConnected window newlyConnected loggingConfig
         checkNoNodesState window connected
         askNSetNodeInfo window dpRequestors newlyConnected displayedElements
         liftIO $ updateDisplayedElements displayedElements connected
@@ -70,10 +73,12 @@ updateUI window connectedNodes displayedElements dpRequestors savedTO reloadFlag
 addColumnsForConnected
   :: UI.Window
   -> Set NodeId
+  -> NonEmpty LoggingParams
   -> UI ()
-addColumnsForConnected window newlyConnected = do
-  showDescriptionColumnIfNeeded window newlyConnected
-  forM_ newlyConnected $ addNodeColumn window
+addColumnsForConnected window newlyConnected loggingConfig = do
+  unless (S.null newlyConnected) $
+    findAndShow window "main-table"
+  forM_ newlyConnected $ addNodeColumn window loggingConfig
 
 deleteColumnsForDisconnected
   :: UI.Window
@@ -82,7 +87,8 @@ deleteColumnsForDisconnected
   -> UI ()
 deleteColumnsForDisconnected window connected disconnected = do
   forM_ disconnected $ deleteNodeColumn window
-  hideDescriptionColumnIfNeeded window connected
+  when (S.null connected) $
+    findAndHide window "main-table"
 
 checkNoNodesState :: UI.Window -> Set NodeId -> UI ()
 checkNoNodesState window connected =

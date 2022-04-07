@@ -9,6 +9,7 @@ module Cardano.Tracer.Handlers.RTView.Run
 import           Control.Monad (void)
 import           Control.Monad.Extra (whenJust)
 import           Data.Fixed (Pico)
+import           Data.List.NonEmpty (NonEmpty)
 import           Data.Maybe (fromMaybe)
 import qualified Data.Text as T
 import           Data.Text.Encoding (encodeUtf8)
@@ -45,7 +46,7 @@ runRTView
   -> DataPointRequestors
   -> SavedTraceObjects
   -> IO ()
-runRTView TracerConfig{network, hasRTView, ekgRequestFreq}
+runRTView TracerConfig{logging, network, hasRTView, ekgRequestFreq}
           connectedNodes acceptedMetrics dpRequestors savedTO =
   whenJust hasRTView $ \(Endpoint host port) -> do
     -- Initialize displayed stuff outside of main page renderer,
@@ -61,6 +62,7 @@ runRTView TracerConfig{network, hasRTView, ekgRequestFreq}
         savedTO
         reloadFlag
         ekgRequestFreq
+        logging
         network
  where
   config h p = UI.defaultConfig
@@ -76,11 +78,13 @@ mkMainPage
   -> SavedTraceObjects
   -> PageReloadedFlag
   -> Maybe Pico
+  -> NonEmpty LoggingParams
   -> Network
   -> UI.Window
   -> UI ()
 mkMainPage connectedNodes displayedElements acceptedMetrics
-           dpRequestors savedTO reloadFlag ekgFreq networkConfig window = do
+           dpRequestors savedTO reloadFlag ekgFreq
+           loggingConfig networkConfig window = do
   void $ return window # set UI.title pageTitle
   void $ UI.getHead window #+
     [ UI.link # set UI.rel "icon"
@@ -114,6 +118,7 @@ mkMainPage connectedNodes displayedElements acceptedMetrics
       dpRequestors
       savedTO
       reloadFlag
+      loggingConfig
   UI.start uiUpdateTimer
 
   -- The user can setup EKG request frequency (in seconds) in tracer's configuration,
