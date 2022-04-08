@@ -17,6 +17,8 @@ import           Graphics.UI.Threepenny.Core
 import           System.FilePath ((</>))
 
 import           Cardano.Tracer.Configuration
+import           Cardano.Tracer.Handlers.RTView.UI.JS.Utils
+import           Cardano.Tracer.Handlers.RTView.UI.Img.Icons
 import           Cardano.Tracer.Handlers.RTView.UI.Utils
 import           Cardano.Tracer.Types
 
@@ -84,15 +86,43 @@ logsSettings loggingConfig anId =
     case mode of
       FileMode -> do
         let pathToSubdir = root </> anId
-            fmt = case format of
-                    ForHuman -> "LOG"
-                    ForMachine -> "JSON"
+        copyPath <- image "has-tooltip-multiline has-tooltip-top rt-view-copy-icon" copySVG
+                          # set dataTooltip "Click to copy the path to a directory with logs from this node"
+        on UI.click copyPath . const $
+          UI.runFunction $ UI.ffi copyTextToClipboard pathToSubdir
         return $ UI.p #+
-                   [  string pathToSubdir
-                   , UI.span #. "tag is-primary is-medium" # set text fmt
+                   [ UI.span #. ("tag is-info is-light is-rounded mr-3"
+                                 <> " has-tooltip-multiline has-tooltip-top")
+                             # set dataTooltip (pathToSubdir
+                                                <> " is the path to a directory with logs from this node")
+                             # set text (shorten pathToSubdir)
+                   , element copyPath
+                   , UI.span #. ("tag is-warning is-light is-rounded ml-3 "
+                                 <> "has-tooltip-multiline has-tooltip-top")
+                             # set dataTooltip "The format log files are written in"
+                             # set text (if format == ForHuman then "LOG" else "JSON")
                    ]
-      JournalMode ->
-        return $ string "J"
+      JournalMode -> do
+        copyId <- image "has-tooltip-multiline has-tooltip-top rt-view-copy-icon" copySVG
+                        # set dataTooltip "Click to copy the syslog identifier of this node"
+        on UI.click copyId . const $
+          UI.runFunction $ UI.ffi copyTextToClipboard anId
+        return $ UI.p #+
+                   [ UI.span #. ("tag is-info is-light is-rounded mr-3"
+                                 <> " has-tooltip-multiline has-tooltip-top")
+                             # set dataTooltip (anId <> " is the syslog identifier for this node")
+                             # set text (shorten anId)
+                   , element copyId
+                   , UI.span #. ("tag is-warning is-light is-rounded ml-3 "
+                                 <> "has-tooltip-multiline has-tooltip-top")
+                             # set dataTooltip "Logs from this node are written in systemd's journal"
+                             # set text "JRNL"
+                   ]
+ where
+  shorten t =
+    if length t > 20
+      then take 20 t <> "..."
+      else t
 
 -- | The node was disconnected, so its column should be deleted.
 deleteNodeColumn

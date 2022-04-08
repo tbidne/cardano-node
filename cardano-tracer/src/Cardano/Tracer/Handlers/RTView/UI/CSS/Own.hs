@@ -85,6 +85,18 @@ span[data-tooltip] {
   cursor: pointer;
 }
 
+.rt-view-copy-icon svg {
+  width: 20px;
+  color: whitesmoke;
+  cursor: pointer;
+}
+
+.rt-view-logs-icon svg {
+  width: 23px;
+  padding-top: 2px;
+  color: whitesmoke;
+}
+
 .rt-view-what-icon {
   text-align: left !important;
 }

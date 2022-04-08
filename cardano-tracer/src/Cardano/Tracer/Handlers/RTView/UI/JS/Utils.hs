@@ -1,8 +1,8 @@
-module Cardano.RTView.GUI.JS.Utils
-    ( copyTextToClipboard
-    , downloadCSVFile
-    , goToTab
-    ) where
+module Cardano.Tracer.Handlers.RTView.UI.JS.Utils
+  ( copyTextToClipboard
+  , downloadCSVFile
+  , goToTab
+  ) where
 
 copyTextToClipboard :: String
 copyTextToClipboard = concat
