@@ -36,7 +36,7 @@ initSavedTraceObjects = newTVarIO M.empty
 saveTraceObjects :: SavedTraceObjects -> NodeId -> [TraceObject] -> IO ()
 saveTraceObjects savedTraceObjects nodeId traceObjects =
   unless (null itemsToSave) $ atomically $ modifyTVar' savedTraceObjects $ \savedTO ->
-    case savedTO M.!? nodeId of
+    case M.lookup nodeId savedTO of
       Nothing ->
         M.insert nodeId (M.fromList itemsToSave) savedTO
       Just savedTOForThisNode ->

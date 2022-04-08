@@ -23,6 +23,8 @@ import qualified Graphics.UI.Threepenny as UI
 import           Graphics.UI.Threepenny.Core
 import           Text.Read (readMaybe)
 
+import Debug.Trace
+
 import           Cardano.Tracer.Configuration
 import           Cardano.Tracer.Handlers.Metrics.Utils
 import           Cardano.Tracer.Handlers.RTView.State.Displayed
@@ -36,12 +38,12 @@ updateUI
   :: UI.Window
   -> ConnectedNodes
   -> DisplayedElements
-  -> DataPointRequestors
   -> SavedTraceObjects
+  -> DataPointRequestors
   -> PageReloadedFlag
   -> NonEmpty LoggingParams
   -> UI ()
-updateUI window connectedNodes displayedElements dpRequestors savedTO reloadFlag loggingConfig = do
+updateUI window connectedNodes displayedElements savedTO dpRequestors reloadFlag loggingConfig = do
   (connected, displayedEls, afterReload) <- liftIO . atomically $ (,,)
     <$> readTVar connectedNodes
     <*> readTVar displayedElements
@@ -67,7 +69,7 @@ updateUI window connectedNodes displayedElements dpRequestors savedTO reloadFlag
         askNSetNodeInfo window dpRequestors newlyConnected displayedElements
         liftIO $ updateDisplayedElements displayedElements connected
   -- Check if we have to update elements on the page using received 'TraceObject's.
-  checkAcceptedTraceObjects window displayedElements savedTO
+  checkSavedTraceObjects window displayedElements savedTO
   setUptimeForNodes window connected displayedElements
 
 addColumnsForConnected
@@ -100,16 +102,16 @@ checkNoNodesState window connected =
       findAndHide window "no-nodes"
       findAndHide window "no-nodes-info"
 
-checkAcceptedTraceObjects
+checkSavedTraceObjects
   :: UI.Window
   -> DisplayedElements
   -> SavedTraceObjects
   -> UI ()
-checkAcceptedTraceObjects window displayedElements savedTO = do
+checkSavedTraceObjects window displayedElements savedTO = do
   savedTraceObjects <- liftIO $ readTVarIO savedTO
-  forM_ (M.toList savedTraceObjects) $ \(nodeId, savedForNode) ->
-    forM_ (M.toList savedForNode) $ \(namespace, toValue) ->
-      updateElementsIfNeeded window displayedElements nodeId namespace toValue
+  forM_ (M.toList savedTraceObjects) $ \(nodeId, savedTOForNode) ->
+    forM_ (M.toList savedTOForNode) $ \(namespace, trObValue) ->
+      updateElementsIfNeeded window displayedElements nodeId namespace trObValue
 
 updateElementsIfNeeded
   :: UI.Window
@@ -118,9 +120,10 @@ updateElementsIfNeeded
   -> Namespace
   -> TraceObjectTValue
   -> UI ()
-updateElementsIfNeeded window displayedElements nodeId namespace toValue = do
+updateElementsIfNeeded _window _displayedElements _nodeId namespace trObValue = do
+  liftIO . traceIO $ "______CHECK_STO___: " <> unpack trObValue
   case namespace of
-    "density" -> updateElement
+    "density" -> return () -- updateElement
     "slotNum" -> return ()
     "blockNum" -> return ()
     "slotInEpoch" -> return ()
@@ -138,10 +141,11 @@ updateElementsIfNeeded window displayedElements nodeId namespace toValue = do
     "currentKESPeriod"  -> return ()
     "remainingKESPeriods" -> return ()
     _ -> return ()
- where
+ --where
+  {-
   updateElement = do
     let elId = ""
-        elValue = toValue
+        elValue = trObValue
     liftIO (getDisplayedValue displayedElements nodeId elId) >>= \case
       Nothing ->
         -- There is no displayed value for this element yet.
@@ -154,6 +158,7 @@ updateElementsIfNeeded window displayedElements nodeId namespace toValue = do
      setAndSave elId elValue = do
       findAndSet (set text $ unpack elValue) window elId
       liftIO $ saveDisplayedValue displayedElements nodeId elId elValue
+  -}
 
 updateMetricsUI
   :: UI.Window

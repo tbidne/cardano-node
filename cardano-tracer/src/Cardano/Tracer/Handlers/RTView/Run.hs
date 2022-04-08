@@ -43,11 +43,11 @@ runRTView
   :: TracerConfig
   -> ConnectedNodes
   -> AcceptedMetrics
-  -> DataPointRequestors
   -> SavedTraceObjects
+  -> DataPointRequestors
   -> IO ()
 runRTView TracerConfig{logging, network, hasRTView, ekgRequestFreq}
-          connectedNodes acceptedMetrics dpRequestors savedTO =
+          connectedNodes acceptedMetrics savedTO dpRequestors =
   whenJust hasRTView $ \(Endpoint host port) -> do
     -- Initialize displayed stuff outside of main page renderer,
     -- to be able to update corresponding elements after page reloading.
@@ -58,8 +58,8 @@ runRTView TracerConfig{logging, network, hasRTView, ekgRequestFreq}
         connectedNodes
         displayedElements
         acceptedMetrics
-        dpRequestors
         savedTO
+        dpRequestors
         reloadFlag
         ekgRequestFreq
         logging
@@ -74,8 +74,8 @@ mkMainPage
   :: ConnectedNodes
   -> DisplayedElements
   -> AcceptedMetrics
-  -> DataPointRequestors
   -> SavedTraceObjects
+  -> DataPointRequestors
   -> PageReloadedFlag
   -> Maybe Pico
   -> NonEmpty LoggingParams
@@ -83,7 +83,7 @@ mkMainPage
   -> UI.Window
   -> UI ()
 mkMainPage connectedNodes displayedElements acceptedMetrics
-           dpRequestors savedTO reloadFlag ekgFreq
+           savedTO dpRequestors reloadFlag ekgFreq
            loggingConfig networkConfig window = do
   void $ return window # set UI.title pageTitle
   void $ UI.getHead window #+
@@ -115,8 +115,8 @@ mkMainPage connectedNodes displayedElements acceptedMetrics
       window
       connectedNodes
       displayedElements
-      dpRequestors
       savedTO
+      dpRequestors
       reloadFlag
       loggingConfig
   UI.start uiUpdateTimer
