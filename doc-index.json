@@ -1350,6 +1350,30 @@
     "link": "lib/Cardano-Api-Script.html#v:eraOfScriptInEra"
   },
   {
+    "display_html": "<span class=\"keyword\">data</span> <a href=\"#t:ReferenceScript\">ReferenceScript</a> era <span class=\"keyword\">where</span><ul class=\"subs\"><li><a href=\"#v:ReferenceScript\">ReferenceScript</a> &#8759; <a href=\"Cardano-Api-Script.html#t:ReferenceScriptsSupportedInEra\" title=\"Cardano.Api.Script\">ReferenceScriptsSupportedInEra</a> era &#8594; <a href=\"Cardano-Api-Script.html#t:ScriptInAnyLang\" title=\"Cardano.Api.Script\">ScriptInAnyLang</a> &#8594; <a href=\"Cardano-Api-Script.html#t:ReferenceScript\" title=\"Cardano.Api.Script\">ReferenceScript</a> era</li><li><a href=\"#v:ReferenceScriptNone\">ReferenceScriptNone</a> &#8759; <a href=\"Cardano-Api-Script.html#t:ReferenceScript\" title=\"Cardano.Api.Script\">ReferenceScript</a> era</li></ul>",
+    "name": "ReferenceScript ReferenceScript ReferenceScriptNone",
+    "module": "Cardano.Api.Script",
+    "link": "lib/Cardano-Api-Script.html#t:ReferenceScript"
+  },
+  {
+    "display_html": "<span class=\"keyword\">data</span> <a href=\"#t:ReferenceScriptsSupportedInEra\">ReferenceScriptsSupportedInEra</a> era <span class=\"keyword\">where</span><ul class=\"subs\"><li><a href=\"#v:ReferenceScriptsInBabbageEra\">ReferenceScriptsInBabbageEra</a> &#8759; <a href=\"Cardano-Api-Script.html#t:ReferenceScriptsSupportedInEra\" title=\"Cardano.Api.Script\">ReferenceScriptsSupportedInEra</a> <a href=\"Cardano-Api-Eras.html#t:BabbageEra\" title=\"Cardano.Api.Eras\">BabbageEra</a></li></ul>",
+    "name": "ReferenceScriptsSupportedInEra ReferenceScriptsInBabbageEra",
+    "module": "Cardano.Api.Script",
+    "link": "lib/Cardano-Api-Script.html#t:ReferenceScriptsSupportedInEra"
+  },
+  {
+    "display_html": "<a href=\"#v:referenceScriptsSupportedInEra\">referenceScriptsSupportedInEra</a> &#8759; <a href=\"Cardano-Api-Eras.html#t:CardanoEra\" title=\"Cardano.Api.Eras\">CardanoEra</a> era &#8594; <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:Maybe\" title=\"Distribution.Compat.Prelude.Internal\">Maybe</a> (<a href=\"Cardano-Api-Script.html#t:ReferenceScriptsSupportedInEra\" title=\"Cardano.Api.Script\">ReferenceScriptsSupportedInEra</a> era)",
+    "name": "referenceScriptsSupportedInEra",
+    "module": "Cardano.Api.Script",
+    "link": "lib/Cardano-Api-Script.html#v:referenceScriptsSupportedInEra"
+  },
+  {
+    "display_html": "<a href=\"#v:refScriptToShelleyScript\">refScriptToShelleyScript</a> &#8759; <a href=\"Cardano-Api-Eras.html#t:CardanoEra\" title=\"Cardano.Api.Eras\">CardanoEra</a> era &#8594; <a href=\"Cardano-Api-Script.html#t:ReferenceScript\" title=\"Cardano.Api.Script\">ReferenceScript</a> era &#8594; StrictMaybe (Script (<a href=\"Cardano-Api-Eras.html#t:ShelleyLedgerEra\" title=\"Cardano.Api.Eras\">ShelleyLedgerEra</a> era))",
+    "name": "refScriptToShelleyScript",
+    "module": "Cardano.Api.Script",
+    "link": "lib/Cardano-Api-Script.html#v:refScriptToShelleyScript"
+  },
+  {
     "display_html": "<span class=\"keyword\">data</span> <a href=\"#t:WitCtxTxIn\">WitCtxTxIn</a>",
     "name": "WitCtxTxIn",
     "module": "Cardano.Api.Script",
@@ -2676,7 +2700,7 @@
     "link": "lib/Cardano-Api-TxBody.html#t:CtxUTxO"
   },
   {
-    "display_html": "<span class=\"keyword\">data</span> <a href=\"#t:TxOut\">TxOut</a> ctx era = <a href=\"#v:TxOut\">TxOut</a> (<a href=\"Cardano-Api-Address.html#t:AddressInEra\" title=\"Cardano.Api.Address\">AddressInEra</a> era) (<a href=\"Cardano-Api-TxBody.html#t:TxOutValue\" title=\"Cardano.Api.TxBody\">TxOutValue</a> era) (<a href=\"Cardano-Api-TxBody.html#t:TxOutDatum\" title=\"Cardano.Api.TxBody\">TxOutDatum</a> ctx era)",
+    "display_html": "<span class=\"keyword\">data</span> <a href=\"#t:TxOut\">TxOut</a> ctx era = <a href=\"#v:TxOut\">TxOut</a> (<a href=\"Cardano-Api-Address.html#t:AddressInEra\" title=\"Cardano.Api.Address\">AddressInEra</a> era) (<a href=\"Cardano-Api-TxBody.html#t:TxOutValue\" title=\"Cardano.Api.TxBody\">TxOutValue</a> era) (<a href=\"Cardano-Api-TxBody.html#t:TxOutDatum\" title=\"Cardano.Api.TxBody\">TxOutDatum</a> ctx era) (<a href=\"Cardano-Api-Script.html#t:ReferenceScript\" title=\"Cardano.Api.Script\">ReferenceScript</a> era)",
     "name": "TxOut TxOut",
     "module": "Cardano.Api.TxBody",
     "link": "lib/Cardano-Api-TxBody.html#t:TxOut"
@@ -4836,7 +4860,7 @@
     "link": "lib/Cardano-Api.html#t:CtxUTxO"
   },
   {
-    "display_html": "<span class=\"keyword\">data</span> <a href=\"#t:TxOut\">TxOut</a> ctx era = <a href=\"#v:TxOut\">TxOut</a> (<a href=\"Cardano-Api.html#t:AddressInEra\" title=\"Cardano.Api\">AddressInEra</a> era) (<a href=\"Cardano-Api.html#t:TxOutValue\" title=\"Cardano.Api\">TxOutValue</a> era) (<a href=\"Cardano-Api.html#t:TxOutDatum\" title=\"Cardano.Api\">TxOutDatum</a> ctx era)",
+    "display_html": "<span class=\"keyword\">data</span> <a href=\"#t:TxOut\">TxOut</a> ctx era = <a href=\"#v:TxOut\">TxOut</a> (<a href=\"Cardano-Api.html#t:AddressInEra\" title=\"Cardano.Api\">AddressInEra</a> era) (<a href=\"Cardano-Api.html#t:TxOutValue\" title=\"Cardano.Api\">TxOutValue</a> era) (<a href=\"Cardano-Api.html#t:TxOutDatum\" title=\"Cardano.Api\">TxOutDatum</a> ctx era) (<a href=\"Cardano-Api-Script.html#t:ReferenceScript\" title=\"Cardano.Api.Script\">ReferenceScript</a> era)",
     "name": "TxOut TxOut",
     "module": "Cardano.Api",
     "link": "lib/Cardano-Api.html#t:TxOut"
@@ -6960,7 +6984,7 @@
     "link": "lib/Cardano-Api-Shelley.html#v:fromShelleyTxIn"
   },
   {
-    "display_html": "<span class=\"keyword\">data</span> <a href=\"#t:TxOut\">TxOut</a> ctx era = <a href=\"#v:TxOut\">TxOut</a> (<a href=\"Cardano-Api-Address.html#t:AddressInEra\" title=\"Cardano.Api.Address\">AddressInEra</a> era) (<a href=\"Cardano-Api-TxBody.html#t:TxOutValue\" title=\"Cardano.Api.TxBody\">TxOutValue</a> era) (<a href=\"Cardano-Api-TxBody.html#t:TxOutDatum\" title=\"Cardano.Api.TxBody\">TxOutDatum</a> ctx era)",
+    "display_html": "<span class=\"keyword\">data</span> <a href=\"#t:TxOut\">TxOut</a> ctx era = <a href=\"#v:TxOut\">TxOut</a> (<a href=\"Cardano-Api-Address.html#t:AddressInEra\" title=\"Cardano.Api.Address\">AddressInEra</a> era) (<a href=\"Cardano-Api-TxBody.html#t:TxOutValue\" title=\"Cardano.Api.TxBody\">TxOutValue</a> era) (<a href=\"Cardano-Api-TxBody.html#t:TxOutDatum\" title=\"Cardano.Api.TxBody\">TxOutDatum</a> ctx era) (<a href=\"Cardano-Api-Shelley.html#t:ReferenceScript\" title=\"Cardano.Api.Shelley\">ReferenceScript</a> era)",
     "name": "TxOut TxOut",
     "module": "Cardano.Api.Shelley",
     "link": "lib/Cardano-Api-Shelley.html#t:TxOut"
@@ -7270,6 +7294,30 @@
     "name": "calculateExecutionUnitsLovelace",
     "module": "Cardano.Api.Shelley",
     "link": "lib/Cardano-Api-Shelley.html#v:calculateExecutionUnitsLovelace"
+  },
+  {
+    "display_html": "<span class=\"keyword\">data</span> <a href=\"#t:ReferenceScript\">ReferenceScript</a> era <span class=\"keyword\">where</span><ul class=\"subs\"><li><a href=\"#v:ReferenceScript\">ReferenceScript</a> &#8759; <a href=\"Cardano-Api-Shelley.html#t:ReferenceScriptsSupportedInEra\" title=\"Cardano.Api.Shelley\">ReferenceScriptsSupportedInEra</a> era &#8594; <a href=\"Cardano-Api-Script.html#t:ScriptInAnyLang\" title=\"Cardano.Api.Script\">ScriptInAnyLang</a> &#8594; <a href=\"Cardano-Api-Shelley.html#t:ReferenceScript\" title=\"Cardano.Api.Shelley\">ReferenceScript</a> era</li><li><a href=\"#v:ReferenceScriptNone\">ReferenceScriptNone</a> &#8759; <a href=\"Cardano-Api-Shelley.html#t:ReferenceScript\" title=\"Cardano.Api.Shelley\">ReferenceScript</a> era</li></ul>",
+    "name": "ReferenceScript ReferenceScript ReferenceScriptNone",
+    "module": "Cardano.Api.Shelley",
+    "link": "lib/Cardano-Api-Shelley.html#t:ReferenceScript"
+  },
+  {
+    "display_html": "<span class=\"keyword\">data</span> <a href=\"#t:ReferenceScriptsSupportedInEra\">ReferenceScriptsSupportedInEra</a> era <span class=\"keyword\">where</span><ul class=\"subs\"><li><a href=\"#v:ReferenceScriptsInBabbageEra\">ReferenceScriptsInBabbageEra</a> &#8759; <a href=\"Cardano-Api-Shelley.html#t:ReferenceScriptsSupportedInEra\" title=\"Cardano.Api.Shelley\">ReferenceScriptsSupportedInEra</a> <a href=\"Cardano-Api-Eras.html#t:BabbageEra\" title=\"Cardano.Api.Eras\">BabbageEra</a></li></ul>",
+    "name": "ReferenceScriptsSupportedInEra ReferenceScriptsInBabbageEra",
+    "module": "Cardano.Api.Shelley",
+    "link": "lib/Cardano-Api-Shelley.html#t:ReferenceScriptsSupportedInEra"
+  },
+  {
+    "display_html": "<a href=\"#v:referenceScriptsSupportedInEra\">referenceScriptsSupportedInEra</a> &#8759; <a href=\"Cardano-Api-Eras.html#t:CardanoEra\" title=\"Cardano.Api.Eras\">CardanoEra</a> era &#8594; <a href=\"file:///home/runner/.ghcup/ghc/8.10.7/share/doc/ghc-8.10.7/html/libraries/Cabal-3.2.1.0/Distribution-Compat-Prelude-Internal.html#t:Maybe\" title=\"Distribution.Compat.Prelude.Internal\">Maybe</a> (<a href=\"Cardano-Api-Shelley.html#t:ReferenceScriptsSupportedInEra\" title=\"Cardano.Api.Shelley\">ReferenceScriptsSupportedInEra</a> era)",
+    "name": "referenceScriptsSupportedInEra",
+    "module": "Cardano.Api.Shelley",
+    "link": "lib/Cardano-Api-Shelley.html#v:referenceScriptsSupportedInEra"
+  },
+  {
+    "display_html": "<a href=\"#v:refScriptToShelleyScript\">refScriptToShelleyScript</a> &#8759; <a href=\"Cardano-Api-Eras.html#t:CardanoEra\" title=\"Cardano.Api.Eras\">CardanoEra</a> era &#8594; <a href=\"Cardano-Api-Shelley.html#t:ReferenceScript\" title=\"Cardano.Api.Shelley\">ReferenceScript</a> era &#8594; StrictMaybe (Script (<a href=\"Cardano-Api-Shelley.html#t:ShelleyLedgerEra\" title=\"Cardano.Api.Shelley\">ShelleyLedgerEra</a> era))",
+    "name": "refScriptToShelleyScript",
+    "module": "Cardano.Api.Shelley",
+    "link": "lib/Cardano-Api-Shelley.html#v:refScriptToShelleyScript"
   },
   {
     "display_html": "<span class=\"keyword\">data</span> <a href=\"#t:Certificate\">Certificate</a><ul class=\"subs\"><li>= <a href=\"#v:StakeAddressRegistrationCertificate\">StakeAddressRegistrationCertificate</a> <a href=\"Cardano-Api-Shelley.html#t:StakeCredential\" title=\"Cardano.Api.Shelley\">StakeCredential</a></li><li>| <a href=\"#v:StakeAddressDeregistrationCertificate\">StakeAddressDeregistrationCertificate</a> <a href=\"Cardano-Api-Shelley.html#t:StakeCredential\" title=\"Cardano.Api.Shelley\">StakeCredential</a></li><li>| <a href=\"#v:StakeAddressDelegationCertificate\">StakeAddressDelegationCertificate</a> <a href=\"Cardano-Api-Shelley.html#t:StakeCredential\" title=\"Cardano.Api.Shelley\">StakeCredential</a> <a href=\"Cardano-Api-Shelley.html#t:PoolId\" title=\"Cardano.Api.Shelley\">PoolId</a></li><li>| <a href=\"#v:StakePoolRegistrationCertificate\">StakePoolRegistrationCertificate</a> <a href=\"Cardano-Api-Shelley.html#t:StakePoolParameters\" title=\"Cardano.Api.Shelley\">StakePoolParameters</a></li><li>| <a href=\"#v:StakePoolRetirementCertificate\">StakePoolRetirementCertificate</a> <a href=\"Cardano-Api-Shelley.html#t:PoolId\" title=\"Cardano.Api.Shelley\">PoolId</a> <a href=\"Cardano-Api-Shelley.html#t:EpochNo\" title=\"Cardano.Api.Shelley\">EpochNo</a></li><li>| <a href=\"#v:GenesisKeyDelegationCertificate\">GenesisKeyDelegationCertificate</a> (<a href=\"Cardano-Api-Shelley.html#t:Hash\" title=\"Cardano.Api.Shelley\">Hash</a> <a href=\"Cardano-Api-KeysShelley.html#t:GenesisKey\" title=\"Cardano.Api.KeysShelley\">GenesisKey</a>) (<a href=\"Cardano-Api-Shelley.html#t:Hash\" title=\"Cardano.Api.Shelley\">Hash</a> <a href=\"Cardano-Api-KeysShelley.html#t:GenesisDelegateKey\" title=\"Cardano.Api.KeysShelley\">GenesisDelegateKey</a>) (<a href=\"Cardano-Api-Shelley.html#t:Hash\" title=\"Cardano.Api.Shelley\">Hash</a> <a href=\"Cardano-Api-Shelley.html#t:VrfKey\" title=\"Cardano.Api.Shelley\">VrfKey</a>)</li><li>| <a href=\"#v:MIRCertificate\">MIRCertificate</a> MIRPot <a href=\"Cardano-Api-Certificate.html#t:MIRTarget\" title=\"Cardano.Api.Certificate\">MIRTarget</a></li></ul>",
@@ -7620,7 +7668,7 @@
     "link": "lib/Cardano-Api-Byron.html#t:TxIn"
   },
   {
-    "display_html": "<span class=\"keyword\">data</span> <a href=\"#t:TxOut\">TxOut</a> ctx era = <a href=\"#v:TxOut\">TxOut</a> (<a href=\"Cardano-Api-Address.html#t:AddressInEra\" title=\"Cardano.Api.Address\">AddressInEra</a> era) (<a href=\"Cardano-Api-TxBody.html#t:TxOutValue\" title=\"Cardano.Api.TxBody\">TxOutValue</a> era) (<a href=\"Cardano-Api-TxBody.html#t:TxOutDatum\" title=\"Cardano.Api.TxBody\">TxOutDatum</a> ctx era)",
+    "display_html": "<span class=\"keyword\">data</span> <a href=\"#t:TxOut\">TxOut</a> ctx era = <a href=\"#v:TxOut\">TxOut</a> (<a href=\"Cardano-Api-Address.html#t:AddressInEra\" title=\"Cardano.Api.Address\">AddressInEra</a> era) (<a href=\"Cardano-Api-TxBody.html#t:TxOutValue\" title=\"Cardano.Api.TxBody\">TxOutValue</a> era) (<a href=\"Cardano-Api-TxBody.html#t:TxOutDatum\" title=\"Cardano.Api.TxBody\">TxOutDatum</a> ctx era) (<a href=\"Cardano-Api-Script.html#t:ReferenceScript\" title=\"Cardano.Api.Script\">ReferenceScript</a> era)",
     "name": "TxOut TxOut",
     "module": "Cardano.Api.Byron",
     "link": "lib/Cardano-Api-Byron.html#t:TxOut"
@@ -7884,10 +7932,16 @@
     "link": "lib_gen/Gen-Cardano-Api-Typed.html#v:genTxIn"
   },
   {
-    "display_html": "<a href=\"#v:genTxOut\">genTxOut</a> &#8759; <a href=\"file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.7/cardano-api-1.33.0/noopt/doc/html/cardano-api/Cardano-Api-Eras.html#t:CardanoEra\" title=\"Cardano.Api.Eras\">CardanoEra</a> era &#8594; Gen (<a href=\"file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.7/cardano-api-1.33.0/noopt/doc/html/cardano-api/Cardano-Api-TxBody.html#t:TxOut\" title=\"Cardano.Api.TxBody\">TxOut</a> <a href=\"file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.7/cardano-api-1.33.0/noopt/doc/html/cardano-api/Cardano-Api-TxBody.html#t:CtxTx\" title=\"Cardano.Api.TxBody\">CtxTx</a> era)",
-    "name": "genTxOut",
+    "display_html": "<a href=\"#v:genTxOutTxContext\">genTxOutTxContext</a> &#8759; <a href=\"file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.7/cardano-api-1.33.0/noopt/doc/html/cardano-api/Cardano-Api-Eras.html#t:CardanoEra\" title=\"Cardano.Api.Eras\">CardanoEra</a> era &#8594; Gen (<a href=\"file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.7/cardano-api-1.33.0/noopt/doc/html/cardano-api/Cardano-Api-TxBody.html#t:TxOut\" title=\"Cardano.Api.TxBody\">TxOut</a> <a href=\"file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.7/cardano-api-1.33.0/noopt/doc/html/cardano-api/Cardano-Api-TxBody.html#t:CtxTx\" title=\"Cardano.Api.TxBody\">CtxTx</a> era)",
+    "name": "genTxOutTxContext",
     "module": "Gen.Cardano.Api.Typed",
-    "link": "lib_gen/Gen-Cardano-Api-Typed.html#v:genTxOut"
+    "link": "lib_gen/Gen-Cardano-Api-Typed.html#v:genTxOutTxContext"
+  },
+  {
+    "display_html": "<a href=\"#v:genTxOutUTxOContext\">genTxOutUTxOContext</a> &#8759; <a href=\"file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.7/cardano-api-1.33.0/noopt/doc/html/cardano-api/Cardano-Api-Eras.html#t:CardanoEra\" title=\"Cardano.Api.Eras\">CardanoEra</a> era &#8594; Gen (<a href=\"file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.7/cardano-api-1.33.0/noopt/doc/html/cardano-api/Cardano-Api-TxBody.html#t:TxOut\" title=\"Cardano.Api.TxBody\">TxOut</a> <a href=\"file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.7/cardano-api-1.33.0/noopt/doc/html/cardano-api/Cardano-Api-TxBody.html#t:CtxUTxO\" title=\"Cardano.Api.TxBody\">CtxUTxO</a> era)",
+    "name": "genTxOutUTxOContext",
+    "module": "Gen.Cardano.Api.Typed",
+    "link": "lib_gen/Gen-Cardano-Api-Typed.html#v:genTxOutUTxOContext"
   },
   {
     "display_html": "<a href=\"#v:genUTxO\">genUTxO</a> &#8759; <a href=\"file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.7/cardano-api-1.33.0/noopt/doc/html/cardano-api/Cardano-Api-Eras.html#t:CardanoEra\" title=\"Cardano.Api.Eras\">CardanoEra</a> era &#8594; Gen (<a href=\"file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.7/cardano-api-1.33.0/noopt/doc/html/cardano-api/Cardano-Api-Query.html#t:UTxO\" title=\"Cardano.Api.Query\">UTxO</a> era)",
@@ -8034,10 +8088,16 @@
     "link": "lib_gen/Gen-Cardano-Api-Typed.html#v:genScriptDataSupportedInAlonzoEra"
   },
   {
-    "display_html": "<a href=\"#v:genTxOutDatumHash\">genTxOutDatumHash</a> &#8759; <a href=\"file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.7/cardano-api-1.33.0/noopt/doc/html/cardano-api/Cardano-Api-Eras.html#t:CardanoEra\" title=\"Cardano.Api.Eras\">CardanoEra</a> era &#8594; Gen (<a href=\"file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.7/cardano-api-1.33.0/noopt/doc/html/cardano-api/Cardano-Api-TxBody.html#t:TxOutDatum\" title=\"Cardano.Api.TxBody\">TxOutDatum</a> <a href=\"file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.7/cardano-api-1.33.0/noopt/doc/html/cardano-api/Cardano-Api-TxBody.html#t:CtxTx\" title=\"Cardano.Api.TxBody\">CtxTx</a> era)",
-    "name": "genTxOutDatumHash",
+    "display_html": "<a href=\"#v:genTxOutDatumHashTxContext\">genTxOutDatumHashTxContext</a> &#8759; <a href=\"file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.7/cardano-api-1.33.0/noopt/doc/html/cardano-api/Cardano-Api-Eras.html#t:CardanoEra\" title=\"Cardano.Api.Eras\">CardanoEra</a> era &#8594; Gen (<a href=\"file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.7/cardano-api-1.33.0/noopt/doc/html/cardano-api/Cardano-Api-TxBody.html#t:TxOutDatum\" title=\"Cardano.Api.TxBody\">TxOutDatum</a> <a href=\"file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.7/cardano-api-1.33.0/noopt/doc/html/cardano-api/Cardano-Api-TxBody.html#t:CtxTx\" title=\"Cardano.Api.TxBody\">CtxTx</a> era)",
+    "name": "genTxOutDatumHashTxContext",
     "module": "Gen.Cardano.Api.Typed",
-    "link": "lib_gen/Gen-Cardano-Api-Typed.html#v:genTxOutDatumHash"
+    "link": "lib_gen/Gen-Cardano-Api-Typed.html#v:genTxOutDatumHashTxContext"
+  },
+  {
+    "display_html": "<a href=\"#v:genTxOutDatumHashUTxOContext\">genTxOutDatumHashUTxOContext</a> &#8759; <a href=\"file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.7/cardano-api-1.33.0/noopt/doc/html/cardano-api/Cardano-Api-Eras.html#t:CardanoEra\" title=\"Cardano.Api.Eras\">CardanoEra</a> era &#8594; Gen (<a href=\"file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.7/cardano-api-1.33.0/noopt/doc/html/cardano-api/Cardano-Api-TxBody.html#t:TxOutDatum\" title=\"Cardano.Api.TxBody\">TxOutDatum</a> <a href=\"file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.7/cardano-api-1.33.0/noopt/doc/html/cardano-api/Cardano-Api-TxBody.html#t:CtxUTxO\" title=\"Cardano.Api.TxBody\">CtxUTxO</a> era)",
+    "name": "genTxOutDatumHashUTxOContext",
+    "module": "Gen.Cardano.Api.Typed",
+    "link": "lib_gen/Gen-Cardano-Api-Typed.html#v:genTxOutDatumHashUTxOContext"
   },
   {
     "display_html": "<a href=\"#v:genTxOutValue\">genTxOutValue</a> &#8759; <a href=\"file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.7/cardano-api-1.33.0/noopt/doc/html/cardano-api/Cardano-Api-Eras.html#t:CardanoEra\" title=\"Cardano.Api.Eras\">CardanoEra</a> era &#8594; Gen (<a href=\"file:///home/runner/work/cardano-node/cardano-node/dist-newstyle/build/x86_64-linux/ghc-8.10.7/cardano-api-1.33.0/noopt/doc/html/cardano-api/Cardano-Api-TxBody.html#t:TxOutValue\" title=\"Cardano.Api.TxBody\">TxOutValue</a> era)",
