@@ -25,8 +25,9 @@ import           Cardano.Tracer.Handlers.RTView.UI.CSS.Bulma
 import           Cardano.Tracer.Handlers.RTView.UI.CSS.Own
 import           Cardano.Tracer.Handlers.RTView.UI.HTML.Body
 import           Cardano.Tracer.Handlers.RTView.UI.Img.Icons
-import           Cardano.Tracer.Handlers.RTView.UI.Updater
 import           Cardano.Tracer.Handlers.RTView.UI.Utils
+import           Cardano.Tracer.Handlers.RTView.Update
+import           Cardano.Tracer.Handlers.RTView.Update.Metrics
 import           Cardano.Tracer.Types
 
 -- | RTView is a part of 'cardano-tracer' that provides an ability
@@ -108,10 +109,10 @@ mkMainPage connectedNodes displayedElements acceptedMetrics
     UI.stop preloaderTimer
   UI.start preloaderTimer
 
-  -- Prepare and run the timer, which will call 'updateUI' function every second.
+  -- Prepare and run the timer, which will call 'update' function every second.
   uiUpdateTimer <- UI.timer # set UI.interval 1000
   on UI.tick uiUpdateTimer . const $
-    updateUI
+    update
       window
       connectedNodes
       displayedElements
@@ -127,7 +128,7 @@ mkMainPage connectedNodes displayedElements acceptedMetrics
       ekgIntervalInMs = toMs . secondsToNominalDiffTime $ fromMaybe 1.0 ekgFreq
   uiUpdateMetricsTimer <- UI.timer # set UI.interval ekgIntervalInMs
   on UI.tick uiUpdateMetricsTimer . const $
-    updateMetricsUI window acceptedMetrics
+    updateMetrics window acceptedMetrics
   UI.start uiUpdateMetricsTimer
 
   on UI.disconnect window . const $ do
