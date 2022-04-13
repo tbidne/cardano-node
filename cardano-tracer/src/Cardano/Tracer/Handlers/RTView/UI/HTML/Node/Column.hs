@@ -86,24 +86,24 @@ logsSettings loggingConfig anId =
     case mode of
       FileMode -> do
         let pathToSubdir = root </> anId
-        copyPath <- image "has-tooltip-multiline has-tooltip-top rt-view-copy-icon" copySVG
+        copyPath <- image "has-tooltip-multiline has-tooltip-top rt-view-copy-icon" copyLightSVG
                           # set dataTooltip "Click to copy the path to a directory with logs from this node"
         on UI.click copyPath . const $
           UI.runFunction $ UI.ffi copyTextToClipboard pathToSubdir
         return $ UI.p #+
                    [ UI.span #. ("tag is-info is-light is-rounded mr-3"
-                                 <> " has-tooltip-multiline has-tooltip-top")
+                                 <> " has-tooltip-multiline has-tooltip-top rt-view-logs-path")
                              # set dataTooltip (pathToSubdir
                                                 <> " is the path to a directory with logs from this node")
                              # set text (shorten pathToSubdir)
                    , element copyPath
                    , UI.span #. ("tag is-warning is-light is-rounded ml-3 "
-                                 <> "has-tooltip-multiline has-tooltip-top")
+                                 <> "has-tooltip-multiline has-tooltip-top rt-view-logs-format")
                              # set dataTooltip "The format log files are written in"
                              # set text (if format == ForHuman then "LOG" else "JSON")
                    ]
       JournalMode -> do
-        copyId <- image "has-tooltip-multiline has-tooltip-top rt-view-copy-icon" copySVG
+        copyId <- image "has-tooltip-multiline has-tooltip-top rt-view-copy-icon" copyLightSVG
                         # set dataTooltip "Click to copy the syslog identifier of this node"
         on UI.click copyId . const $
           UI.runFunction $ UI.ffi copyTextToClipboard anId

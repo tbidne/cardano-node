@@ -1,4 +1,6 @@
-module Cardano.Tracer.Handlers.RTView.UI.HTML.PageBody
+{-# LANGUAGE OverloadedStrings #-}
+
+module Cardano.Tracer.Handlers.RTView.UI.HTML.Body
   ( mkPageBody
   ) where
 
@@ -9,7 +11,8 @@ import           Graphics.UI.Threepenny.Core
 
 import           Cardano.Tracer.Configuration
 import           Cardano.Tracer.Handlers.RTView.UI.Img.Icons
-import           Cardano.Tracer.Handlers.RTView.UI.HTML.OwnInfo (mkOwnInfo)
+import           Cardano.Tracer.Handlers.RTView.UI.HTML.OwnInfo
+import           Cardano.Tracer.Handlers.RTView.UI.Theme
 import           Cardano.Tracer.Handlers.RTView.UI.Utils
 
 mkPageBody
@@ -21,19 +24,19 @@ mkPageBody window networkConfig =
     [ UI.div ## "preloader" #. "pageloader is-active" #+
         [ UI.span #. "title" # set text "Just a second..."
         ]
-    , topNavigation
+    , topNavigation window
     , UI.div ## "no-nodes" #. "container is-max-widescreen has-text-centered" #+
-        [ image "rt-view-no-nodes-icon" noNodesSVG
-        , UI.p #. "rt-view-no-nodes-message" #+
+        [ image "rt-view-no-nodes-icon" noNodesLightSVG ## "no-nodes-icon"
+        , UI.p ## "no-nodes-message" #. "rt-view-no-nodes-message" #+
             [ string "There are no connected nodes. Yet."
             ]
         ]
     , noNodesInfo networkConfig
     , UI.mkElement "section" #. "section" #+
-        [ UI.div ## "main-table"
-                 #. "table-container rt-view-main-table-container"
+        [ UI.div ## "main-table-container"
+                 #. "table-container"
                  # hideIt #+
-            [ UI.table #. "table rt-view-main-table" #+
+            [ UI.table ## "main-table" #. "table rt-view-main-table" #+
                 [ UI.mkElement "thead" #+
                     [ UI.tr ## "node-name-row" #+
                         [ UI.th #. "rt-view-main-table-description"
@@ -97,29 +100,34 @@ mkPageBody window networkConfig =
         ]
     ]
 
-topNavigation :: UI Element
-topNavigation = do
+topNavigation :: UI.Window -> UI Element
+topNavigation window = do
   closeInfo <- UI.button #. "modal-close is-large" #+ []
   info <- mkOwnInfo closeInfo
-  infoIcon <- image "mr-4 rt-view-info-icon" rtViewInfoSVG
-                    -- #. "has-tooltip-right"
-                    -- # set dataTooltip "RTView info"
+  infoIcon <- image "has-tooltip-multiline has-tooltip-bottom rt-view-info-icon" rtViewInfoLightSVG
+                    ## "info-icon"
+                    # set dataTooltip "RTView info"
   registerClicksForModal info infoIcon closeInfo
 
   --closeNotifications <- UI.button #. "modal-close is-large" #+ []
   --notifications <- mkOwnInfo closeNotifications
-  notifyIcon <- image "rt-view-notify-icon" rtViewNotifySVG
-                      -- #. "has-tooltip-bottom"
-                      -- # set dataTooltip "RTView notifications"
+  notifyIcon <- image "has-tooltip-multiline has-tooltip-bottom rt-view-notify-icon" rtViewNotifyLightSVG
+                      ## "notify-icon"
+                      # set dataTooltip "RTView notifications"
   --registerClicksForModal notifications notifyIcon closeNotifications
 
-  UI.div #. "navbar rt-view-top-bar" #+
+  themeIcon <- image "has-tooltip-multiline has-tooltip-bottom rt-view-theme-icon" rtViewThemeToLightSVG
+                     # set dataState darkState
+                     # set dataTooltip "Switch to light theme"
+  on UI.click themeIcon . const $ switchTheme window themeIcon
+
+  UI.div ## "top-bar" #. "navbar rt-view-top-bar-dark" #+
     [ element info
     -- , element notifications
     , UI.div #. "navbar-brand" #+
         [ UI.div #. "navbar-item" #+
-            [ image "rt-view-cardano-logo" cardanoLogoSVG
-            , UI.span #. "rt-view-name" # set text "Node Real-time View"
+            [ image "rt-view-cardano-logo" cardanoLogoLightSVG ## "cardano-logo"
+            , UI.span ## "name" #. "rt-view-name" # set text "Node Real-time View"
             ]
         ]
     , UI.div #. "navbar-menu" #+
@@ -127,6 +135,7 @@ topNavigation = do
         , UI.div #. "navbar-end" #+
             [ UI.div #. "navbar-item" #+ [element notifyIcon]
             , UI.div #. "navbar-item" #+ [element infoIcon]
+            , UI.div #. "navbar-item" #+ [element themeIcon]
             ]
         ]
     ]

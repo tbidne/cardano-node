@@ -1,5 +1,8 @@
+{-# LANGUAGE FlexibleContexts #-}
+
 module Cardano.Tracer.Handlers.RTView.UI.Utils
   ( (##)
+  , dataState
   , dataTooltip
   , findAndDo
   , findByClassAndDo
@@ -14,7 +17,6 @@ module Cardano.Tracer.Handlers.RTView.UI.Utils
   , hideIt
   , pageTitle
   , pageTitleNotify
-  , whatIsItImage
   ) where
 
 import           Data.Text (Text, unpack)
@@ -22,8 +24,6 @@ import           Control.Monad (void)
 import           Control.Monad.Extra (whenJustM)
 import qualified Graphics.UI.Threepenny as UI
 import           Graphics.UI.Threepenny.Core
-
-import           Cardano.Tracer.Handlers.RTView.UI.Img.Icons
 
 (##) :: UI Element -> String -> UI Element
 (##) el anId = el # set UI.id_ anId
@@ -86,10 +86,14 @@ pageTitleNotify = "(!) Cardano RTView"
 dataTooltip :: WriteAttr Element String
 dataTooltip = mkWriteAttr $ set' (attr "data-tooltip")
 
+dataState :: Attr Element String
+dataState = dataAttr "state"
+
+dataAttr :: String -> Attr Element String
+dataAttr name = mkReadWriteAttr getData setData
+ where
+  getData   el = callFunction $ ffi "$(%1).data(%2)" el name
+  setData v el = runFunction  $ ffi "$(%1).data(%2,%3)" el name v
+
 image :: String -> String -> UI Element
 image imgClass svg = UI.span #. imgClass # set html svg
-
-whatIsItImage :: String -> UI Element
-whatIsItImage tooltip =
-  image "rt-view-what-icon has-tooltip-multiline has-tooltip-right" questionSVG
-        # set dataTooltip tooltip

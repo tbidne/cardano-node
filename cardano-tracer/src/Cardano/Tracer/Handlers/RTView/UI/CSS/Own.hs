@@ -2,6 +2,15 @@
 
 module Cardano.Tracer.Handlers.RTView.UI.CSS.Own
   ( ownCSS
+  -- Helpers
+  , backgroundDark
+  , backgroundLight
+  , hrefDark
+  , hrefLight
+  , nameDark
+  , nameLight
+  , textDark
+  , textLight
   ) where
 
 import           Data.String.QQ
@@ -33,7 +42,7 @@ code {
 }
 
 .rt-view-href {
-  color: #607bf7 !important;
+  color: #607bf7;
 }
 
 .rt-view-href:hover {
@@ -45,12 +54,20 @@ span[data-tooltip] {
   border-bottom: none !important;
 }
 
-.rt-view-top-bar {
+.rt-view-top-bar-dark {
   background-color: #131325;
   color: whitesmoke;
   padding-top: 8px;
   padding-bottom: 2px;
   border-bottom: 1px solid #888;
+}
+
+.rt-view-top-bar-light {
+  background-color: #efefef;
+  color: #131325;
+  padding-top: 8px;
+  padding-bottom: 2px;
+  border-bottom: 1px solid #dbdbdb;
 }
 
 .rt-view-own-info-box {
@@ -85,6 +102,14 @@ span[data-tooltip] {
   cursor: pointer;
 }
 
+.rt-view-theme-icon svg {
+  width: 23px;
+  padding-top: 2px;
+  margin-right: 13px;
+  color: whitesmoke;
+  cursor: pointer;
+}
+
 .rt-view-copy-icon svg {
   width: 20px;
   color: whitesmoke;
@@ -114,14 +139,6 @@ span[data-tooltip] {
   color: #1fc1c3;
 }
 
-.rt-view-node-tab-icon svg {
-  width: 16px;
-  margin-right: 5px;
-  color: #1fc1c3;
-  max-height: 16px;
-  object-fit: contain;
-}
-
 .rt-view-node-link-icon svg {
   width: 19px;
   margin-left: 9px;
@@ -132,41 +149,12 @@ span[data-tooltip] {
   color: #1fc1c3;
 }
 
-.rt-view-node-panel {
-  background-color: #dedede;
-}
-
-.rt-view-node-panel-down svg {
-  width: 13px;
-  margin-top: 4px;
-  margin-right: 3px;
-  cursor: pointer;
-}
-
-.rt-view-node-panel-block {
-  padding: 5px 20px 0px 20px;
-  height: 300px;
-  background-color: #2c2b3b;
-  color: #ccc;
-}
-
-.rt-view-node-panel-head {
-  background-color: #454563;
-  color: whitesmoke;
-}
-
 .rt-view-node-name {
   font-weight: normal !important;
 }
 
 .rt-view-node-name-column {
   margin-top: 2px;
-}
-
-.rt-view-node-panel-tabs {
-  font-size: 20px;
-  background-color: #2c2b3b;
-  margin-bottom: 0px !important;
 }
 
 .tabs a {
@@ -185,14 +173,6 @@ span[data-tooltip] {
 .tabs li.is-active a {
   border-bottom: 4px solid white;
   color: white;
-}
-
-.panel-block:not(:last-child), .panel-tabs:not(:last-child) {
-  border-bottom: 0px solid #ededed;
-}
-
-.rt-view-node-panel-cols {
-  width: 100%;
 }
 
 .rt-view-no-nodes-icon svg {
@@ -218,6 +198,7 @@ span[data-tooltip] {
 
 .rt-view-node-column-cell {
   min-width: 350px;
+  column: whitesmoke;
 }
 
 .rt-view-main-table td {
@@ -258,3 +239,20 @@ span[data-tooltip] {
   margin-top: 80px;
 }
 |]
+
+hrefLight
+  , hrefDark
+  , textLight
+  , textDark
+  , nameLight
+  , nameDark
+  , backgroundLight
+  , backgroundDark :: String
+hrefLight       = "#607bf7"
+hrefDark        = "#264af0"
+textLight       = "whitesmoke"
+textDark        = "#333"
+nameLight       = "whitesmoke"
+nameDark        = "#0033ad"
+backgroundLight = "whitesmoke"
+backgroundDark  = "#131325"
