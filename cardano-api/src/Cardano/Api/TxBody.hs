@@ -126,6 +126,9 @@ module Cardano.Api.TxBody (
     collectTxBodyScriptWitnesses,
     mapTxScriptWitnesses,
 
+    -- * Conversion to inline data
+    scriptDataToInlineDatum,
+
     -- * Internal conversion functions & types
     toByronTxId,
     toShelleyTxId,
@@ -832,7 +835,22 @@ fromShelleyTxOut era ledgerTxOut =
       where
         Alonzo.TxOut addr value datahash = ledgerTxOut
 
-    ShelleyBasedEraBabbage -> error "TODO: Babbage"
+    ShelleyBasedEraBabbage ->
+       TxOut (fromShelleyAddr era addr)
+             (TxOutValue MultiAssetInBabbageEra
+                         (fromMaryValue value))
+             (fromBabbageTxOutDatum
+               ScriptDataInBabbageEra
+               InlineDatumSupportedInBabbageEra
+               datum)
+             (case mRefScript of
+                SNothing -> ReferenceScriptNone
+                SJust refScript ->
+                  fromShelleyScriptToReferenceScript ShelleyBasedEraBabbage refScript)
+      where
+        Babbage.TxOut addr value datum mRefScript = ledgerTxOut
+
+
 
 -- TODO: If ledger creates an open type family for datums
 -- we can consolidate this function with the Babbage version
@@ -857,7 +875,21 @@ toBabbageTxOutDatum
   => TxOutDatum CtxUTxO era -> Babbage.Datum (ShelleyLedgerEra era)
 toBabbageTxOutDatum  TxOutDatumNone = Babbage.NoDatum
 toBabbageTxOutDatum (TxOutDatumHash _ (ScriptDataHash dh)) = Babbage.DatumHash dh
-toBabbageTxOutDatum (TxOutDatumInline _ sd) = scriptDataToBinaryData sd
+toBabbageTxOutDatum (TxOutDatumInline _ sd) = scriptDataToInlineDatum sd
+
+fromBabbageTxOutDatum
+  :: Ledger.Crypto ledgerera ~ StandardCrypto
+  => ScriptDataSupportedInEra era
+  -> InlineDatumSupportedInEra era
+  -> Babbage.Datum ledgerera
+  -> TxOutDatum ctx era
+fromBabbageTxOutDatum _ _ Babbage.NoDatum = TxOutDatumNone
+fromBabbageTxOutDatum supp _ (Babbage.DatumHash dh) =
+  TxOutDatumHash supp $ ScriptDataHash dh
+fromBabbageTxOutDatum _ supp (Babbage.Datum binData) =
+  TxOutDatumInline supp $ binaryDataToScriptData supp binData
+
+
 
 -- ----------------------------------------------------------------------------
 -- Era-dependent transaction body features
@@ -3157,7 +3189,7 @@ toBabbageTxOutDatum'
 toBabbageTxOutDatum'  TxOutDatumNone = Babbage.NoDatum
 toBabbageTxOutDatum' (TxOutDatumHash _ (ScriptDataHash dh)) = Babbage.DatumHash dh
 toBabbageTxOutDatum' (TxOutDatumInTx' _ (ScriptDataHash dh) _) = Babbage.DatumHash dh
-toBabbageTxOutDatum' (TxOutDatumInline _ sd) = scriptDataToBinaryData sd
+toBabbageTxOutDatum' (TxOutDatumInline _ sd) = scriptDataToInlineDatum sd
 
 
 -- ----------------------------------------------------------------------------
@@ -3478,3 +3510,20 @@ calculateExecutionUnitsLovelace euPrices eUnits =
     Nothing -> Nothing
     Just prices ->
       return . fromShelleyLovelace $ Alonzo.txscriptfee prices (toAlonzoExUnits eUnits)
+
+-- ----------------------------------------------------------------------------
+-- Inline data
+--
+-- | Conversion of ScriptData to binary data which allows for the storage of data
+-- onchain within a transaction output.
+--
+
+scriptDataToInlineDatum :: ScriptData -> Babbage.Datum ledgerera
+scriptDataToInlineDatum = Babbage.Datum . Alonzo.dataToBinaryData . toAlonzoData
+
+binaryDataToScriptData
+  :: InlineDatumSupportedInEra era -> Alonzo.BinaryData ledgerera -> ScriptData
+binaryDataToScriptData InlineDatumSupportedInBabbageEra d =
+  fromAlonzoData $ Alonzo.binaryDataToData d
+
+

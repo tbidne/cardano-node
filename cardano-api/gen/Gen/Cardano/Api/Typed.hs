@@ -66,7 +66,8 @@ import           Cardano.Api.Byron (KeyWitness (ByronKeyWitness),
 import           Cardano.Api.Shelley (Hash (ScriptDataHash), KESPeriod (KESPeriod),
                    OperationalCertificateIssueCounter (OperationalCertificateIssueCounter),
                    PlutusScript (PlutusScriptSerialised), ProtocolParameters (ProtocolParameters),
-                   ReferenceScript (..), StakeCredential (StakeCredentialByKey), StakePoolKey)
+                   ReferenceScript (..), StakeCredential (StakeCredentialByKey), StakePoolKey,
+                   referenceScriptsSupportedInEra)
 
 import           Cardano.Prelude
 
@@ -403,15 +404,20 @@ genTxOutTxContext era =
   TxOut <$> genAddressInEra era
         <*> genTxOutValue era
         <*> genTxOutDatumHashTxContext era
-        <*> return ReferenceScriptNone -- TODO: Babbage Era
+        <*> genReferenceScript era
 
 genTxOutUTxOContext :: CardanoEra era -> Gen (TxOut CtxUTxO era)
 genTxOutUTxOContext era =
   TxOut <$> genAddressInEra era
         <*> genTxOutValue era
         <*> genTxOutDatumHashUTxOContext era
-        <*> return ReferenceScriptNone -- TODO: Babbage Era
+        <*> genReferenceScript era
 
+genReferenceScript :: CardanoEra era -> Gen (ReferenceScript era)
+genReferenceScript era =
+  case referenceScriptsSupportedInEra era of
+    Nothing -> return ReferenceScriptNone
+    Just supp -> ReferenceScript supp <$> genScriptInAnyLang
 
 genUTxO :: CardanoEra era -> Gen (UTxO era)
 genUTxO era =
