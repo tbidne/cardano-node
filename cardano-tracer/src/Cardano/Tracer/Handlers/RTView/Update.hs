@@ -63,21 +63,21 @@ update window connectedNodes displayedElements savedTO dpRequestors reloadFlag l
           "currentKESPeriod"  -> return ()
           "remainingKESPeriods" -> return ()
           _ -> return ()
-       --where
-        {-
-        updateElement = do
-          let elId = ""
-              elValue = trObValue
-          liftIO (getDisplayedValue displayedElements nodeId elId) >>= \case
-            Nothing ->
-              -- There is no displayed value for this element yet.
-              setAndSave elId elValue
-            Just displayedValue ->
-              -- There is a value that already displayed, check if it changed.
-              unless (elValue == displayedValue) $
-                setAndSave elId elValue
-         where
-           setAndSave elId elValue = do
-            findAndSet (set text $ T.unpack elValue) window elId
-            liftIO $ saveDisplayedValue displayedElements nodeId elId elValue
-        -}
+
+{-
+updateElement = do
+  let elId = ""
+      elValue = trObValue
+  liftIO (getDisplayedValue displayedElements nodeId elId) >>= \case
+    Nothing ->
+      -- There is no displayed value for this element yet.
+      setAndSave elId elValue
+    Just displayedValue ->
+      -- There is a value that already displayed, check if it changed.
+      unless (elValue == displayedValue) $
+        setAndSave elId elValue
+ where
+   setAndSave elId elValue = do
+    findAndSet (set text $ T.unpack elValue) window elId
+    liftIO $ saveDisplayedValue displayedElements nodeId elId elValue
+-}
