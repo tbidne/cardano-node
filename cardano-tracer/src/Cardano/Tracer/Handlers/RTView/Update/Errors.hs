@@ -2,8 +2,8 @@
 {-# LANGUAGE OverloadedStrings #-}
 {-# LANGUAGE ScopedTypeVariables #-}
 
-module Cardano.Tracer.Handlers.RTView.Update.Metrics
-  ( updateMetrics
+module Cardano.Tracer.Handlers.RTView.Update.Errors
+  ( updateErrors
   ) where
 
 import           Control.Concurrent.STM.TVar (readTVarIO)
@@ -15,11 +15,11 @@ import           Graphics.UI.Threepenny.Core
 import           Cardano.Tracer.Handlers.Metrics.Utils
 import           Cardano.Tracer.Types
 
-updateMetrics
+updateErrors
   :: UI.Window
   -> AcceptedMetrics
   -> UI ()
-updateMetrics _window acceptedMetrics = do
+updateErrors _window acceptedMetrics = do
   allMetrics <- liftIO $ readTVarIO acceptedMetrics
   forM_ (M.toList allMetrics) $ \(_nodeId, (ekgStore, _)) -> do
     metrics <- liftIO $ getListOfMetrics ekgStore

@@ -7,6 +7,7 @@ module Cardano.Tracer.Handlers.RTView.UI.Utils
   , findAndDo
   , findByClassAndDo
   , findAndSet
+  , findAndSetText
   , findByClassAndSet
   , findAndAdd
   , findAndHide
@@ -51,6 +52,13 @@ findAndSet
   -> UI ()
 findAndSet doIt window elId =
   findAndDo window elId $ \el -> void $ element el # doIt
+
+findAndSetText
+  :: Text
+  -> UI.Window
+  -> Text
+  -> UI ()
+findAndSetText t = findAndSet (set UI.text $ unpack t)
 
 findAndAdd
   :: [UI Element]

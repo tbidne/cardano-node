@@ -27,7 +27,7 @@ import           Cardano.Tracer.Handlers.RTView.UI.HTML.Body
 import           Cardano.Tracer.Handlers.RTView.UI.Img.Icons
 import           Cardano.Tracer.Handlers.RTView.UI.Utils
 import           Cardano.Tracer.Handlers.RTView.Update
-import           Cardano.Tracer.Handlers.RTView.Update.Metrics
+import           Cardano.Tracer.Handlers.RTView.Update.Resources
 import           Cardano.Tracer.Types
 
 -- | RTView is a part of 'cardano-tracer' that provides an ability
@@ -123,19 +123,19 @@ mkMainPage connectedNodes displayedElements acceptedMetrics
   UI.start uiUpdateTimer
 
   -- The user can setup EKG request frequency (in seconds) in tracer's configuration,
-  -- so we start metrics' updating in a separate timer with corresponding interval.
+  -- so we start resources metrics updating in a separate timer with corresponding interval.
   let toMs dt = fromEnum dt `div` 1000000000
       ekgIntervalInMs = toMs . secondsToNominalDiffTime $ fromMaybe 1.0 ekgFreq
-  uiUpdateMetricsTimer <- UI.timer # set UI.interval ekgIntervalInMs
-  on UI.tick uiUpdateMetricsTimer . const $
-    updateMetrics window acceptedMetrics
-  UI.start uiUpdateMetricsTimer
+  uiUpdateResourcesTimer <- UI.timer # set UI.interval ekgIntervalInMs
+  on UI.tick uiUpdateResourcesTimer . const $
+    updateResources window acceptedMetrics
+  UI.start uiUpdateResourcesTimer
 
   on UI.disconnect window . const $ do
     -- The connection with the browser was dropped (probably user closed the tab),
     -- so timers should be stopped.
     UI.stop uiUpdateTimer
-    UI.stop uiUpdateMetricsTimer
+    UI.stop uiUpdateResourcesTimer
     -- To restore current displayed state after DOM-rerendering.
     liftIO $ pageWasReload reloadFlag
 

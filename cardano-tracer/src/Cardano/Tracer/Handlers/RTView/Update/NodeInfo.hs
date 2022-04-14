@@ -1,6 +1,4 @@
-{-# LANGUAGE LambdaCase #-}
 {-# LANGUAGE OverloadedStrings #-}
-{-# LANGUAGE ScopedTypeVariables #-}
 
 module Cardano.Tracer.Handlers.RTView.Update.NodeInfo
   ( askNSetNodeInfo
@@ -32,10 +30,10 @@ askNSetNodeInfo window dpRequestors newlyConnected displayedElements =
   unless (S.null newlyConnected) $
     forM_ newlyConnected $ \nodeId@(NodeId anId) ->
       whenJustM (liftIO $ askDataPoint dpRequestors nodeId "NodeInfo") $ \ni -> do
-        findAndSet' (niName ni) (anId <> "__node-name")
-        findAndSet' (niVersion ni) (anId <> "__node-version")
+        findAndSetText (niName ni) window (anId <> "__node-name")
+        findAndSetText (niVersion ni) window (anId <> "__node-version")
         setProtocol (niProtocol ni) (anId <> "__node-protocol")
-        findAndSet' (T.take 7 $ niCommit ni) (anId <> "__node-commit")
+        findAndSetText (T.take 7 $ niCommit ni) window (anId <> "__node-commit")
         findAndSet  (set UI.href $ nodeLink (niCommit ni)) window (anId <> "__node-commit")
         let nodeStartElId = anId <> "__node-start-time"
         setTime (niStartTime ni) nodeStartElId
@@ -46,12 +44,10 @@ askNSetNodeInfo window dpRequestors newlyConnected displayedElements =
                    nodeStartElId
                    (T.pack . show $ niStartTime ni)
  where
-  findAndSet' t = findAndSet (set text $ T.unpack t) window
-
   nodeLink commit = T.unpack $ "https://github.com/input-output-hk/cardano-node/commit/" <> T.take 7 commit
 
   setProtocol p id' = do
-    findAndSet' "" id'
+    findAndSetText "" window id'
     let byronTag   = UI.span #. "tag is-warning is-rounded is-medium" # set text "Byron"
         shelleyTag = UI.span #. "tag is-info is-rounded is-medium ml-3" # set text "Shelley"
     case p of
@@ -60,10 +56,9 @@ askNSetNodeInfo window dpRequestors newlyConnected displayedElements =
       _         -> findAndAdd [byronTag, shelleyTag] window id'
 
   setTime ts id' = do
-    findAndSet' "" id'
+    findAndSetText "" window id'
     let time = formatTime defaultTimeLocale "%b %e, %Y %T" ts
         tz   = formatTime defaultTimeLocale "%Z" ts
     findAndAdd [ string time
-               , string " "
-               , UI.span #. "has-text-weight-normal is-size-6" # set text tz
+               , UI.span #. "has-text-weight-normal is-size-6 ml-2" # set text tz
                ] window id'
