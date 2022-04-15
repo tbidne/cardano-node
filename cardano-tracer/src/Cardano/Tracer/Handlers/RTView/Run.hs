@@ -6,6 +6,7 @@ module Cardano.Tracer.Handlers.RTView.Run
   , module Cardano.Tracer.Handlers.RTView.State.TraceObjects
   ) where
 
+import           Control.Concurrent.Async (concurrently_)
 import           Control.Monad (void)
 import           Control.Monad.Extra (whenJust)
 import           Data.Fixed (Pico)
@@ -20,6 +21,8 @@ import           System.Time.Extra (sleep)
 
 import           Cardano.Tracer.Configuration
 import           Cardano.Tracer.Handlers.RTView.State.Displayed
+import           Cardano.Tracer.Handlers.RTView.State.Historical
+import           Cardano.Tracer.Handlers.RTView.State.Last
 import           Cardano.Tracer.Handlers.RTView.State.TraceObjects
 import           Cardano.Tracer.Handlers.RTView.UI.CSS.Bulma
 import           Cardano.Tracer.Handlers.RTView.UI.CSS.Own
@@ -27,6 +30,7 @@ import           Cardano.Tracer.Handlers.RTView.UI.HTML.Body
 import           Cardano.Tracer.Handlers.RTView.UI.Img.Icons
 import           Cardano.Tracer.Handlers.RTView.UI.Utils
 import           Cardano.Tracer.Handlers.RTView.Update
+import           Cardano.Tracer.Handlers.RTView.Update.Historical
 import           Cardano.Tracer.Handlers.RTView.Update.Resources
 import           Cardano.Tracer.Types
 
@@ -54,17 +58,29 @@ runRTView TracerConfig{logging, network, hasRTView, ekgRequestFreq}
     -- to be able to update corresponding elements after page reloading.
     displayedElements <- initDisplayedElements
     reloadFlag <- initPageReloadFlag
-    UI.startGUI (config host port) $
-      mkMainPage
-        connectedNodes
-        displayedElements
-        acceptedMetrics
-        savedTO
-        dpRequestors
-        reloadFlag
-        ekgRequestFreq
-        logging
-        network
+    -- We have to collect different information from the node and save it
+    -- independently from RTView web-server. As a result, we'll be able to
+    -- show charts with historical data (where X axis is the time) for the
+    -- period when RTView web-page wasn't opened.
+    resourcesHistory <- initResourcesHistory
+    lastResources <- initLastResources 
+    concurrently_
+      (UI.startGUI (config host port) $
+         mkMainPage
+           connectedNodes
+           displayedElements
+           acceptedMetrics
+           savedTO
+           dpRequestors
+           reloadFlag
+           ekgRequestFreq
+           logging
+           network)
+      (runHistoricalUpdater
+         savedTO
+         acceptedMetrics
+         resourcesHistory
+         lastResources)
  where
   config h p = UI.defaultConfig
     { UI.jsPort = Just . fromIntegral $ p

@@ -49,7 +49,8 @@ library
 
                        Cardano.Tracer.Handlers.RTView.Run
                        Cardano.Tracer.Handlers.RTView.State.Displayed
-                       Cardano.Tracer.Handlers.RTView.State.Resources
+                       Cardano.Tracer.Handlers.RTView.State.Historical
+                       Cardano.Tracer.Handlers.RTView.State.Last
                        Cardano.Tracer.Handlers.RTView.State.TraceObjects
                        Cardano.Tracer.Handlers.RTView.UI.CSS.Bulma
                        Cardano.Tracer.Handlers.RTView.UI.CSS.Own
@@ -63,6 +64,7 @@ library
                        Cardano.Tracer.Handlers.RTView.UI.Utils
                        Cardano.Tracer.Handlers.RTView.Update
                        Cardano.Tracer.Handlers.RTView.Update.Errors
+                       Cardano.Tracer.Handlers.RTView.Update.Historical
                        Cardano.Tracer.Handlers.RTView.Update.NodeInfo
                        Cardano.Tracer.Handlers.RTView.Update.Nodes
                        Cardano.Tracer.Handlers.RTView.Update.Peers
