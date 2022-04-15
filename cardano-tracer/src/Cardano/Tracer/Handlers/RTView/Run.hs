@@ -69,13 +69,13 @@ runRTView TracerConfig{logging, network, hasRTView, ekgRequestFreq}
          mkMainPage
            connectedNodes
            displayedElements
-           acceptedMetrics
            savedTO
            dpRequestors
            reloadFlag
            ekgRequestFreq
            logging
-           network)
+           network
+           resourcesHistory)
       (runHistoricalUpdater
          savedTO
          acceptedMetrics
@@ -90,18 +90,18 @@ runRTView TracerConfig{logging, network, hasRTView, ekgRequestFreq}
 mkMainPage
   :: ConnectedNodes
   -> DisplayedElements
-  -> AcceptedMetrics
   -> SavedTraceObjects
   -> DataPointRequestors
   -> PageReloadedFlag
   -> Maybe Pico
   -> NonEmpty LoggingParams
   -> Network
+  -> ResourcesHistory
   -> UI.Window
   -> UI ()
-mkMainPage connectedNodes displayedElements acceptedMetrics
-           savedTO dpRequestors reloadFlag ekgFreq
-           loggingConfig networkConfig window = do
+mkMainPage connectedNodes displayedElements savedTO
+           dpRequestors reloadFlag ekgFreq loggingConfig
+           networkConfig resourcesHistory window = do
   void $ return window # set UI.title pageTitle
   void $ UI.getHead window #+
     [ UI.link # set UI.rel "icon"
@@ -144,7 +144,7 @@ mkMainPage connectedNodes displayedElements acceptedMetrics
       ekgIntervalInMs = toMs . secondsToNominalDiffTime $ fromMaybe 1.0 ekgFreq
   uiUpdateResourcesTimer <- UI.timer # set UI.interval ekgIntervalInMs
   on UI.tick uiUpdateResourcesTimer . const $
-    updateResources window acceptedMetrics
+    updateResourcesCharts window connectedNodes resourcesHistory
   UI.start uiUpdateResourcesTimer
 
   on UI.disconnect window . const $ do

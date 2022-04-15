@@ -4,12 +4,12 @@
 {-# LANGUAGE ScopedTypeVariables #-}
 
 module Cardano.Tracer.Handlers.RTView.Update.Resources
-  ( updateResources
+  ( updateResourcesCharts
   , updateResourcesHistory
   ) where
 
 import           Control.Concurrent.STM.TVar (readTVarIO)
-import           Control.Monad (forM_)
+import           Control.Monad (forM_, unless)
 import           Control.Monad.Extra (whenJust)
 import qualified Data.Map.Strict as M
 import           Data.Time.Clock (getCurrentTime)
@@ -68,28 +68,19 @@ updateResourcesHistory acceptedMetrics (ResHistory rHistory) lastResources = do
                     , cpuLastNS = tns
                     }
 
--- | Update charts.
-updateResources
+updateResourcesCharts
   :: UI.Window
-  -> AcceptedMetrics
+  -> ConnectedNodes
+  -> ResourcesHistory
   -> UI ()
-updateResources _window _acceptedMetrics = do
-  return ()
-  {-
-  now <- utc2ns <$> liftIO getCurrentTime
-  allMetrics <- liftIO $ readTVarIO acceptedMetrics
-  forM_ (M.toList allMetrics) $ \(_nodeId, (ekgStore, _)) -> do
-    metrics <- liftIO $ getListOfMetrics ekgStore
-    forM_ metrics $ \(metricName, metricValue) -> do
-      let valueS = unpack metricValue
-      case metricName of
-        "stat.cputicks" -> updateCPUTicks valueS now
-        "mem.resident" -> return () -- updateMemoryBytes
-        "rts.gcLiveBytes" -> return () -- updateRTSBytesUsed
-        "rts.gcMajorNum" -> return () -- updateGcMajorNum
-        "rts.gcMinorNum" -> return () -- updateGcMinorNum
-        "rts.gcticks" -> return () -- updateGCTicks
-        "rts.mutticks" -> return () -- updateMutTicks
-        -- "rts.stat.threads" TODO
-        _ -> return ()
-  -}
+updateResourcesCharts _window connectedNodes (ResHistory rHistory) = do
+  connected <- liftIO $ readTVarIO connectedNodes
+  forM_ connected $ \nodeId -> do
+    cpuHistory <- liftIO $ getHistoricalData rHistory nodeId "CPU"
+    unless (null cpuHistory) $ do
+      let (_tsOfLastPoint, _) = last cpuHistory
+      -- To avoid the rendering of the same points again,
+      -- remember 'newestTS', so the next time only the newer
+      -- points will be rendered.
+      return ()
+

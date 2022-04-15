@@ -6,13 +6,14 @@ module Cardano.Tracer.Handlers.RTView.State.Historical
   , TransactionsHistory (..)
   , ValueH (..)
   , addHistoricalData
+  , getHistoricalData
   , initBlockchainHistory
   , initResourcesHistory
   , initTransactionsHistory
   ) where
 
 import           Control.Concurrent.STM (atomically)
-import           Control.Concurrent.STM.TVar (TVar, modifyTVar', newTVarIO)
+import           Control.Concurrent.STM.TVar (TVar, modifyTVar', newTVarIO, readTVarIO)
 import           Data.Map.Strict (Map)
 import qualified Data.Map.Strict as M
 import           Data.Set (Set)
@@ -29,7 +30,7 @@ import           Cardano.Tracer.Types (NodeId)
 --   where X axis is a time in UTC. An example: resource metrics, chain information,
 --   tx information, etc.
 type POSIXTime = Word64
-data ValueH = ValueD Double | ValueI Integer deriving (Eq, Ord)
+data ValueH = ValueD Double | ValueI Integer deriving (Eq, Ord, Show)
 type HistoricalPoints = Set (POSIXTime, ValueH)
 
 -- | Historical points for particular data (for example, "CPU").
@@ -94,3 +95,17 @@ addHistoricalData history nodeId now dataName valueH = atomically $
 
   minAge = utc2s now - pointsAgeInSec
   pointsAgeInSec = 12 * 60 * 60
+
+getHistoricalData
+  :: History
+  -> NodeId
+  -> DataName
+  -> IO [(POSIXTime, ValueH)]
+getHistoricalData history nodeId dataName = do
+  history' <- readTVarIO history
+  case M.lookup nodeId history' of
+    Nothing -> return []
+    Just dataForNode ->
+      case M.lookup dataName dataForNode of
+        Nothing -> return []
+        Just points -> return $ S.toAscList points
