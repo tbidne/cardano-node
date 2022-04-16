@@ -441,6 +441,9 @@ testnet testnetOptions H.Conf {..} = do
 
     portString <- H.readFile $ tempAbsPath </> node </> "port"
 
+    putStrLn $ "CN HOST: " <> show ifaceAddress
+    putStrLn $ "CN PORT: " <> show portString
+
     void $ H.createProcess =<<
       ( H.procNode
         [ "run"
