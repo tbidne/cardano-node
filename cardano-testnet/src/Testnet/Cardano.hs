@@ -775,6 +775,11 @@ testnet testnetOptions H.Conf {..} = do
 
     portString <- fmap S.strip . H.readFile $ tempAbsPath </> node </> "port"
 
+    H.note_ $ "CNT HOST: " <> show ifaceAddress
+    H.note_ $ "CNT PORT: " <> show portString
+    H.note_ $ "CNT SOCK: " <> show tempAbsPath <> ", " <> show node
+    H.note_ $ "CNT   DB: " <> show sprocket
+
     void $ H.createProcess =<<
       ( H.procNode
         [ "run"

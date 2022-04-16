@@ -60,6 +60,11 @@ hprop_shutdown = H.integration . H.runFinallies . H.workspace "chairman" $ \temp
   hNodeStdout <- H.openFile nodeStdoutFile IO.WriteMode
   hNodeStderr <- H.openFile nodeStderrFile IO.WriteMode
 
+  H.note_ $ "CNH HOST: " <> show ifaceAddress
+  H.note_ $ "CNH PORT: " <> show portString
+  H.note_ $ "CNH SOCK: " <> show tempAbsPath <> ", " <> show node
+  H.note_ $ "CNH   DB: " <> show sprocket
+
   -- Run cardano-node with pipe as stdin.  Use 0 file descriptor as shutdown-ipc
   (mStdin, _mStdout, _mStderr, pHandle, _releaseKey) <- H.createProcess =<<
     ( H.procNode
